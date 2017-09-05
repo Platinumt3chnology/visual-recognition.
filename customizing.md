@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-30"
+lastupdated: "2017-09-01"
 
 ---
 
@@ -85,7 +85,7 @@ There are size limitations for training calls and data:
 - The service accepts a maximum of 10,000 images or 100 MB per .zip file
 - The service requires a minimum of 10 images per .zip file.
 - The service accepts a maximum of 256 MB per training call.
-- Minimum recommend size of an image is 32X32 pixels.
+- Minimum recommended size of an image is 32X32 pixels.
 
 There are also size limitations for classification calls:
 
@@ -100,7 +100,7 @@ The following guidelines are not enforced by the API. However, the service tends
 - Make sure that your images are at least 224 x 224 pixels.
 - Include at least 50 positive images per class before you assess your training results.
     - Assuming similar quality and content for your training data, more training images generally provide more accurate results than fewer images.
-    - 150-200 images per .zip file provides the best balance between processing time and accuracy. More than 200 images increases the time and the accuracy, but with diminishing returns for the amount of time it takes.
+    - 150 - 200 images per .zip file provides the best balance between processing time and accuracy. More than 200 images increases the time and the accuracy, but with diminishing returns for the amount of time it takes.
     - The benefits of training a classifier on more images plateaus at around 5000 images. Although you can train on more than 5000 images, that number might not significantly increase accuracy, and increases processing time.
 - Include a negative class to help improve your results.
     - Include approximately the same number of negative images as positive ones. An unequal number of images might reduce the quality of the trained classifier.
@@ -112,11 +112,14 @@ For more information about training, see [Best practices for custom classifiers 
 
 ## Guidelines for high volume classifying
 
-If you want to classify many images, submitting one image at a time can take a long time. You can maximize efficiency and performance of the service in the following ways:
+Maximize efficiency and performance of the service in the following ways when you submit many images:
 
-- Resize images to no larger than 320 x 320 pixels. Images do not need to be high resolution.
-- Submit images in batches as compressed (.zip) files.
-- Specify only the classifiers you want results for in the `classifier_ids` parameter. If you do not specify a value for this parameter, the service classifies the images against the default classifier and takes longer to return a response.
+- Crop or resize your images to 224 x 224 pixels. The service is currently optimized for this size although it might change.
+    - Crop the image if it has an aspect ratio greater than 2:2 or under 1:2.
+    - Consider cropping the image into multiple square images, or include only the center of the image, depending on what is most important to your use.
+- Submit up to 20 images in a single .zip file. You don't need to use any compression because JPEG and PNG images are compressed files.
+- Use the **classifier_ids** parameter to specify only the classifiers that you want to use.
+- Although the service reads EXIF tags and rotates images, for the best throughput, send images that don't need to be rotated by the service (the EXIF **Orientation** tag is set to `1`).
 
 ## Custom classifier scores
 
@@ -162,9 +165,8 @@ Similarly, as a person, you may face the same trade  off. If the system notifies
 
     You can do this in multiple ways, one of which is the following:
 
-    1. Assemble a set of labeled images "L" that was not used in training the classifier.
-    1. Split L into two sets, V and T - validation and testing.
-    1. Run V through your classifier and pick a score threshold "R" which optimizes the correctness metric you value, such as top-5 precision, across all of V.
-    1. From T, select a random subset "Q" and classify it using your classifier and "R". Compute the probability of a correct classification on Q. That's one experiment.
-    1. Repeat step 4 with a different subset Q from T, then compute the average % correct across all experiments.
-
+    1.  Assemble a set of labeled images "L" that was not used in training the classifier.
+    1.  Split L into two sets, V and T - validation and testing.
+    1.  Run V through your classifier and pick a score threshold "R" which optimizes the correctness metric you value, such as top-5 precision, across all of V.
+    1.  From T, select a random subset "Q" and classify it using your classifier and "R". Compute the probability of a correct classification on Q. That's one experiment.
+    1.  Repeat step 4 with a different subset Q from T, then compute the average % correct across all experiments.
