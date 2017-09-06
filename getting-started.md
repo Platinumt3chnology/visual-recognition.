@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-24"
+lastupdated: "2017-09-06"
 
 ---
 
@@ -28,8 +28,8 @@ This tutorial guides you through how to use the default classifiers in {{site.da
 If you already created a service instance, you're all set with these prerequisites. Move on to Step 1.
 {: tip}
 
-1.  Go to the [{{site.data.keyword.visualrecognitionshort}} service](https://console.{DomainName}/catalog/services/language-translator/) and either sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
-1.  After you log in, type `language-tutorial` in the **Service name** field of the {{site.data.keyword.visualrecognitionshort}} page. Click **Create**.
+1.  Go to the [{{site.data.keyword.visualrecognitionshort}} service](https://console.{DomainName}/catalog/services/visual-recognition/) and either sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
+1.  After you log in, type `vision-tutorial` in the **Service name** field of the {{site.data.keyword.visualrecognitionshort}} page. Click **Create**.
 
 ## Step 1: Copy your credentials
 {: #copy-credentials}
