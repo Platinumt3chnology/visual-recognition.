@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-24"
+lastupdated: "2017-09-08"
 
 ---
 
@@ -26,6 +26,11 @@ The following new features and changes to the service are available.
 {: #changelog}
 
 The following new features and changes to the service are available.
+
+### 8 September 2017
+{: #8september2017}
+
+- **Beta Similarity Search and collections closed**: As of September 8, 2017, the beta period for Similarity Search is closed. For more information, see [Visual Recognition API – Similarity Search Update ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/08/visual-recognition-api-similarity-search-update/){: new_window}.
 
 ### 30 June 2017
 {: #30june2017}
