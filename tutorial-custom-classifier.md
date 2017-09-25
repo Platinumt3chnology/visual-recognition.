@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-24"
+lastupdated: "2017-09-15"
 
 ---
 
@@ -85,7 +85,7 @@ Use the credentials that you copied in "Getting started tutorial" for this tutor
 
 ## Step 3: Updating an existing custom classifier
 
-You can't update a custom classifier with a free API Key. If you have a free key, you upgrade to a Standard plan. For details, see [Changing your plan](https://console.bluemix.net/docs/pricing/changing_plan.html).
+You can't update a custom classifier with a free API key. If you have a free key, you can upgrade to a Standard plan. For details, see [Changing your plan](https://console.bluemix.net/docs/pricing/changing_plan.html).
 {: tip}
 
 You can update a custom classifier either by adding classes to the classifier or by adding images to an existing class. Here, you improve the classifier that you created in Step 2 by adding a *Dalmatian* class to the types of dogs that can be classified. You also add images of cats to the negative example set for the "dogs" classifier.
