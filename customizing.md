@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-01"
+lastupdated: "2017-10-20"
 
 ---
 
@@ -115,7 +115,7 @@ For more information about training, see [Best practices for custom classifiers 
 Maximize efficiency and performance of the service in the following ways when you submit many images:
 
 - Crop or resize your images to 224 x 224 pixels. The service is currently optimized for this size although it might change.
-    - Crop the image if it has an aspect ratio greater than 2:2 or under 1:2.
+    - Crop the image if it has an aspect ratio greater than 2:1 or under 1:2.
     - Consider cropping the image into multiple square images, or include only the center of the image, depending on what is most important to your use.
 - Submit up to 20 images in a single .zip file. You don't need to use any compression because JPEG and PNG images are compressed files.
 - Use the **classifier_ids** parameter to specify only the classifiers that you want to use.
