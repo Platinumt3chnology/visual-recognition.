@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-06"
+lastupdated: "2017-10-27"
 
 ---
 
@@ -45,6 +45,3 @@ The {{site.data.keyword.visualrecognitionshort}} service can be used for diverse
 - **Social commerce:** Use an image of a plated dish to find out which restaurant serves it and find reviews, use a travel photo to find vacation suggestions based on similar experiences
 - **Retail:** Take a photo of a favorite outfit to find stores with those clothes in stock or on sale, use a travel image to find retail suggestions in that area
 - **Education:** Create image-based applications to educate about taxonomies
-
-## Supported languages
-The **Classify images** method supports English (`en`), Arabic (`ar`), German (`de`), Spanish (`es`), Italian (`it`), Japanese (`ja`), and Korean (`ko`) for the output of default classes.
