@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-06"
+lastupdated: "2017-11-09"
 
 ---
 
@@ -12,10 +12,12 @@ lastupdated: "2017-09-06"
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
+{:curl: #curl .ph data-hd-programlang='curl'}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:download: .download}
 
 # Getting started tutorial
 
@@ -25,25 +27,28 @@ This tutorial guides you through how to use the default classifiers in {{site.da
 ## Before you begin
 {: #prerequisites}
 
-If you already created a service instance, you're all set with these prerequisites. Move on to Step 1.
-{: tip}
+- Create an instance of the service:
+    - {: download} If you're seeing this, you created your service instance. Now get your credentials.
+    - Create a project from a service:
+        1.  Go to the {{site.data.keyword.watson}} Developer Console [Services ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/developer/watson/services){: new_window} page.
+        1.  Select {{site.data.keyword.visualrecognitionshort}}, click **Add Services**, and either sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
+        1.  Type `vision-tutorial` as the project name and click **Create Project**.
+- Copy the credentials to authenticate to your service instance:
+    - {: download} From the service dashboard (what you're looking at):
+        1.  Click the **Service credentials** tab.
+        1.  Click **View credentials** under **Actions**.
+        1.  Copy the api-key value.
+        {: download}
+    - From your **vision-tutorial** project in the Developer Console, copy the `api-key` value for `"visual_recognition"` from the  **Credentials** section.
 
-1.  Go to the [{{site.data.keyword.visualrecognitionshort}} service](https://console.{DomainName}/catalog/services/visual-recognition/) and either sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
-1.  After you log in, type `vision-tutorial` in the **Service name** field of the {{site.data.keyword.visualrecognitionshort}} page. Click **Create**.
+<!-- Remove this text after dedicated instances have the Developer Console: begin -->
 
-## Step 1: Copy your credentials
-{: #copy-credentials}
+If you use {{site.data.keyword.Bluemix_dedicated_notm}}, create your service instance from the [{{site.data.keyword.visualrecognitionshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} page in the Catalog. For details about how to find your service credentials, see [Service credentials for Watson services ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/watson/getting-started-credentials.html#getting-credentials-manually){: new_window}.
 
-After you create the service instance, you'll land on the dashboard for the instance. Here you can find the credentials to authenticate to your service instance.
+<!-- Remove this text after dedicated instances have the Developer Console: end -->
 
-1.  Click **Service credentials**.
-1.  Click **View credentials** under **Actions**.
-1.  Copy the `api-key` value.
-
-## Step 2: Classifying an image
-
-If you have {{site.data.keyword.Bluemix_notm}} Dedicated, the `gateway-a.watsonplatform.net` endpoint here might not be your service endpoint. Check the `url` on the **Service credentials** page of your service dashboard.
-{: tip}
+## Step 1: Classify an image
+{: #classify}
 
 1.  Download the sample <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg" download="fruitbowl.jpg">fruitbowl.jpg <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> image.
 1.  Issue the following command to upload the image and classify it against all built-in classifiers:
@@ -55,6 +60,9 @@ If you have {{site.data.keyword.Bluemix_notm}} Dedicated, the `gateway-a.watsonp
     "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key={api-key}&version=2016-05-20"
     ```
     {: pre}
+
+    If you have {{site.data.keyword.Bluemix_notm}} Dedicated, the `gateway-a.watsonplatform.net` endpoint here might not be your service endpoint. Check the `url` on the **Service credentials** page of your service dashboard.
+    {: tip}
 
     The response includes the default classifier, the classes identified in the image, and a score for each class.
 
@@ -103,7 +111,7 @@ If you have {{site.data.keyword.Bluemix_notm}} Dedicated, the `gateway-a.watsonp
 
     Scores range from 0-1, with a higher score indicating greater correlation. The `/v3/classify` calls don't include low-scoring classes by default.
 
-## Step 3: Detecting faces in an image
+## Step 2: Detect faces in an image
 {: #detect-faces}
 
 {{site.data.keyword.visualrecognitionshort}} can detect faces in images. The response provides information such as the location of the face in the image and the estimated age range and gender for each face.
