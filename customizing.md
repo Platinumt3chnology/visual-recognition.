@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-20"
+lastupdated: "2017-11-16"
 
 ---
 
@@ -98,6 +98,9 @@ There are also size limitations for classification calls:
 The following guidelines are not enforced by the API. However, the service tends to perform better when the training data adheres to them:
 
 - Make sure that your images are at least 224 x 224 pixels.
+- For .png images, make sure that the pixel depth is set to at least 24 bits per pixel:
+    - To check the depth on MacOS, run the `file` command. 24-bit depth is displayed as `8-bit/color`.
+    - To check on Windows, right-click the file and chose **Properties** > **Details**. Look for **Bit depth**.
 - Include at least 50 positive images per class before you assess your training results.
     - Assuming similar quality and content for your training data, more training images generally provide more accurate results than fewer images.
     - 150 - 200 images per .zip file provides the best balance between processing time and accuracy. More than 200 images increases the time and the accuracy, but with diminishing returns for the amount of time it takes.
