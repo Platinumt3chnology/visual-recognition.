@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-26"
+lastupdated: "2017-11-17"
 
 ---
 
@@ -21,6 +21,11 @@ lastupdated: "2017-10-26"
 
 The following new features and changes to the service are available.
 {: shortdesc}
+
+## Beta features
+{: #beta}
+
+{{site.data.keyword.IBM_notm}} releases services, features, and language support for your evaluation that are classified as beta. These features might be unstable, might change frequently, and might be discontinued with short notice. Beta features also might not provide the same level of performance or compatibility that generally available features provide and are not intended for use in a production environment. Beta features are supported only on [developerWorks Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/visual-recognition.html){: new_window}.
 
 ## Changes
 {: #changelog}
@@ -52,7 +57,7 @@ The following new features and changes to the service are available.
 
 - **New {{site.data.keyword.visualrecognitionshort}} tool is available: Beta**
 
-    A new beta feature, the {{site.data.keyword.visualrecognitionshort}} tool, is available at [http://visual-recognition-tooling.mybluemix.net/ ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://visual-recognition-tooling.mybluemix.net/){: new_window}. This tool helps you work more easily with the {{site.data.keyword.visualrecognitionshort}} service. By entering your Bluemix API key, you can use a GUI to access General Tagging and Face Detection features, as well as to seamlessly create, retrain, and delete custom classifiers associated with your API key, without needing to code.
+    A new beta feature, the {{site.data.keyword.visualrecognitionshort}} tool, is available at [http://visual-recognition-tooling.mybluemix.net/ ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://visual-recognition-tooling.mybluemix.net/){: new_window}. This tool helps you work more easily with the {{site.data.keyword.visualrecognitionshort}} service. By entering your {{{site.data.keyword.cloud_notm}} API key, you can use a GUI to access General Tagging and Face Detection features, as well as to seamlessly create, retrain, and delete custom classifiers associated with your API key, without needing to code.
 
 ### 8 March 2017
 {: #8march2017}
