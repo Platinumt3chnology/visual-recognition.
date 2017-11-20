@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-11-17"
+lastupdated: "2017-11-20"
 
 ---
 
@@ -57,7 +57,7 @@ The following new features and changes to the service are available.
 
 - **New {{site.data.keyword.visualrecognitionshort}} tool is available: Beta**
 
-    A new beta feature, the {{site.data.keyword.visualrecognitionshort}} tool, is available at [http://visual-recognition-tooling.mybluemix.net/ ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://visual-recognition-tooling.mybluemix.net/){: new_window}. This tool helps you work more easily with the {{site.data.keyword.visualrecognitionshort}} service. By entering your {{{site.data.keyword.cloud_notm}} API key, you can use a GUI to access General Tagging and Face Detection features, as well as to seamlessly create, retrain, and delete custom classifiers associated with your API key, without needing to code.
+    A new beta feature, the {{site.data.keyword.visualrecognitionshort}} tool, is available at [https://watson-visual-recognition.ng.bluemix.net/ ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-visual-recognition.ng.bluemix.net/){: new_window}. This tool helps you work more easily with the {{site.data.keyword.visualrecognitionshort}} service. By entering your {{{site.data.keyword.cloud_notm}} API key, you can use a GUI to access General Tagging and Face Detection features, as well as to seamlessly create, retrain, and delete custom classifiers associated with your API key, without needing to code.
 
 ### 8 March 2017
 {: #8march2017}
