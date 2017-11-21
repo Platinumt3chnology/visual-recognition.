@@ -7,7 +7,6 @@ Visual Recognition
     {: .navgroup id="learn"}
     getting-started.md
     index.md
-    visual-recognition-overviw.md
     [Demo](https://visual-recognition-demo.ng.bluemix.net/)
     [Video: Building classifiers with the tool](https://youtu.be/VXezXAzOnUE)
 
