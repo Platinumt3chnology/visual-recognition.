@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-11-17"
+lastupdated: "2017-12-11"
 
 ---
 
@@ -19,12 +19,12 @@ lastupdated: "2017-11-17"
 
 # Guidelines for training classifiers
 
-After you classify an image and create, train, and query a custom classifier with the example data in the [Creating a custom classifier tutorial](/docs/services/visual-recognition/tutorial-custom-classifier.html), you will want to classify your own data or create your own custom classifier.
+After you classify an image and create, train, and query a custom classifier with the example data in the [Creating a custom classifier tutorial](/docs/services/visual-recognition/tutorial-custom-classifier.html), you can classify your own data or create your own custom classifier.
 {: shortdesc}
 
-## Default classifier categories
+## General classifier categories
 
-The default classifier returns classes from thousands of possible tags organized into categories and subcategories. The following list shows the top-level categories:
+The General classifier returns classes from thousands of possible tags organized into categories and subcategories. The following list shows the top-level categories:
 
 - Animals (including birds, reptiles, amphibians, etc.)
 - Person and people-oriented information and activities
@@ -44,7 +44,7 @@ The `/v3/classify` method classifies images within a hierarchy of related classe
 
 A custom classifier is a group of classes that are trained against each other. This allows you to create a multi-faceted classifier that can identify highly specialized subjects, while also providing a score for each individual class.
 
-During classifier training, classes are created when you upload separate compressed (.zip) files of positive examples for each class. For example, to create a classifier called "fruit", you might upload a .zip file of images of pears, a .zip file of images of apples, and a .zip file of images of bananas in a single training call.
+During training, classes are created when you upload separate compressed (.zip) files of positive examples for each class. For example, to create a classifier called "fruit", you might upload a .zip file of images of pears, a .zip file of images of apples, and a .zip file of images of bananas in a single training call.
 
 You can also provide a .zip file of negative examples in the same training call to further hone your classifier. Negative example files are not used to create a class. For the custom classifier "fruit", you might provide a .zip file with images of various vegetables.
 
@@ -52,13 +52,13 @@ You can also provide a .zip file of negative examples in the same training call 
 
 After training completes, when the service identifies fruit in an image, it will return the classifier "fruit" as an array containing the classes "pears", "apples", and "bananas" with their respective confidence scores.
 
-**Important:** The `POST /v3/classifiers` training call requires that you provide at least two example .zip files: two positive examples files, or one positive examples file and one negative examples file.
+**Important:** The **Create a classifier** call requires that you provide at least two example .zip files: two positive examples files or one positive and one negative file.
 
-Custom classifiers are only accessible to the specific service instance where they were created and cannot be shared with other {{site.data.keyword.Bluemix_notm}} users who do not have access to your instance of the service.
+Custom classifiers are accessible only to the specific service instance where they were created and cannot be shared with other {{site.data.keyword.Bluemix_notm}} users who do not have access to your instance of the service.
 
 ## Updating custom classifiers
 
-You can update an existing classifier by adding new classes, or by adding new images to existing classes. To update the existing classifier, use several compressed (.zip) files, including files containing positive or negative images (.jpg, or .png). You must supply at least one compressed file, with additional positive or negative examples.
+You can update an existing classifier by adding new classes or by adding new images to existing classes. To update the existing classifier, use several compressed (.zip) files, including files containing positive or negative images (.jpg, or .png). You must supply at least one compressed file, with additional positive or negative examples.
 
 Compressed files containing positive examples are used to create and update "classes" to impact all of the classes in that classifier. The prefix that you specify for each positive example parameter is used as the class name within the new classifier. The "\_positive\_examples" suffix is required. There is no limit on the number of positive example files you can upload in a single call.
 
@@ -87,11 +87,16 @@ There are size limitations for training calls and data:
 - The service accepts a maximum of 256 MB per training call.
 - Minimum recommended size of an image is 32X32 pixels.
 
-There are also size limitations for classification calls:
+There are also size limitations when classifying images or detecting faces:
 
-- The `POST /v3/classify` methods accept a maximum of 20 images per batch.
-- The `POST /v3/detect_faces` methods accept a maximum of 15 images per batch.
-<!-- - The `POST /v3/recognize_text` methods accept a maximum of 10 images per batch. -->
+- Limitations for the methods to classify images:
+    - Maximum image size is 10 MB.
+    - Maximum .zip file size is 100 MB with up to 20 images.
+- Limitations for the methods to detect faces:
+    - Maximum image size is 2 MB.
+    - Maximum .zip file size is 5 MB with up to 15 images.
+
+<!-- - The `POST /v3/recognize_text` method accept a maximum of 10 images per batch. -->
 
 ## Guidelines for good training
 
@@ -126,7 +131,7 @@ Maximize efficiency and performance of the service in the following ways when yo
 
 ## Custom classifier scores
 
-The `/classify` method produces a score between 0.0 and 1.0 for each image for each class. This section delves into the meaning of those scores for custom classifiers (as opposed to the default classifier).
+The `/classify` method produces a score between 0.0 and 1.0 for each image for each class. This section delves into the meaning of those scores for custom classifiers (as opposed to the General classifier).
 
 ### Background reading
 
@@ -156,7 +161,7 @@ Similarly, as a person, you may face the same trade  off. If the system notifies
 - **What do the scores mean?**
 
     - The scores are comparable indicators, with a range from 0.0 to 1.0. You can compare the scores of two custom classes (from the same or different classifiers) on the same or different images, and the higher one should be more likely to appear in the image than the lower one. However, they may both be present. It is best to pick a decision threshold for each class individually.
-    - The custom classifier scores are not comparable to the scores returned by the default classifier (which has `classifier\_id: "default"`)
+    - The scores for custom classifiers are not comparable to the scores returned by the General classifier (which has `classifier_id: "default"`)
     - The service attempts to normalize the score output so that 0.5 is a good decision threshold. By default, scores below 0.5 are not reported in the results of `/classify`. You can override this behavior by setting the threshold parameter of the `/classify` method. This normalization is only computed on the training data, so with new data or different application contexts, you might find that a different threshold works better.
     - The scores are unitless and are neither percentages nor probabilities. (They do not add up to 100% or 1.0).
 
