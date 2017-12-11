@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-15"
+lastupdated: "2017-12-11"
 
 ---
 
@@ -19,13 +19,13 @@ lastupdated: "2017-09-15"
 
 # Creating a custom classifier
 
-After you classify an image in the Getting started example, you are ready to train and create a custom classifier. With a custom classifier, you can train the {{site.data.keyword.visualrecognitionshort}} service to classify images to suit your business needs.
+After you classify an image in the "Getting started tutorial," you are ready to train and create a custom classifier (or model). With a custom classifier, you can train the {{site.data.keyword.visualrecognitionshort}} service to classify images to suit your business needs.
 {: shortdesc}
 
 ## Step 1:  Copy your credentials
 {: #copy-credentials}
 
-Use the credentials that you copied in "Getting started tutorial" for this tutorial. If you didn't create a service instance, run through those steps in the [Before you begin](/docs/services/visual-recognition/getting-started.html#prerequisites) section.
+Use the credentials that you copied in "Getting started tutorial." If you didn't create a service instance, run through those steps in the [Before you begin](/docs/services/visual-recognition/getting-started.html#prerequisites) section.
 
 ## Step 2: Creating a custom classifier
 {: #create}
@@ -148,7 +148,7 @@ You can update a custom classifier either by adding classes to the classifier or
 
 When the new classifier is ready, call it to see how it performs.
 
-1.  Create a JSON file called `myparams.json` that includes the parameters for your call, such as the `classifier_id` of your new classifier, and the default classifier. A simple JSON file might look like this:
+1.  Create a JSON file called `myparams.json` that includes the parameters for your call, such as the `classifier_id` for both your new classifier and the General model classifier (which uses the `default` classifier_id). A simple JSON file might look like this:
 
     ```json
     {
@@ -169,7 +169,7 @@ When the new classifier is ready, call it to see how it performs.
     ```
     {: pre}
 
-    To classify against default classes, omit the `parameters` parameter.
+    To classify against only the built-in General model, omit the `parameters` parameter.
     {: tip}
 
     The response includes classifiers, their classes, and a score for each class. Scores range from 0-1, with a higher score indicating greater correlation. The `/v3/classify` calls omit low-scoring classes by default if high-scoring classes are identified. You can set a minimum score to display by specifying a floating point value for the `threshold` parameter in your call.
@@ -207,7 +207,7 @@ When the new classifier is ready, call it to see how it performs.
                   "score": 0.610501
                 }
               ],
-              "classifier_id": "dogs_2084675858",
+              "classifier_id": "dogs_1941945966",
               "name": "dogs"
             }
           ],
@@ -239,7 +239,7 @@ curl -X DELETE \
 
 Now that you have a basic understanding of how to use custom classifiers, you can dive deeper:
 
-- Learn more about [Best practices for custom classifiers](https://www.ibm.com/blogs/bluemix/2016/10/watson-visual-recognition-training-best-practices/).
+- Learn more about [Best practices for custom classifiers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2016/10/watson-visual-recognition-training-best-practices/){: new_window}.
 - Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/){: new_window}.
 
 ### Attributions

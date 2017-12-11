@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-26"
+lastupdated: "2017-12-11"
 
 ---
 
@@ -21,4 +21,4 @@ lastupdated: "2017-10-26"
 
 The **Classify images** method of {{site.data.keyword.visualrecognitionfull}} supports English (`en`), Arabic (`ar`), German (`de`), Spanish (`es`), Italian (`it`), Japanese (`ja`), and Korean (`ko`) for the output of default classes.
 
-For details about the API call, see the **Classify an image** method in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/#classify_an_image){: new_window} External link icon.
+For details about the API call, see the **Classify an image** method in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/#classify_an_image){: new_window}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-11-20"
+lastupdated: "2017-12-11"
 
 ---
 
@@ -31,6 +31,76 @@ The following new features and changes to the service are available.
 {: #changelog}
 
 The following new features and changes to the service are available.
+
+### 11 December 2017
+{: #11december2017}
+
+<ul>
+  <li>
+    <strong>Increased accuracy and output with the General model</strong>
+      <p>
+        The General model, which contains several thousand tags, now detects more secondary objects and has improved scene detection. These improvements help recognize the less prominent aspects of an image. In addition, the average number of tags returned per image has increased to 10.
+      </p>
+      <p>
+        The following image shows an example of the tags returned before the update and the additional tags that are now returned.
+      </p>
+      <img src="images/antarctica-iceberg.jpg" alt="Iceberg in Antarctica">
+      <table>
+        <tr>
+          <th>Original tags</th>
+          <th>Additional tags</th>
+        </tr>
+        <tr>
+          <td>
+          Tag: iceberg<br/>
+          Score: 0.919</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+          Tag: ice mass<br/>
+          Score: 0.801</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+          Tag: nature<br/>
+          Score: 0.770</td>
+        </tr>
+        <tr>
+          <td>
+          Tag: blue color<br/>
+          Score: 0.975</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+          Tag: alabaster color<br/>
+          Score: 0.5</td>
+          <td></td>
+        </tr>
+      </table>
+    <li>
+      <strong>New Explicit model available in beta</strong>
+      <p>
+        The Explicit model, which launches in beta, classifies whether an image contains pornographic content and is inappropriate for general use. You can include the Explicit model with other models for combined analysis. For example, include both the `default` and `explicit` classifier IDs in your request to return image tags and whether the image contains explicit content.
+      <p>
+        For details about the API call, see the **Classify images** method in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/#classify_an_image), or try out the model in the [API explorer![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/?curl#classify_an_image-post).
+      </p>
+    </li>
+    <li>
+      <strong>Support for larger file sizes</strong>
+      <p>
+        The <strong>Classify images</strong> methods now support image files up to 10 MB and .zip files up to 100 MB.
+    </li>
+    <li>
+      <strong>Array required when passing classifier IDs</strong>
+      <p>
+        The API now enforces an array when you pass in `classifier_ids` as part of the **parameters** object in the **Classify images** method. Previously, you could pass a classifier ID as a string. For more information, see the parameters description and example file in the [API reference![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developer-cloud/visual-recognition/api/v3/?curl#classify_an_image-post)
+      </p>
+    </li>
+</ul>
 
 ### 8 September 2017
 {: #8september2017}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-11-09"
+lastupdated: "2017-12-11"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2017-11-09"
 
 # Getting started tutorial
 
-This tutorial guides you through how to use the default classifiers in {{site.data.keyword.visualrecognitionfull}} to classify an image and then detect faces in an image.
+This tutorial guides you through how to use some built-in classifiers in {{site.data.keyword.visualrecognitionfull}} to classify an image and then detect faces in an image.
 {: shortdesc}
 
 ## Before you begin
@@ -64,7 +64,7 @@ If you use {{site.data.keyword.Bluemix_dedicated_notm}}, create your service ins
     If you have {{site.data.keyword.Bluemix_notm}} Dedicated, the `gateway-a.watsonplatform.net` endpoint here might not be your service endpoint. Check the `url` on the **Service credentials** page of your service dashboard.
     {: tip}
 
-    The response includes the default classifier, the classes identified in the image, and a score for each class.
+    The response includes the General model or classifier (which uses the `default` classifier_id), the classes identified in the image, and a score for each class.
 
     ```json
     {
@@ -109,7 +109,7 @@ If you use {{site.data.keyword.Bluemix_dedicated_notm}}, create your service ins
     ```
     {: codeblock}
 
-    Scores range from 0-1, with a higher score indicating greater correlation. The `/v3/classify` calls don't include low-scoring classes by default.
+    Confidence scores are in the range of 0 to 1, with a higher score indicating greater correlation. By default, the `/v3/classify` calls don't include classes with a score below `0.5`.
 
 ## Step 2: Detect faces in an image
 {: #detect-faces}
@@ -171,7 +171,7 @@ The service can also identify many celebrities by name, and can provide a *knowl
 
 ## Next steps
 
-You have a basic understanding of how to use the default classifiers with {{site.data.keyword.visualrecognitionshort}}. Now dive deeper:
+You have a basic understanding of how to use the built-in default classifier with {{site.data.keyword.visualrecognitionshort}}. Now dive deeper:
 
 - Learn more about how to [build a custom classifier](/docs/services/visual-recognition/tutorial-custom-classifier.html).
 - Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/){: new_window}.
