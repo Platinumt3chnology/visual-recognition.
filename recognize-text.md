@@ -19,13 +19,13 @@ lastupdated: "2017-12-15"
 
 # Text recognition in natural scenes (Beta)
 
-Use the beta Text model to detect and recognize English text in images. The Text model is designed to recognize scene text in images rather than the denser text in documents.
+Use the {{site.data.keyword.visualrecognitionshort}} beta Text model to detect and recognize English text in images. The Text model is designed to recognize scene text in images rather than the denser text in documents.
 
 ---
 
-**Beta:** The Text model is a private beta feature, and you must have permission from IBM to make calls to the model. If you have questions or comments, contact Kevin Gong at kgong@us.ibm.com. For more information, see "Beta features" in the [Release notes](/docs/services/visual-recognition/release-notes.html#beta). If you have questions or comments about the Text model, contact Kevin Gong at kgong@us.ibm.com.
+**Beta:** The Text model is a private beta feature, and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. If you have questions about access or about the Text model, contact Kevin Gong at kgong@us.ibm.com. For more information about beta features, see [Release notes](/docs/services/visual-recognition/release-notes.html#beta).
 
-[Return](/docs/services/visual-recognition/index.html) to the generally available docs.
+[Go](/docs/services/visual-recognition/index.html) to the generally available docs.
 
 ---
 <!--
