@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-12-11"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -44,40 +44,53 @@ The following new features and changes to the service are available.
       <p>
         The following image shows an example of the tags returned before the update and the additional tags that are now returned.
       </p>
-      <img src="images/antarctica-iceberg.jpg" alt="Iceberg in Antarctica">
+      <img src="images/tree-flower.jpg" alt="Photograph of azalea plant">
       <table>
         <tr>
           <th>Original tags</th>
           <th>Additional tags</th>
         </tr>
         <tr>
-          <td>
-          Tag: iceberg<br/>
-          Score: 0.919</td>
           <td></td>
+          <td>
+          Tag: tree<br/>
+          Score: 0.799</td>
         </tr>
         <tr>
           <td></td>
           <td>
-          Tag: ice mass<br/>
-          Score: 0.801</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>
-          Tag: nature<br/>
-          Score: 0.770</td>
+          Tag: flower<br/>
+          Score: 0.792</td>
         </tr>
         <tr>
           <td>
-          Tag: blue color<br/>
-          Score: 0.975</td>
+          Tag: alpine azalea<br/>
+          Score: 0.696</td>
           <td></td>
         </tr>
         <tr>
           <td>
-          Tag: alabaster color<br/>
+          Tag: plant<br/>
+          Score: 0.868</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+          Tag: azalea<br/>
+          Score: 0.617</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            Tag: swamp azalea<br/>
           Score: 0.5</td>
+          </td>
+          <td></td>
+        <tr>
+          <td>
+            Tag: reddish orange color<br/>
+          Score: 0.1</td>
+          </td>
           <td></td>
         </tr>
       </table>
