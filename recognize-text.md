@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-12-15"
+lastupdated: "2017-12-18"
 
 ---
 
@@ -54,6 +54,18 @@ Text in images is better recognized when it adheres to these guidelines:
 - The text is primarily full words, not strings of letters such as product codes. The model recognizes words rather than individual characters, and might discard single-letter "words" or numbers.
 - The text is printed in a standard font, not a highly stylized one. For example, text in license plates or movie poster titles might not be recognized. Likewise, handwritten text might not be recognized.
 - The Text model is trained mainly on English language words. Text in other languages likely won't be recognized.
+
+## Known issues
+{: #known-issues}
+
+- **Image file name required:** With the initial release, calls to the Text model require a file name when you POST a file using the multipart/form-data Content-Type. For example, the following curl code snippet sends an empty file name:
+
+    ```curl
+    curl -X POST -F "images_file=@example.jpg ;filename="
+    ```
+    {: pre}
+
+    This request fails with the error, "No images were specified." To fix this error, include the file name with your request.
 
 ## Next steps
 
