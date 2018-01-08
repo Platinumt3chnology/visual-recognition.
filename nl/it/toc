@@ -1,0 +1,54 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="visual-recognition" audience="service" href="/docs/services/visual-recognition/getting-started.html"}
+Visual Recognition
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    [Demo](https://visual-recognition-demo.ng.bluemix.net/)
+    [Video: Building classifiers with the tool](https://youtu.be/VXezXAzOnUE)
+
+    {: .topicgroup}
+    Ulteriori risorse
+        [Blog](https://developer.ibm.com/watson/blog/)
+        [Webinars](http://www.ibm.com/watson/building-with-watson-webinar.html)
+        [Videos](https://www.youtube.com/user/IBMWatsonSolutions)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    tutorial-custom-classifier.md
+    customizing.md
+    [Best practices for custom classifiers](https://www.ibm.com/blogs/bluemix/2016/10/watson-visual-recognition-training-best-practices/)
+    [Building Cognitive Applications: Visual Recognition (IBM Redbooks)](http://www.redbooks.ibm.com/redbooks/pdfs/sg248393.pdf)
+    migrating.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [API reference](https://www.ibm.com/watson/developercloud/visual-recognition/api)
+    language-support.md
+
+    {: .topicgroup}
+    SDK Watson
+        [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
+        [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
+        [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
+        [PHP SDK](https://github.com/ThomasIBM/php-sdk)
+        [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
+        [.NET SDK](https://github.com/watson-developer-cloud/dotnet-standard-sdk)
+        [Swift SDK](https://github.com/watson-developer-cloud/ios-sdk)
+        [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
+
+    [Watson GitHub repos](https://github.com/watson-developer-cloud/)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    release-notes.md
+
+    {: .topicgroup}
+    Community di sviluppatori
+        [StackOverflow](http://stackoverflow.com/questions/tagged/visual-recognition)
+        [developerWorks Answers](https://developer.ibm.com/answers/topics/visual-recognition.html)
+        [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
+    {: .navgroup-end}

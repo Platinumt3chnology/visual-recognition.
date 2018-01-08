@@ -1,0 +1,54 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="visual-recognition" audience="service" href="/docs/services/visual-recognition/getting-started.html"}
+Visual Recognition
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    [데모](https://visual-recognition-demo.ng.bluemix.net/)
+    [동영상: 도구를 사용하여 분류자 빌드](https://youtu.be/VXezXAzOnUE)
+
+    {: .topicgroup}
+    추가 자원
+        [블로그](https://developer.ibm.com/watson/blog/)
+        [온라인 회의](http://www.ibm.com/watson/building-with-watson-webinar.html)
+        [동영상](https://www.youtube.com/user/IBMWatsonSolutions)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    tutorial-custom-classifier.md
+    customizing.md
+    [사용자 정의 분류자의 우수 사례](https://www.ibm.com/blogs/bluemix/2016/10/watson-visual-recognition-training-best-practices/)
+    [코그너티브 애플리케이션 빌드: Visual Recognition(IBM 레드북)](http://www.redbooks.ibm.com/redbooks/pdfs/sg248393.pdf)
+    migrating.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [API 참조서](https://www.ibm.com/watson/developercloud/visual-recognition/api)
+    language-support.md
+
+    {: .topicgroup}
+    Watson SDK
+        [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
+        [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
+        [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
+        [PHP SDK](https://github.com/ThomasIBM/php-sdk)
+        [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
+        [.NET SDK](https://github.com/watson-developer-cloud/dotnet-standard-sdk)
+        [Swift SDK](https://github.com/watson-developer-cloud/ios-sdk)
+        [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
+
+    [Watson GitHub 저장소](https://github.com/watson-developer-cloud/)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    release-notes.md
+
+    {: .topicgroup}
+    개발자 커뮤니티
+        [StackOverflow](http://stackoverflow.com/questions/tagged/visual-recognition)
+        [developerWorks Answers](https://developer.ibm.com/answers/topics/visual-recognition.html)
+        [WDC Slack 채널](http://wdc-slack-inviter.mybluemix.net/)
+    {: .navgroup-end}

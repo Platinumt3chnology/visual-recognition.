@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg3347" inkscape:version="0.91 r13725" sodipodi:docname="visual-recognition-process-110717.svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 595.3 841.9"
+	 style="enable-background:new 0 0 595.3 841.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{font-family:'Helvetica';}
+	.st1{font-size:32px;}
+	.st2{font-family:'Helvetica-Bold';}
+	.st3{font-size:40px;}
+</style>
+<sodipodi:namedview  bordercolor="#666666" borderopacity="1.0" id="base" inkscape:current-layer="layer11" inkscape:cx="-263.41554" inkscape:cy="756.7981" inkscape:document-units="px" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:window-height="839" inkscape:window-maximized="1" inkscape:window-width="1600" inkscape:window-x="-9" inkscape:window-y="-9" inkscape:zoom="0.24748737" pagecolor="#ffffff" showgrid="false">
+	</sodipodi:namedview>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="Layer 1">
+	
+		<image style="overflow:visible;enable-background:new    ;" width="1280" height="720" id="image3374" xlink:href="D2009575.png"  transform="matrix(1.7 0 0 2.0921 -1147.4286 -282.6817)">
+	</image>
+</g>
+<g id="layer10" inkscape:groupmode="layer" inkscape:label="Layer 10">
+	<text transform="matrix(1 0 0 1 -500.5718 929.7588)" class="st2 st3">Trainieren </text>
+	<text transform="matrix(1 0 0 1 -299.2529 929.7588)" class="st2 st3">u</text>
+	<text transform="matrix(1 0 0 1 -274.813 929.7588)" class="st2 st3">nd Erstellen </text>
+	<text transform="matrix(1 0 0 1 -500.5718 979.7588)" class="st2 st3">neuer Modelle</text>
+</g>
+<g id="layer11" inkscape:groupmode="layer" inkscape:label="Layer 11">
+	<text transform="matrix(1 0 0 1 -500.5718 1042.9287)" class="st0 st1">Hochladen Ihrer Beispiele </text>
+	<text transform="matrix(1 0 0 1 -500.5718 1082.9287)" class="st0 st1">als Trainingsdaten.</text>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="Layer 3">
+	<text transform="matrix(1 0 0 1 -473.1421 57.7847)" class="st0 st1">Sammeln von Bildern für die Analyse.</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="Layer 4">
+	<text transform="matrix(1 0 0 1 -41.1421 404.0449)" class="st2 st3">Analysieren von Bildern</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="Layer 5">
+	<text transform="matrix(1 0 0 1 -36.5718 460.0703)" class="st0 st1">Verwenden der integrierten Funktionen </text>
+	<text transform="matrix(1 0 0 1 -36.5718 500.0703)" class="st0 st1">Ihrer eigenen angepassten Modelle.</text>
+</g>
+<g id="layer6" inkscape:groupmode="layer" inkscape:label="Layer 6">
+	<text transform="matrix(1 0 0 1 610.2861 394.9023)" style="enable-background:new    ;"><tspan x="0" y="0" class="st2 st3">Anzeigen der </tspan><tspan x="0" y="48" class="st2 st3">Ergebnisse</tspan></text>
+</g>
+<g id="layer7" inkscape:groupmode="layer" inkscape:label="Layer 7">
+	<text transform="matrix(1 0 0 1 614.8574 497.3564)" class="st0 st1">Prüfen der Einblicke in </text>
+	<text transform="matrix(1 0 0 1 614.8574 537.3564)" class="st0 st1">Ihre visuellen Inhalte.</text>
+</g>
+<g id="layer8" inkscape:groupmode="layer" inkscape:label="Layer 8">
+	<text transform="matrix(1 0 0 1 -1062.8574 932.0449)" style="enable-background:new    ;"><tspan x="0" y="0" class="st2 st3">Vorbereiten von </tspan><tspan x="0" y="48" class="st2 st3">Trainingsdaten</tspan></text>
+</g>
+<g id="layer9" inkscape:groupmode="layer" inkscape:label="Layer 9">
+	<text transform="matrix(1 0 0 1 -1062.8574 1032.7852)" class="st0 st1">Sortieren der Bilder in positive </text>
+	<text transform="matrix(1 0 0 1 -1062.8574 1072.7852)" class="st0 st1">oder negative Bilder.</text>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="Layer 2">
+	<text transform="matrix(1 0 0 1 -475.4277 4.0444)" class="st2 st3">Vorbereiten von Bildern</text>
+</g>
+</svg>
