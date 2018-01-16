@@ -85,7 +85,7 @@ Use the credentials that you copied in "Getting started tutorial." If you didn't
 
 ## Step 3: Updating an existing custom classifier
 
-If you have an API key for a Lite plan and want to update a classifer, you must create another service instance on a Standard plan and re-create your custom classifier. Follow the steps in the [Before you begin](/docs/services/visual-recognition/getting-started.html#prerequisites) section of the "Getting started tutorial" and make sure to select the Standard plan.
+If you have an API key for a Lite plan and want to update a classifier, you must create another service instance on a Standard plan and re-create your custom classifier. Follow the steps in the [Before you begin](/docs/services/visual-recognition/getting-started.html#prerequisites) section of the "Getting started tutorial" and make sure to select the Standard plan.
 {: tip}
 
 You can update a custom classifier either by adding classes to the classifier or by adding images to an existing class. Here, you improve the classifier that you created in Step 2 by adding a *Dalmatian* class to the types of dogs that can be classified. You also add images of cats to the negative example set for the "dogs" classifier.
