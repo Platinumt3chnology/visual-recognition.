@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2017
+  years: 2015, 2018
 lastupdated: "2018-01-16"
 
 ---
@@ -35,9 +35,13 @@ The following new features and changes to the service are available.
 ### 16 January 2018
 {: #16january2018}
 
-- The Free plan is now replaced by the **Lite** account and plan. A Lite account is free; no credit card is required. However, Lite plan service instances are deleted after 30 days. 
-- The maximum number of API calls that you can make with the Lite plan is slightly different from the Free plan. You can make a maximum of 7,500 API calls per month at 250 calls per day on the Lite plan.
-- To update a Lite account with custom classifiers to a billable account, you create another service instance and re-create you custom classifiers.
+- **Lite account and plan replaces the Free plan**
+
+    A Lite account is free; no credit card is required. However, Lite plan service instances are deleted after 30 days.
+
+    The maximum number of API calls that you can make with the Lite plan is slightly different from the Free plan. You can make a maximum of 7,500 API calls per month at 250 calls per day on the Lite plan.
+
+    To update to a billable account when you have custom classifiers, create another service instance and re-create your custom classifiers.
 
 ### 11 December 2017
 {: #11december2017}
