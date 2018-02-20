@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-12-11"
+lastupdated: "2018-02-23"
 
 ---
 
@@ -118,6 +118,9 @@ If you use {{site.data.keyword.Bluemix_dedicated_notm}}, create your service ins
 
 The service can also identify many celebrities by name, and can provide a *knowledge graph* so that you can aggregate higher-level concepts.
 
+You can try out the updated Face model, which can provide more accurate results with facial analysis of age and gender. To use the beta model, replace `/v3/detect_faces` with `/v3/detect_faces_beta` in the command in the following step.
+{: tip}
+
 1.  Download the sample <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/prez.jpg" download="prez.jpg">prez.jpg <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> image.
 1.  Issue the following command to the `POST /v3/detect_faces` method to upload and analyze the image. If you use your own image, the maximum size is 2 MB:
     - Replace `{api-key}` with the service credentials you copied earlier.
@@ -129,7 +132,7 @@ The service can also identify many celebrities by name, and can provide a *knowl
     ```
     {: pre}
 
-    The response includes a location, age estimate, gender, identity and type hierarchy (if the service recognizes that face), and a score for each.
+    The response includes a location, age estimate, gender, identity and type hierarchy (if the service recognizes that face), and a score for each. (Identity information is not available with the `/v3/detect_faces_beta` endpoint.)
 
     Scores range from 0-1, with a higher score indicating greater correlation. All faces are detected, but for images with more than 10 faces, age and gender confidence scores might return with scores of 0.
 
