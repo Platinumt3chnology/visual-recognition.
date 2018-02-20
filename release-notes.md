@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-23"
+lastupdated: "2018-02-20"
 
 ---
 
@@ -42,12 +42,16 @@ The following new features and changes to the service are available.
     - You can view results of the updated model in the [demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://visual-recognition-demo.ng.bluemix.net/){: new_window} and the beta [Visual Recognition Tool ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-visual-recognition.ng.bluemix.net/){: new_window}.
     - The beta model is available at `/v3/detect_faces_beta`.
 
-  Differences between the beta and generally available (GA) models:
+  Differences between the beta and general availability (GA) models:
     - The POST request supports a separate form parameter called `url`. The GA model encloses that information in the `parameters` JSON object. For details, see the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.
     - .gif and .tif image formats are supported.
     - Larger file sizes are supported: up to 10 MB for image files and up to 100 MB for .zip files.
     - Beta face detection does not include identity information in the response.
     - The POST request requires a filename with `images_file`. The GA Face model does not enforce this constraint.
+
+- **Face identity deprecated**
+
+    The identity information in the response of the GA Face model is deprecated and will be removed from the API on **April 2, 2018.** The identity information refers to the `name` of the person, `score`, and `type_hierarchy` knowledge graph.
 
 ### 16 January 2018
 {: #16january2018}
@@ -168,7 +172,7 @@ The following new features and changes to the service are available.
 
 - **New {{site.data.keyword.visualrecognitionshort}} tool is available: Beta**
 
-    A new beta feature, the {{site.data.keyword.visualrecognitionshort}} tool, is available at [https://watson-visual-recognition.ng.bluemix.net/ ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-visual-recognition.ng.bluemix.net/){: new_window}. This tool helps you work more easily with the {{site.data.keyword.visualrecognitionshort}} service. By entering your {{{site.data.keyword.cloud_notm}} API key, you can use a GUI to access General Tagging and Face Detection features, as well as to seamlessly create, retrain, and delete custom classifiers associated with your API key, without needing to code.
+    A new beta feature, the {{site.data.keyword.visualrecognitionshort}} tool, is available at [https://watson-visual-recognition.ng.bluemix.net/ ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-visual-recognition.ng.bluemix.net/){: new_window}. This tool helps you work more easily with the {{site.data.keyword.visualrecognitionshort}} service. By entering your {{site.data.keyword.cloud_notm}} API key, you can use a GUI to access General Tagging and Face Detection features, as well as to seamlessly create, retrain, and delete custom classifiers associated with your API key, without needing to code.
 
 ### 8 March 2017
 {: #8march2017}
