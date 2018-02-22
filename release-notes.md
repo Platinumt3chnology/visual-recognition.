@@ -43,11 +43,11 @@ The following new features and changes to the service are available.
     - The beta model is available at `/v3/detect_faces_beta`.
 
   Differences between the beta and general availability (GA) models:
-    - The POST request supports a separate form parameter called `url`. The GA model encloses that information in the `parameters` JSON object. For details, see the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.
-    - .gif and .tif image formats are supported.
-    - Larger file sizes are supported: up to 10 MB for image files and up to 100 MB for .zip files.
-    - Beta face detection does not include identity information in the response.
-    - The POST request requires a filename with `images_file`. The GA Face model does not enforce this constraint.
+    - The beta model supports .gif and .tif image formats; this enhancement is expected to be applied to the GA model.
+    - The beta model supports larger file sizes: up to 10 MB for image files and up to 100 MB for .zip files. This enhancement is expected to be applied to the GA model.
+    - Beta face detection does not include `FaceIdentity` information in the response.
+    - The beta model's POST request requires a non-empty filename. The GA Face model does not enforce this constraint.
+    - The beta model's POST request supports a separate form parameter called `url`. The GA model encloses that information in the `parameters` JSON object. For details, see the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.
 
 - **Face identity deprecated**
 
