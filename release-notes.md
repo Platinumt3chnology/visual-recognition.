@@ -47,7 +47,7 @@ The following new features and changes to the service are available.
     - The beta model supports larger file sizes: up to 10 MB for image files and up to 100 MB for .zip files. This enhancement is expected to be applied to the GA model.
     - Beta face detection does not include `FaceIdentity` information in the response.
     - The beta model's POST request requires a non-empty filename. The GA Face model does not enforce this constraint.
-    - The beta model's POST request supports a separate form parameter called `url`. The GA model encloses that information in the `parameters` JSON object. For details, see the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.
+    - The beta model's POST request supports a separate form parameter called `url`. The GA model encloses that information in the `parameters` JSON object. For details, see the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/visual-recognition-v3#!/Face/getDetectFacesBeta).
 
 - **Face identity deprecated**
 
