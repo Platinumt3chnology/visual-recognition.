@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-16"
+lastupdated: "2018-02-23"
 
 ---
 
@@ -31,6 +31,27 @@ The following new features and changes to the service are available.
 {: #changelog}
 
 The following new features and changes to the service are available.
+
+### 23 February 2018
+{: #23february2018}
+
+- **Enhanced Face model available in beta**
+
+    An updated face detection model is available. This beta model uses broader training datasets for increased accuracy of facial detection for age and gender. For more information, see [Increasing the Accuracy of IBM’s Watson Visual Recognition Service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/watson/2018/02/increasing-accuracy-ibms-watson-visual-recognition-service/){: new_window} and [Mitigating Bias in AI Models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/research/2018/02/mitigating-bias-ai-models/){: new_window}.
+
+    - You can view results of the updated model in the [demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://visual-recognition-demo.ng.bluemix.net/){: new_window} and the beta [Visual Recognition Tool ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-visual-recognition.ng.bluemix.net/){: new_window}.
+    - The beta model is available at `/v3/detect_faces_beta`.
+
+  Differences between the beta and general availability (GA) models:
+    - The beta model supports .gif and .tif image formats; this enhancement is expected to be applied to the GA model.
+    - The beta model supports larger file sizes: up to 10 MB for image files and up to 100 MB for .zip files. This enhancement is expected to be applied to the GA model.
+    - Beta face detection does not include `FaceIdentity` information in the response.
+    - The beta model's POST request requires a non-empty filename. The GA Face model does not enforce this constraint.
+    - The beta model's POST request supports a separate form parameter called `url`. The GA model encloses that information in the `parameters` JSON object. For details, see the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.
+
+- **Face identity deprecated**
+
+    The identity information in the response of the GA Face model is deprecated and will be removed from the API on **April 2, 2018.** The identity information refers to the `name` of the person, `score`, and `type_hierarchy` knowledge graph.
 
 ### 16 January 2018
 {: #16january2018}
@@ -151,7 +172,7 @@ The following new features and changes to the service are available.
 
 - **New {{site.data.keyword.visualrecognitionshort}} tool is available: Beta**
 
-    A new beta feature, the {{site.data.keyword.visualrecognitionshort}} tool, is available at [https://watson-visual-recognition.ng.bluemix.net/ ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-visual-recognition.ng.bluemix.net/){: new_window}. This tool helps you work more easily with the {{site.data.keyword.visualrecognitionshort}} service. By entering your {{{site.data.keyword.cloud_notm}} API key, you can use a GUI to access General Tagging and Face Detection features, as well as to seamlessly create, retrain, and delete custom classifiers associated with your API key, without needing to code.
+    A new beta feature, the {{site.data.keyword.visualrecognitionshort}} tool, is available at [https://watson-visual-recognition.ng.bluemix.net/ ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-visual-recognition.ng.bluemix.net/){: new_window}. This tool helps you work more easily with the {{site.data.keyword.visualrecognitionshort}} service. By entering your {{site.data.keyword.cloud_notm}} API key, you can use a GUI to access General Tagging and Face Detection features, as well as to seamlessly create, retrain, and delete custom classifiers associated with your API key, without needing to code.
 
 ### 8 March 2017
 {: #8march2017}
