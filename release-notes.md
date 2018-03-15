@@ -20,7 +20,7 @@ lastupdated: "2018-03-15"
 <!-- Link definitions -->
 
 [watson-studio-reg]: https://dataplatform.ibm.com/registration/stepone?context=wdp&target=watson_vision_combined&apps=data_science_experience
-[demo]: https://www.ibm.com/watson/services/visual-recognition/demo
+[demo]: https://watson-visual-recognition-duo-dev.ng.bluemix.net/
 
 
 # Release notes
