@@ -7,7 +7,7 @@ Visual Recognition
     {: .navgroup id="learn"}
     getting-started.md
     index.md
-    [Demo](https://visual-recognition-demo.ng.bluemix.net/)
+    [Demo](https://watson-visual-recognition-duo-dev.ng.bluemix.net/)
     [Video: Building classifiers with the tool](https://youtu.be/VXezXAzOnUE)
 
     {: .topicgroup}
