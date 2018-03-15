@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-23"
+lastupdated: "2018-03-15"
 
 ---
 
@@ -16,6 +16,12 @@ lastupdated: "2018-02-23"
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+
+<!-- Link definitions -->
+
+[watson-studio-reg]: https://dataplatform.ibm.com/registration/stepone?context=wdp&target=watson_vision_combined&apps=data_science_experience
+[demo]: https://www.ibm.com/watson/services/visual-recognition/demo
+
 
 # Release notes
 
@@ -39,7 +45,7 @@ The following new features and changes to the service are available.
 
     An updated face detection model is available. This beta model uses broader training datasets for increased accuracy of facial detection for age and gender. For more information, see [Increasing the Accuracy of IBM’s Watson Visual Recognition Service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/watson/2018/02/increasing-accuracy-ibms-watson-visual-recognition-service/){: new_window} and [Mitigating Bias in AI Models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/research/2018/02/mitigating-bias-ai-models/){: new_window}.
 
-    - You can view results of the updated model in the [demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://visual-recognition-demo.ng.bluemix.net/){: new_window} and the beta [Visual Recognition Tool ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-visual-recognition.ng.bluemix.net/){: new_window}.
+    - You can view results of the updated model in the [demo ![External link icon](../../icons/launch-glyph.svg "External link icon")][demo]{: new_window} and the beta [Visual Recognition Tool ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-visual-recognition.ng.bluemix.net/){: new_window}.
     - The beta model is available at `/v3/detect_faces_beta`.
 
   Differences between the beta and general availability (GA) models:
@@ -47,7 +53,7 @@ The following new features and changes to the service are available.
     - The beta model supports larger file sizes: up to 10 MB for image files and up to 100 MB for .zip files. This enhancement is expected to be applied to the GA model.
     - Beta face detection does not include `FaceIdentity` information in the response.
     - The beta model's POST request requires a non-empty filename. The GA Face model does not enforce this constraint.
-    - The beta model's POST request supports a separate form parameter called `url`. The GA model encloses that information in the `parameters` JSON object. For details, see the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/visual-recognition-v3#!/Face/getDetectFacesBeta).
+    - The beta model's POST request supports a separate form parameter called `url`. The GA model encloses that information in the `parameters` JSON object. For details, see the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/visual-recognition-v3#!/Face/getDetectFacesBeta){: new_window}.
 
 - **Face identity deprecated**
 
