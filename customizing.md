@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-03-20"
 
 ---
 
@@ -23,6 +23,7 @@ After you classify an image and create, train, and query a custom classifier wit
 {: shortdesc}
 
 ## General classifier categories
+{: #general-model}
 
 The General classifier returns classes from thousands of possible tags organized into categories and subcategories. The following list shows the top-level categories:
 

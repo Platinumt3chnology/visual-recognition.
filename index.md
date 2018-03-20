@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-03-20"
 
 ---
 
@@ -20,13 +20,24 @@ lastupdated: "2017-12-11"
 
 # About
 
-**Beta Similarity Search and collections closed**: *As of September 8, 2017, the beta period for Similarity Search is closed. For more information, see [Visual Recognition API – Similarity Search Update ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/08/visual-recognition-api-similarity-search-update/){: new_window}.*
+**Important**: *On April 2, 2018, the identity information in the response to calls to the Face model will be removed. The identity information refers to the name of the person, score, and type_hierarchy knowledge graph. For details about the enhanced Face model, see the [Release notes](/docs/services/visual-recognition/release-notes.html#23february2018).*
 {: deprecated}
 
 The {{site.data.keyword.visualrecognitionfull}} service uses deep learning algorithms to analyze images for scenes, objects, faces, and other content. The response includes keywords that provide information about the content.
 {: shortdesc}
 
-A set of built-in models provides highly accurate results without training. You can also train custom models to create specialized classes.
+##Available models
+{: #models}
+
+A set of built-in models provides highly accurate results without training:
+
+- [**General** model](/docs/services/visual-recognition/customizing.html#general-model): Default classification from thousands of classes.
+- [**Face** model](/docs/services/visual-recognition/getting-started.html#detect-faces): Facial analysis with age and gender.
+- **Explicit** model (Beta): Whether an image is inappropriate for general use.
+- **Food** model (Beta): Specifically for images of food items.
+- **Text** model (To request access, contact Kevin Gong at kgong@us.ibm.com)
+
+You can also train [custom models](/docs/services/visual-recognition/tutorial-custom-classifier.html) to create specialized classes.
 
 ## How to use the service
 
