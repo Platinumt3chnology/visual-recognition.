@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-15"
+lastupdated: "2018-03-20"
 
 ---
 
@@ -19,9 +19,8 @@ lastupdated: "2018-03-15"
 
 <!-- Link definitions -->
 
-[watson-studio-reg]: https://dataplatform.ibm.com/registration/stepone?context=wdp&target=watson_vision_combined&apps=data_science_experience
-[demo]: https://watson-visual-recognition-duo-dev.ng.bluemix.net/
-
+[watson-studio-reg]: https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio
+[demo]: https://www.ibm.com/watson/services/visual-recognition/demo
 
 # Release notes
 
@@ -38,22 +37,114 @@ The following new features and changes to the service are available.
 
 The following new features and changes to the service are available.
 
+### 20 March 2018
+{: #20march2018}
+
+- **Integration with Apple Core ML**
+
+    {{site.data.keyword.visualrecognitionshort}} now includes support for the Apple Core ML model format. You can use a Core ML version of your {{site.data.keyword.visualrecognitionshort}} model on your iOS apps.
+
+    **Start developing**: To get started developing with {{site.data.keyword.visualrecognitionshort}} and Core ML, check out these projects on GitHub:
+
+    - Classify images locally: [{{site.data.keyword.visualrecognitionshort}} with Core ML ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/visual-recognition-coreml){: new_window}.
+    - Integrate {{site.data.keyword.discoveryfull}} with the results: [{{site.data.keyword.visualrecognitionshort}} and Discovery with Core ML ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/visual-recognition-with-discovery-coreml){: new_window}.
+    - Explore the SDK: [Swift SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/swift-sdk){: new_window}.
+
+- **Changes to the API**
+
+    The following backward-compatible changes to the API are included in the integration:
+
+    - A new `core_ml_enabled` field that indicates whether a classifier model can be downloaded as a Core ML model. The field is returned in the response for calls to `GET and POST /v3/classifiers` and `GET /v3/classifiers/{classifier_id}`.
+    - A new `GET /v3/classifiers/{classifier_id}/core_ml_model` method to download a Core ML model as an .mlmodel file.  You can download Core ML model files for custom models created after March 19.
+    - A new `updated` field with the latest training date of the model. The `updated` field matches either the `retrained` field or the `created` field.
+
+    For details about the API changes for Core ML, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/){: new_window} or try them out in the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/visual-recognition-v3){: new_window}.
+
+- **New tool available: Watson Studio**
+
+    [Watson Studio ![External link icon](../../icons/launch-glyph.svg "External link icon")][watson-studio-reg]{: new_window} is the new integrated environment that includes a replacement for the beta {{site.data.keyword.visualrecognitionshort}} tool. Watson Studio supports not only {{site.data.keyword.visualrecognitionshort}} but also many other {{site.data.keyword.cloud_notm}} services and resources. You can use Watson Studio with all your existing {{site.data.keyword.visualrecognitionshort}} instances and classifiers.
+
+     Watson Studio provides a collaborative environment in the cloud. With Watson Studio, developers, subject matter experts, data scientists, and others can build and train {{site.data.keyword.visualrecognitionshort}} and other AI models. You can also use Watson Studio to access the built-in General and Face models.
+
+     Watson studio also supports Core ML. You can download a Core ML model file for your custom model.
+
+    [Get started ![External link icon](../../icons/launch-glyph.svg "External link icon")][watson-studio-reg]{: new_window} with Watson Studio.
+
+- **Updated deep learning architecture for custom models**
+
+    {{site.data.keyword.visualrecognitionshort}} now uses a faster and more efficient deep learning network architecture for classification. The updated models also can differentiate more strongly between the top class and the rest of the classes. This approach might result in somewhat longer training times. The new architecture is used to train new custom models. When you retrain existing older models, the original architecture is used.
+
+    The following example shows the differentiation with the new architecture:
+
+    ![Man archery bow and arrow. Photo by Annie Spratt on Unsplash](images/archery.jpg)
+
+    <table>
+      <tr>
+        <th>Original class and score</th>
+        <th>Updated class and score</th>
+      </tr>
+      <tr>
+        <td>Archery</br>0.99 </td>
+        <td><strong>archery<strong></br>0.9</td>
+      </tr>
+      <tr>
+        <td>Auto Racing</br>0.996398</td>
+        <td><strong>biking</strong></br>0.004</td>
+      </tr>
+      <tr>
+        <td>Biking</br>0.0500174</td>
+        <td><strong>fishing</strong></br>0.001</td>
+      </tr>
+      <tr>
+        <td>Fishing</br>0.11029</td>
+        <td><strong>golf</strong></br>0.031</td>
+      </tr>
+      <tr>
+        <td>Golf</br>0.0980796</td>
+        <td><strong>gymnastics</strong></br>0.029</td>
+      </tr>
+      <tr>
+        <td>Gymnastics</br>0.964391</td>
+        <td><strong>judo</strong></br>0.021</td>
+      </tr>
+      <tr>
+        <td>Judo</br>0.339119</td>
+        <td><strong>racing</strong></br>0.002</td>
+      </tr>
+      <tr>
+        <td>Skating</br>0.0393602</td>
+        <td><strong>skating</strong></br>0.061</td>
+      </tr>
+      <tr>
+        <td>Skiing</br>0.0310527</td>
+        <td><strong>skiing</strong></br>0.003</td>
+      </tr>
+      <tr>
+        <td>Track and Field</br>0.208147</td>
+        <td><strong>track</strong></br>0.035</td>
+      </tr>
+    </table>
+
+- **French language support**
+
+    The **Classify** methods now support French in the output of `default` model classes. For the full list of languages, see [Supported languages](/docs/services/visual-recognition/language-support.html).
+
 ### 23 February 2018
 {: #23february2018}
 
 - **Enhanced Face model available in beta**
 
-    An updated face detection model is available. This beta model uses broader training datasets for increased accuracy of facial detection for age and gender. For more information, see [Increasing the Accuracy of IBM’s Watson Visual Recognition Service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/watson/2018/02/increasing-accuracy-ibms-watson-visual-recognition-service/){: new_window} and [Mitigating Bias in AI Models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/research/2018/02/mitigating-bias-ai-models/){: new_window}.
+    An updated face detection model is available. This beta model uses broader training datasets for increased accuracy of facial detection for age and gender. For more information, see [Increasing the Accuracy of IBM’s Watson {{site.data.keyword.visualrecognitionshort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/watson/2018/02/increasing-accuracy-ibms-watson-visual-recognition-service/){: new_window} and [Mitigating Bias in AI Models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/research/2018/02/mitigating-bias-ai-models/){: new_window}.
 
     - You can view results of the updated model in the [demo ![External link icon](../../icons/launch-glyph.svg "External link icon")][demo]{: new_window} and the beta [Visual Recognition Tool ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-visual-recognition.ng.bluemix.net/){: new_window}.
     - The beta model is available at `/v3/detect_faces_beta`.
 
-  Differences between the beta and general availability (GA) models:
+    Differences between the beta and general availability (GA) models:
     - The beta model supports .gif and .tif image formats; this enhancement is expected to be applied to the GA model.
     - The beta model supports larger file sizes: up to 10 MB for image files and up to 100 MB for .zip files. This enhancement is expected to be applied to the GA model.
     - Beta face detection does not include `FaceIdentity` information in the response.
     - The beta model's POST request requires a non-empty filename. The GA Face model does not enforce this constraint.
-    - The beta model's POST request supports a separate form parameter called `url`. The GA model encloses that information in the `parameters` JSON object. For details, see the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/visual-recognition-v3#!/Face/getDetectFacesBeta){: new_window}.
+    - The beta model's POST request supports a separate form parameter called `url`. The GA model encloses that information in the `parameters` JSON object. For details, see the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix){: new_window}.
 
 - **Face identity deprecated**
 
@@ -75,7 +166,7 @@ The following new features and changes to the service are available.
 
 <ul>
   <li>
-    <strong>Increased accuracy and output with the General model</strong>
+    <strong>Increased accuracy and output with the General model</strong>
       <p>
         The General model, which contains several thousand tags, now detects more secondary objects and has improved scene detection. These improvements help recognize the less prominent aspects of an image. In addition, the average number of tags returned per image has increased to 10.
       </p>
@@ -164,7 +255,7 @@ The following new features and changes to the service are available.
 - **Improved tagging**: We increased the number of training images for the default classifier. That increase improve the ability to recognize accurately the overall ‘scene’ of an image. For details, see [Further Enhancements for General Tagging Feature ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/07/watson-visual-recognition-sees-enhancements-general-tagging-feature/){: new_window}
 - **Additional languages**: The **Classify images** method now supports Korean, Italian, and German in addition to English, Arabic, Spanish, and Japanese.
 
-    For details about the API call, see the **Classify an image** method in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/#classify_an_image){: new_window} External link icon.
+    For details about the API call, see the **Classify an image** method in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/#classify_an_image){: new_window}.
 
 ### 16 May 2017
 {: #16may2017}
@@ -209,7 +300,7 @@ The following new features and changes to the service are available.
 
 - **New pricing**
 
-    IBM has lowered the pricing of custom classifiers on the {{site.data.keyword.visualrecognitionshort}} service and increased what's available on the free plan. For more information, see the [{{site.data.keyword.visualrecognitionshort}} pricing page](http://www.ibm.com/watson/developercloud/visual-recognition.html#pricing-block).
+    {{site.data.keyword.IBM_notm}} has lowered the pricing of custom classifiers on the {{site.data.keyword.visualrecognitionshort}} service and increased what's available on the free plan. For more information, see the [{{site.data.keyword.visualrecognitionshort}} pricing page](http://www.ibm.com/watson/developercloud/visual-recognition.html#pricing-block).
 
 ### 7 October 2016
 {: #7october2016}
@@ -227,7 +318,7 @@ The following new features and changes to the service are available.
 
 - **Text recognition is now closed beta**
 
-    The `POST` and `GET /v3/recognize_text` methods have gone back into closed beta. IBM looks forward to continuing to support BETA clients that use the service, with no current plans for another open beta.
+    The `POST` and `GET /v3/recognize_text` methods have gone back into closed beta. {{site.data.keyword.IBM_notm}} looks forward to continuing to support BETA clients that use the service, with no current plans for another open beta.
 
 ### 1 August 2016
 

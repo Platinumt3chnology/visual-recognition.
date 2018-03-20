@@ -46,6 +46,7 @@ Visual Recognition
 
     {: .navgroup id="help"}
     release-notes.md
+    feedback.md
 
     {: .topicgroup}
     Developer community
