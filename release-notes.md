@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-03-22"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-03-20"
 
 <!-- Link definitions -->
 
-[watson-studio-reg]: https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio
+[watson-studio-reg]: https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio?cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs
 [demo]: https://www.ibm.com/watson/services/visual-recognition/demo
 
 # Release notes
