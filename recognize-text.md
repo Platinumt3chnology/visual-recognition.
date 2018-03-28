@@ -23,7 +23,7 @@ Use the {{site.data.keyword.visualrecognitionshort}} beta Text model to detect a
 
 ---
 
-**Beta:** The Text model is a private beta feature, and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. If you have questions about access or about the Text model, contact Kevin Gong at kgong@us.ibm.com. For more information about beta features, see [Release notes](/docs/services/visual-recognition/release-notes.html#beta).
+**Beta:** The Text model is a private beta feature, and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. If you have questions about access or about the Text model, contact Tammy Lew at ttlew@us.ibm.com. For more information about beta features, see [Release notes](/docs/services/visual-recognition/release-notes.html#beta).
 
 [Go](/docs/services/visual-recognition/index.html) to the generally available docs.
 
