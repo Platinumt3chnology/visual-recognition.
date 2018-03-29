@@ -35,7 +35,7 @@ A set of built-in models provides highly accurate results without training:
 - [**Face** model](/docs/services/visual-recognition/getting-started.html#detect-faces): Facial analysis with age and gender.
 - **Explicit** model (Beta): Whether an image is inappropriate for general use.
 - **Food** model (Beta): Specifically for images of food items.
-- **Text** model (To request access: ibm.biz/request-text)
+- **Text** model (Private beta): Text extraction from natural scene images. [Request access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://datasciencex.typeform.com/to/nU6efl){: new_window}.
 
 You can also train [custom models](/docs/services/visual-recognition/tutorial-custom-classifier.html) to create specialized classes.
 
