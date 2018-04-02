@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2018-02-23"
+  years: 2015, 2018
+lastupdated: "2018-04-02"
 
 ---
 
@@ -68,43 +68,56 @@ If you use {{site.data.keyword.Bluemix_dedicated_notm}}, create your service ins
 
     ```json
     {
-     "custom_classes": 0,
       "images": [
         {
           "classifiers": [
             {
+              "classifier_id": "default",
+              "name": "default",
               "classes": [
                 {
                   "class": "banana",
-                  "score": 0.81,
+                  "score": 0.562,
                   "type_hierarchy": "/fruit/banana"
                 },
                 {
                   "class": "fruit",
-                  "score": 0.922
+                  "score": 0.788
                 },
                 {
-                  "class": "mango",
-                  "score": 0.554,
-                  "type_hierarchy": "/fruit/mango"
+                  "class": "diet (food)",
+                  "score": 0.528,
+                  "type_hierarchy": "/food/diet (food)"
                 },
                 {
-                  "class": "olive color"
-                  "score": 0.951
+                  "class": "food",
+                  "score": 0.528
                 },
                 {
-                  "class": "olive green color"
-                  "score": 0.747
+                  "class": "honeydew",
+                  "score": 0.5,
+                  "type_hierarchy": "/fruit/melon/honeydew"
+                },
+                {
+                  "class": "melon",
+                  "score": 0.501
+                },
+                {
+                  "class": "olive color",
+                  "score": 0.973
+                },
+                {
+                  "class": "lemon yellow color",
+                  "score": 0.789
                 }
-              ],
-              "classifier_id": "default",
-              "name": "default"
+              ]
             }
           ],
           "image": "fruitbowl.jpg"
         }
       ],
-      "images_processed": 1
+      "images_processed": 1,
+      "custom_classes": 0
     }
     ```
     {: codeblock}
@@ -116,25 +129,20 @@ If you use {{site.data.keyword.Bluemix_dedicated_notm}}, create your service ins
 
 {{site.data.keyword.visualrecognitionshort}} can detect faces in images. The response provides information such as the location of the face in the image and the estimated age range and gender for each face.
 
-The service can also identify many celebrities by name, and can provide a *knowledge graph* so that you can aggregate higher-level concepts.
-
-You can try out the updated Face model, which can provide more accurate results with facial analysis of age and gender. To use the beta model, replace `/v3/detect_faces` with `/v3/detect_faces_beta` in the command in the following step.
-{: tip}
-
-1.  Download the sample <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/prez.jpg" download="prez.jpg">prez.jpg <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> image.
-1.  Issue the following command to the `POST /v3/detect_faces` method to upload and analyze the image. If you use your own image, the maximum size is 2 MB:
+1.  Download the sample <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg" download="">Ginni_Rometty.jpg <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> image.
+1.  Issue the following command to the `POST /v3/detect_faces` method to upload and analyze the image. If you use your own image, the maximum size is 10 MB:
     - Replace `{api-key}` with the service credentials you copied earlier.
     - Modify the location of the images\_file to point to where you saved the image.
 
     ```bash
-    curl -X POST --form "images_file=@prez.jpg" \
+    curl -X POST --form "images_file=@Ginni_Rometty.jpg" \
     "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/detect_faces?api_key={api-key}&version=2016-05-20"
     ```
     {: pre}
 
-    The response includes a location, age estimate, gender, identity and type hierarchy (if the service recognizes that face), and a score for each. (Identity information is not available with the `/v3/detect_faces_beta` endpoint.)
+    The response includes a location and age and gender estimates with scores.
 
-    Scores range from 0-1, with a higher score indicating greater correlation. All faces are detected, but for images with more than 10 faces, age and gender confidence scores might return with scores of 0.
+    Scores range from 0-1, with a higher score indicating greater correlation.
 
     ```json
     {
@@ -143,28 +151,23 @@ You can try out the updated Face model, which can provide more accurate results 
           "faces": [
             {
               "age": {
-                "max": 54,
-                "min": 45,
-                "score": 0.364876
+                "min": 50,
+                "max": 53,
+                "score": 0.33788413
               },
               "face_location": {
-                "height": 117,
-                "left": 406,
-                "top": 149,
-                "width": 108
+                "height": 744,
+                "width": 606,
+                "left": 460,
+                "top": 373
               },
               "gender": {
-                "gender": "MALE",
-                "score": 0.993307
-              },
-              "identity": {
-                "name": "Barack Obama",
-                "score": 0.982014
-                "type_hierarchy": "/people/politicians/democrats/barack obama"
+                "gender": "FEMALE",
+                "score": 0.9999988
               }
             }
           ],
-          "image": "prez.jpg"
+          "image": "Ginni_Rometty.jpg"
         }
       ],
       "images_processed": 1
@@ -183,4 +186,4 @@ You have a basic understanding of how to use the built-in default classifier wit
 {: #attributions}
 
 - [Fruit basket ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://flic.kr/p/JPHES){: new_window} by Flikr user [Ryan Edwards-Crewe ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.flickr.com/photos/ryanec/){: new_window} used under [Creative Commons Attribution 2.0 license ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://creativecommons.org/licenses/by/2.0/deed.en){: new_window}. No changes were made to this image.
-- [obama ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://bit.ly/1T0DCl9){: new_window} by Flikr user [dcblog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.flickr.com/photos/12863058@N08/){: new_window} used under [Creative Commons Attribution 2.0 license ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://creativecommons.org/licenses/by/2.0/deed.en){: new_window}. No changes were made to this image.
+- [Ginni Rometty at the Fortune MPW Summit in 2011 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://commons.wikimedia.org/wiki/File:Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg){: new_window} by Asa Mathat / Fortune Live Media used under [CC BY 2.0 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://creativecommons.org/licenses/by/2.0/legalcode){: new_window}.  No changes were made to this image.

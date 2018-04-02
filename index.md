@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-04-02"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-03-20"
 
 # About
 
-**Important**: *On April 2, 2018, the identity information in the response to calls to the Face model will be removed. The identity information refers to the name of the person, score, and type_hierarchy knowledge graph. For details about the enhanced Face model, see the [Release notes](/docs/services/visual-recognition/release-notes.html#23february2018).*
+**Important**: *On April 2, 2018, the identity information in the response to calls to the Face model was removed. The identity information refers to the name of the person, score, and type_hierarchy knowledge graph. For details about the enhanced Face model, see the [Release notes](/docs/services/visual-recognition/release-notes.html#2april2018).*
 {: deprecated}
 
 The {{site.data.keyword.visualrecognitionfull}} service uses deep learning algorithms to analyze images for scenes, objects, faces, and other content. The response includes keywords that provide information about the content.
@@ -36,6 +36,8 @@ A set of built-in models provides highly accurate results without training:
 - **Explicit** model (Beta): Whether an image is inappropriate for general use.
 - **Food** model (Beta): Specifically for images of food items.
 - **Text** model (Private beta): Text extraction from natural scene images. [Request access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://datasciencex.typeform.com/to/nU6efl){: new_window}.
+
+
 
 You can also train [custom models](/docs/services/visual-recognition/tutorial-custom-classifier.html) to create specialized classes.
 
