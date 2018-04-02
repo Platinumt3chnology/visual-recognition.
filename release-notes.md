@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-22"
+lastupdated: "2018-04-02"
 
 ---
 
@@ -36,6 +36,40 @@ The following new features and changes to the service are available.
 {: #changelog}
 
 The following new features and changes to the service are available.
+
+### 2 April 2018
+{: #2april2018}
+
+- **General availability of enhanced Face model**
+
+    The updated face detection model is now in General availability (GA).
+
+    This enhanced model uses broader training data sets for increased accuracy of facial detection for age and gender. For example, age predictions are improved by reducing the range between `min` and `max`. The fixed 9-year age range in the previous model is replaced with a dynamic and smaller range. The average age range is now 4.9 years.
+
+    - Changes to the API
+
+    Other differences between the enhanced and previous Face model:
+        - The enhanced model supports .gif and .tif image formats.
+        - The enhanced model supports larger file sizes: up to 10 MB for image files and up to 100 MB for .zip files.
+        - The enhanced model does not include `FaceIdentity` information in the response. The identity information refers to the `name` of the person, `score`, and `type_hierarchy` knowledge graph.
+
+    For details about the API, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/curl.html?curl#detect-faces-in-an-image){: new_window}.
+
+    - Known issues
+
+        - Form parameters cannot include the **Content-Type**. For example, this request fails to analyze the **url** parameter because it includes `;type=text/plain`:
+
+            ``` curl
+            curl -F url="https://example.com/images/prez.jpg;type=text/plain" \
+            "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/detect_faces?api_key={api-key}&version=2016-05-20"
+            ```
+            {: pre}
+
+        - The age score has a range of 0 to 0.3. We are working to restore the original range of 0 to 1.
+
+    - Beta endpoint deprecated
+
+    The beta endpoint at `/v3/detect_faces_beta` is deprecated and will not be accessible after May 17, 2018. Make sure that your requests point to `/v3/detect_faces`.
 
 ### 20 March 2018
 {: #20march2018}
@@ -134,7 +168,7 @@ The following new features and changes to the service are available.
 
 - **Enhanced Face model available in beta**
 
-    An updated face detection model is available. This beta model uses broader training datasets for increased accuracy of facial detection for age and gender. For more information, see [Increasing the Accuracy of IBM’s Watson {{site.data.keyword.visualrecognitionshort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/watson/2018/02/increasing-accuracy-ibms-watson-visual-recognition-service/){: new_window} and [Mitigating Bias in AI Models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/research/2018/02/mitigating-bias-ai-models/){: new_window}.
+    An updated face detection model is available. This beta model uses broadertraining data sets for increased accuracy of facial detection for age and gender. For more information, see [Increasing the Accuracy of IBM’s Watson {{site.data.keyword.visualrecognitionshort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/watson/2018/02/increasing-accuracy-ibms-watson-visual-recognition-service/){: new_window} and [Mitigating Bias in AI Models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/research/2018/02/mitigating-bias-ai-models/){: new_window}.
 
     - You can view results of the updated model in the [demo ![External link icon](../../icons/launch-glyph.svg "External link icon")][demo]{: new_window} and the beta [Visual Recognition Tool ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-visual-recognition.ng.bluemix.net/){: new_window}.
     - The beta model is available at `/v3/detect_faces_beta`.

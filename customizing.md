@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-04-02"
 
 ---
 
@@ -94,8 +94,8 @@ There are also size limitations when classifying images or detecting faces:
     - Maximum image size is 10 MB.
     - Maximum .zip file size is 100 MB with up to 20 images.
 - Limitations for the methods to detect faces:
-    - Maximum image size is 2 MB.
-    - Maximum .zip file size is 5 MB with up to 15 images.
+    - Maximum image size is 10 MB.
+    - Maximum .zip file size is 100 MB with up to 15 images.
 
 <!-- - The `POST /v3/recognize_text` method accept a maximum of 10 images per batch. -->
 
