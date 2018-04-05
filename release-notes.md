@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-02"
+lastupdated: "2018-04-05"
 
 ---
 
@@ -27,6 +27,15 @@ lastupdated: "2018-04-02"
 The following new features and changes to the service are available.
 {: shortdesc}
 
+## Service API Versioning
+{: version}
+
+API requests require a version parameter that takes a date in the format `version=YYYY-MM-DD`. Whenever we change the API in a backwards-incompatible way, we release a new minor version of the API.
+
+Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
+
+The current version is `2016-05-20`.
+
 ## Beta features
 {: #beta}
 
@@ -36,6 +45,19 @@ The following new features and changes to the service are available.
 {: #changelog}
 
 The following new features and changes to the service are available.
+
+### 5 April 2018
+{: #5april2018}
+
+- **Fix for Face model score issue**
+
+  The range for the age score in the Face model is restored to the original range of 0 to 1. For details, see the [Known issues](#2april2018) for 2 April 2018.
+
+- **New form-data parameters**
+
+    The **Classify images** and **Detect faces in images** methods support new form-data parameters. Classify images supports separate `url`, `classifier_ids`, `threshold`, and `owners` parameters, and Detect faces supports `url`.
+
+    In the past, you encoded the values in a JSON string and passed the **parameters** form-data parameter. You can use the new method of passing these values in separate form-data parameters for all application development. For details, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/){: new_window}.
 
 ### 2 April 2018
 {: #2april2018}
@@ -383,7 +405,7 @@ The following changes and updates were made to the {{site.data.keyword.visualrec
 - **Version date:** To utilize the features of this release, use `2016-05-20` as the value for the `version` parameter.
 - **Classes and classifiers:** Single classifiers are now called "classes". In GA, a group of classes is called a "classifier".
 - **Classification:** Use the `POST` or `GET /v3/classify` methods to quickly and accurately identify a variety of subjects and scenes with default classes.
-- **Face detection:** Use the `POST` or `GET /v3/detect_faces` methods to detect faces in images and get information about them, such as where the face is located in the image and the estimated age range and gender for each face. The service can also identify many celebrities by name and can provide a knowledge graph so that you can perform interesting aggregations into higher-evel concepts.
+- **Face detection:** Use the `POST` or `GET /v3/detect_faces` methods to detect faces in images and get information about them, such as where the face is located in the image and the estimated age range and gender for each face. The service can also identify many celebrities by name and can provide a knowledge graph so that you can perform interesting aggregations into higher-level concepts.
 - **Multi-faceted custom classifiers:** You can now create and train highly specialized classifiers that are defined by several classes. For example, you can create a "new\_red\_car" classifier that is defined by the classes "new\_cars" and "red\_cars". To learn more  about creating multi-faceted classifiers, see [Structure of the training data](/docs/services/visual-recognition/customizing.html#structure).
 - **Asynchronous training:** Training of custom classifiers is now asynchronous, so training calls complete quickly while your custom classifier continues to learn in the background. To check on the training status of your custom classifier and find out when it is available for use, call the `GET /v3/classifiers/{classifier_id}` method and check the `status` response parameter.
 
