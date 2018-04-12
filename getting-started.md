@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-02"
+lastupdated: "2018-04-12"
 
 ---
 
@@ -57,7 +57,7 @@ If you use {{site.data.keyword.Bluemix_dedicated_notm}}, create your service ins
 
     ```bash
     curl -X POST --form "images_file=@fruitbowl.jpg" \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key={api-key}&version=2016-05-20"
+    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key={api-key}&version=2018-03-19"
     ```
     {: pre}
 
@@ -136,7 +136,7 @@ If you use {{site.data.keyword.Bluemix_dedicated_notm}}, create your service ins
 
     ```bash
     curl -X POST --form "images_file=@Ginni_Rometty.jpg" \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/detect_faces?api_key={api-key}&version=2016-05-20"
+    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/detect_faces?api_key={api-key}&version=2018-03-19"
     ```
     {: pre}
 
