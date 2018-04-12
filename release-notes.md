@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-05"
+lastupdated: "2018-04-12"
 
 ---
 
@@ -34,7 +34,7 @@ API requests require a version parameter that takes a date in the format `versio
 
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
-The current version is `2016-05-20`.
+The current version is `2018-03-19`.
 
 ## Beta features
 {: #beta}
@@ -45,6 +45,21 @@ The current version is `2016-05-20`.
 {: #changelog}
 
 The following new features and changes to the service are available.
+
+### 12 April 2018
+{: #12april2018}
+
+- **Support for retraining a custom model on the Lite plan**
+
+    Under the Lite plan, you no longer have to delete and create another custom model when you want to update or retrain the model. You can now update a custom model as long as you remain under daily and monthly [limits](https://console.bluemix.net/catalog/services/visual-recognition) of the plan.
+
+    If you need to have multiple models or multiple versions of the same model, update from the Lite plan to a billable account.
+
+- **New minor version with support for CORS**
+
+    **Version:** `2018-03-19`
+
+    We now support Cross-Origin Resource Sharing (CORS) headers when you specify `version=2018-03-19` in requests.
 
 ### 5 April 2018
 {: #5april2018}

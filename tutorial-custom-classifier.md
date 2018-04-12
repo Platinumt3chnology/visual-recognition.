@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-02"
+lastupdated: "2018-04-12"
 
 ---
 
@@ -44,7 +44,7 @@ Use the credentials that you copied in "Getting started tutorial." If you didn't
     --form "goldenretriever_positive_examples=@golden-retriever.zip" \
     --form "negative_examples=@cats.zip" \
     --form "name=dogs" \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers?api_key={api-key}&version=2016-05-20"
+    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers?api_key={api-key}&version=2018-03-19"
     ```
     {: pre}
 
@@ -81,14 +81,11 @@ Use the credentials that you copied in "Getting started tutorial." If you didn't
 
     ```bash
     curl -X GET \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?api_key={api-key}&version=2016-05-20"
+    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?api_key={api-key}&version=2018-03-19"
     ```
     {: pre}
 
 ## Step 3: Updating an existing custom model
-
-If you have an API key for a Lite plan and want to update a custom model, you must create another service instance on a Standard plan and re-create your custom model. Follow the steps in the [Before you begin](/docs/services/visual-recognition/getting-started.html#prerequisites) section of the "Getting started tutorial" and make sure to select the Standard plan.
-{: tip}
 
 You can update a custom model either by adding classes to the model or by adding images to an existing class. Here, you improve the model that you created in Step 2 by adding a *Dalmatian* class to the types of dogs that can be classified. You also add images of cats to the negative example set for the "dogs" custom model.
 
@@ -102,7 +99,7 @@ You can update a custom model either by adding classes to the model or by adding
     curl -X POST \
     --form "dalmatian_positive_examples=@dalmatian.zip" \
     --form "negative_examples=@more-cats.zip" \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?api_key={api-key}&version=2016-05-20"
+    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?api_key={api-key}&version=2018-03-19"
     ```
     {: pre}
 
@@ -143,7 +140,7 @@ You can update a custom model either by adding classes to the model or by adding
 
     ```bash
     curl -X GET \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?api_key={api-key}&version=2016-05-20"
+    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?api_key={api-key}&version=2018-03-19"
     ```
     {: pre}
 
@@ -160,7 +157,7 @@ When the new model is ready, call it to see how it performs.
     curl -X POST \
     --form "images_file=@dogs.jpg" \
     --form "classifier_ids=dogs__1941945966,default" \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key={api-key}&version=2016-05-20"
+    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key={api-key}&version=2018-03-19"
     ```
     {: pre}
 
@@ -247,7 +244,7 @@ To delete the model, call the `DELETE /v3/classifiers/{classifier_id}` method. R
 
 ```bash
 curl -X DELETE \
-"https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?api_key={api-key}&version=2016-05-20"
+"https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?api_key={api-key}&version=2018-03-19"
 ```
 {: pre}
 
