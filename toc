@@ -28,6 +28,7 @@ Visual Recognition
     {: .navgroup id="reference"}
     [API reference](https://www.ibm.com/watson/developercloud/visual-recognition/api)
     language-support.md
+    information-security.md
 
     {: .topicgroup}
     Watson SDKs
