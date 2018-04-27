@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-12"
+lastupdated: "2018-04-27"
 
 ---
 
@@ -28,24 +28,13 @@ This tutorial guides you through how to use some built-in classifiers in {{site.
 {: #prerequisites}
 
 - Create an instance of the service:
-    - {: download} If you're seeing this, you created your service instance. Now get your credentials.
-    - Create a project from a service:
-        1.  Go to the {{site.data.keyword.watson}} Developer Console [Services ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/developer/watson/services){: new_window} page.
-        1.  Select {{site.data.keyword.visualrecognitionshort}}, click **Add Services**, and either sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
-        1.  Type `vision-tutorial` as the project name and click **Create Project**.
+    1.  Go to the [{{site.data.keyword.visualrecognitionshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/visual-recognition){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
+    1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
+    1.  Click **Create**.
 - Copy the credentials to authenticate to your service instance:
-    - {: download} From the service dashboard (what you're looking at):
-        1.  Click the **Service credentials** tab.
-        1.  Click **View credentials** under **Actions**.
-        1.  Copy the api-key value.
-        {: download}
-    - From your **vision-tutorial** project in the Developer Console, copy the `api-key` value for `"visual_recognition"` from the  **Credentials** section.
+    1.  Click **Show** to view your credentials.
+    1.  Copy the api-key value.
 
-<!-- Remove this text after dedicated instances have the Developer Console: begin -->
-
-If you use {{site.data.keyword.Bluemix_dedicated_notm}}, create your service instance from the [{{site.data.keyword.visualrecognitionshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} page in the Catalog. For details about how to find your service credentials, see [Service credentials for Watson services ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/watson/getting-started-credentials.html#getting-credentials-manually){: new_window}.
-
-<!-- Remove this text after dedicated instances have the Developer Console: end -->
 
 ## Step 1: Classify an image
 {: #classify}
