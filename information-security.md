@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-24"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -54,7 +54,13 @@ Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and 
 ### Migration steps
 {: #gdpr-visrec-steps}
 
-Steps to migrate will be made available by May 1, 2018.
+A forthcoming update to the {{site.data.keyword.visualrecognitionfull}} service is planned that will effectively allow your previously trained custom models/classifiers to be available in your new service instance.
+
+- You will first be required to provision a new instance of the {{site.data.keyword.visualrecognitionshort}} service and generate new authentication keys for the new service.
+
+- You will then use your prior and new {{site.data.keyword.visualrecognitionshort}} plan service authentication keys to request the migration of your custom models to your new {{site.data.keyword.visualrecognitionshort}} service instance.
+
+**IMPORTANT**: For customers using the SDK, you will need to update your SDK version to be compatible with the new authentication process.
 
 ### FAQ/Support
 {: #gdpr-visrec-faq}
