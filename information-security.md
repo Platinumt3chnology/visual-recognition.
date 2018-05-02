@@ -65,4 +65,4 @@ A forthcoming update to the {{site.data.keyword.visualrecognitionfull}} service 
 ### FAQ/Support
 {: #gdpr-visrec-faq}
 
-Please direct questions to your account representative, or reach out to support directly here: [https://ibm.biz/ibmcloudsupport](https://ibm.biz/ibmcloudsupport).
+Please direct questions to your account representative, or reach out to support directly at [https://ibm.biz/ibmcloudsupport ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/ibmcloudsupport){: new_window}
