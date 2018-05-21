@@ -28,6 +28,7 @@ Visual Recognition
     [API reference](https://www.ibm.com/watson/developercloud/visual-recognition/api)
     language-support.md
     information-security.md
+    migrate.md
 
     {: .topicgroup}
     Watson SDKs
