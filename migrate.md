@@ -26,7 +26,7 @@ Migrate to a new instance of the {{site.data.keyword.visualrecognitionfull}} ser
 To migrate your current models/classifiers and training data, you are first required to provision a new instance of the {{site.data.keyword.visualrecognitionshort}} service. Then, take the images you used to train the models in your current {{site.data.keyword.visualrecognitionshort}} service instance, and use those images to re-create your custom models in your new {{site.data.keyword.visualrecognitionshort}} service instance.
 
 1.  Create a new instance of the {{site.data.keyword.visualrecognitionshort}} service:
-      - Go to the [{{site.data.keyword.visualrecognitionshort}} page](https://console.bluemix.net/catalog/services/visual-recognition) in the {{site.data.keyword.cloud_notm}} catalog.
+      - Go to the [{{site.data.keyword.visualrecognitionshort}} page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/visual-recognition){: new_window} in the {{site.data.keyword.cloud_notm}} catalog.
       - Select a plan and click **Create**.
 1.  From the service dashboard, select your new {{site.data.keyword.visualrecognitionshort}} service instance, then:
      - Click the **Service credentials** tab and select *View credentials*.
@@ -36,4 +36,4 @@ To migrate your current models/classifiers and training data, you are first requ
 1.  [Re-create your custom models](tutorial-custom-classifier.html#creating-a-custom-model) in your new instance of the {{site.data.keyword.visualrecognitionshort}} service.
 1.  [Train your custom models](customizing.html#guidelines-for-training-classifiers) with your new {{site.data.keyword.visualrecognitionshort}} service instance.
 
-**Note**: To create and train custom models in Watson Studio, [launch the Watson Studio tooling](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-legacy) after creating your new {{site.data.keyword.visualrecognitionshort}} service instance.
+**Note**: To create and train custom models in Watson Studio, [launch the Watson Studio tooling] ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-legacy){: new_window} after creating your new {{site.data.keyword.visualrecognitionshort}} service instance.
