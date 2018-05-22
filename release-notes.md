@@ -47,7 +47,7 @@ The current version is `2018-03-19`.
 The following new features and changes to the service are available.
 
 ### 22 May 2018
-{: #22May2018}
+{: #22may2018}
 
 - **Updates to the Lite plan**
 
