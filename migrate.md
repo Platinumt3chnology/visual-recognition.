@@ -52,7 +52,6 @@ To migrate your current models/classifiers and training data, you are first requ
        -F "images_file=@my_image.jpg" \
        "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19"
       ```
-{: pre}
 
       *Detect faces in images*
 
@@ -62,16 +61,12 @@ To migrate your current models/classifiers and training data, you are first requ
        "https://gateway.watsonplatform.net/visual-recognition/api/v3/detect_faces?version=2018-03-19"
       ```
 
-{: pre}
-
       *Retrieve a list of classifiers*
 
       ``` curl
        curl -X GET --header "Authorization: Bearer eyJhbGciOi......KIi8hdFs" \
        "https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers?version=2018-03-19"
       ```
-
-{: pre}
 
     - Authenticating with an API key directly
 
@@ -87,8 +82,6 @@ To migrate your current models/classifiers and training data, you are first requ
        "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19"
       ```
 
-{: pre}
-
       *Detect faces in images*
 
       ``` curl
@@ -97,15 +90,11 @@ To migrate your current models/classifiers and training data, you are first requ
        "https://gateway.watsonplatform.net/visual-recognition/api/v3/detect_faces?version=2018-03-19"
       ```
 
-{: pre}
-
       *Retrieve a list of classifiers*
 
       ``` curl
        curl -X GET -u "apikey:{apikey}" \
        "https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers?version=2018-03-19"
       ```
-
-{: pre}
 
 1. [Re-create and train your custom models](tutorial-custom-classifier.html#creating-a-custom-model), using your chosen authentication method, in your new instance of the {{site.data.keyword.visualrecognitionshort}} service.
