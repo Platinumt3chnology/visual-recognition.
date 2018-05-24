@@ -35,9 +35,7 @@ To migrate your current models/classifiers and training data, you are first requ
      - Copy the API key as indicated here.
      ![Service credentials tab](images/apikey2.png)
 
-1.  Modify calling applications
-
-    There are two options to authenticate: token and API key. The token option provides greater security if, for example, your API request is somehow compromised, because the token expires after one hour. The API key is a more basic authentication method, and does not expire.
+1.  Modify how you call your service. There are two options to authenticate: token and API key. The token option provides greater security if, for example, your API request is somehow compromised, because the token expires after one hour. The API key is a more basic authentication method, and does not expire.
 
     - Authenticating with an Identity and Access Management (IAM) token
 
