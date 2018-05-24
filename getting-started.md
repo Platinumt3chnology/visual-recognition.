@@ -33,7 +33,7 @@ This tutorial guides you through how to use some built-in classifiers in {{site.
     1.  Click **Create**.
 - Copy the credentials to authenticate to your service instance:
     1.  Click **Show** to view your credentials.
-    1.  Copy the api-key value.
+    1.  Copy the apikey value.
 
 
 ## Step 1: Classify an image
@@ -41,12 +41,12 @@ This tutorial guides you through how to use some built-in classifiers in {{site.
 
 1.  Download the sample <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg" download="fruitbowl.jpg">fruitbowl.jpg <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> image.
 1.  Issue the following command to upload the image and classify it against all built-in classifiers:
-    - Replace `{api-key}` with the service credentials you copied earlier.
+    - Replace `{your_api_key}` with the service credentials you copied earlier.
     - Modify the location of the images\_file to point to where you saved the image.
 
     ```bash
-    curl -X POST --form "images_file=@fruitbowl.jpg" \
-    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?api_key={api-key}&version=2018-03-19"
+    curl -X POST -u "apikey:{your_api_key}" --form "images_file=@fruitbowl.jpg" \
+    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19"
     ```
     {: pre}
 
@@ -120,12 +120,12 @@ This tutorial guides you through how to use some built-in classifiers in {{site.
 
 1.  Download the sample <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg" download="">Ginni_Rometty.jpg <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> image.
 1.  Issue the following command to the `POST /v3/detect_faces` method to upload and analyze the image. If you use your own image, the maximum size is 10 MB:
-    - Replace `{api-key}` with the service credentials you copied earlier.
+    - Replace `{your_api_key}` with the service credentials you copied earlier.
     - Modify the location of the images\_file to point to where you saved the image.
 
     ```bash
-    curl -X POST --form "images_file=@Ginni_Rometty.jpg" \
-    "https://gateway.watsonplatform.net/visual-recognition/api/v3/detect_faces?api_key={api-key}&version=2018-03-19"
+    curl -X POST -u "apikey:{your_api_key}" --form "images_file=@Ginni_Rometty.jpg" \
+    "https://gateway.watsonplatform.net/visual-recognition/api/v3/detect_faces?version=2018-03-19"
     ```
     {: pre}
 
