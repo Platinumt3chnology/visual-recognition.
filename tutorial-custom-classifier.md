@@ -44,7 +44,7 @@ Use the credentials that you copied in "Getting started tutorial." If you didn't
     --form "goldenretriever_positive_examples=@golden-retriever.zip" \
     --form "negative_examples=@cats.zip" \
     --form "name=dogs" \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers?api_key={api-key}&version=2018-03-19"
+    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers?api_key={api-key}&version=2018-03-19"
     ```
     {: pre}
 
@@ -81,7 +81,7 @@ Use the credentials that you copied in "Getting started tutorial." If you didn't
 
     ```bash
     curl -X GET \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?api_key={api-key}&version=2018-03-19"
+    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?api_key={api-key}&version=2018-03-19"
     ```
     {: pre}
 
@@ -99,7 +99,7 @@ You can update a custom model either by adding classes to the model or by adding
     curl -X POST \
     --form "dalmatian_positive_examples=@dalmatian.zip" \
     --form "negative_examples=@more-cats.zip" \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?api_key={api-key}&version=2018-03-19"
+    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?api_key={api-key}&version=2018-03-19"
     ```
     {: pre}
 
@@ -140,7 +140,7 @@ You can update a custom model either by adding classes to the model or by adding
 
     ```bash
     curl -X GET \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?api_key={api-key}&version=2018-03-19"
+    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?api_key={api-key}&version=2018-03-19"
     ```
     {: pre}
 
@@ -157,7 +157,7 @@ When the new model is ready, call it to see how it performs.
     curl -X POST \
     --form "images_file=@dogs.jpg" \
     --form "classifier_ids=dogs__1941945966,default" \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key={api-key}&version=2018-03-19"
+    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?api_key={api-key}&version=2018-03-19"
     ```
     {: pre}
 
@@ -244,7 +244,7 @@ To delete the model, call the `DELETE /v3/classifiers/{classifier_id}` method. R
 
 ```bash
 curl -X DELETE \
-"https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?api_key={api-key}&version=2018-03-19"
+"https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?api_key={api-key}&version=2018-03-19"
 ```
 {: pre}
 
