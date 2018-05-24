@@ -46,11 +46,11 @@ This tutorial guides you through how to use some built-in classifiers in {{site.
 
     ```bash
     curl -X POST --form "images_file=@fruitbowl.jpg" \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key={api-key}&version=2018-03-19"
+    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?api_key={api-key}&version=2018-03-19"
     ```
     {: pre}
 
-    If you have {{site.data.keyword.Bluemix_notm}} Dedicated, the `gateway-a.watsonplatform.net` endpoint here might not be your service endpoint. Check the `url` on the **Service credentials** page of your service dashboard.
+    If you have {{site.data.keyword.Bluemix_notm}} Dedicated, the `gateway.watsonplatform.net` endpoint here might not be your service endpoint. Check the `url` on the **Service credentials** page of your service dashboard.
     {: tip}
 
     The response includes the General model or classifier (which uses the `default` classifier_id), the classes identified in the image, and a score for each class.
@@ -125,7 +125,7 @@ This tutorial guides you through how to use some built-in classifiers in {{site.
 
     ```bash
     curl -X POST --form "images_file=@Ginni_Rometty.jpg" \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/detect_faces?api_key={api-key}&version=2018-03-19"
+    "https://gateway.watsonplatform.net/visual-recognition/api/v3/detect_faces?api_key={api-key}&version=2018-03-19"
     ```
     {: pre}
 
