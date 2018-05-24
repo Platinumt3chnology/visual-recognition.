@@ -26,7 +26,7 @@ Migrate to a new instance of the {{site.data.keyword.visualrecognitionfull}} ser
 To migrate your current models/classifiers and training data, you are first required to provision a new instance of the {{site.data.keyword.visualrecognitionshort}} service. Then, take the images you used to train the models in your current {{site.data.keyword.visualrecognitionshort}} service instance, and use those images to re-create your custom models in your new {{site.data.keyword.visualrecognitionshort}} service instance.
 
 1.  Create a new instance of the {{site.data.keyword.visualrecognitionshort}} service:
-      - Go to the [{{site.data.keyword.visualrecognitionshort}} page](https://console.bluemix.net/catalog/services/visual-recognition) in the {{site.data.keyword.cloud_notm}} catalog.
+      - Go to the [{{site.data.keyword.visualrecognitionshort}} page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/visual-recognition){: new_window} in the {{site.data.keyword.cloud_notm}} catalog.
       - Select a plan and click **Create**.
 
 1.  From the service dashboard, select your new {{site.data.keyword.visualrecognitionshort}} service instance, then:
