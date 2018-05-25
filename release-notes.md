@@ -62,7 +62,7 @@ The following new features and changes to the service are available.
 
     Lite plans created after May 22, 2018 are changing:
 
-    - New Lite plan instances continue to be available after 30 days if you use them every month. Previously, Lite plan instances were deleted after 30 days whether you used them or not.
+    - New Lite plan instances continue to be available after 30 days if you use them every month.
     - You can create and retrain two custom models under the new Lite plan.
     - Lite plans include up to 1,000 events a month. Each image that you send for classification, detection, or training is an event. Downloading a Core ML model doesn't count toward the event limit.
 
