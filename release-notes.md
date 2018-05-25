@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-05-25"
 
 ---
 
@@ -49,11 +49,20 @@ The following new features and changes to the service are available.
 ### 22 May 2018
 {: #22may2018}
 
+- **New API authentication process**:
+
+    You now authenticate with Identity and Access Management (IAM) at a new endpoint:
+
+    - Use a different endpoint URL for new instances. The default endpoint is `https:/gateway.watsonplatform.net/visual-recognition/api/`. To find the URL for your service instance, check the credentials by clicking the instance from the {{site.data.keyword.cloud_notm}} [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?watson){: new_window}.
+    - Modify how you authenticate to the API. You provide either an IAM key or access token for your service instance. See [Migrating](/docs/services/visual-recognition/migrate.html) for examples.
+
+    For service instances created before May 23, 2018, the authentication process and endpoint have not changed. Authenticate by providing the `api_key` query parameter.
+
 - **Updates to the Lite plan**
 
     Lite plans created after May 22, 2018 are changing:
 
-    - New Lite plan instances continue to be available after 30 days if you use them every month. Previously, Lite plan instances were deleted after 30 days whether you used them or not.
+    - New Lite plan instances continue to be available after 30 days if you use them every month.
     - You can create and retrain two custom models under the new Lite plan.
     - Lite plans include up to 1,000 events a month. Each image that you send for classification, detection, or training is an event. Downloading a Core ML model doesn't count toward the event limit.
 
@@ -62,23 +71,6 @@ The following new features and changes to the service are available.
 - **Information security**:
 
     We updated the documentation to include some new details about data privacy. Read the details in [Information security](information-security.html).
-
-- **New API authentication process**:
-
-    The process for authenticating has changed for service instances created after May 22, 2018 at 4:00 PM EDT. You authenticate before you can make API calls.
-
-    1.  Get an API key from {{site.data.keyword.cloud_notm}}. Use that key to generate an {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) token. For more details, see [How to get an IBM Cloud IAM token using an API key ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/iam/apikey_iamtoken.html).
-
-    1.  Pass the access token from the response to {{site.data.keyword.visualrecognitionshort}} as a header with a bearer token. For example, specify the token in curl with the syntax `--header 'Authorization: Bearer {access_token}'`. Here's an example call:
-
-        ``` curl
-        curl -X GET \
-        "https://{ENDPOINT_HOST}/visual-recognition/api/v3/classifiers?version=2018-03-19" \
-        --header "Authorization: Bearer eyJhbGciOiJIUz......sgrKIi8hdFs"
-        ```
-        {: pre}
-
-        For existing instances, you continue to authenticate with the API key that is provided in the service credentials for that service instance.
 
 ### 12 April 2018
 {: #12april2018}
