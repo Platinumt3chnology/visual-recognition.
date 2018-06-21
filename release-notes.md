@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -45,6 +45,15 @@ The current version is `2018-03-19`.
 {: #changelog}
 
 The following new features and changes to the service are available.
+
+### 21 June 2018
+{: #21june2018}
+
+- **Additional language support**
+
+    - The **Classify** methods now support Chinese (Simplified and Traditional) and Portuguese (Brazilian) in the output of `default` (General) model classes. For the full list of languages, see [Supported languages](/docs/services/visual-recognition/language-support.html).
+    - All languages are now also supported in the responses from the **Food** and **Explicit** models.
+
 
 ### 22 May 2018
 {: #22may2018}
