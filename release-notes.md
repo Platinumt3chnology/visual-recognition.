@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-01"
 
 ---
 
@@ -45,6 +45,12 @@ The current version is `2018-03-19`.
 {: #changelog}
 
 The following new features and changes to the service are available.
+
+### 1 July 2018
+{: #01july2018}
+
+- **New pricing for custom models**
+    - Starting July 1, 2018, classifying an image with a custom model costs half the earlier rate and is now $0.002 per image. For details and other important information, see [Updates to Watson Visual Recognition \- Price reduction for Custom Classification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/visrec-price-reduction){: new_window} in the <em>Watson blog<em>.
 
 ### 21 June 2018
 {: #21june2018}
