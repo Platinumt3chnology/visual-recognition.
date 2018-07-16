@@ -8,7 +8,6 @@ Visual Recognition
     getting-started.md
     index.md
     [Demo](https://watson-visual-recognition-duo-dev.ng.bluemix.net/)
-    [Video: Building classifiers with the tool](https://youtu.be/VXezXAzOnUE)
 
     {: .topicgroup}
     Additional resources
