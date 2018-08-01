@@ -1,13 +1,14 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="visual-recognition" audience="service" href="/docs/services/visual-recognition/getting-started.html"}
+{: .toc subcollection="visual-recognition" service-name="Visual Recognition" arm="1102714" audience="service" href="/docs/services/visual-recognition/getting-started.html"}
 Visual Recognition
 
     {: .navgroup id="learn"}
     getting-started.md
     index.md
-    [Demo](https://watson-visual-recognition-duo-dev.ng.bluemix.net/)
+    [Demo](https://www.ibm.com/watson/services/visual-recognition/demo/)
+    [Video: Visual Recognition in Watson Studio](https://youtu.be/tvNRgI8jOIs)
 
     {: .topicgroup}
     Additional resources

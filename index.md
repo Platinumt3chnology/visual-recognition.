@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-02"
+lastupdated: "2018-08-01"
 
 ---
 
@@ -33,8 +33,8 @@ A set of built-in models provides highly accurate results without training:
 
 - [**General** model](/docs/services/visual-recognition/customizing.html#general-model): Default classification from thousands of classes.
 - [**Face** model](/docs/services/visual-recognition/getting-started.html#detect-faces): Facial analysis with age and gender.
-- **Explicit** model (Beta): Whether an image is inappropriate for general use.
-- **Food** model (Beta): Specifically for images of food items.
+- **Explicit** model: Whether an image is inappropriate for general use.
+- **Food** model: Specifically for images of food items.
 - **Text** model (Private beta): Text extraction from natural scene images. [Request access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://datasciencex.typeform.com/to/nU6efl){: new_window}.
 
 

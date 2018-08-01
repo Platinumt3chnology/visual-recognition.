@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-01"
+lastupdated: "2018-08-01"
 
 ---
 
@@ -45,6 +45,17 @@ The current version is `2018-03-19`.
 {: #changelog}
 
 The following new features and changes to the service are available.
+
+### 1 August 2018
+{: #01august2018}
+
+- **General availability of Food and Explicit models**
+
+    The Food and Explicit models moved from Beta to General availability (GA). The Food model recognizes more food and meals than the General (default) model. The Explicit model identifies what might be considered pornographic images.
+
+    No code change are required. Both models are free under the Lite plan and cost $0.002 per image under the Standard plan.
+
+    For more information, see [Updates to Watson Visual Recognition ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/visrec-price-reduction){: new_window} in the <em>Watson blog<em>.
 
 ### 1 July 2018
 {: #01july2018}
