@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-02"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -104,13 +104,13 @@ There are also size limitations when classifying images or detecting faces:
 The following guidelines are not enforced by the API. However, the service tends to perform better when the training data adheres to them:
 
 - Make sure that your images are at least 224 x 224 pixels.
+    - If you encounter size limitations, you can resize your images to 224 x 224 pixels without compromising the quality of the training.
 - For .png images, make sure that the pixel depth is set to at least 24 bits per pixel:
     - To check the depth on MacOS, run the `file` command. 24-bit depth is displayed as `8-bit/color`.
     - To check on Windows, right-click the file and choose **Properties** > **Details**. Look for **Bit depth**.
 - Include at least 50 positive images per class before you assess your training results.
     - Assuming similar quality and content for your training data, more training images generally provide more accurate results than fewer images.
     - 150 - 200 images per .zip file provides the best balance between processing time and accuracy. More than 200 images increases the time and the accuracy, but with diminishing returns for the amount of time it takes.
-    - The benefits of training a classifier on more images plateaus at around 5000 images. Although you can train on more than 5000 images, that number might not significantly increase accuracy, and increases processing time.
 - Include a negative class to help improve your results.
     - Include approximately the same number of negative images as positive ones. An unequal number of images might reduce the quality of the trained classifier.
 - Make sure that the backgrounds in your training images are comparable to what you expect to classify. The accuracy of your classifier can be affected by the kinds of images you provide to train it.
@@ -123,7 +123,8 @@ For more information about training, see [Best practices for custom classifiers 
 
 Maximize efficiency and performance of the service in the following ways when you submit many images:
 
-- Crop or resize your images to 224 x 224 pixels. The service is currently optimized for this size although it might change.
+- Crop or resize your images.
+    - For the best performance without compromising classification quality, consider resizing your images to 224 x 224 pixels. The service is currently optimized for this size, although that might change.
     - Crop the image if it has an aspect ratio greater than 2:1 or under 1:2.
     - Consider cropping the image into multiple square images, or include only the center of the image, depending on what is most important to your use.
 - Submit up to 20 images in a single .zip file. You don't need to use any compression because JPEG and PNG images are compressed files.
