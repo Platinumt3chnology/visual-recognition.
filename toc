@@ -38,6 +38,7 @@ Visual Recognition
         [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
         [.NET SDK](https://github.com/watson-developer-cloud/dotnet-standard-sdk)
         [OpenWhisk SDK](https://github.com/watson-developer-cloud/openwhisk-sdk)
+        [Ruby SDK](https://github.com/watson-developer-cloud/ruby-sdk)
         [Salesforce SDK](https://github.com/watson-developer-cloud/salesforce-sdk)
         [Swift SDK](https://github.com/watson-developer-cloud/swift-sdk)
         [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
@@ -52,6 +53,6 @@ Visual Recognition
     {: .topicgroup}
     Developer community
         [StackOverflow](http://stackoverflow.com/questions/tagged/visual-recognition)
-        [developerWorks Answers](https://developer.ibm.com/answers/topics/visual-recognition.html)
+        [IBM Developer Answers](https://developer.ibm.com/answers/topics/visual-recognition.html)
         [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
     {: .navgroup-end}
