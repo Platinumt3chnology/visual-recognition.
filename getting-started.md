@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-27"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,16 +18,21 @@ lastupdated: "2018-04-27"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 {:download: .download}
+{:apikey data-credential-placeholder='apikey'}
 
 # Getting started tutorial
 
-This tutorial guides you through how to use some built-in classifiers in {{site.data.keyword.visualrecognitionfull}} to classify an image and then detect faces in an image.
+This tutorial guides you through how to use some built-in models in {{site.data.keyword.visualrecognitionfull}} to classify an image and then detect faces in an image.
 {: shortdesc}
 
 ## Before you begin
 {: #prerequisites}
 
 - Create an instance of the service:
+
+    If you're seeing this, you created your service instance. Skip this step.
+    {: download}
+
     1.  Go to the [{{site.data.keyword.visualrecognitionshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/visual-recognition){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
     1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
     1.  Click **Create**.
@@ -35,25 +40,17 @@ This tutorial guides you through how to use some built-in classifiers in {{site.
     1.  Click **Show** to view your credentials.
     1.  Copy the apikey value.
 
-
 ## Step 1: Classify an image
 {: #classify}
 
-1.  Download the sample <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg" download="fruitbowl.jpg">fruitbowl.jpg <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> image.
-1.  Issue the following command to upload the image and classify it against all built-in classifiers:
-    - Replace `{your_api_key}` with the service credentials you copied earlier.
-    - Modify the location of the images\_file to point to where you saved the image.
+1.  Issue the following call to classify [an image ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg){: new_window}. Replace `{your_api_key}` with the service credentials you copied earlier:
 
     ```bash
-    curl -X POST -u "apikey:{your_api_key}" --form "images_file=@fruitbowl.jpg" \
-    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19"
+    curl -u "apikey:{your_api_key}"{: apikey} "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg&version=2018-03-19"
     ```
     {: pre}
 
-    If you have {{site.data.keyword.Bluemix_notm}} Dedicated, the `gateway.watsonplatform.net` endpoint here might not be your service endpoint. Check the `url` on the **Service credentials** page of your service dashboard.
-    {: tip}
-
-    The response includes the General model or classifier (which uses the `default` classifier_id), the classes identified in the image, and a score for each class.
+    The response includes the classes identified in the image from the built-in General model (`"classifier_id": "default"`) and a confidence score for each class. The score represents a percentage, and higher values represent higher confidences. By default, responses from the `Classify` calls don't include classes with a score below `0.5` (50%).
 
     ```json
     {
@@ -65,44 +62,66 @@ This tutorial guides you through how to use some built-in classifiers in {{site.
               "name": "default",
               "classes": [
                 {
-                  "class": "banana",
-                  "score": 0.562,
-                  "type_hierarchy": "/fruit/banana"
+                  "class": "circuit board",
+                  "score": 0.578,
+                  "type_hierarchy": "/electrical device/computer circuit/circuit board"
                 },
                 {
-                  "class": "fruit",
-                  "score": 0.788
+                  "class": "computer circuit",
+                  "score": 0.755
                 },
                 {
-                  "class": "diet (food)",
-                  "score": 0.528,
-                  "type_hierarchy": "/food/diet (food)"
+                  "class": "electrical device",
+                  "score": 0.757
                 },
                 {
-                  "class": "food",
-                  "score": 0.528
+                  "class": "disk controller",
+                  "score": 0.553,
+                  "type_hierarchy": "/controller/disk controller"
                 },
                 {
-                  "class": "honeydew",
+                  "class": "controller",
+                  "score": 0.558
+                },
+                {
+                  "class": "central processing unit",
+                  "score": 0.535
+                },
+                {
+                  "class": "PC board",
+                  "score": 0.501,
+                  "type_hierarchy": "/electrical device/computer circuit/PC board"
+                },
+                {
+                  "class": "CPU board",
                   "score": 0.5,
-                  "type_hierarchy": "/fruit/melon/honeydew"
+                  "type_hierarchy": "/electrical device/computer circuit/CPU board"
                 },
                 {
-                  "class": "melon",
-                  "score": 0.501
+                  "class": "electronic equipment",
+                  "score": 0.6
                 },
                 {
-                  "class": "olive color",
-                  "score": 0.973
+                  "class": "memory device",
+                  "score": 0.599
                 },
                 {
-                  "class": "lemon yellow color",
-                  "score": 0.789
+                  "class": "microchip",
+                  "score": 0.592
+                },
+                {
+                  "class": "jade green color",
+                  "score": 0.838
+                },
+                {
+                  "class": "emerald color",
+                  "score": 0.787
                 }
               ]
             }
           ],
-          "image": "fruitbowl.jpg"
+          "source_url": "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg",
+          "resolved_url": "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg"
         }
       ],
       "images_processed": 1,
@@ -111,27 +130,72 @@ This tutorial guides you through how to use some built-in classifiers in {{site.
     ```
     {: codeblock}
 
-    Confidence scores are in the range of 0 to 1, with a higher score indicating greater correlation. By default, the `/v3/classify` calls don't include classes with a score below `0.5`.
+## Step 2: Classify with the Food model
+{: #classify-food}
 
-## Step 2: Detect faces in an image
-{: #detect-faces}
+{{site.data.keyword.visualrecognitionshort}} also includes a built-in Food model that might be more accurate for your images with food items.
 
-{{site.data.keyword.visualrecognitionshort}} can detect faces in images. The response provides information such as the location of the face in the image and the estimated age range and gender for each face.
-
-1.  Download the sample <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg" download="">Ginni_Rometty.jpg <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> image.
-1.  Issue the following command to the `POST /v3/detect_faces` method to upload and analyze the image. If you use your own image, the maximum size is 10 MB:
-    - Replace `{your_api_key}` with the service credentials you copied earlier.
-    - Modify the location of the images\_file to point to where you saved the image.
+1.  Issue a call to classify an [image of food ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg){: new_window} against the Food model. Replace `{your_api_key}` with the service credentials you copied earlier:
 
     ```bash
-    curl -X POST -u "apikey:{your_api_key}" --form "images_file=@Ginni_Rometty.jpg" \
-    "https://gateway.watsonplatform.net/visual-recognition/api/v3/detect_faces?version=2018-03-19"
+    curl -u "apikey:{your_api_key}"{: apikey} -F "classifier_ids=food" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg&version=2018-03-19"
     ```
     {: pre}
 
-    The response includes a location and age and gender estimates with scores.
+    The service returns the following results. You can see that the `classifier_id` is identified as `food`. The classes that the service identified are also different from the first response.
 
-    Scores range from 0-1, with a higher score indicating greater correlation.
+    ```json
+    {
+      "images": [
+        {
+          "classifiers": [
+            {
+              "classifier_id": "food",
+              "name": "food",
+              "classes": [
+                {
+                  "class": "apple",
+                  "score": 0.572,
+                  "type_hierarchy": "/fruit/accessory fruit/apple"
+                },
+                {
+                  "class": "accessory fruit",
+                  "score": 0.572
+                },
+                {
+                  "class": "fruit",
+                  "score": 0.805
+                },
+                {
+                  "class": "banana",
+                  "score": 0.5,
+                  "type_hierarchy": "/fruit/banana"
+                }
+              ]
+            }
+          ],
+          "source_url": "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg",
+          "resolved_url": "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg"
+        }
+      ],
+      "images_processed": 1,
+      "custom_classes": 0
+    }
+    ```
+
+## Step 3: Detect faces in an image
+{: #detect-faces}
+
+{{site.data.keyword.visualrecognitionshort}} can detect faces in images.
+
+1.  Issue the following call to the `Detect faces in an image` method to analyze an [image of Ginni Rometty ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg){: new_window}. Replace `{your_api_key}` with the service credentials you copied earlier.
+
+    ```bash
+    curl -u "apikey:{your_api_key}"{: apikey} "https://gateway.watsonplatform.net/visual-recognition/api/v3/detect_faces?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg&version=2018-03-19"
+    ```
+    {: pre}
+
+    The response provides the location of the face in the image and the estimated age range and gender for each face.
 
     ```json
     {
@@ -142,7 +206,7 @@ This tutorial guides you through how to use some built-in classifiers in {{site.
               "age": {
                 "min": 50,
                 "max": 53,
-                "score": 0.33788413
+                "score": 0.8261783
               },
               "face_location": {
                 "height": 744,
@@ -156,7 +220,8 @@ This tutorial guides you through how to use some built-in classifiers in {{site.
               }
             }
           ],
-          "image": "Ginni_Rometty.jpg"
+          "source_url": "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg",
+          "resolved_url": "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg"
         }
       ],
       "images_processed": 1
@@ -166,13 +231,15 @@ This tutorial guides you through how to use some built-in classifiers in {{site.
 
 ## Next steps
 
-You have a basic understanding of how to use the built-in default classifier with {{site.data.keyword.visualrecognitionshort}}. Now dive deeper:
+You have a basic understanding of how to use built-in classifiers with {{site.data.keyword.visualrecognitionshort}}. Now dive deeper:
 
-- Learn more about how to [build a custom classifier](/docs/services/visual-recognition/tutorial-custom-classifier.html).
+- Try these calls with your own images. Just keep the image size under 10 MB.
+- Learn more about how to [build a custom model](/docs/services/visual-recognition/tutorial-custom-classifier.html).
 - Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/){: new_window}.
 
 ### Attributions
 {: #attributions}
 
+- [IBM VGA 90X8941 on PS55.jpg ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://commons.wikimedia.org/wiki/File:IBM_VGA_90X8941_on_PS55.jpg){: new_window} by [Darklanlan ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://commons.wikimedia.org/wiki/User:Darklanlan){: new_window} used under [CC BY 4.0 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://creativecommons.org/licenses/by/4.0/legalcode "Creative Commons Attribution 4.0"){: new_window}. No changes were made to this image.
 - [Fruit basket ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://flic.kr/p/JPHES){: new_window} by Flikr user [Ryan Edwards-Crewe ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.flickr.com/photos/ryanec/){: new_window} used under [Creative Commons Attribution 2.0 license ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://creativecommons.org/licenses/by/2.0/deed.en){: new_window}. No changes were made to this image.
-- [Ginni Rometty at the Fortune MPW Summit in 2011 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://commons.wikimedia.org/wiki/File:Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg){: new_window} by Asa Mathat / Fortune Live Media used under [CC BY 2.0 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://creativecommons.org/licenses/by/2.0/legalcode){: new_window}.  No changes were made to this image.
+- [Ginni Rometty at the Fortune MPW Summit in 2011 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://commons.wikimedia.org/wiki/File:Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg){: new_window} by Asa Mathat / Fortune Live Media used under [CC BY 2.0 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://creativecommons.org/licenses/by/2.0/legalcode){: new_window}. No changes were made to this image.

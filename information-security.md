@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,10 +12,6 @@ lastupdated: "2018-05-21"
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
 
 # Information security
 {: #information-security}
@@ -27,6 +23,11 @@ IBM is committed to providing our clients and partners with innovative data priv
 Clients are responsible for ensuring their own compliance with various laws and regulations, including the European Union General Data Protection Regulation. Clients are solely responsible for obtaining advice of competent legal counsel as to the identification and interpretation of any relevant laws and regulations that may affect the clients’ business and any actions the clients may need to take to comply with such laws and regulations.
 
 The products, services, and other capabilities described herein are not suitable for all client situations and may have restricted availability. IBM does not provide legal, accounting or auditing advice or represent or warrant that its services or products will ensure that clients are in compliance with any law or regulation.
+
+If you need to request GDPR support for {{site.data.keyword.cloud}} {{site.data.keyword.watson}} resources that are created
+
+- In the European Union, see [Requesting support for IBM Cloud Watson resources created in the European Union](/docs/services/watson/getting-started-gdpr-sar.html#request-EU).
+- Outside the European Union, see [Requesting support for resources outside the European Union](/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU).
 
 ## European Union General Data Protection Regulation (GDPR)
 {: #gdpr}
@@ -55,11 +56,10 @@ Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and 
 
 If you need to remove an individual customer's data from a {{site.data.keyword.visualrecognitionshort}} service instance with multiple customers, you first need to associate that data with a unique **Customer ID** for each individual that may have provided data. To specify the Customer ID for any data sent using the `POST /classifiers` method, include the **X-Watson-Metadata: customer_id** property in your header.
 
-``` curl
+```bash
 curl -X POST
- --header
-   'X-Watson-Metadata: customer_id={ID-string}' \
- --form "apple_positive_examples=@apples.zip" \
+--header 'X-Watson-Metadata: customer_id={ID-string}' \
+--form "apple_positive_examples=@apples.zip" \
  "https://{HOST-URL}/visual-recognition/api/v3/classifiers?version=2018-03-19"
 ```
 {: pre}
@@ -74,15 +74,15 @@ curl -X POST
 
 Determine the date that your service instance was created by checking the host URL in your service credentials. Instances created **before** May 22, 2018 have a host URL of `gateway-a.watsonplatform.net . . .`, and need to migrate to a new {{site.data.keyword.visualrecognitionshort}} service instance.
 
-To delete data for an individual, for service instances created **after** May 22, 2018, you provide the customer_id field=value pair to the `user_data` parameter.
+To delete data for an individual, for service instances created **after** May 22, 2018, you provide the customer_id field=value pair to the `user_data` method.
 
 **IMPORTANT**: Specifying a `customer_id` parameter will delete all data with that `customer_id` parameter across your entire {{site.data.keyword.visualrecognitionshort}} instance, not just within one application.
 
 As an example, to delete user abc's data from your {{site.data.keyword.visualrecognitionshort}} instance, send the following cURL command:
 
-``` curl
+```bash
 curl -X DELETE
- "https://{HOST-URL}/visual-recognition/api/v3/user_data?customer_id=abc&version=2018-03-19"
+"https://{HOST-URL}/visual-recognition/api/v3/user_data?customer_id=abc&version=2018-03-19"
 ```
 {: pre}
 
