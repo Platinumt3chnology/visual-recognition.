@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-01"
 
 ---
 
@@ -23,8 +23,8 @@ IBM is committed to providing our clients and partners with innovative data priv
 Clients are responsible for ensuring their own compliance with various laws and regulations, including the European Union General Data Protection Regulation. Clients are solely responsible for obtaining advice of competent legal counsel as to the identification and interpretation of any relevant laws and regulations that may affect the clients’ business and any actions the clients may need to take to comply with such laws and regulations.
 
 The products, services, and other capabilities described herein are not suitable for all client situations and may have restricted availability. IBM does not provide legal, accounting or auditing advice or represent or warrant that its services or products will ensure that clients are in compliance with any law or regulation.
-
 If you need to request GDPR support for {{site.data.keyword.cloud}} {{site.data.keyword.watson}} resources that are created
+
 
 - In the European Union, see [Requesting support for IBM Cloud Watson resources created in the European Union](/docs/services/watson/getting-started-gdpr-sar.html#request-EU).
 - Outside the European Union, see [Requesting support for resources outside the European Union](/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU).
@@ -54,13 +54,13 @@ Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and 
 
 ### Labeling data
 
-If you need to remove an individual customer's data from a {{site.data.keyword.visualrecognitionshort}} service instance with multiple customers, you first need to associate that data with a unique **Customer ID** for each individual that may have provided data. To specify the Customer ID for any data sent using the `POST /classifiers` method, include the **X-Watson-Metadata: customer_id** property in your header.
+If you need to remove an individual customer's data from a {{site.data.keyword.visualrecognitionshort}} service instance with multiple customers, you first need to associate that data with a unique **Customer ID** for each individual that might have provided data. To specify the Customer ID for any data sent using the `POST /classifiers` method, include the **X-Watson-Metadata: customer_id** property in your header. The following example associates the customer ID `my_ID` with the data passed with a `POST /v3/classifiers` request:
 
 ```bash
-curl -X POST
---header 'X-Watson-Metadata: customer_id={ID-string}' \
+curl -X POST \
+--header "X-Watson-Metadata: customer_id=my_ID" \
 --form "apple_positive_examples=@apples.zip" \
- "https://{HOST-URL}/visual-recognition/api/v3/classifiers?version=2018-03-19"
+"https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers?version=2018-03-19"
 ```
 {: pre}
 
@@ -72,23 +72,17 @@ curl -X POST
 
 ### Deleting labeled data
 
-Determine the date that your service instance was created by checking the host URL in your service credentials. Instances created **before** May 22, 2018 have a host URL of `gateway-a.watsonplatform.net . . .`, and need to migrate to a new {{site.data.keyword.visualrecognitionshort}} service instance.
-
-To delete data for an individual, for service instances created **after** May 22, 2018, you provide the customer_id field=value pair to the `user_data` method.
-
-**IMPORTANT**: Specifying a `customer_id` parameter will delete all data with that `customer_id` parameter across your entire {{site.data.keyword.visualrecognitionshort}} instance, not just within one application.
-
-As an example, to delete user abc's data from your {{site.data.keyword.visualrecognitionshort}} instance, send the following cURL command:
+To delete all data that is associated with a customer ID, use the `DELETE /v3/user_data` method. You pass the string `customer_id={id}` as a query parameter with the request. The following example deletes all data for the customer ID `my_ID`:
 
 ```bash
-curl -X DELETE
-"https://{HOST-URL}/visual-recognition/api/v3/user_data?customer_id=abc&version=2018-03-19"
+curl -X DELETE -u "apikey:{apikey}" \
+"https://gateway.watsonplatform.net/visual-recognition/api/v3/user_data?customer_id=my_ID&version=2018-03-19"
 ```
 {: pre}
 
-Each example returns an empty JSON object {}.
+The `/v3/user_data` method deletes all data that is associated with the specified customer ID, regardless of the method by which the information was added. The method has no effect if no data is associated with the customer ID.
 
-**Note**: Delete requests are processed in batches and may take up to 24 hours to complete.
+**Note**: Delete requests are processed in batches and might take up to 24 hours to complete.
 
 ### Support
 {: #gdpr-visrec-support}

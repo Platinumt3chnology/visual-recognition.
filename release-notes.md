@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-17"
+lastupdated: "2018-10-01"
 
 ---
 
@@ -12,10 +12,6 @@ lastupdated: "2018-09-17"
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
 
 <!-- Link definitions -->
 
@@ -45,6 +41,15 @@ The current version is `2018-03-19`.
 {: #changelog}
 
 The following new features and changes to the service are available.
+
+### 1 October 2018
+{: #01october2018}
+
+- **Service instances created before May 23, 2018 are deleted.**
+
+    - As previously notified, all {{site.data.keyword.visualrecognitionshort}} instances created before May 23, 2018 are no longer active. Data from the instances is now deleted. See [Migrating](/docs/services/visual-recognition/migrate.html) for details about how to move to a new service instance.
+    - Service instances created after this date are not affected.
+    - If you have any questions, contact [IBM support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/ibmcloudsupport){: new_window}.
 
 ### 1 August 2018
 {: #01august2018}
@@ -148,7 +153,7 @@ The following new features and changes to the service are available.
 
         - Form parameters cannot include the **Content-Type**. For example, this request fails to analyze the **url** parameter because it includes `;type=text/plain`:
 
-            ``` curl
+            ```bash
             curl -F url="https://example.com/images/prez.jpg;type=text/plain" \
             "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/detect_faces?api_key={api-key}&version=2016-05-20"
             ```
