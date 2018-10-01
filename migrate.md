@@ -36,7 +36,8 @@ To migrate your current models (classifiers), you provision a new instance of th
     1.  Copy the API key as indicated in the following image.
 
         ![Service credentials tab](images/apikey2.png)
-1.  Modify how you call your service. 
+
+1.  Modify how you call your service.
 
     There are two options to authenticate: token or API key. The token option provides greater security if, for example, your API request is somehow compromised, because the token expires after one hour. The API key is a more basic authentication method, and does not expire.
 

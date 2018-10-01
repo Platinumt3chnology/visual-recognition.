@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-01"
 
 ---
 
@@ -54,13 +54,13 @@ Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and 
 
 ### Labeling data
 
-If you need to remove an individual customer's data from a {{site.data.keyword.visualrecognitionshort}} service instance with multiple customers, you first need to associate that data with a unique **Customer ID** for each individual that may have provided data. To specify the Customer ID for any data sent using the `POST /classifiers` method, include the **X-Watson-Metadata: customer_id** property in your header.
+If you need to remove an individual customer's data from a {{site.data.keyword.visualrecognitionshort}} service instance with multiple customers, you first need to associate that data with a unique **Customer ID** for each individual that might have provided data. To specify the Customer ID for any data sent using the `POST /classifiers` method, include the **X-Watson-Metadata: customer_id** property in your header. The following example associates the customer ID `my_ID` with the data passed with a `POST /v3/classifiers` request:
 
 ```bash
-curl -X POST
---header 'X-Watson-Metadata: customer_id={ID-string}' \
+curl -X POST \
+--header "X-Watson-Metadata: customer_id=my_ID" \
 --form "apple_positive_examples=@apples.zip" \
- "https://{HOST-URL}/visual-recognition/api/v3/classifiers?version=2018-03-19"
+"https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers?version=2018-03-19"
 ```
 {: pre}
 
@@ -72,25 +72,19 @@ curl -X POST
 
 ### Deleting labeled data
 
-Determine the date that your service instance was created by checking the host URL in your service credentials. Instances created **before** May 22, 2018 have a host URL of `gateway-a.watsonplatform.net . . .`, and need to migrate to a new {{site.data.keyword.visualrecognitionshort}} service instance.
-
-To delete data for an individual, for service instances created **after** May 22, 2018, you provide the customer_id field=value pair to the `user_data` method.
-
-**IMPORTANT**: Specifying a `customer_id` parameter will delete all data with that `customer_id` parameter across your entire {{site.data.keyword.visualrecognitionshort}} instance, not just within one application.
-
-As an example, to delete user abc's data from your {{site.data.keyword.visualrecognitionshort}} instance, send the following cURL command:
+To delete all data that is associated with a customer ID, use the `DELETE /v3/user_data` method. You pass the string `customer_id={id}` as a query parameter with the request. The following example deletes all data for the customer ID `my_ID`:
 
 ```bash
-curl -X DELETE
-"https://{HOST-URL}/visual-recognition/api/v3/user_data?customer_id=abc&version=2018-03-19"
+curl -X DELETE -u "apikey:{apikey}" \
+"https://gateway.watsonplatform.net/visual-recognition/api/v3/user_data?customer_id=my_ID&version=2018-03-19"
 ```
 {: pre}
 
-Each example returns an empty JSON object {}.
+The `/v3/user_data` method deletes all data that is associated with the specified customer ID, regardless of the method by which the information was added. The method has no effect if no data is associated with the customer ID.
 
-**Note**: Delete requests are processed in batches and may take up to 24 hours to complete.
+**Note**: Delete requests are processed in batches and might take up to 24 hours to complete.
 
 ### Support
 {: #gdpr-visrec-support}
 
-Please direct questions to your account representative, or reach out to support directly at [https://ibm.biz/ibmcloudsupport ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/ibmcloudsupport){: new_window}.
+Please direct questions to your account representative, or reach out to support directly a [https://ibm.biz/ibmcloudsupport ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/ibmcloudsupport){: new_window}.
