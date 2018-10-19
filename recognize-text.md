@@ -2,20 +2,21 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-01"
+lastupdated: "2018-10-19"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+
+<!-- Link definitions -->
+
+[api-ref-text]: https://console.bluemix.net/apidocs/visual-recognition/visual-recognition-v3-text
 
 # Text recognition in natural scenes (Beta)
 
@@ -56,4 +57,4 @@ Text in images is better recognized when it adheres to these guidelines:
 
 ## Next steps
 
-Get familiar with the API in the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://text-model-api-explorer.mybluemix.net/apis/visual-recognition-v3#/Text){: new_window}
+Get familiar with the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")][api-ref-text]{: new_window}.
