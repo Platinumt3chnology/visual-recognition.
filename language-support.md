@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-27"
 
 ---
 
@@ -23,4 +23,4 @@ The **Classify images** method of {{site.data.keyword.visualrecognitionfull}} su
 
 The languages work with the output classes of all the built-in models: `default` (also called the General model), `food`, and `explicit`.
 
-For details about the API call, see the **Classify images** method in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/){: new_window}.
+For details about the API call, see the **Classify images** method in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/apidocs/visual-recognition/#classify-images){: new_window}.

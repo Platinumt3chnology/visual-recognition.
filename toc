@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="visual-recognition" service-name="Visual Recognition" arm="1102714" audience="service" href="/docs/services/visual-recognition/getting-started.html"}
+{: .toc subcollection="visual-recognition" service-name="Visual Recognition" arm="1102714" audience="service" href="/docs/services/visual-recognition/getting-started.html" path="services/visual-recognition"}
 Visual Recognition
 
     {: .navgroup id="learn"}
@@ -25,7 +25,7 @@ Visual Recognition
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API reference](https://www.ibm.com/watson/developercloud/visual-recognition/api)
+    [API reference](https://console.bluemix.net/apidocs/visual-recognition)
     language-support.md
     information-security.md
     migrate.md

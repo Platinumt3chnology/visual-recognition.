@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-27"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-09-27"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 {:download: .download}
-{:apikey data-credential-placeholder='apikey'}
+{:apikey: data-credential-placeholder='apikey'}
 
 # Getting started tutorial
 
@@ -235,7 +235,7 @@ You have a basic understanding of how to use built-in classifiers with {{site.da
 
 - Try these calls with your own images. Just keep the image size under 10 MB.
 - Learn more about how to [build a custom model](/docs/services/visual-recognition/tutorial-custom-classifier.html).
-- Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/){: new_window}.
+- Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/apidocs/visual-recognition){: new_window}.
 
 ### Attributions
 {: #attributions}
