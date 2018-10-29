@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-12"
+lastupdated: "2018-10-27"
 
 ---
 
@@ -253,7 +253,7 @@ curl -X DELETE -u "apikey:{your_api_key}" \
 Now that you have a basic understanding of how to use custom models, you can dive deeper:
 
 - Learn more about [Best practices for custom classifiers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2016/10/watson-visual-recognition-training-best-practices/){: new_window}.
-- Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/){: new_window}.
+- Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/apidocs/visual-recognition){: new_window}.
 
 ### Attributions
 {: #attributions}

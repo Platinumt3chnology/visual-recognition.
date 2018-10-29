@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-01"
+lastupdated: "2018-10-27"
 
 ---
 
@@ -129,7 +129,7 @@ The following new features and changes to the service are available.
 
     The **Classify images** and **Detect faces in images** methods support new form-data parameters. Classify images supports separate `url`, `classifier_ids`, `threshold`, and `owners` parameters, and Detect faces supports `url`.
 
-    In the past, you encoded the values in a JSON string and passed the **parameters** form-data parameter. You can use the new method of passing these values in separate form-data parameters for all application development. For details, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/){: new_window}.
+    In the past, you encoded the values in a JSON string and passed the **parameters** form-data parameter. You can use the new method of passing these values in separate form-data parameters for all application development. For details, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/apidocs/visual-recognition){: new_window}.
 
 ### 2 April 2018
 {: #2april2018}
@@ -147,7 +147,7 @@ The following new features and changes to the service are available.
         - The enhanced model supports larger file sizes: up to 10 MB for image files and up to 100 MB for .zip files.
         - The enhanced model does not include `FaceIdentity` information in the response. The identity information refers to the `name` of the person, `score`, and `type_hierarchy` knowledge graph.
 
-    For details about the API, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/curl.html?curl#detect-faces-in-an-image){: new_window}.
+    For details about the API, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/apidocs/visual-recognition/#detect-faces-in-images){: new_window}.
 
     - Known issues
 
@@ -186,7 +186,7 @@ The following new features and changes to the service are available.
     - A new `GET /v3/classifiers/{classifier_id}/core_ml_model` method to download a Core ML model as an .mlmodel file.  You can download Core ML model files for custom models created after March 19.
     - A new `updated` field with the latest training date of the model. The `updated` field matches either the `retrained` field or the `created` field.
 
-    For details about the API changes for Core ML, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/){: new_window} or try them out in the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/visual-recognition-v3){: new_window}.
+    For details about the API changes for Core ML, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://https://console.{DomainName}/apidocs/visual-recognition){: new_window} or try them out in the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/visual-recognition-v3){: new_window}.
 
 - **New tool available: Watson Studio**
 
@@ -356,7 +356,7 @@ The following new features and changes to the service are available.
       <p>
         The Explicit model, which launches in beta, classifies whether an image contains pornographic content and is inappropriate for general use. You can include the Explicit model with other models for combined analysis. For example, include both the `default` and `explicit` classifier IDs in your request to return image tags and whether the image contains explicit content.
       <p>
-        For details about the API call, see the **Classify images** method in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/#classify_an_image), or try out the model in the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/visual-recognition-v3#!/Classify/classify).
+        For details about the API call, see the **Classify images** method in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/apidocs/visual-recognition/#classify-images).
       </p>
     </li>
     <li>
@@ -367,7 +367,7 @@ The following new features and changes to the service are available.
     <li>
       <strong>Array required when passing classifier IDs</strong>
       <p>
-        The API now enforces an array when you pass in `classifier_ids` as part of the **parameters** object in the **Classify images** method. Previously, you could pass a classifier ID as a string. For more information, see the parameters description and example file in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/?curl#classify_an_image).
+        The API now enforces an array when you pass in `classifier_ids` as part of the **parameters** object in the **Classify images** method. Previously, you could pass a classifier ID as a string. For more information, see the parameters description and example file in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/apidocs/visual-recognition/#classify-images).
       </p>
     </li>
 </ul>
@@ -383,7 +383,7 @@ The following new features and changes to the service are available.
 - **Improved tagging**: We increased the number of training images for the default classifier. That increase improve the ability to recognize accurately the overall ‘scene’ of an image. For details, see [Further Enhancements for General Tagging Feature ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/07/watson-visual-recognition-sees-enhancements-general-tagging-feature/){: new_window}
 - **Additional languages**: The **Classify images** method now supports Korean, Italian, and German in addition to English, Arabic, Spanish, and Japanese.
 
-    For details about the API call, see the **Classify an image** method in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/#classify_an_image){: new_window}.
+    For details about the API call, see the **Classify an image** method in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/apidocs/visual-recognition/#classify-images){: new_window}.
 
 ### 16 May 2017
 {: #16may2017}
@@ -489,9 +489,9 @@ The newest release of the {{site.data.keyword.visualrecognitionshort}} service i
 To immediately start using version 2 of the API, understand and update your code to reflect these changes:
 
 - In version 1 of the service, you analyzed images by labels. In version 2 of the service, labels are called **classifiers**. Classifiers have a unique classifier ID indicated by the `classifier_id` parameter and a short name indicated by the `name` parameter.
-- The `POST /v1/recognize` method for analyzing an image is now the [`POST /v2/classify` ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/#classify_an_image){: new_window} method. The `labels_to_check` parameter is renamed to `classifier_ids`.
-- The `GET /v1/tag/labels` method for retrieving a list of labels in V1 is now the [`GET /v2/classifiers` ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/#retrieve_a_list_of_classifiers){: new_window} method for retrieving a list of classifiers.
-- In addition to retrieving a list of classifiers, you can also retrieve details for a specific classifier with the new [`GET /v2/classifiers/{classifier_id}` ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/#retrieve_classifier_details){: new_window} method.
-- Version 2 of the Beta {{site.data.keyword.visualrecognitionshort}} API enables you to create custom classifiers with the new [`POST /v2/classifiers` ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/#create_a_classifier){: new_window} method. To learn more about creating custom classifiers, see [Creating custom classifiers](/docs/services/visual-recognition/customizing.html).
-- Version 2 of the Beta {{site.data.keyword.visualrecognitionshort}} API also enables you to delete custom classifiers with the new [`DELETE /v2/classifiers` ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/#delete_a_classifier){: new_window} method.
+- The `POST /v1/recognize` method for analyzing an image is now the [`POST /v2/classify` ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v2/#classify_an_image){: new_window} method. The `labels_to_check` parameter is renamed to `classifier_ids`.
+- The `GET /v1/tag/labels` method for retrieving a list of labels in V1 is now the [`GET /v2/classifiers` ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v2/#retrieve_a_list_of_classifiers){: new_window} method for retrieving a list of classifiers.
+- In addition to retrieving a list of classifiers, you can also retrieve details for a specific classifier with the new [`GET /v2/classifiers/{classifier_id}` ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v2/#retrieve_classifier_details){: new_window} method.
+- Version 2 of the Beta {{site.data.keyword.visualrecognitionshort}} API enables you to create custom classifiers with the new [`POST /v2/classifiers` ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v2/#create_a_classifier){: new_window} method. To learn more about creating custom classifiers, see [Creating custom classifiers](/docs/services/visual-recognition/customizing.html).
+- Version 2 of the Beta {{site.data.keyword.visualrecognitionshort}} API also enables you to delete custom classifiers with the new [`DELETE /v2/classifiers` ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v2/#delete_a_classifier){: new_window} method.
 - Version 2 of the Beta {{site.data.keyword.visualrecognitionshort}} API requires the `version` parameter. Specify the release date of the version of the API you want to use in `MM-DD-YYYY` format.
