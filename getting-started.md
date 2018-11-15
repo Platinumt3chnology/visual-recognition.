@@ -33,14 +33,16 @@ This tutorial guides you through how to use some built-in models in {{site.data.
 
 ## Before you begin
 {: #prerequisites}
+{: hide-dashboard}
 
-- {: hide-dashboard}Create an instance of the service:
+- Create an instance of the service:
     1.  Go to the [{{site.data.keyword.visualrecognitionshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/visual-recognition){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
     1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
     1.  Click **Create**.
-- {: hide-dashboard}Copy the credentials to authenticate to your service instance:
+- Copy the credentials to authenticate to your service instance:
     1.  Click **Show** to view your credentials.
     1.  Copy the apikey value.
+{: hide-dashboard}
 
 ## Step 1: Classify an image
 {: #classify}

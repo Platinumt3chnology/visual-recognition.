@@ -189,7 +189,7 @@ The following new features and changes to the service are available.
     - A new `GET /v3/classifiers/{classifier_id}/core_ml_model` method to download a Core ML model as an .mlmodel file.  You can download Core ML model files for custom models created after March 19.
     - A new `updated` field with the latest training date of the model. The `updated` field matches either the `retrained` field or the `created` field.
 
-    For details about the API changes for Core ML, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://https://{DomainName}/apidocs/visual-recognition){: new_window} or try them out in the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/visual-recognition-v3){: new_window}.
+    For details about the API changes for Core ML, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://https://{DomainName}/apidocs/visual-recognition#/retrieve-a-core-ml-model-of-a-classifier){: new_window}.
 
 - **New tool available: Watson Studio**
 
