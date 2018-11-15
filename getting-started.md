@@ -2,13 +2,16 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-27"
+lastupdated: "2018-11-15"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -16,9 +19,12 @@ lastupdated: "2018-10-27"
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
+{:ruby: .ph data-hd-programlang='ruby'}
 {:swift: .ph data-hd-programlang='swift'}
 {:download: .download}
 {:apikey: data-credential-placeholder='apikey'}
+{:url: data-credential-placeholder='url'}
+{:hide-dashboard: .hide-dashboard}
 
 # Getting started tutorial
 
@@ -27,23 +33,21 @@ This tutorial guides you through how to use some built-in models in {{site.data.
 
 ## Before you begin
 {: #prerequisites}
+{: hide-dashboard}
 
 - Create an instance of the service:
-
-    If you're seeing this, you created your service instance. Skip this step.
-    {: download}
-
-    1.  Go to the [{{site.data.keyword.visualrecognitionshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/visual-recognition){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
+    1.  Go to the [{{site.data.keyword.visualrecognitionshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/visual-recognition){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
     1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
     1.  Click **Create**.
 - Copy the credentials to authenticate to your service instance:
     1.  Click **Show** to view your credentials.
     1.  Copy the apikey value.
+{: hide-dashboard}
 
 ## Step 1: Classify an image
 {: #classify}
 
-1.  Issue the following call to classify [an image ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg){: new_window}. Replace `{your_api_key}` with the service credentials you copied earlier:
+1.  Issue the following call to classify [an image ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg){: new_window}. <span class="hide-dashboard">Replace `{api_key}` with the service credentials you copied earlier.</span>
 
     ```bash
     curl -u "apikey:{your_api_key}"{: apikey} "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg&version=2018-03-19"
@@ -135,7 +139,7 @@ This tutorial guides you through how to use some built-in models in {{site.data.
 
 {{site.data.keyword.visualrecognitionshort}} also includes a built-in Food model that might be more accurate for your images with food items.
 
-1.  Issue a call to classify an [image of food ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg){: new_window} against the Food model. Replace `{your_api_key}` with the service credentials you copied earlier:
+1.  Issue a call to classify an [image of food ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg){: new_window} against the Food model.<span class="hide-dashboard">Replace `{api_key}` with the service credentials you copied earlier.</span>
 
     ```bash
     curl -u "apikey:{your_api_key}"{: apikey} -F "classifier_ids=food" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg&version=2018-03-19"
@@ -188,7 +192,7 @@ This tutorial guides you through how to use some built-in models in {{site.data.
 
 {{site.data.keyword.visualrecognitionshort}} can detect faces in images.
 
-1.  Issue the following call to the `Detect faces in an image` method to analyze an [image of Ginni Rometty ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg){: new_window}. Replace `{your_api_key}` with the service credentials you copied earlier.
+1.  Issue the following call to the `Detect faces in an image` method to analyze an [image of Ginni Rometty ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg){: new_window}.<span class="hide-dashboard">Replace `{api_key}` with the service credentials you copied earlier.</span>
 
     ```bash
     curl -u "apikey:{your_api_key}"{: apikey} "https://gateway.watsonplatform.net/visual-recognition/api/v3/detect_faces?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg&version=2018-03-19"
@@ -235,7 +239,7 @@ You have a basic understanding of how to use built-in classifiers with {{site.da
 
 - Try these calls with your own images. Just keep the image size under 10 MB.
 - Learn more about how to [build a custom model](/docs/services/visual-recognition/tutorial-custom-classifier.html).
-- Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/apidocs/visual-recognition){: new_window}.
+- Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition){: new_window}.
 
 ### Attributions
 {: #attributions}

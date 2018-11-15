@@ -2,13 +2,16 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-01"
+lastupdated: "2018-11-15"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -16,7 +19,6 @@ lastupdated: "2018-08-01"
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
-{:note: .deprecated}
 
 # About
 
@@ -26,7 +28,7 @@ lastupdated: "2018-08-01"
 The {{site.data.keyword.visualrecognitionfull}} service uses deep learning algorithms to analyze images for scenes, objects, faces, and other content. The response includes keywords that provide information about the content.
 {: shortdesc}
 
-##Available models
+## Available models
 {: #models}
 
 A set of built-in models provides highly accurate results without training:
@@ -37,8 +39,6 @@ A set of built-in models provides highly accurate results without training:
 - **Food** model: Specifically for images of food items.
 - **Text** model (Private beta): Text extraction from natural scene images. [Request access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://datasciencex.typeform.com/to/nU6efl){: new_window}.
 
-
-
 You can also train [custom models](/docs/services/visual-recognition/tutorial-custom-classifier.html) to create specialized classes.
 
 ## How to use the service
@@ -48,6 +48,7 @@ The following image shows the process of creating and using {{site.data.keyword.
 ![Describes the flow of the {{site.data.keyword.visualrecognitionshort}} service, from preparing, training, and classifying images to viewing results.](images/visual-recognition-process-110717.png)
 
 ## Use cases
+{: #usecases}
 
 The {{site.data.keyword.visualrecognitionshort}} service can be used for diverse applications and industries, such as:
 

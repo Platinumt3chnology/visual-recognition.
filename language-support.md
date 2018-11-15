@@ -9,6 +9,9 @@ lastupdated: "2018-10-27"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -23,4 +26,4 @@ The **Classify images** method of {{site.data.keyword.visualrecognitionfull}} su
 
 The languages work with the output classes of all the built-in models: `default` (also called the General model), `food`, and `explicit`.
 
-For details about the API call, see the **Classify images** method in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/apidocs/visual-recognition/#classify-images){: new_window}.
+For details about the API call, see the **Classify images** method in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition/#classify-images){: new_window}.
