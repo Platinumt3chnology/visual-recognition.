@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-19"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -10,13 +10,15 @@ lastupdated: "2018-10-19"
 {:new_window: target="_blank"}
 {:tip: .tip}
 {:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
 <!-- Link definitions -->
 
-[api-ref-text]: https://console.bluemix.net/apidocs/visual-recognition/visual-recognition-v3-text
+[api-ref-text]: https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text
 
 # Text recognition in natural scenes (Beta)
 
@@ -24,7 +26,8 @@ Use the {{site.data.keyword.visualrecognitionshort}} beta Text model to detect a
 
 ---
 
-**Beta:** The Text model is a private beta feature, and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. For more information about beta features, see [Release notes](/docs/services/visual-recognition/release-notes.html#beta).
+The Text model is a private beta feature, and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. For more information about beta features, see [Release notes](/docs/services/visual-recognition/release-notes.html#beta).
+{: important}
 
 [Go](/docs/services/visual-recognition/index.html) to the generally available docs.
 
