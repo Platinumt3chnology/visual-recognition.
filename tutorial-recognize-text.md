@@ -2,13 +2,16 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-15"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:important: .important}
 {:pre: .pre}
 {:codeblock: .codeblock}
@@ -21,18 +24,13 @@ lastupdated: "2018-10-31"
 This tutorial guides you through how to use make your first call with the {{site.data.keyword.visualrecognitionshort}} beta Text model to detect and recognize English text in an image.
 {: shortdesc}
 
----
-
-**Beta:** The Text model is a private beta feature, and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. For more information about beta features, see [Release notes](/docs/services/visual-recognition/release-notes.html#beta).
-
-[Go](/docs/services/visual-recognition/index.html) to the generally available docs.
-
----
+**Beta:** The Text model is a private beta feature, and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. For more information about beta features, see [Release notes](/docs/services/visual-recognition/release-notes.html#beta). [Go](/docs/services/visual-recognition/index.html) to the generally available docs.
+{: important}
 
 ## Before you begin
 {: #prerequisites}
 
-1.  Go to the [{{site.data.keyword.visualrecognitionshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/visual-recognition){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
+1.  Go to the [{{site.data.keyword.visualrecognitionshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/visual-recognition){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
     1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
     1.  Click **Create**.
 - Copy the credentials to authenticate to your service instance:
@@ -116,7 +114,7 @@ This tutorial guides you through how to use make your first call with the {{site
 You have a basic understanding of how to recognize text in an image. Explore further.
 
 - Read the [overview](/docs/services/visual-recognition/recognize-text.html)
-- Explore the Text model methods in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text#recognize-text-in-an-image-get-beta){: new_window}.
+- Explore the Text model methods in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text#recognize-text-in-an-image-get-beta){: new_window}.
 
 ### Attributions
 {: #attributions}
