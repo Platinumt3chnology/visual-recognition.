@@ -25,7 +25,7 @@ Visual Recognition
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API reference](https://console.bluemix.net/apidocs/visual-recognition)
+    [API reference](https://bluemix.net/apidocs/visual-recognition)
     language-support.md
     information-security.md
     migrate.md
