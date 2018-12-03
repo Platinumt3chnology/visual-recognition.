@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="visual-recognition" audience="service" href="/docs/services/visual-recognition/getting-started.html"}
+{: .toc subcollection="visual-recognition" audience="service" href="/docs/services/visual-recognition/getting-started.html" path="services/visual-recognition"}
 Visual Recognition
 
     {: .navgroup id="learn"}
