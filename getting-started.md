@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-08"
+lastupdated: "2019-01-09"
 
 ---
 
@@ -32,16 +32,28 @@ lastupdated: "2019-01-08"
 This tutorial guides you through how to use some built-in models in {{site.data.keyword.visualrecognitionfull}} to classify an image and then detect faces in an image.
 {: shortdesc}
 
+If you prefer to work in a graphical interface, use {{site.data.keyword.DSX}}. [Launch the tool ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: new_window} and follow the [video ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/898RN31szg0){: new_window}.
+{: tip}
+
 ## Before you begin
 {: #prerequisites}
 
 - {: hide-dashboard} Create an instance of the service:
-    1.  Go to the [{{site.data.keyword.visualrecognitionshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/visual-recognition){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
+    1.  Go to the [{{site.data.keyword.visualrecognitionshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/visual-recognition){: new_window} page in the catalog.
     1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
     1.  Click **Create**.
 - {: hide-dashboard} Copy the credentials to authenticate to your service instance:
-    1.  Click **Show** to view your credentials.
-    1.  Copy the apikey value.
+    1.  On the **Manage** page, click **Show Credentials**.
+    1.  Copy the `API Key` value.
+- {: curl} Make sure that you have the `curl` command.
+    - Test whether `curl` is installed. Run the following command on the command line. If the output lists the `curl` version with SSL support, you are set for the tutorial.
+
+        ```bash
+        curl -V
+        ```
+        {: pre}
+
+    - If necessary, install a version with SSL enabled from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. Add the location of the file to your PATH environment variables if you want to run `curl` from any command line location.
 - {:go} Install the [Go SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/go-sdk){: new_window}.
 
     ```go
@@ -87,13 +99,14 @@ This tutorial guides you through how to use some built-in models in {{site.data.
     ```
     {:pre}
 
+
 ## Step 1: Classify an image
 {: #classify}
 
-1.  Issue the following call to classify [an image ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg){: new_window}. <span class="hide-dashboard">Replace `{api_key}` with the service credentials you copied earlier.</span>
+1.  Issue the following call to classify [an image ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg){: new_window}. <span class="hide-dashboard">Replace `{apikey}` with the service credentials you copied earlier.</span>
 
     ```bash
-    curl -u "apikey:{api_key}"{: apikey} "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg&version=2018-03-19"
+    curl -u "apikey:{apikey}"{: apikey} "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg&version=2018-03-19"
     ```
     {: pre}
     {: curl}
@@ -291,10 +304,10 @@ This tutorial guides you through how to use some built-in models in {{site.data.
 
 {{site.data.keyword.visualrecognitionshort}} also includes a built-in Food model that might be more accurate for your images with food items.
 
-1.  Issue a call to classify an [image of food ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg){: new_window} against the Food model. <span class="hide-dashboard">Replace `{api_key}` with the service credentials you copied earlier.</span>
+1.  Issue a call to classify an [image of food ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg){: new_window} against the Food model. <span class="hide-dashboard">Replace `{apikey}` with the service credentials you copied earlier.</span>
 
     ```bash
-    curl -u "apikey:{api_key}"{: apikey} -F "classifier_ids=food" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg&version=2018-03-19"
+    curl -u "apikey:{apikey}"{: apikey} -F "classifier_ids=food" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg&version=2018-03-19"
     ```
     {: pre}
     {: curl}
@@ -457,10 +470,10 @@ This tutorial guides you through how to use some built-in models in {{site.data.
 
 {{site.data.keyword.visualrecognitionshort}} can detect faces in images.
 
-1.  Issue the following call to the `Detect faces in an image` method to analyze an [image of Ginni Rometty ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg){: new_window}. <span class="hide-dashboard">Replace `{api_key}` with the service credentials you copied earlier.</span>
+1.  Issue the following call to the `Detect faces in an image` method to analyze an [image of Ginni Rometty ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg){: new_window}. <span class="hide-dashboard">Replace `{apikey}` with the service credentials you copied earlier.</span>
 
     ```bash
-    curl -u "apikey:{api_key}"{: apikey} "https://gateway.watsonplatform.net/visual-recognition/api/v3/detect_faces?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg&version=2018-03-19"
+    curl -u "apikey:{apikey}"{: apikey} "https://gateway.watsonplatform.net/visual-recognition/api/v3/detect_faces?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg&version=2018-03-19"
     ```
     {: pre}
     {: curl}
