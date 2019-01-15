@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-09"
+lastupdated: "2019-01-15"
 
 ---
 
@@ -606,6 +606,7 @@ If you prefer to work in a graphical interface, use {{site.data.keyword.DSX}}. [
               },
               "gender": {
                 "gender": "FEMALE",
+                "gender_label": "female",
                 "score": 0.9999988
               }
             }

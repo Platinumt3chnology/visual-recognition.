@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-15"
+  years: 2015, 2019
+lastupdated: "2019-01-15"
 
 ---
 
@@ -44,6 +44,12 @@ The current version is `2018-03-19`.
 {: #changelog}
 
 The following new features and changes to the service are available.
+
+### 15 January 2019
+{: #15january2019}
+
+- **Translation for gender in Detect Faces**
+    - The **Detect Faces** methods now return translated labels for "Male" and "Female" when you provide the language in the **Accept-Language** request header. For details see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition#detect-faces-in-images){: new_window}.
 
 ### 1 October 2018
 {: #01october2018}
