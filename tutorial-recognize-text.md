@@ -1,17 +1,14 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-15"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
 {:important: .important}
 {:pre: .pre}
 {:codeblock: .codeblock}
@@ -20,15 +17,16 @@ lastupdated: "2018-11-15"
 {:url: data-credential-placeholder='url'}
 
 # Recognizing text in an image
+{: #tutorial-recognize-text}
 
 This tutorial guides you through how to use make your first call with the {{site.data.keyword.visualrecognitionshort}} beta Text model to detect and recognize English text in an image.
 {: shortdesc}
 
-**Beta:** The Text model is a private beta feature, and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. For more information about beta features, see [Release notes](/docs/services/visual-recognition/release-notes.html#beta). [Go](/docs/services/visual-recognition/index.html) to the generally available docs.
+The Text model is a private beta feature, and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. [Request access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://datasciencex.typeform.com/to/nU6efl){: new_window}. For more information about beta features, see [Release notes](/docs/services/visual-recognition/release-notes.html#beta).
 {: important}
 
 ## Before you begin
-{: #prerequisites}
+{: #tutorial-recognize-text-prerequisites}
 
 1.  Go to the [{{site.data.keyword.visualrecognitionshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/visual-recognition){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
     1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
@@ -38,7 +36,7 @@ This tutorial guides you through how to use make your first call with the {{site
     1.  Copy the **API key** value.
 
 ## Step 1: Recognize text in an image
-{: #recognize-text}
+{: #tutorial-recognize-text-recognize-text}
 
 1.  Issue the following call to recognize text in [an image ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/lookButDontTouch.jpg){: new_window}. Replace `{your_api_key}` with the API key value that you copied earlier.
 
@@ -113,10 +111,10 @@ This tutorial guides you through how to use make your first call with the {{site
 
 You have a basic understanding of how to recognize text in an image. Explore further.
 
-- Read the [overview](/docs/services/visual-recognition/recognize-text.html)
+- Read the [overview](/docs/services/visual-recognition/recognize-text.html).
 - Explore the Text model methods in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text#recognize-text-in-an-image-get-beta){: new_window}.
 
 ### Attributions
-{: #attributions}
+{: #tutorial-recognize-text-attributions}
 
 - [lookButDontTouch ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://unsplash.com/photos/WrvDSkS2yu4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){: new_window} by [Lubo Minar ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://unsplash.com/@bubo){: new_window} on [Unsplash ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){: new_window}.  No changes were made to this image.

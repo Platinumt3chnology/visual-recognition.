@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-28"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -21,17 +21,12 @@ lastupdated: "2018-11-28"
 [api-ref-text]: https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text
 
 # Text recognition in natural scenes (Beta)
+{: #recognize-text}
 
 Use the {{site.data.keyword.visualrecognitionshort}} beta Text model to detect and recognize English text in images. The Text model is designed to recognize scene text in images rather than the denser text in documents.
 
----
-
-The Text model is a private beta feature, and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. For more information about beta features, see [Release notes](/docs/services/visual-recognition/release-notes.html#beta).
+The Text model is a private beta feature, and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. [Request access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://datasciencex.typeform.com/to/nU6efl){: new_window}. For more information about beta features, see [Release notes](/docs/services/visual-recognition/release-notes.html#beta).
 {: important}
-
-[Go](/docs/services/visual-recognition/index.html) to the generally available docs.
-
----
 
 The Text model works best on short text strings. For example, a common use of the Text model is to read signs.
 
@@ -40,7 +35,7 @@ The Text model works best on short text strings. For example, a common use of th
 The white boxes illustrate each word that the model recognizes in the image.
 
 ## The response
-{: #response}
+{: #recognize-text-response}
 
 The response includes the detected string, and each word within that string is identified with the following information:
 
@@ -50,7 +45,7 @@ The response includes the detected string, and each word within that string is i
 - A line number where the word was detected.
 
 ## Guidelines for good text recognition
-{: #guidelines}
+{: #recognize-text-guidelines}
 
 Text in images is better recognized when it adheres to these guidelines:
 
@@ -59,5 +54,7 @@ Text in images is better recognized when it adheres to these guidelines:
 - The Text model is trained mainly on English language words. Text in other languages likely won't be recognized.
 
 ## Next steps
+{: recognize-text-next-steps}
 
-Get familiar with the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")][api-ref-text]{: new_window}.
+- [Make a call](/docs/services/visual-recognition/tutorial-recognize-text.html) to recognize text in an image.
+- Get familiar with the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")][api-ref-text]{: new_window}.

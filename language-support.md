@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-15"
+lastupdated: "2019-02-01"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2019-01-15"
 # Supported languages
 
 ## Classify images
-{: #classify}
+{: #language-support}
 
 The **Classify images** method of {{site.data.keyword.visualrecognitionfull}} supports English (`en`), Arabic (`ar`), German (`de`), Spanish (`es`), French (`fr`), Italian (`it`), Japanese (`ja`), Korean (`ko`), Portuguese (Brazilian) (`pt-br`), Chinese (Simplified) (`zh-cn`), and Chinese (Traditional) (`zh-tw`).
 
