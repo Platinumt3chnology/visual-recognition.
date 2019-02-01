@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-15"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -21,8 +21,9 @@ lastupdated: "2018-11-15"
 {:swift: .ph data-hd-programlang='swift'}
 
 # About
+{: #index}
 
-**Important**: *On April 2, 2018, the identity information in the response to calls to the Face model was removed. The identity information refers to the name of the person, score, and type_hierarchy knowledge graph. For details about the enhanced Face model, see the [Release notes](/docs/services/visual-recognition/release-notes.html#2april2018).*
+On April 2, 2018, the identity information in the response to calls to the Face model was removed. The identity information refers to the name of the person, score, and type_hierarchy knowledge graph. For details about the enhanced Face model, see the [Release notes](/docs/services/visual-recognition/release-notes.html#2april2018).
 {: deprecated}
 
 The {{site.data.keyword.visualrecognitionfull}} service uses deep learning algorithms to analyze images for scenes, objects, faces, and other content. The response includes keywords that provide information about the content.
@@ -42,13 +43,14 @@ A set of built-in models provides highly accurate results without training:
 You can also train [custom models](/docs/services/visual-recognition/tutorial-custom-classifier.html) to create specialized classes.
 
 ## How to use the service
+{: #language-support-how-to}
 
 The following image shows the process of creating and using {{site.data.keyword.visualrecognitionshort}}:
 
 ![Describes the flow of the {{site.data.keyword.visualrecognitionshort}} service, from preparing, training, and classifying images to viewing results.](images/visual-recognition-process-110717.png)
 
 ## Use cases
-{: #usecases}
+{: #language-support-use-cases}
 
 The {{site.data.keyword.visualrecognitionshort}} service can be used for diverse applications and industries, such as:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-15"
+lastupdated: "2019-02-01"
 
 ---
 
@@ -22,6 +22,7 @@ lastupdated: "2019-01-15"
 [demo]: https://www.ibm.com/watson/services/visual-recognition/demo
 
 # Release notes
+{: #release-notes}
 
 The following new features and changes to the service are available.
 {: shortdesc}

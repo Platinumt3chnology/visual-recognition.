@@ -1,17 +1,14 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-05"
+  years: 2015, 2019
+lastupdated: "2018-09-04"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,6 +18,7 @@ lastupdated: "2018-09-05"
 {:swift: .ph data-hd-programlang='swift'}
 
 # Guidelines for training classifiers
+{: #customizing}
 
 After you classify an image and create, train, and query a custom classifier with the example data in the [Creating a custom classifier tutorial](/docs/services/visual-recognition/tutorial-custom-classifier.html), you can classify your own data or create your own custom classifier.
 {: shortdesc}
@@ -40,6 +38,7 @@ The General classifier returns classes from thousands of possible tags organized
 - And many more, including furnishings, fruits, musical instruments, tools, colors, gadgets, devices, instruments, weapons, buildings, structures and man-made objects, clothing and garments, and flowers, among others.
 
 ### Classify response hierarchy
+{: #customizing-response-hierarchy}
 
 The `/v3/classify` method classifies images within a hierarchy of related classes. For example, a picture of a Beagle might be classified as "animal" as well as the related "dog" and "beagle". A positive match with the related classes, in this case "dog" and "beagle", boosts the score of the parent response. In this example, the response includes all three classes: "animal", "dog", and "beagle". The score of the parent class ("animal") is boosted because it matches the related classes ("dog" and "beagle"). The parent is also a "type\_hierarchy" to show that it is a parent of the hierarchy.
 
@@ -61,6 +60,7 @@ After training completes, when the service identifies fruit in an image, it will
 Custom classifiers are accessible only to the specific service instance where they were created and cannot be shared with other {{site.data.keyword.Bluemix_notm}} users who do not have access to your instance of the service.
 
 ## Updating custom classifiers
+{: #customizing-update}
 
 You can update an existing classifier by adding new classes or by adding new images to existing classes. To update the existing classifier, use several compressed (.zip) files, including files containing positive or negative images (.jpg, or .png). You must supply at least one compressed file, with additional positive or negative examples.
 
@@ -71,6 +71,7 @@ The compressed file containing negative examples is not used to create a class w
 ![Fruits classifier retrained with new positive class for oranges and negative class for cheese](images/retrain.png)
 
 ### How retraining works
+{: #customizing-retrain}
 
 If you train a classifier with three sets of positive class pictures - Apples, Bananas, and Pears - the system trains three models internally. For the Apples model, the group of pictures in "Apples" is trained as a positive example, and the group of pictures uploaded in "Bananas" and "Pears" are trained as negative examples. The system then knows that bananas and pears are not apples. The other classes are used as negative examples for the Bananas, and Pears models as well.
 
@@ -83,6 +84,7 @@ Now, you simply retrain the system with YellowPears.zip and GreenPears.zip as po
 The end result is that the YellowPears and GreenPears classes will have Apples and Bananas as negative examples, but will not have any exact duplicate images from the Pears class as negative examples.
 
 ## Size limitations
+{: #customizing-size}
 
 There are size limitations for training calls and data:
 
@@ -103,6 +105,7 @@ There are also size limitations when classifying images or detecting faces:
 <!-- - The `POST /v3/recognize_text` method accept a maximum of 10 images per batch. -->
 
 ## Guidelines for good training
+{: #customizing-guidelines-training}
 
 The following guidelines are not enforced by the API. However, the service tends to perform better when the training data adheres to them:
 
@@ -123,6 +126,7 @@ The following guidelines are not enforced by the API. However, the service tends
 For more information about training, see [Best practices for custom classifiers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2016/10/watson-visual-recognition-training-best-practices/){: new_window}.
 
 ## Guidelines for high volume classifying
+{: #customizing-guidelines-classifying}
 
 Maximize efficiency and performance of the service in the following ways when you submit many images:
 
@@ -135,21 +139,25 @@ Maximize efficiency and performance of the service in the following ways when yo
 - Although the service reads EXIF tags and rotates images, for the best throughput, send images that don't need to be rotated by the service (the EXIF **Orientation** tag is set to `1`).
 
 ## Custom classifier scores
+{: #customizing-scores}
 
 The `/classify` method produces a score between 0.0 and 1.0 for each image for each class. This section delves into the meaning of those scores for custom classifiers (as opposed to the General classifier).
 
 ### Background reading
+{: #customizing-reading}
 
 - The service performs [statistical classification. ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/Statistical_classification){: new_window}
 - You can [measure statistical classifiers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/Category:Information_retrieval_evaluation){: new_window} in several ways.
 
 ### How to use the scores
+{: #customizing-scores-how-to}
 
 - Think about possible actions to be taken in response to a classification. Specifically, analyze how you will use "true" or "false" positive or negative conditions.  These conditions are described in the Background Reading.
 - This cost-benefit balance is crucial to deciding what to do with each class score, and only someone who understands the final application can determine it. The score value needed for the application to take some action is called the "decision threshold." The service does not compute this for you.
 - Custom classifiers use binary "one versus the rest" models to train each class against the other classes. The system assumes that two classes within a classifier cannot occur at the same time, so you should create separate classifiers to test for classes that can exist together, like `blue` and `sky`. Alternatively, you could create a distinct classifier for cases where both classes exist at the same time and test for a class like `blueSky`.
 
 ### Example
+{: #customizing-example}
 
 Imagine that you are monitoring an assigned parking space with a webcam. You train a custom classifier to recognize whether your car is in the spot, some other car is in the spot, the spot is empty, or the camera has been blocked. You collect training examples for each of these cases and train a custom classifier with four classes. Your application classifies images from the webcam to report the status of the spot, and the system notifies you with a message if the status is unexpected. Each time the service classifies the image from the camera, it produces four scores: `myCar`, `unknownCar`, `emptySpot`, and `blockedCamera`.
 
@@ -162,6 +170,7 @@ So, the notification logic and threshold will probably vary, depending on the pe
 Similarly, as a person, you may face the same trade  off. If the system notifies you that the camera has been blocked, the accompanying image will likely simply be all black or gray. Do you go to check on the car in person or ignore it? Again, this depends on your other priorities and the perceived risks.
 
 ### Questions
+{: #customizing-faq}
 
 - **What do the scores mean?**
 

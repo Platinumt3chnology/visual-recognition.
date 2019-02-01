@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-10"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -26,6 +26,7 @@ lastupdated: "2018-12-10"
 {:url: data-credential-placeholder='url'}
 
 # Creating a custom model
+{: #tutorial-custom-classifier}
 
 After you analyze an image in the "Getting started tutorial," you are ready to train and create a custom model. With a custom model, you can train the {{site.data.keyword.visualrecognitionshort}} service to classify images to suit your business needs.
 {: shortdesc}
@@ -94,6 +95,7 @@ Use the credentials that you copied in "Getting started tutorial." If you didn't
     {: pre}
 
 ## Step 3: Updating an existing custom model
+{: #tutorial-custom-classifier-update}
 
 You can update a custom model either by adding classes to the model or by adding images to an existing class. Here, you improve the model that you created in Step 2 by adding a *Dalmatian* class to the types of dogs that can be classified. You also add images of cats to the negative example set for the "dogs" custom model.
 
@@ -153,7 +155,7 @@ You can update a custom model either by adding classes to the model or by adding
     {: pre}
 
 ## Step 4: Classifying an image with a custom model
-{: #classify}
+{: #tutorial-custom-classifier-classify}
 
 When the new model is ready, call it to see how it performs.
 
@@ -245,6 +247,7 @@ When the new model is ready, call it to see how it performs.
 You're done! You created, trained, and queried a custom model with {{site.data.keyword.visualrecognitionshort}}.
 
 ### Deleting your custom model
+{: #tutorial-custom-classifier-delete}
 
 You might want to delete your custom model to begin developing your application with a clean instance.
 
@@ -257,6 +260,7 @@ curl -X DELETE -u "apikey:{your_api_key}" \
 {: pre}
 
 ## Next steps
+{: #tutorial-custom-classifier-next-steps}
 
 Now that you have a basic understanding of how to use custom models, you can dive deeper:
 
@@ -264,6 +268,6 @@ Now that you have a basic understanding of how to use custom models, you can div
 - Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition){: new_window}.
 
 ### Attributions
-{: #attributions}
+{: #tutorial-custom-classifier-attributions}
 
 All images used on this page are from Flikr and used under [Creative Commons Attribution 2.0 license ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://creativecommons.org/licenses/by/2.0/deed.en){: new_window}. No changes were made to these images.
