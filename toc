@@ -25,6 +25,7 @@ Visual Recognition
 
     {: .topicgroup}
     Beta features
+        object-detection.md
         recognize-text.md
         tutorial-recognize-text.md
     {: .navgroup-end}
