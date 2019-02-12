@@ -25,7 +25,7 @@ lastupdated: "2019-02-12"
 [api-ref-v4]: https://{DomainName}/apidocs/visual-recognition-v4
 
 # Custom Object Detection (Beta)
-{: object-detection-overview}
+{: #object-detection-overview}
 
 {{site.data.keyword.visualrecognitionfull}} Custom Object Detection (Beta) identifies items and their location in an image. The service detects these items based on a set of images with labeled training data that you provide.
 {: shortdesc}
@@ -33,7 +33,7 @@ lastupdated: "2019-02-12"
 Custom Object Detection is a private beta feature and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. [Request access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://datasciencex.typeform.com/to/c70Ak5){: new_window}. For more information about beta features, see the [Release notes](/docs/services/visual-recognition/release-notes.html#beta).
 {: important}
 
-You train the object detection model to recognize objects that are important to your workflow or domain. For example, detect damage to cars or find machines that need maintenance or perform visual inspections in the field. You can also use object detection to count objects or manage inventory.
+You train the object detection model to recognize objects that are important to your workflow or domain. For example, detect damage to cars, find machines that need maintenance, or perform visual inspections in the field. You can also use object detection to count objects or manage inventory.
 
 ## Object detection and classification compared
 {: #obj-detect-comparison}
@@ -58,7 +58,7 @@ Custom Object detection is similar to custom classification, but the service ide
 
 The items that are detected are based on the information that you provide when you train an object detection model.
 
-In the following image, the **Analyze images** method of Custom Object Detection, identifies the location of cookies in the image. Each detected object includes the label (in this case, `Cookie`) with its location and a confidence score.
+In the following image, the **Analyze images** method of Custom Object Detection identifies the location of cookies in the image. Each detected object includes the label (in this case, `Cookie`) with its location and a confidence score.
 
 ![Object detection response image](images/cookies-bbox.png "An image to show object detection")
 
@@ -68,7 +68,7 @@ In the following image, the **Analyze images** method of Custom Object Detection
 To use {{site.data.keyword.visualrecognitionshort}} Custom Object Detection, you follow this sequence of steps to set up a custom object detection model:
 
 1.  Create a collection: A collection is a container for your images and training data. See [Create a collection ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition-v4#create-a-collection){: new_window} in the v4 API reference.
-1.  Add your images to the collection. You can add single images by URL or by file, or you can upload a .zip file of images. See [Add images ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition-v4#add-images){: new_window} in the v4 API reference.
+1.  Add your images to the collection. You can add single images by URL or by file, or you can upload a `.zip` file of images. See [Add images ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition-v4#add-images){: new_window} in the v4 API reference.
 1.  Add training data to your images. See [Preparing your training data](#object-detection-preparation).
 1.  Train your collection. After you have enough training data, start training on the images in the collection. See [Train a collection ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition-v4#train-a-collection){: new_window} in the v4 API reference.
 
@@ -98,6 +98,7 @@ The following example shows the training data for an object labeled `BurntCookie
   }]
 }
 ```
+{: codeblock}
 
 In this initial beta release, you create the location information by hand or by using an image annotation tool.
 
@@ -127,6 +128,7 @@ After you add the training data to images in your collection, the final setup st
   }
 }
 ```
+{: codeblock}
 
 You can retrain a model after you update the training data by reissuing the call.
 
@@ -135,7 +137,7 @@ For more information, see [Train a collection ![External link icon](../../icons/
 ## Analyze images
 {: #object-detection-train}
 
-After you set up a custom object detection model and the training is complete, you can detect objects in other images. As with classification, you provide an image or .zip file of images and an optional **threshold** to set the minimum score of detected objects. For more information, see the **Analyze images** method in the [v4 API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition-v4#analyze-images).
+After you set up a custom object detection model and the training is complete, you can detect objects in other images. As with classification, you provide an image or `.zip` file of images and an optional **threshold** to set the minimum score of detected objects. For more information, see the **Analyze images** method in the [v4 API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition-v4#analyze-images).
 
 ## Next steps
 {: #object-detection-next-steps}

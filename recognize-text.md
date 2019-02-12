@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-11"
+lastupdated: "2019-02-12"
 
 ---
 
@@ -51,7 +51,7 @@ Text in images is better recognized when it adheres to these guidelines:
 
 - The text is primarily full words, not strings of letters such as product codes. The model recognizes words rather than individual characters, and might discard single-letter "words" or numbers.
 - The text is printed in a standard font, not a highly stylized one. For example, text in license plates or movie poster titles might not be recognized. Likewise, handwritten text might not be recognized.
-- The Text model is trained mainly on English language words. Text in other languages likely won't be recognized.
+- The Text model is trained mainly on English language words. Text in other languages is unlikely to be recognized.
 
 ## Next steps
 {: #recognize-text-next-steps}
