@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-02-11"
 
 ---
 
@@ -54,7 +54,7 @@ Text in images is better recognized when it adheres to these guidelines:
 - The Text model is trained mainly on English language words. Text in other languages likely won't be recognized.
 
 ## Next steps
-{: recognize-text-next-steps}
+{: #recognize-text-next-steps}
 
 - [Make a call](/docs/services/visual-recognition/tutorial-recognize-text.html) to recognize text in an image.
 - Get familiar with the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")][api-ref-text]{: new_window}.
