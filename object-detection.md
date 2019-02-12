@@ -107,7 +107,7 @@ In general, the more images and bounding boxes that you provide in your training
 - Each labeled object in the collection has at least 100 locations (bounding boxes).
 - Each image in the collection has no more than 10 bounding boxes.
 - The size of each bounding box is greater than 15% of the image dimensions.
-- The API reads the EXIF orientation tags in your images. Make sure that the `location` coordinates match that orientation. To adjust the orientation, you can use a tool like ImageMagick to _auto-orient_ your images before you add training data.
+- The API reads the EXIF orientation tags in your images. Make sure that the `location` coordinates match that orientation. To adjust the orientation, you can use a tool like ImageMagick to _auto-orient_ your images before you add bounding boxes.
 
 For more information about the **Add training data to an image** method, see the [v4 API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition-v4#add-training-data-to-an-image){: new_window}.
 
