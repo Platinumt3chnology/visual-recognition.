@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-10-01"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -47,7 +47,7 @@ Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and 
 
 - All {{site.data.keyword.visualrecognitionfull}} service instances created before **May 22, 2018** are not suitable for clients that require compliance with the EU General Data Protection Regulation EU 2016/679 (GDPR).
 
-- Clients that are subject to GDPR need to [migrate to a new {{site.data.keyword.visualrecognitionshort}} service instance](migrate.html#migrating) available on **May 22nd, 2018** and to adopt the new agreement for the {{site.data.keyword.visualrecognitionshort}} service.
+- Clients that are subject to GDPR need to [migrate to a new {{site.data.keyword.visualrecognitionshort}} service instance](/docs/services/visual-recognition/migrate.html#migrating) available on **May 22nd, 2018** and to adopt the new agreement for the {{site.data.keyword.visualrecognitionshort}} service.
 
 - Clients will be required to provision a new {{site.data.keyword.visualrecognitionshort}} service and generate *new authentication keys* to utilize the new {{site.data.keyword.visualrecognitionshort}} service.
 

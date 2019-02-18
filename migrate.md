@@ -1,8 +1,8 @@
----
 
+---
 copyright:
   years: 2015, 2019
-lastupdated: "2018-09-28"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -108,4 +108,4 @@ To migrate your current models (classifiers), you provision a new instance of th
             "https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers?version=2018-03-19"
             ```
 
-1.  [Re-create and train your custom models](tutorial-custom-classifier.html#creating-a-custom-model) in your new instance of the {{site.data.keyword.visualrecognitionshort}} service.
+1.  [Re-create and train your custom models](/docs/services/visual-recognition/tutorial-custom-classifier.html#creating-a-custom-model) in your new instance of the {{site.data.keyword.visualrecognitionshort}} service.
