@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -111,7 +111,7 @@ The following new features and changes to the service are available.
 
 - **Information security**:
 
-    We updated the documentation to include some new details about data privacy. Read the details in [Information security](information-security.html).
+    We updated the documentation to include some new details about data privacy. Read the details in [Information security](/docs/services/visual-recognition/information-security.html).
 
 ### 12 April 2018
 {: #12april2018}
