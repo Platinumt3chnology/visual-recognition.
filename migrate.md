@@ -108,4 +108,4 @@ To migrate your current models (classifiers), you provision a new instance of th
             "https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers?version=2018-03-19"
             ```
 
-1.  [Re-create and train your custom models](/docs/services/visual-recognition/tutorial-custom-classifier.html#creating-a-custom-model) in your new instance of the {{site.data.keyword.visualrecognitionshort}} service.
+1.  [Re-create and train your custom models](/docs/services/visual-recognition/tutorial-custom-classifier.html#tutorial-custom-classifier) in your new instance of the {{site.data.keyword.visualrecognitionshort}} service.
