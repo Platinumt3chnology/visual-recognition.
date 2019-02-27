@@ -70,13 +70,13 @@ The following new features and changes to the service are available.
 
     No code change are required. Both models are free under the Lite plan and cost $0.002 per image under the Standard plan.
 
-    For more information, see [Updates to Watson Visual Recognition ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/visrec-price-reduction){: new_window} in the <em>Watson blog<em>.
+    For more information, see [Updates to Watson Visual Recognition ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/visrec-price-reduction){: new_window} in the <em>Watson blog</em>.
 
 ### 1 July 2018
 {: #01july2018}
 
 - **New pricing for custom models**
-    - Starting July 1, 2018, classifying an image with a custom model costs half the earlier rate and is now $0.002 per image. For details and other important information, see [Updates to Watson Visual Recognition \- Price reduction for Custom Classification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/visrec-price-reduction){: new_window} in the <em>Watson blog<em>.
+    - Starting July 1, 2018, classifying an image with a custom model costs half the earlier rate and is now $0.002 per image. For details and other important information, see [Updates to Watson Visual Recognition \- Price reduction for Custom Classification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/visrec-price-reduction){: new_window} in the <em>Watson blog</em>.
 
 ### 21 June 2018
 {: #21june2018}

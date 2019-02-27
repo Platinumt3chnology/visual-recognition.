@@ -69,7 +69,9 @@ curl -X POST \
 
 **Note**: Multi-byte characters are supported for the Customer ID string. Characters must be URL-encoded, both in the header during training, and in the query parameter during deletion. Only `_` is allowed; the list of special characters that are not supported is:
 
-```\ | * { } $ - [ ] / ' ` " ~ ? ; < > ( ) ! & = % # ^ @ : . , + space```
+```
+\ | * { } $ - [ ] / ' ` " ~ ? ; < > ( ) ! & = % # ^ @ : . , + space
+```
 
 **Note**: You are responsible for creating customer_ID values, and ensuring that each is unique.
 
