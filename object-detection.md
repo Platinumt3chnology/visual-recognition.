@@ -2,7 +2,10 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-12"
+lastupdated: "2019-03-06"
+
+keywords: custom object detection,object detection,bounding boxes,visual inspection
+subcollection: visual-recognition
 
 ---
 
@@ -30,7 +33,7 @@ lastupdated: "2019-02-12"
 {{site.data.keyword.visualrecognitionfull}} Custom Object Detection (Beta) identifies items and their location in an image. The service detects these items based on a set of images with labeled training data that you provide.
 {: shortdesc}
 
-Custom Object Detection is a private beta feature and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. [Request access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://datasciencex.typeform.com/to/c70Ak5){: new_window}. For more information about beta features, see the [Release notes](/docs/services/visual-recognition/release-notes.html#beta).
+Custom Object Detection is a private beta feature and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. [Request access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://datasciencex.typeform.com/to/c70Ak5){: new_window}. For more information about beta features, see the [Release notes](/docs/services/visual-recognition?topic=visual-recognition-release-notes#beta).
 {: important}
 
 You train the object detection model to recognize objects that are important to your workflow or domain. For example, detect damage to cars, find machines that need maintenance, or perform visual inspections in the field. You can also use object detection to count objects or manage inventory.
@@ -77,7 +80,7 @@ After you complete these steps and train your collection, you can analyze images
 ### Preparing your training data
 {: #object-detection-preparation}
 
-The most important part of the setup process is preparing and assembling your training data. Just as when you [create a custom model](/docs/services/visual-recognition/tutorial-custom-classifier.htm) for classifying images, you assemble a set of images that represent the objects that you want to detect.
+The most important part of the setup process is preparing and assembling your training data. Just as when you [create a custom model](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier) for classifying images, you assemble a set of images that represent the objects that you want to detect.
 
 In addition to a set of images, you also provide training data for each image. For object detection, training data is the set of labels and locations for objects in the image that you want {{site.data.keyword.visualrecognitionshort}} to recognize. You can have more than one object in an image.
 

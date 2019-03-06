@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-06"
+
+keywords: new features,updates to Visual Recognition,what's new with Visual Recognition
+
+subcollection: visual-recognition
 
 ---
 
@@ -57,7 +61,7 @@ The following new features and changes to the service are available.
 
 - **Service instances created before May 23, 2018 are deleted.**
 
-    - As previously notified, all {{site.data.keyword.visualrecognitionshort}} instances created before May 23, 2018 are no longer active. Data from the instances is now deleted. See [Migrating](/docs/services/visual-recognition/migrate.html) for details about how to move to a new service instance.
+    - As previously notified, all {{site.data.keyword.visualrecognitionshort}} instances created before May 23, 2018 are no longer active. Data from the instances is now deleted. See [Migrating](/docs/services/visual-recognition?topic=visual-recognition-migrating#migrating) for details about how to move to a new service instance.
     - Service instances created after this date are not affected.
     - If you have any questions, contact [IBM support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/ibmcloudsupport){: new_window}.
 
@@ -70,20 +74,20 @@ The following new features and changes to the service are available.
 
     No code change are required. Both models are free under the Lite plan and cost $0.002 per image under the Standard plan.
 
-    For more information, see [Updates to Watson Visual Recognition ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/visrec-price-reduction){: new_window} in the <em>Watson blog<em>.
+    For more information, see [Updates to Watson Visual Recognition ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/visrec-price-reduction){: new_window} in the <em>Watson blog</em>.
 
 ### 1 July 2018
 {: #01july2018}
 
 - **New pricing for custom models**
-    - Starting July 1, 2018, classifying an image with a custom model costs half the earlier rate and is now $0.002 per image. For details and other important information, see [Updates to Watson Visual Recognition \- Price reduction for Custom Classification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/visrec-price-reduction){: new_window} in the <em>Watson blog<em>.
+    - Starting July 1, 2018, classifying an image with a custom model costs half the earlier rate and is now $0.002 per image. For details and other important information, see [Updates to Watson Visual Recognition \- Price reduction for Custom Classification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/visrec-price-reduction){: new_window} in the <em>Watson blog</em>.
 
 ### 21 June 2018
 {: #21june2018}
 
 - **Additional language support**
 
-    - The **Classify** methods now support Chinese (Simplified and Traditional) and Portuguese (Brazilian) in the output of `default` (General) model classes. For the full list of languages, see [Supported languages](/docs/services/visual-recognition/language-support.html).
+    - The **Classify** methods now support Chinese (Simplified and Traditional) and Portuguese (Brazilian) in the output of `default` (General) model classes. For the full list of languages, see [Supported languages](/docs/services/visual-recognition?topic=visual-recognition-supported-languages#supported-languages).
     - All languages are now also supported in the responses from the **Food** and **Explicit** models.
 
 
@@ -95,7 +99,7 @@ The following new features and changes to the service are available.
     You now authenticate with Identity and Access Management (IAM) at a new endpoint:
 
     - Use a different endpoint URL for new instances. The default endpoint is `https:/gateway.watsonplatform.net/visual-recognition/api/`. To find the URL for your service instance, check the credentials by clicking the instance from the {{site.data.keyword.cloud_notm}} [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?watson){: new_window}.
-    - Modify how you authenticate to the API. You provide either an IAM key or access token for your service instance. See [Migrating](/docs/services/visual-recognition/migrate.html) for examples.
+    - Modify how you authenticate to the API. You provide either an IAM key or an access token for your service instance. See [Migrating](/docs/services/visual-recognition?topic=visual-recognition-migrating#migrating) for examples.
 
     For service instances created before May 23, 2018, the authentication process and endpoint have not changed. Authenticate by providing the `api_key` query parameter.
 
@@ -111,7 +115,7 @@ The following new features and changes to the service are available.
 
 - **Information security**:
 
-    We updated the documentation to include some new details about data privacy. Read the details in [Information security](/docs/services/visual-recognition/information-security.html).
+    We updated the documentation to include some new details about data privacy. Read the details in [Information security](/docs/services/visual-recognition?topic=visual-recognition-information-security#information-security).
 
 ### 12 April 2018
 {: #12april2018}
@@ -265,7 +269,7 @@ The following new features and changes to the service are available.
 
 - **French language support**
 
-    The **Classify** methods now support French in the output of `default` model classes. For the full list of languages, see [Supported languages](/docs/services/visual-recognition/language-support.html).
+    The **Classify** methods now support French in the output of `default` model classes. For the full list of languages, see [Supported languages](/docs/services/visual-recognition?topic=visual-recognition-supported-languages#supported-languages).
 
 ### 23 February 2018
 {: #23february2018}
@@ -488,7 +492,7 @@ The following changes and updates were made to the {{site.data.keyword.visualrec
 - **Classes and classifiers:** Single classifiers are now called "classes". In GA, a group of classes is called a "classifier".
 - **Classification:** Use the `POST` or `GET /v3/classify` methods to quickly and accurately identify a variety of subjects and scenes with default classes.
 - **Face detection:** Use the `POST` or `GET /v3/detect_faces` methods to detect faces in images and get information about them, such as where the face is located in the image and the estimated age range and gender for each face. The service can also identify many celebrities by name and can provide a knowledge graph so that you can perform interesting aggregations into higher-level concepts.
-- **Multi-faceted custom classifiers:** You can now create and train highly specialized classifiers that are defined by several classes. For example, you can create a "new\_red\_car" classifier that is defined by the classes "new\_cars" and "red\_cars". To learn more  about creating multi-faceted classifiers, see [Structure of the training data](/docs/services/visual-recognition/customizing.html#structure).
+- **Multi-faceted custom classifiers:** You can now create and train highly specialized classifiers that are defined by several classes. For example, you can create a "new\_red\_car" classifier that is defined by the classes "new\_cars" and "red\_cars". To learn more  about creating multi-faceted classifiers, see [Structure of the training data](/docs/services/visual-recognition?topic=visual-recognition-customizing#structure).
 - **Asynchronous training:** Training of custom classifiers is now asynchronous, so training calls complete quickly while your custom classifier continues to learn in the background. To check on the training status of your custom classifier and find out when it is available for use, call the `GET /v3/classifiers/{classifier_id}` method and check the `status` response parameter.
 
 ### 2 December 2015
@@ -502,6 +506,6 @@ To immediately start using version 2 of the API, understand and update your code
 - The `POST /v1/recognize` method for analyzing an image is now the [`POST /v2/classify` ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v2/#classify_an_image){: new_window} method. The `labels_to_check` parameter is renamed to `classifier_ids`.
 - The `GET /v1/tag/labels` method for retrieving a list of labels in V1 is now the [`GET /v2/classifiers` ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v2/#retrieve_a_list_of_classifiers){: new_window} method for retrieving a list of classifiers.
 - In addition to retrieving a list of classifiers, you can also retrieve details for a specific classifier with the new [`GET /v2/classifiers/{classifier_id}` ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v2/#retrieve_classifier_details){: new_window} method.
-- Version 2 of the Beta {{site.data.keyword.visualrecognitionshort}} API enables you to create custom classifiers with the new [`POST /v2/classifiers` ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v2/#create_a_classifier){: new_window} method. To learn more about creating custom classifiers, see [Creating custom classifiers](/docs/services/visual-recognition/customizing.html).
+- Version 2 of the Beta {{site.data.keyword.visualrecognitionshort}} API enables you to create custom classifiers with the new [`POST /v2/classifiers` ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v2/#create_a_classifier){: new_window} method. To learn more about creating custom classifiers, see [Creating custom classifiers](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier).
 - Version 2 of the Beta {{site.data.keyword.visualrecognitionshort}} API also enables you to delete custom classifiers with the new [`DELETE /v2/classifiers` ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v2/#delete_a_classifier){: new_window} method.
 - Version 2 of the Beta {{site.data.keyword.visualrecognitionshort}} API requires the `version` parameter. Specify the release date of the version of the API you want to use in `MM-DD-YYYY` format.

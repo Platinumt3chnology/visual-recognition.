@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-06"
+
+keywords: Visual Recognition languages,language support,supported languages
+
+subcollection: visual-recognition
 
 ---
 
@@ -37,4 +41,3 @@ For details about the API call, see the **Classify images** method in the [API r
 The **Detect faces** methods return translations of the English words for gender ("Male" and "Female") in the response. Set the language with the **Accept-Language** request header.
 
 For details, see the **Detect faces** methods in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition/#detect-faces-in-images){: new_window}.
-

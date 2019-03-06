@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-09-04"
+lastupdated: "2019-03-06"
+
+keywords: training classifiers,example data,hierarchy,updating classifiers,retraining classifiers
+
+subcollection: visual-recognition
 
 ---
 
@@ -20,7 +24,7 @@ lastupdated: "2018-09-04"
 # Guidelines for training classifiers
 {: #customizing}
 
-After you classify an image and create, train, and query a custom classifier with the example data in the [Creating a custom classifier tutorial](/docs/services/visual-recognition/tutorial-custom-classifier.html), you can classify your own data or create your own custom classifier.
+After you classify an image and create, train, and query a custom classifier with the example data in the [Creating a custom classifier tutorial](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier), you can classify your own data or create your own custom classifier.
 {: shortdesc}
 
 ## General classifier categories
@@ -68,7 +72,7 @@ Compressed files containing positive examples are used to create and update "cla
 
 The compressed file containing negative examples is not used to create a class within the created classifier, but does define what the updated classifier is not. Negative example files should contain images that do not depict the subject of any of the positive examples. You can only specify one negative example file in a single call.
 
-![Fruits classifier retrained with new positive class for oranges and negative class for cheese](images/retrain.png)
+![Fruits classifier retrained with new positive class for oranges and negative class for cheese](images/retrain.svg)
 
 ### How retraining works
 {: #customizing-retrain}

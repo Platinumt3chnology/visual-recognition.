@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-06"
+lastupdated: "2019-03-06"
+
+keywords: classify,classifying,Visual Recognition,getting started,detecting faces,detect faces,food model,general model,sample code
+
+subcollection: visual-recognition
 
 ---
 
@@ -625,7 +629,7 @@ If you prefer to work in a graphical interface, use {{site.data.keyword.DSX}}. [
 You have a basic understanding of how to use built-in classifiers with {{site.data.keyword.visualrecognitionshort}}. Now dive deeper:
 
 - Try these calls with your own images. Just keep the image size under 10 MB.
-- Learn more about how to [build a custom model](/docs/services/visual-recognition/tutorial-custom-classifier.html).
+- Learn more about how to [build a custom model](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier).
 - {: curl} Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition){: new_window}.
 - {: go} Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition?language=go){: new_window}.
 - {: java} Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition?language=java){: new_window}.
