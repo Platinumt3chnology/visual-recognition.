@@ -70,7 +70,7 @@ curl -X POST \
 
 Multi-byte characters are supported for the customer ID string. Characters must be URL-encoded, both in the header during training, and in the query parameter during deletion. The ID can contain alphanumeric and underscore (`_`) characters. These characters are not supported: ``\ | * { } $ - [ ] / ' ` " ~ ? ; < > ( ) ! & = % # ^ @ : . , + space``.
 
-You are responsible for creating customer_ID values, and ensuring that each is unique.
+You are responsible for creating customer ID values, and ensuring that each is unique.
 {: important}
 
 ### Deleting labeled data
