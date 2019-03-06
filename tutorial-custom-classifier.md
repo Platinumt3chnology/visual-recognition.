@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-06"
+lastupdated: "2019-03-06"
+
+keywords: custom model,custom classifier,samples,training a custom model
+
+subcollection: visual-recognition
 
 ---
 
@@ -34,7 +38,7 @@ After you analyze an image in the "Getting started tutorial," you are ready to t
 ## Step 1:  Copy your credentials
 {: #copy-credentials}
 
-Use the credentials that you copied in "Getting started tutorial." If you didn't create a service instance, run through those steps in the [Before you begin](/docs/services/visual-recognition/getting-started.html#prerequisites) section.
+Use the credentials that you copied in "Getting started tutorial." If you didn't create a service instance, run through those steps in the [Before you begin](/docs/services/visual-recognition?topic=visual-recognition-getting-started-tutorial#prerequisites) section.
 
 ## Step 2: Creating a custom model
 {: #create}

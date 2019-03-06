@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-12"
+lastupdated: "2019-03-06"
+
+keywords: Text recognition,Visual Recognition beta Text model,Text model,recognize text
+
+subcollection: visual-recognition
 
 ---
 
@@ -25,7 +29,7 @@ lastupdated: "2019-02-12"
 
 Use the {{site.data.keyword.visualrecognitionshort}} beta Text model to detect and recognize English text in images. The Text model is designed to recognize scene text in images rather than the denser text in documents.
 
-The Text model is a private beta feature, and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. [Request access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://datasciencex.typeform.com/to/nU6efl){: new_window}. For more information about beta features, see [Release notes](/docs/services/visual-recognition/release-notes.html#beta).
+The Text model is a private beta feature, and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. [Request access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://datasciencex.typeform.com/to/nU6efl){: new_window}. For more information about beta features, see [Release notes](/docs/services/visual-recognition?topic=visual-recognition-release-notes#beta).
 {: important}
 
 The Text model works best on short text strings. For example, a common use of the Text model is to read signs.
@@ -56,5 +60,5 @@ Text in images is better recognized when it adheres to these guidelines:
 ## Next steps
 {: #recognize-text-next-steps}
 
-- [Make a call](/docs/services/visual-recognition/tutorial-recognize-text.html) to recognize text in an image.
+- [Make a call](/docs/services/visual-recognition?topic=visual-recognition-tutorial-recognize-text#tutorial-recognize-text) to recognize text in an image.
 - Get familiar with the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")][api-ref-text]{: new_window}.
