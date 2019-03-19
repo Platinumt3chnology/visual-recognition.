@@ -13,7 +13,7 @@
    viewBox="0 0 1784 1338.4062"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
    sodipodi:docname="retrain.svg"
    inkscape:export-filename="C:\Users\IBM_ADMIN\Watson_workspace\developer-cloud--docs\visual-recognition\images\retrain.png"
    inkscape:export-xdpi="80.059998"
@@ -43,9 +43,9 @@
      inkscape:window-height="1027"
      id="namedview67"
      showgrid="false"
-     inkscape:zoom="0.62387442"
-     inkscape:cx="882.48465"
-     inkscape:cy="675.97471"
+     inkscape:zoom="0.88229167"
+     inkscape:cx="872.52068"
+     inkscape:cy="974.14715"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -415,7 +415,7 @@
      class="cls-5"
      x="890.46606"
      y="738.18774"
-     style="font-size:48px;font-family:HelvNeueforIBM;text-anchor:middle">
+     style="font-size:48px;line-height:0%;font-family:HelvNeueforIBM;text-anchor:middle">
     <tspan
        x="890.46606"
        id="tspan26">frutta</tspan>
@@ -425,7 +425,7 @@
      class="cls-6"
      x="891.48669"
      y="798.97089"
-     style="font-style:italic;font-size:30px;font-family:HelvNeueforIBM;text-anchor:middle">
+     style="font-style:italic;font-size:30px;line-height:0%;font-family:HelvNeueforIBM;text-anchor:middle">
     <tspan
        x="891.48669"
        id="tspan38">classificatore</tspan>
@@ -434,7 +434,7 @@
      id="g3237"
      transform="translate(52.44247,227.38459)">
     <text
-       style="font-size:48px;font-family:HelvNeueforIBM;text-anchor:middle"
+       style="font-size:48px;line-height:0%;font-family:HelvNeueforIBM;text-anchor:middle"
        y="219.4583"
        x="291.74261"
        class="cls-5"
@@ -444,7 +444,7 @@
          x="291.74261">mele</tspan>
     </text>
     <text
-       style="font-style:italic;font-size:30px;font-family:HelvNeueforIBM;text-anchor:middle"
+       style="font-style:italic;font-size:30px;line-height:0%;font-family:HelvNeueforIBM;text-anchor:middle"
        y="258.58725"
        x="289.03479"
        class="cls-6"
@@ -454,7 +454,7 @@
          x="289.03479">classe</tspan>
     </text>
     <text
-       style="font-weight:300;font-size:30px;font-family:HelvNeueforIBM;text-anchor:middle"
+       style="font-weight:300;font-size:30px;line-height:0%;font-family:HelvNeueforIBM;text-anchor:middle"
        y="162.37837"
        x="290.23868"
        class="cls-7"
@@ -469,7 +469,7 @@
      id="g3253"
      transform="translate(-49.56461,222.85094)">
     <text
-       style="font-size:48px;font-family:HelvNeueforIBM;text-anchor:middle"
+       style="font-size:48px;line-height:0%;font-family:HelvNeueforIBM;text-anchor:middle"
        y="218.90765"
        x="1121.7427"
        class="cls-5"
@@ -479,7 +479,7 @@
          x="1121.7427">pere</tspan>
     </text>
     <text
-       style="font-style:italic;font-size:30px;font-family:HelvNeueforIBM;text-anchor:middle"
+       style="font-style:italic;font-size:30px;line-height:0%;font-family:HelvNeueforIBM;text-anchor:middle"
        y="260.12088"
        x="1120.5001"
        class="cls-6"
@@ -490,7 +490,7 @@
          x="1120.5001">classe</tspan>
     </text>
     <text
-       style="font-weight:300;font-size:30px;font-family:HelvNeueforIBM;text-anchor:middle"
+       style="font-weight:300;font-size:30px;line-height:0%;font-family:HelvNeueforIBM;text-anchor:middle"
        y="169.17883"
        x="1125.8396"
        class="cls-7"
@@ -505,7 +505,7 @@
      id="g3245"
      transform="translate(9.37282,222.85094)">
     <text
-       style="font-size:48px;font-family:HelvNeueforIBM;text-anchor:middle"
+       style="font-size:48px;line-height:0%;font-family:HelvNeueforIBM;text-anchor:middle"
        y="221.44031"
        x="696.80994"
        class="cls-5"
@@ -515,7 +515,7 @@
          x="696.80994">banane</tspan>
     </text>
     <text
-       style="font-style:italic;font-size:30px;font-family:HelvNeueforIBM;text-anchor:middle"
+       style="font-style:italic;font-size:30px;line-height:0%;font-family:HelvNeueforIBM;text-anchor:middle"
        y="263.12088"
        x="696.23431"
        class="cls-6"
@@ -526,7 +526,7 @@
          x="696.23431">classe</tspan>
     </text>
     <text
-       style="font-weight:300;font-size:30px;font-family:HelvNeueforIBM;text-anchor:middle"
+       style="font-weight:300;font-size:30px;line-height:0%;font-family:HelvNeueforIBM;text-anchor:middle"
        y="164.64519"
        x="699.9718"
        class="cls-7"
@@ -543,7 +543,7 @@
      class="cls-7"
      x="697.74365"
      y="1125.1595"
-     style="font-weight:300;font-size:30px;font-family:HelvNeueforIBM;text-anchor:middle">
+     style="font-weight:300;font-size:30px;line-height:0%;font-family:HelvNeueforIBM;text-anchor:middle">
     <tspan
        x="697.74365"
        id="tspan50">esempi negativi</tspan>
@@ -553,10 +553,10 @@
      class="cls-5"
      x="703.91357"
      y="1068.7131"
-     style="font-size:48px;font-family:HelvNeueforIBM;text-anchor:middle">
+     style="font-size:48px;line-height:0%;font-family:HelvNeueforIBM;text-anchor:middle">
     <tspan
        x="703.91357"
-       id="tspan53">verdure</tspan>
+       id="tspan53">ortaggi</tspan>
   </text>
   <image
      y="490.50089"
@@ -576,7 +576,7 @@
      id="g3245-3"
      transform="translate(743.89051,215.00405)">
     <text
-       style="font-size:48px;font-family:HelvNeueforIBM;text-anchor:middle"
+       style="font-size:48px;line-height:0%;font-family:HelvNeueforIBM;text-anchor:middle"
        y="221.44031"
        x="696.80994"
        class="cls-5"
@@ -586,7 +586,7 @@
          x="696.80994">arance</tspan>
     </text>
     <text
-       style="font-style:italic;font-size:30px;font-family:HelvNeueforIBM;text-anchor:middle"
+       style="font-style:italic;font-size:30px;line-height:0%;font-family:HelvNeueforIBM;text-anchor:middle"
        y="263.12088"
        x="696.23431"
        class="cls-6"
@@ -597,7 +597,7 @@
          x="696.23431">classe</tspan>
     </text>
     <text
-       style="font-weight:300;font-size:30px;font-family:HelvNeueforIBM;text-anchor:middle"
+       style="font-weight:300;font-size:30px;line-height:0%;font-family:HelvNeueforIBM;text-anchor:middle"
        y="164.64519"
        x="699.9718"
        class="cls-7"
@@ -659,16 +659,15 @@
      id="g3521"
      transform="translate(195.2524,213.78365)">
     <text
-       sodipodi:linespacing="125%"
        id="text3515"
-       y="76.417999"
-       x="1441.3378"
-       style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:17.18535042px;line-height:125%;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue Ultra-Light';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       y="76.792542"
+       x="1434.8469"
+       style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:10.3617487px;line-height:0%;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue Ultra-Light';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.86347902"
        xml:space="preserve"
-       transform="scale(0.85926756,1.1637819)"><tspan
-         style="font-size:24.0594902px;fill:#ff0000"
-         y="76.417999"
-         x="1441.3378"
+       transform="scale(0.86347904,1.1581057)"><tspan
+         style="font-size:24.17741394px;line-height:1.25;fill:#ff0000;stroke-width:0.86347902"
+         y="76.792542"
+         x="1434.8469"
          id="tspan3517"
          sodipodi:role="line">NUOVO</tspan></text>
     <rect
@@ -704,16 +703,15 @@
      id="g3521-4"
      transform="translate(-947.22705,132.17799)">
     <text
-       sodipodi:linespacing="125%"
        id="text3515-2"
-       y="77.259666"
-       x="1426.548"
-       style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:17.37462997px;line-height:125%;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue Ultra-Light';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       y="75.592148"
+       x="1456.3137"
+       style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:10.1997776px;line-height:0%;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue Ultra-Light';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.84998143"
        xml:space="preserve"
-       transform="scale(0.8687315,1.1511037)"><tspan
-         style="font-size:24.32448196px;fill:#ff0000"
-         y="77.259666"
-         x="1426.548"
+       transform="scale(0.84998144,1.1764963)"><tspan
+         style="font-size:23.79948044px;line-height:1.25;fill:#ff0000;stroke-width:0.84998143"
+         y="75.592148"
+         x="1456.3137"
          id="tspan3517-7"
          sodipodi:role="line">NUOVO</tspan></text>
     <rect
@@ -790,16 +788,15 @@
      id="g3521-5"
      transform="translate(-171.97316,1129.5806)">
     <text
-       sodipodi:linespacing="125%"
        id="text3515-0"
-       y="77.259666"
-       x="1426.548"
-       style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:17.37462997px;line-height:125%;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue Ultra-Light';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       y="76.19471"
+       x="1445.4509"
+       style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:10.2810812px;line-height:0%;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue Ultra-Light';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.85675681"
        xml:space="preserve"
-       transform="scale(0.8687315,1.1511037)"><tspan
-         style="font-size:24.32448196px;fill:#ff0000"
-         y="77.259666"
-         x="1426.548"
+       transform="scale(0.85675683,1.1671923)"><tspan
+         style="font-size:23.98919106px;line-height:1.25;fill:#ff0000;stroke-width:0.85675681"
+         y="76.19471"
+         x="1445.4509"
          id="tspan3517-9"
          sodipodi:role="line">NUOVO</tspan></text>
     <rect
@@ -823,7 +820,7 @@
      class="cls-7"
      x="1078.9036"
      y="1121.821"
-     style="font-weight:300;font-size:30px;font-family:HelvNeueforIBM;text-anchor:middle">
+     style="font-weight:300;font-size:30px;line-height:0%;font-family:HelvNeueforIBM;text-anchor:middle">
     <tspan
        x="1078.9036"
        id="tspan50-1">esempi negativi</tspan>
@@ -833,20 +830,9 @@
      class="cls-5"
      x="1075.4011"
      y="1074.2324"
-     style="font-size:48px;font-family:HelvNeueforIBM;text-anchor:middle">
+     style="font-size:48px;line-height:0%;font-family:HelvNeueforIBM;text-anchor:middle">
     <tspan
        x="1075.4011"
-       id="tspan53-8">formaggi</tspan>
+       id="tspan53-8">formaggio</tspan>
   </text>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:27.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="1064.3168"
-     y="426.36374"
-     id="text3451"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan3453"
-       x="1064.3168"
-       y="426.36374"></tspan></text>
 </svg>

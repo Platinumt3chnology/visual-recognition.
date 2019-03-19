@@ -1,62 +1,64 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-13"
+  years: 2015, 2019
+lastupdated: "2019-03-06"
+
+keywords: Text recognition,Visual Recognition beta Text model,Text model,recognize text
+
+subcollection: visual-recognition
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
 
-# Texterkennung in natürlichen Szenen
+<!-- Link definitions -->
 
-Sie können das Beta-Textmodell verwenden, um englischen Text in Bildern zu erkennen. Das Textmodell dient primär zur Erkennung von Legendentext in Bildern, nicht von umfangreicherem Text in Dokumenten.
+[api-ref-text]: https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text
 
-Das Textmodell ist ein Beta-Feature und nicht für den Einsatz in einer Produktionsumgebung konzipiert. Weitere Informationen finden Sie im Abschnitt "Beta-Features" in den [Releaseinformationen](/docs/services/visual-recognition/release-notes.html#beta).
-{: tip}
+# Texterkennung in natürlichen Szenen (Beta)
+{: #recognize-text}
 
-Das Textmodell ist am besten für die Verarbeitung kurzer Textfolgen geeignet. Häufig wird das Textmodell z. B. zum Lesen von Verkehrs- und Hinweisschildern verwendet.
+Mit dem {{site.data.keyword.visualrecognitionshort}} Beta-Textmodell können Sie englischen Text in Bildern erkennen. Das Textmodell dient zur Erkennung von Szenentext in Bildern, nicht der Erkennung von umfangreicherem Text in Dokumenten.
 
-![Verkehrs-/Hinweisschild mit einem Rahmen um die erkannten Wörter](images/road-sign-text-detection.png)
+Das Textmodell ist eine Privat-Betafunktion. Sie müssen über die Berechtigung von {{site.data.keyword.IBM_notm}} verfügen, um Aufrufe an das Modell durchzuführen.[Fordern Sie Zugriff an ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://datasciencex.typeform.com/to/nU6efl){: new_window}. Weitere Informationen zu Beta-Funktionen finden Sie in den [Releaseinformationen](/docs/services/visual-recognition?topic=visual-recognition-release-notes#beta).
+{: important}
 
-![Im Bild mit dem Verkehrs-/Hinweisschild erkannte Wörter und Verlässlichkeitsscores](images/road-sign-text-response.png)
+Das Textmodell ist am besten für die Verarbeitung kurzer Textfolgen geeignet. Eine häufige Verwendung des Textmodells ist beispielsweise das Lesen von Schildern.
 
-Die weißen Felder stellen alle Wörter dar, die von dem Modell im Bild erkannt wurden.
+![Straßenschild mit Rahmen um die erkannten Wörter. Foto von Ashim D’Silva in Unsplash](images/walk-signal-detection.png) ![Bilder mit Wörtern, die auf einem Straßenschild erkannt wurden, und Konfidenzscores](images/walk-signal-response.png)
+
+Die weißen Felder stellen alle Wörter dar, die das Modell im Bild erkannt hat.
 
 ## Antwort
+{: #recognize-text-response}
 
 Die Antwort enthält die erkannte Zeichenfolge und jedes Wort in der Zeichenfolge wird mit folgenden Informationen identifiziert:
 
 - Das erkannte Wort.
-- Ein Score, der die Verlässlichkeit oder Richtigkeit des erkannten Wortes angibt.
+- Ein Score für die Konfidenz der Worterkennung.
 - Die Position des Rahmens um das Wort. Der Rahmen gibt an, wo sich das Wort im Bild befindet.
 - Eine Zeilennummer, die angibt, wo das Wort erkannt wurde.
 
 ## Richtlinien für bessere Ergebnisse bei der Texterkennung
+{: #recognize-text-guidelines}
 
 Text in Bildern wird besser erkannt, wenn er den folgenden Richtlinien entspricht:
 
-- Der Text besteht primär aus vollständigen Wörtern und nicht aus beliebigen Buchstabenfolgen (z. B. Produktcodes). Das Modell erkennt eher Wörter als einzelne Zeichen und berücksichtigt u. U. "Wörter" aus Einzelzeichen oder Zahlen nicht.
+- Der Text besteht primär aus vollständigen Wörtern und nicht aus beliebigen Buchstabenfolgen (z. B. Produktcodes). Das Modell erkennt Wörter, nicht einzelne Zeichen, und verwirft u. U. "Wörter" aus Einzelbuchstaben oder Zahlen.
 - Der Text liegt in einer Standardschrift und nicht einer speziellen Schriftart vor. Text auf Kfz-Kennzeichen oder Filmplakaten wird möglicherweise nicht erkannt. Auch handschriftlicher Text wird wahrscheinlich nicht erkannt.
-- Der Text macht mindestens 5% des Bilds aus.
-- Der Text ist nicht mehr als 45 Grad aus der Horizontalen geneigt. Das Beta-Textmodell liest EXIF-Tags und dreht Bilder. Für einen hohen Durchsatz ist es aber besser, wenn Sie nur Bilder senden, die nicht von dem Service gedreht werden müssen (EXIF-Tag **Orientation** ist auf `1` gesetzt).
-- Das Textmodell ist für Wörter in englischer Sprache trainiert. Text in anderen Sprachen wird wahrscheinlich nicht erkannt.
+- Das Textmodell ist hauptsächlich für Wörter in englischer Sprache trainiert. Text in anderen Sprachen wird mit einiger Wahrscheinlichkeit nicht erkannt.
 
 ## Nächste Schritte
+{: #recognize-text-next-steps}
 
-Machen Sie sich im [API Explorer ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://text-model-api-explorer.mybluemix.net/apis/visual-recognition-v3#/Text){: new_window} mit der API vertraut.
-
-Wenn Sie Fragen oder Kommentare zum Textmodell haben, wenden Sie sich an Kevin Gong (kgong@us.ibm.com).
-
----
-
-Wechseln Sie zur [Hauptdokumentation](/docs/services/visual-recognition/index.html).
+- [Aufruf ausführen](/docs/services/visual-recognition?topic=visual-recognition-tutorial-recognize-text#tutorial-recognize-text), um Text in einem Bild zu erkennen.
+- Machen Sie sich in der [API-Referenz![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")][api-ref-text]{: new_window} mit der API vertraut.

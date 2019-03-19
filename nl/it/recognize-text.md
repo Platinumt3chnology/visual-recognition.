@@ -1,62 +1,64 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-13"
+  years: 2015, 2019
+lastupdated: "2019-03-06"
+
+keywords: Text recognition,Visual Recognition beta Text model,Text model,recognize text
+
+subcollection: visual-recognition
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
 
-# Riconoscimento del testo in scene naturali
+<!-- Link definitions -->
 
-Utilizza il modello di testo beta per rilevare e riconoscere il testo in inglese nelle immagini. Il modello di testo è progettato per riconoscere il testo nella scena stampato nelle immagini invece del testo denso nei documenti.
+[api-ref-text]: https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text
 
-Il modello di testo è una funzione beta e non è pensato per l'utilizzo in un ambiente di produzione. Per ulteriori informazioni, consulta "Funzioni beta" nelle [Note sulla release](/docs/services/visual-recognition/release-notes.html#beta).
-{: tip}
+# Riconoscimento del testo in scene naturali (Beta)
+{: #recognize-text}
 
-Il modello di testo funziona in modo migliore su stringhe di testo brevi. Ad esempio, un utilizzo comune del modello di testo è di leggere i segnali stradali.
+Utilizza il modello Text beta {{site.data.keyword.visualrecognitionshort}} per rilevare e riconoscere il testo in inglese nelle immagini. Il modello Text è progettato per riconoscere il testo della scena nelle immagini invece del testo più denso nei documenti.
 
-![Segnale stradale con riquadri di delimitazione intorno a parole rilevate](images/road-sign-text-detection.png)
+Il modello Text è una funzione beta privata e devi avere l'autorizzazione da {{site.data.keyword.IBM_notm}} per effettuare le chiamate al modello. [Richiedi l'accesso![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://datasciencex.typeform.com/to/nU6efl){: new_window}. Per ulteriori informazioni sulle funzioni beta, vedi [Note sulla release](/docs/services/visual-recognition?topic=visual-recognition-release-notes#beta).
+{: important}
 
-![Parole e punteggi di confidenza rilevati nell'immagine del segnale stradale](images/road-sign-text-response.png)
+Il modello Text funziona in modo migliore su stringhe di testo brevi. Ad esempio, un utilizzo comune del modello Text è per leggere i segnali stradali.
 
-I riquadri bianchi illustrano ogni parola che il modello ha rilevato nell'immagine.
+![Segnale stradale con riquadri di delimitazione intorno alle parole riconosciute. Foto di Ashim D’Silva su Unsplash](images/walk-signal-detection.png) ![Parole e punteggi di attendibilità rilevati nell'immagine di segnale stradale](images/walk-signal-response.png)
+
+Le caselle bianche illustrano ciascuna parola che il modello riconosce nell'immagine.
 
 ## La risposta
+{: #recognize-text-response}
 
 La risposta include la stringa rilevata e ogni parola all'interno di questa stringa vene identificata con le seguenti informazioni:
 
-- La parola rilevata
-- Un punteggio che indica la confidenza nell'accuratezza della parola rilevata.
+- La parola riconosciuta.
+- Un punteggio che indica l'attendibilità nel riconoscimento della parola.
 - L'ubicazione del riquadro di delimitazione intorno alla parola. Il riquadro indica dove la parola viene posizionata nell'immagine.
 - Un numero di riga in cui è stata rilevata la parola.
 
-## Linee guida per un buon riconoscimento del testo 
+## Linee guida per un buon riconoscimento del testo
+{: #recognize-text-guidelines}
 
 Il testo nelle immagini viene riconosciuto in modo migliore quando si rispettano queste linee guida:
 
-- Il testo è formato principalmente da parole complete, non da stringhe di lettere come i codici prodotti. Il modello riconosce le parole invece dei caratteri individuali e potrebbe scartare le singole lettere delle "parole" o i numeri.
+- Il testo è formato principalmente da parole complete, non da stringhe di lettere come i codici prodotti. Il modello riconosce le parole invece dei caratteri individuali e potrebbe scartare "parole" o numeri di una sola lettera.
 - Il testo è stampato con un font standard, non con uno altamente stilizzato. Ad esempio, il testo nelle targhe o nei titoli dei poster dei film potrebbe non venire riconosciuto. Allo stesso modo, il testo scritto a mano potrebbe non essere riconosciuto.
-- Il testo occupa almeno il 5% dell'immagine.
-- Il testo è inclinato a non più di 45 gradi dall'orizzontale. Il modello di testo beta legge le tag EXIF e ruota le immagini. Tuttavia, per una migliore velocità di trasmissione, invia le immagini che non devono essere ruotate dal servizio (la tag **Orientation** EXIF è impostata su `1`).
-- Il modello di testo viene formato su parole in lingua inglese. Il testo in altre lingue probabilmente non sarà riconosciuto.
+- Il modello Text viene formato principalmente su parole in lingua inglese. Il testo in altre lingue probabilmente non sarà riconosciuto.
 
 ## Passi successivi
+{: #recognize-text-next-steps}
 
-Prendi familiarità con l'API in [API explorer ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://text-model-api-explorer.mybluemix.net/apis/visual-recognition-v3#/Text){: new_window}
-
-Se hai domande o commenti sul modello di testo, contatta Kevin Gong all'indirizzo kgong@us.ibm.com.
-
----
-
-Vai alla [documentazione](/docs/services/visual-recognition/index.html) principale.
+- [Effettua una chiamata](/docs/services/visual-recognition?topic=visual-recognition-tutorial-recognize-text#tutorial-recognize-text) per riconoscere il testo in un'immagine.
+- Acquisisci dimestichezza con l'API nella [guida di riferimento API ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")][api-ref-text]{: new_window}.

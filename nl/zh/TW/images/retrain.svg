@@ -439,7 +439,7 @@ AAAAAElFTkSuQmCC
      style="font-size:48px;text-anchor:middle;font-family:HelvNeueforIBM">
     <tspan
        x="890.46606"
-       id="tspan26">fruits</tspan>
+       id="tspan26">水果</tspan>
   </text>
   <text
      id="classifier"
@@ -462,7 +462,7 @@ AAAAAElFTkSuQmCC
        id="apples">
       <tspan
          id="tspan17"
-         x="291.74261">apples</tspan>
+         x="291.74261">蘋果</tspan>
     </text>
     <text
        style="font-size:30px;font-style:italic;text-anchor:middle;font-family:HelvNeueforIBM"
@@ -497,7 +497,7 @@ AAAAAElFTkSuQmCC
        id="pears">
       <tspan
          id="tspan23"
-         x="1121.7427">pears</tspan>
+         x="1121.7427">梨</tspan>
     </text>
     <text
        style="font-size:30px;font-style:italic;text-anchor:middle;font-family:HelvNeueforIBM"
@@ -533,7 +533,7 @@ AAAAAElFTkSuQmCC
        id="bananas">
       <tspan
          id="tspan20"
-         x="696.80994">bananas</tspan>
+         x="696.80994">香蕉</tspan>
     </text>
     <text
        style="font-size:30px;font-style:italic;text-anchor:middle;font-family:HelvNeueforIBM"
@@ -577,7 +577,7 @@ AAAAAElFTkSuQmCC
      style="font-size:48px;text-anchor:middle;font-family:HelvNeueforIBM">
     <tspan
        x="703.91357"
-       id="tspan53">vegetables</tspan>
+       id="tspan53">蔬菜</tspan>
   </text>
   <image
      y="490.50089"
@@ -653,7 +653,7 @@ TkSuQmCC
        id="bananas-1">
       <tspan
          id="tspan20-2"
-         x="696.80994">oranges</tspan>
+         x="696.80994">橘子</tspan>
     </text>
     <text
        style="font-size:30px;font-style:italic;text-anchor:middle;font-family:HelvNeueforIBM"
@@ -990,6 +990,6 @@ zwg99//Ou7meFNjIEwAAAABJRU5ErkJggg==
      style="font-size:48px;text-anchor:middle;font-family:HelvNeueforIBM">
     <tspan
        x="1075.4011"
-       id="tspan53-8">cheese</tspan>
+       id="tspan53-8">起司</tspan>
   </text>
 </svg>

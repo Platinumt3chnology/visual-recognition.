@@ -1,14 +1,14 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="visual-recognition" audience="service" href="/docs/services/visual-recognition/getting-started.html" path="services/visual-recognition"}
+{: .toc subcollection="visual-recognition" service-name="Visual Recognition" arm="1102714" audience="service" href="/docs/services/visual-recognition?topic=visual-recognition-getting-started-tutorial#getting-started-tutorial" path="services/visual-recognition"}
 Visual Recognition
 
     {: .navgroup id="learn"}
     getting-started.md
     index.md
-    [デモ](https://visual-recognition-demo.ng.bluemix.net/)
-    [ビデオ: ツールを使用した分類器の作成](https://youtu.be/VXezXAzOnUE)
+    [デモ](https://www.ibm.com/watson/services/visual-recognition/demo/)
+    [ビデオ: Visual Recognition in Watson Studio](https://youtu.be/tvNRgI8jOIs)
 
     {: .topicgroup}
     追加リソース
@@ -22,33 +22,30 @@ Visual Recognition
     customizing.md
     [Best practices for custom classifiers](https://www.ibm.com/blogs/bluemix/2016/10/watson-visual-recognition-training-best-practices/)
     [Building Cognitive Applications: Visual Recognition (IBM Redbooks)](http://www.redbooks.ibm.com/redbooks/pdfs/sg248393.pdf)
-    migrating.md
+
+    {: .topicgroup}
+    ベータ版の機能
+        object-detection.md
+        recognize-text.md
+        tutorial-recognize-text.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API リファレンス](https://www.ibm.com/watson/developercloud/visual-recognition/api)
+    [API リファレンス](https://cloud.ibm.com/apidocs/visual-recognition)
     language-support.md
-
-    {: .topicgroup}
-    Watson SDK
-        [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
-        [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
-        [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
-        [PHP SDK](https://github.com/ThomasIBM/php-sdk)
-        [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
-        [.NET SDK](https://github.com/watson-developer-cloud/dotnet-standard-sdk)
-        [Swift SDK](https://github.com/watson-developer-cloud/ios-sdk)
-        [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
-
+    information-security.md
+    migrate.md
+    /watson/watson-using-sdks
     [Watson GitHub リポジトリー](https://github.com/watson-developer-cloud/)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     release-notes.md
+    feedback.md
 
     {: .topicgroup}
     開発者コミュニティー
         [StackOverflow](http://stackoverflow.com/questions/tagged/visual-recognition)
-        [developerWorks Answers](https://developer.ibm.com/answers/topics/visual-recognition.html)
+        [IBM Developer Answers](https://developer.ibm.com/answers/topics/visual-recognition.html)
         [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
     {: .navgroup-end}

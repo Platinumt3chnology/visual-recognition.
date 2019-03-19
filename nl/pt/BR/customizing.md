@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-01-29"
+  years: 2015, 2019
+lastupdated: "2019-03-06"
+
+keywords: training classifiers,example data,hierarchy,updating classifiers,retraining classifiers
+
+subcollection: visual-recognition
 
 ---
 
@@ -18,11 +22,13 @@ lastupdated: "2018-01-29"
 {:swift: .ph data-hd-programlang='swift'}
 
 # Diretrizes para treinar classificadores
+{: #customizing}
 
-Depois de classificar uma imagem e criar, treinar e consultar um classificador customizado com os dados de exemplo no [tutorial Criando um classificador customizado](/docs/services/visual-recognition/tutorial-custom-classifier.html), é possível classificar seus próprios dados ou criar seu próprio classificador customizado.
+Depois de classificar uma imagem e criar, treinar e consultar um classificador customizado com os dados de exemplo no [tutorial Criando um classificador customizado](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier), é possível classificar seus próprios dados ou criar seu próprio classificador customizado.
 {: shortdesc}
 
 ## Categorias de classificador Geral
+{: #general-model}
 
 O classificador Geral retorna classes de milhares de tags possíveis organizadas em categorias e subcategorias. A lista a seguir mostra as categorias de nível superior:
 
@@ -36,6 +42,7 @@ O classificador Geral retorna classes de milhares de tags possíveis organizadas
 - E muitos outros, incluindo móveis, frutas, instrumentos musicais, ferramentas, cores, gadgets, dispositivos, instrumentos, armas, prédios, estruturas e objetos feitos pelo homem, roupas e acessórios, e flores, entre outros.
 
 ### Classificar hierarquia de respostas
+{: #customizing-response-hierarchy}
 
 O método `/v3/classify` classifica imagens em uma hierarquia de classes relacionadas. Por exemplo, uma imagem de um Beagle pode ser classificada como "animal" ou como os itens relacionados "dog" e "beagle". Uma correspondência positiva com as classes relacionadas, nesse caso "dog" e "beagle", impulsiona a pontuação da resposta pai. Nesse exemplo, a resposta inclui todas as três classes: "animal", "dog" e "beagle". A pontuação da classe pai ("animal") é impulsionada, pois ela corresponde às classes relacionadas ("dog" e "beagle"). O pai é também um "type\_hierarchy" para mostrar que é um pai da hierarquia.
 
@@ -57,6 +64,7 @@ Após a conclusão do treinamento, quando o serviço identificar a fruta em uma 
 Os classificadores customizados são acessíveis somente para a instância de serviço específica em que eles foram criados e não podem ser compartilhados com outros usuários do {{site.data.keyword.Bluemix_notm}} que não têm acesso à sua instância do serviço.
 
 ## Atualizando classificadores customizados
+{: #customizing-update}
 
 É possível atualizar um classificador existente incluindo novas classes ou incluindo novas imagens em classes existentes. Para atualizar o classificador existente, use vários arquivos compactados (.zip), incluindo arquivos contendo imagens positivas ou negativas (.jpg ou .png). Deve-se fornecer pelo menos um arquivo compactado, com exemplos positivos ou negativos adicionais.
 
@@ -64,9 +72,10 @@ Os arquivos compactados contendo exemplos positivos são usados para criar e atu
 
 O arquivo compactado contendo exemplos negativos não é usado para criar uma classe dentro do classificador criado, mas define o que o classificador atualizado não é. Arquivos de exemplo negativo devem conter imagens que não representam o assunto de qualquer um dos exemplos positivos. É possível especificar somente um arquivo de exemplo negativo em uma única chamada.
 
-![Classificador de frutas retreinado com nova classe positiva para laranjas e classe negativa para queijo](images/retrain.png)
+![Classificador de frutas retreinado com nova classe positiva para laranjas e classe negativa para queijo](images/retrain.svg)
 
 ### Como funciona o retreinamento
+{: #customizing-retrain}
 
 Se você treina um classificador com três conjuntos de figuras de classe positiva, maçãs, bananas e peras, o sistema treina três modelos internamente. Para o modelo Maçãs, o grupo de figuras em "Maçãs" é treinado como um exemplo positivo e o grupo de figuras transferidas por upload em "Bananas" e "Peras" é treinado como exemplo negativo. O sistema então sabe que bananas e peras não são maçãs. As outras classes são usadas como exemplos negativos para os modelos Bananas e Peras também.
 
@@ -79,6 +88,7 @@ Agora, você simplesmente retreina o sistema com YellowPears.zip e GreenPears.zi
 O resultado final é que as classes YellowPears e GreenPears terão Maçãs e Bananas como exemplos negativos, mas não terão nenhuma imagem duplicada exata da classe Peras como exemplos negativos.
 
 ## Limitações de tamanho
+{: #customizing-size}
 
 Existem limitações de tamanho para chamadas de treinamento e dados:
 
@@ -93,23 +103,24 @@ Também existem limitações de tamanho ao classificar imagens ou detectar faces
     - O tamanho máximo da imagem é 10 MB.
     - O tamanho máximo do arquivo .zip é 100 MB com até 20 imagens.
 - Limitações para os métodos para detectar faces:
-    - O tamanho máximo da imagem é 2 MB.
-    - O tamanho máximo do arquivo .zip é 5 MB com até 15 imagens.
+    - O tamanho máximo da imagem é 10 MB.
+    - O tamanho máximo do arquivo .zip é de 100 MB com até 15 imagens.
 
 <!-- - The `POST /v3/recognize_text` method accept a maximum of 10 images per batch. -->
 
 ## Diretrizes para um bom treinamento
+{: #customizing-guidelines-training}
 
 As diretrizes a seguir não são aplicadas pela API. No entanto, o serviço tende a ser executado melhor quando os dados de treinamento aderem a elas:
 
 - Certifique-se de que suas imagens tenham pelo menos 224 x 224 pixels.
+    - Se você encontrar limitações de tamanho, será possível redimensionar suas imagens para 224 x 224 pixels sem comprometer a qualidade do treinamento.
 - Para imagens .png, certifique-se de que a profundidade de pixel esteja configurada para pelo menos 24 bits por pixel:
     - Para verificar a profundidade no MacOS, execute o comando `file`. A profundidade de 24 bits é exibida como `8-bit/color`.
     - Para verificar no Windows, clique com o botão direito no arquivo e escolha **Propriedades** > **Detalhes**. Procure por **Intensidade de bits**.
 - Inclua pelo menos 50 imagens positivas por classe antes de avaliar seus resultados de treinamento.
     - Supondo qualidade e conteúdo similares para seu treinamento de dados, mais imagens de treinamento geralmente fornecem resultados mais precisos do que menos imagens.
     - 150 a 200 imagens por arquivo .zip fornece o melhor equilíbrio entre o tempo de processamento e a precisão. Mais de 200 imagens aumenta o tempo e a precisão, mas com retornos decrescentes para a quantia de tempo consumido.
-    - Os benefícios de treinar um classificador em mais imagens oscila em torno de 5.000 imagens. Embora seja possível treinar em mais de 5.000 imagens, esse número pode não aumentar significativamente a precisão e aumentar o tempo de processamento.
 - Inclua uma classe negativa para ajudar a melhorar os resultados.
     - Incluir aproximadamente o mesmo número de imagens negativas que as positivas. Um número desigual de imagens pode reduzir a qualidade do classificador treinado.
 - Certifique-se de que os segundos planos em suas imagens de treinamento sejam comparáveis ao que você espera classificar. A precisão de seu classificador pode ser afetada pelos tipos de imagens que você fornece para treiná-lo.
@@ -119,10 +130,12 @@ As diretrizes a seguir não são aplicadas pela API. No entanto, o serviço tend
 Para obter mais informações sobre treinamento, veja [Melhores práticas para classificadores customizados ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2016/10/watson-visual-recognition-training-best-practices/){: new_window}.
 
 ## Diretrizes para classificar altos volumes
+{: #customizing-guidelines-classifying}
 
 Maximize a eficiência e o desempenho do serviço das seguintes maneiras ao enviar muitas imagens:
 
-- Corte ou redimensione suas imagens para 224 x 224 pixels. O serviço é otimizado atualmente para o tamanho, embora ele possa mudar.
+- Redimensionar ou redimensionar suas imagens.
+    - Para obter o melhor desempenho sem comprometer a qualidade de classificação, considere redimensionar suas imagens para 224 x 224 pixels. O serviço está atualmente otimizado para esse tamanho, embora isso possa mudar.
     - Corte a imagem se ela tem uma proporção de aspecto maior de 2:1 ou menor de 1:2.
     - Considere cortar a imagem e várias imagens quadradas ou inclua somente o centro da imagem, dependendo do que é mais importante para seu uso.
 - Envie até 20 imagens em um único arquivo .zip. Você não precisa usar nenhuma compactação, pois as imagens JPEG e PNG são arquivos compactados.
@@ -130,21 +143,25 @@ Maximize a eficiência e o desempenho do serviço das seguintes maneiras ao envi
 - Embora o serviço leia tags EXIF e gire imagens, para obter o melhor rendimento, envie imagens que não precisam ser giradas pelo serviço (a tag **Orientação** é configurada para `1`).
 
 ## Pontuações do classificador customizado
+{: #customizing-scores}
 
 O método `/classify` produz uma pontuação entre 0,0 e 1,0 para cada imagem em cada classe. Esta seção analisa o significado dessas pontuações para classificadores customizados (em oposição ao classificador Geral).
 
 ### Leitura de segundo plano
+{: #customizing-reading}
 
 - O serviço executa a [classificação estatística. ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://en.wikipedia.org/wiki/Statistical_classification){: new_window}
 - É possível [medir os classificadores estatísticos ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://en.wikipedia.org/wiki/Category:Information_retrieval_evaluation){: new_window} de várias maneiras.
 
 ### Como usar as pontuações
+{: #customizing-scores-how-to}
 
-- Pense sobre as ações possíveis a serem tomadas em resposta a uma classificação. Especificamente, analise como você usará as condições positivas ou negativas "true" ou "false". Essas condições são descritas na Leitura de segundo plano.
+- Pense sobre as ações possíveis a serem tomadas em resposta a uma classificação. Especificamente, analise como você usará as condições positivas ou negativas "true" ou "false".  Essas condições são descritas na Leitura de segundo plano.
 - Esse saldo de custo-benefício é crucial para decidir o que fazer com cada pontuação da classe e somente alguém que entenda o aplicativo final pode determiná-lo. O valor de pontuação necessário para o aplicativo tomar alguma ação é chamado "limite de decisão". O serviço não calcula isso para você.
 - Os classificadores customizados usam os modelos binários "um versus o resto" para treinar cada classe com relação a outras classes. O sistema assume que duas classes em um classificador não podem ocorrer ao mesmo tempo, então é necessário criar classificadores separados para testar para classes que podem existir juntas, como `blue` e `sky`. Como alternativa, seria possível criar um classificador distinto para casos em que ambas as classes existem ao mesmo tempo e testam para uma classe como `blueSky`.
 
 ### Exemplo
+{: #customizing-example}
 
 Imagine que você está monitorando uma vaga de estacionamento designada com uma webcam. Você treina um classificador customizado para reconhecer se seu carro está no ponto, algum outro carro está no ponto, o ponto está vazio ou a câmera foi bloqueada. Você coleta exemplos de treinamento para cada um desses casos e treina um classificador customizado com quatro classes. Seu aplicativo classifica as imagens da webcam para relatar o status do ponto e o sistema notifica você com uma mensagem se o status é inesperado. Cada vez que o serviço classifica a imagem da câmera, ele produz quatro pontuações: `myCar`, `unknownCar`, `emptySpot` e `blockedCamera`.
 
@@ -157,6 +174,7 @@ Então, a lógica de notificação e o limite provavelmente irão variar, depend
 Da mesma forma, como uma pessoa, você pode enfrentar o mesmo impasse. Se o sistema notifica que a câmera foi bloqueada, é provável que a imagem que acompanha esteja simplesmente toda em preto ou cinza. Você vai verificar no carro pessoalmente ou ignorar isso? Novamente, isso depende de suas outras prioridades e os riscos percebidos.
 
 ### Perguntas
+{: #customizing-faq}
 
 - **O que as pontuações significam?**
 

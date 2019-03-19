@@ -1,80 +1,123 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-27"
+  years: 2015, 2019
+lastupdated: "2019-03-06"
+
+keywords: Text recognition,Visual Recognition beta Text model,Text model,recognize text
+
+subcollection: visual-recognition
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{:apikey: data-credential-placeholder='apikey'}
+{:url: data-credential-placeholder='url'}
 
 # Reconhecendo texto em uma imagem
+{: #tutorial-recognize-text}
 
+Este tutorial orienta sobre como fazer sua primeira chamada com o modelo Text beta do {{site.data.keyword.visualrecognitionshort}} para detectar e reconhecer texto em inglês em uma imagem.
 {: shortdesc}
 
-## Antes de Começar
-{: #copy-credentials}
+O modelo de Texto é um recurso beta privado e deve-se ter permissão do {{site.data.keyword.IBM_notm}} para fazer chamadas para o modelo. [Solicitar acesso ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://datasciencex.typeform.com/to/nU6efl){: new_window}. Para obter mais informações sobre recursos beta, consulte as [Notas sobre a liberação](/docs/services/visual-recognition?topic=visual-recognition-release-notes#beta).
+{: important}
 
-Use as credenciais que você copiou no "Tutorial de introdução" para este tutorial. Se você não criou uma instância de serviço, execute essas etapas na seção [Antes de começar](/docs/services/visual-recognition/getting-started.html#prerequisites).
+## Antes de Começar
+{: #tutorial-recognize-text-prerequisites}
+
+1.  Acesse a página [{{site.data.keyword.visualrecognitionshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/services/visual-recognition){: new_window} no {{site.data.keyword.Bluemix_notm}} Catalog.
+    1.  Inscreva-se para obter uma conta gratuita do {{site.data.keyword.Bluemix_notm}} ou efetue login.
+    1.  Clique em  ** Criar **.
+- Copie as credenciais para autenticar sua instância de serviço:
+    1.  Clique em  ** Mostrar **  para visualizar suas credenciais.
+    1.  Copie o valor da  ** chave API ** .
 
 ## Etapa 1: reconhecer texto em uma imagem
-{: #recognize-text}
+{: #tutorial-recognize-text-recognize-text}
 
-1.  Faça download da imagem de exemplo do <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/" download=""> de amostra...<img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externon" class="style-scope doc-content"></a>
-1.  Emita o comando a seguir para o método `POST /v3/recognize_text` para fazer upload e analisar a imagem. Se você usar sua própria imagem, o tamanho máximo será de 2 MB:
-    - Substitua `{api-key}` por essas credenciais de serviço que você copiou anteriormente.
-    - Modifique o local do images\_file para apontar o local no qual você salvou a imagem.
+1.  Emita a chamada a seguir para reconhecer texto em [uma imagem ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/lookButDontTouch.jpg){: new_window}. Substitua `{your_api_key}` pelo valor da chave de API copiado anteriormente.
 
     ```bash
-    curl -X POST --form "images_file=@prez.jpg" \ "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/recognize_text?api_key={api-key}&version=2016-05-20"
+    curl -u "apikey: {"{: apikey} \
+    "https: //gateway.watsonplatform.net/visual-recognition/api/v3/recognize_text?url=https://watson-developer-cloud.github.io/doc-downloads/visual-recognition/lookButDontTouch.jpg & version=2018-03-03-19"
     ```
+    {: pre}
 
-    A resposta inclui uma hierarquia de local, de estimativa de idade, de gênero, de identidade e de tipo (se o serviço reconhece essa face) e uma pontuação para cada.
-
-    Amplitude de pontuação de 0 a 1, com uma pontuação mais alta indicando maior correlação. Todas as faces são detectadas, mas para imagens com mais de 10 faces, pontuações de confiança de idade e de gênero podem retornar pontuações de 0.
-
+    A resposta inclui o texto reconhecido e as localizações de palavras no texto com uma pontuação de confiança para cada palavra. As informações de local podem ser usadas para desenhar caixas delimitadoras ao redor das palavras.
 
     ```json
     {
-      "images_processed": 1,
-      "images": [
-        {
-          "image": "string",
-          "text": "string",
+      "images": [ {
+          "image": "lookButDontTouch.jpg",
+          "text": "look but\ndont\ntouch",
           "words": [
             {
-              "word": "string",
-              "text_location": {
-                "width": 0,
-                "height": 0,
-                "left": 0,
-                "top": 0
+              "word": "look",
+              "location": {
+                "height": 651,
+                "width": 1235,
+                "left": 914,
+                "top": 1591
               },
-              "score": 0,
+              "score": 0.9718,
               "line_number": 0
+            },
+            {
+              "word": "but",
+              "location": {
+                "height": 651,
+                "width": 939,
+                "left": 2148,
+                "top": 1591
+              },
+              "score": 0.9246,
+              "line_number": 0
+            },
+            {
+              "word": "dont",
+              "location": {
+                "height": 586,
+                "width": 1594,
+                "left": 1220,
+                "top": 2240
+              },
+              "score": 0.5823,
+              "line_number": 1
+            },
+            {
+              "word": "touch",
+              "location": {
+                "height": 629,
+                "width": 1701,
+                "left": 1193,
+                "top": 2824
+              },
+              "score": 0.8806,
+              "line_number": 2
             }
           ]
         }
-      ]
+      ],
+      "images_processed": 1
     }
+    ```
     {: codeblock}
 
-## Próximas etapas
+## Próximos passos
 
-Você tem um entendimento básico de como usar os classificadores padrão com o {{site.data.keyword.visualrecognitionshort}}. Agora vá além:
+Você tem um entendimento básico de como reconhecer texto em uma imagem. Explore ainda mais.
 
-- Leia sobre a API na [Referência de API![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/){: new_window}.
+- Leia a  [ visão geral ](/docs/services/visual-recognition?topic=visual-recognition-text-recognition-in-natural-scenes-beta-#text-recognition-in-natural-scenes-beta-).
+- Explore os métodos do modelo Text na [Referência de API ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text#recognize-text-in-an-image-get-beta){: new_window}.
 
-### Attributions
-{: #attributions}
+### Atribuições
+{: #tutorial-recognize-text-attributions}
 
-Todas as imagens usadas nesta página são do Flikr e usadas sob [licença do Creative Commons Attribution 2.0![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://creativecommons.org/licenses/by/2.0/deed.en){: new_window}. Nenhuma mudança foi feita nessas imagens.
+- [lookButDontTouch ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://unsplash.com/photos/WrvDSkS2yu4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){: new_window} por [Lubo Minar ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://unsplash.com/@bubo){: new_window} no [Unsplash ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){: new_window}. Nenhuma mudança foi feita nessa imagem.

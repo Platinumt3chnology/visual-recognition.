@@ -1,14 +1,21 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-07"
+  years: 2015, 2019
+lastupdated: "2019-03-06"
+
+keywords: Visual Recognition service,Face model,Food model,Explicit,Text recognition,Visual Recognition use cases
+
+subcollection: visual-recognition
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -16,25 +23,39 @@ lastupdated: "2017-12-07"
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
-{:note: .deprecated}
 
 # 關於
+{: #index}
 
-**測試版相似性搜尋與集合已結束**：*截至 2017 年 9 月 8 日，相似性搜尋的測試版期間已經結束。如需相關資訊，請參閱 [Visual Recognition API – Similarity Search Update ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/bluemix/2017/08/visual-recognition-api-similarity-search-update/){: new_window}。*
+Face 模型呼叫回應中的識別資訊已於 2018 年 4 月 2 日移除。識別資訊指人員的名稱、評分，以及 type_hierarchy 知識圖。如需加強型 Face 模型的詳細資料，請參閱[版本注意事項](/docs/services/visual-recognition?topic=visual-recognition-release-notes#2april2018)。
 {: deprecated}
 
 {{site.data.keyword.visualrecognitionfull}} 服務使用深入學習演算法來分析影像的場景、物件、臉孔及其他內容。回應包含可提供該內容相關資訊的關鍵字。
 {: shortdesc}
 
-一組內建模型會提供高正確性的結果，而不需訓練。您也可以訓練自訂模型，以建立特殊化類別。
+## 可用的模型
+{: #models}
+
+一組可提供高度正確結果的內建模型，而且不需要訓練：
+
+- [**一般**模型](/docs/services/visual-recognition?topic=visual-recognition-customizing#general-model)：來自數千個類別的分類。
+- [**臉孔**模型](/docs/services/visual-recognition?topic=visual-recognition-getting-started-tutorial#detect-faces)：包含年齡和性別的臉孔分析。
+- **Explicit** 模型：影像是否不適合一般用途。
+- **Food** 模型：專用於食物項目的影像。
+- **Text** 模型（專用測試版）：從自然場景擷取文字。[要求存取權 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://datasciencex.typeform.com/to/nU6efl){: new_window}。
+
+您也可以訓練[自訂模型](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier)來建立特殊化類別。
 
 ## 如何使用服務
+{: #language-support-how-to}
 
 下列影像顯示建立與使用 {{site.data.keyword.visualrecognitionshort}} 的處理程序：
 
-![說明 {{site.data.keyword.visualrecognitionshort}} 服務的流程，從準備、訓練及分類影像到檢視結果。](images/visual-recognition-process-110717.png)
+![說明 {{site.data.keyword.visualrecognitionshort}} 服務的流程，從準備、訓練及分類影像到檢視結果。](images/visual-recognition-process-110717.svg)
+
 
 ## 使用案例
+{: #language-support-use-cases}
 
 {{site.data.keyword.visualrecognitionshort}} 服務可以用於多樣的應用程式及產業，例如：
 

@@ -43,9 +43,9 @@
      inkscape:window-height="838"
      id="namedview67"
      showgrid="false"
-     inkscape:zoom="0.44114583"
-     inkscape:cx="461.49769"
-     inkscape:cy="635.5145"
+     inkscape:zoom="0.22057292"
+     inkscape:cx="812.00127"
+     inkscape:cy="752.68699"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -437,7 +437,7 @@
     <tspan
        x="891.48669"
        id="tspan38"
-       style="-inkscape-font-specification:SimSun;font-family:SimSun;font-style:normal">分类器</tspan>
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">分类器</tspan>
   </text>
   <g
      id="g3237"
@@ -461,7 +461,8 @@
        id="class">
       <tspan
          id="tspan29"
-         x="289.03479">类</tspan>
+         x="289.03479"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei">类</tspan>
     </text>
     <text
        style="font-size:30px;font-weight:300;text-anchor:middle;font-family:HelvNeueforIBM"
@@ -473,7 +474,7 @@
       <tspan
          id="tspan41"
          x="290.23868"
-         style="-inkscape-font-specification:SimSun;font-family:SimSun">正面示例</tspan>
+         style="-inkscape-font-specification:SimHei;font-family:SimHei">正面示例</tspan>
     </text>
   </g>
   <g
@@ -492,14 +493,15 @@
     </text>
     <text
        style="font-size:30px;font-style:italic;text-anchor:middle;font-family:HelvNeueforIBM"
-       y="258.12088"
-       x="1126.5001"
+       y="260.12088"
+       x="1120.5001"
        class="cls-6"
        data-name="class copy 2"
        id="class_copy_2">
       <tspan
          id="tspan35"
-         x="1126.5001">类</tspan>
+         x="1120.5001"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei">类</tspan>
     </text>
     <text
        style="font-size:30px;font-weight:300;text-anchor:middle;font-family:HelvNeueforIBM"
@@ -511,7 +513,7 @@
       <tspan
          id="tspan44"
          x="1125.8396"
-         style="-inkscape-font-specification:SimSun;font-family:SimSun">正面示例</tspan>
+         style="-inkscape-font-specification:SimHei;font-family:SimHei">正面示例</tspan>
     </text>
   </g>
   <g
@@ -531,13 +533,14 @@
     <text
        style="font-size:30px;font-style:italic;text-anchor:middle;font-family:HelvNeueforIBM"
        y="263.12088"
-       x="692.23431"
+       x="696.23431"
        class="cls-6"
        data-name="class copy"
        id="class_copy">
       <tspan
          id="tspan32"
-         x="692.23431">类</tspan>
+         x="696.23431"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei">类</tspan>
     </text>
     <text
        style="font-size:30px;font-weight:300;text-anchor:middle;font-family:HelvNeueforIBM"
@@ -549,7 +552,7 @@
       <tspan
          id="tspan47"
          x="699.9718"
-         style="-inkscape-font-specification:SimSun;font-family:SimSun">正面示例</tspan>
+         style="-inkscape-font-specification:SimHei;font-family:SimHei">正面示例</tspan>
     </text>
   </g>
   <text
@@ -562,7 +565,7 @@
     <tspan
        x="697.74365"
        id="tspan50"
-       style="-inkscape-font-specification:SimSun;font-family:SimSun">负面示例</tspan>
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">负面示例</tspan>
   </text>
   <text
      id="vegetables"
@@ -606,13 +609,14 @@
     <text
        style="font-size:30px;font-style:italic;text-anchor:middle;font-family:HelvNeueforIBM"
        y="263.12088"
-       x="704.23431"
+       x="696.23431"
        class="cls-6"
        data-name="class copy"
        id="class_copy-3">
       <tspan
          id="tspan32-3"
-         x="704.23431">类</tspan>
+         x="696.23431"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei">类</tspan>
     </text>
     <text
        style="font-size:30px;font-weight:300;text-anchor:middle;font-family:HelvNeueforIBM"
@@ -624,7 +628,7 @@
       <tspan
          id="tspan47-1"
          x="699.9718"
-         style="-inkscape-font-specification:SimSun;font-family:SimSun">正面示例</tspan>
+         style="-inkscape-font-specification:SimHei;font-family:SimHei">正面示例</tspan>
     </text>
   </g>
   <image
@@ -684,7 +688,7 @@
        x="1239.9528"
        style="font-size:20px;font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Ultra-Light"
        xml:space="preserve"><tspan
-         style="font-size:28px;fill:#ff0000;-inkscape-font-specification:SimSun;font-family:SimSun"
+         style="font-size:28px;fill:#ff0000;-inkscape-font-specification:SimHei;font-family:SimHei"
          y="88.933884"
          x="1239.9528"
          id="tspan3517"
@@ -728,7 +732,7 @@
        x="1239.9528"
        style="font-size:20px;font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Ultra-Light"
        xml:space="preserve"><tspan
-         style="font-size:28px;fill:#ff0000;-inkscape-font-specification:SimSun;font-family:SimSun"
+         style="font-size:28px;fill:#ff0000;-inkscape-font-specification:SimHei;font-family:SimHei"
          y="88.933884"
          x="1239.9528"
          id="tspan3517-7"
@@ -813,7 +817,7 @@
        x="1239.9528"
        style="font-size:20px;font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Ultra-Light"
        xml:space="preserve"><tspan
-         style="font-size:28px;fill:#ff0000;-inkscape-font-specification:SimSun;font-family:SimSun"
+         style="font-size:28px;fill:#ff0000;-inkscape-font-specification:SimHei;font-family:SimHei"
          y="88.933884"
          x="1239.9528"
          id="tspan3517-9"
@@ -843,7 +847,7 @@
     <tspan
        x="1078.9036"
        id="tspan50-1"
-       style="-inkscape-font-specification:SimSun;font-family:SimSun">负面示例</tspan>
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">负面示例</tspan>
   </text>
   <text
      id="vegetables-3"

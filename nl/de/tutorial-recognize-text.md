@@ -1,81 +1,124 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-27"
+  years: 2015, 2019
+lastupdated: "2019-03-06"
+
+keywords: Text recognition,Visual Recognition beta Text model,Text model,recognize text
+
+subcollection: visual-recognition
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{:apikey: data-credential-placeholder='apikey'}
+{:url: data-credential-placeholder='url'}
 
 # Text in einem Bild erkennen
+{: #tutorial-recognize-text}
 
+Dieses Lernprogramm führt Sie durch die Verwendung des ersten Aufrufs mit dem {{site.data.keyword.visualrecognitionshort}}-Beta-Textmodell zur Erkennung von englischem Text in einem Bild.
 {: shortdesc}
 
-## Vorbereitende Schritte
-{: #copy-credentials}
+Das Textmodell ist eine Privat-Betafunktion. Sie müssen über die Berechtigung von {{site.data.keyword.IBM_notm}} verfügen, um Aufrufe an das Modell durchzuführen. [Fordern Sie Zugriff an ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://datasciencex.typeform.com/to/nU6efl){: new_window}. Weitere Informationen zu Beta-Funktionen finden Sie in den [Releaseinformationen](/docs/services/visual-recognition?topic=visual-recognition-release-notes#beta).
+{: important}
 
-Verwenden Sie die Berechtigungsnachweise, die Sie im "Lernprogramm zur Einführung" für dieses Lernprogramm kopiert haben. Wenn Sie keine Serviceinstanz erstellt haben, führen Sie diese Schritte im Abschnitt [Vorbereitende Schritte](/docs/services/visual-recognition/getting-started.html#prerequisites) aus.
+## Vorbereitende Schritte
+{: #tutorial-recognize-text-prerequisites}
+
+1.  Wechseln Sie zur Seite [{{site.data.keyword.visualrecognitionshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/services/visual-recognition){: new_window} im {{site.data.keyword.Bluemix_notm}}-Katalog.
+    1.  Registrieren Sie sich entweder für ein kostenloses {{site.data.keyword.Bluemix_notm}}-Konto oder melden Sie sich an.
+    1.  Klicken Sie auf **Erstellen**.
+- Kopieren Sie die Berechtigungsnachweise, um sich für Ihre Serviceinstanz zu authentifizieren:
+    1.  Klicken Sie auf **Anzeigen**, um Ihre Berechtigungsnachweise anzuzeigen.
+    1.  Kopieren Sie den Wert für **API key** (API-Schlüssel).
 
 ## Schritt 1: Text in einem Bild erkennen
-{: #recognize-text}
+{: #tutorial-recognize-text-recognize-text}
 
-1.  Laden Sie das Beispielbild <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/" download="">...<img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link" class="style-scope doc-content"></a> herunter.
-1.  Geben Sie den folgenden Befehl für die Methode `POST /v3/recognize_text` ein, um das Bild hochzuladen und zu analysieren. Wenn Sie Ihr eigenes Bild verwenden, beträgt die maximale Größe 2 MB:
-    - Ersetzen Sie `{api-schlüssel}` durch die Serviceberechtigungsnachweise, die Sie zuvor kopiert haben.
-    - Ändern Sie die Position von images\_file, um dorthin zu verweisen, wo Sie das Bild gespeichert haben.
+1.  Geben Sie folgenden Aufruf aus, um Text in [einem Bild ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/lookButDontTouch.jpg){: new_window} zu erkennen. Ersetzen Sie `{your_api_key}` (Ihren API-Schlüssel) durch den API-Schlüsselwert, den Sie zuvor kopiert haben.
 
     ```bash
-    curl -X POST --form "images_file=@prez.jpg" \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/recognize_text?api_key={api-schlüssel}&version=2016-05-20"
+    curl -u "apikey:{your_api_key}"{: apikey} \
+    "https://gateway.watsonplatform.net/visual-recognition/api/v3/recognize_text?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/lookButDontTouch.jpg&version=2018-03-19"
     ```
+    {: pre}
 
-    Die Antwort enthält eine Position, ein geschätztes Alter, das Geschlecht sowie Identität, Typhierarchie (wenn der Service das Gesicht erkennt) und einen Score für alle.
-
-    Die Scores liegen im Bereich von 0 bis 1, wobei ein höherer Score eine größere Korrelation bedeutet. Alle Gesichter werden erkannt, aber bei Bildern mit mehr als zehn Gesichtern werden für Alter und Geschlecht möglicherweise Scores von 0 zurückgegeben.
-
+    Die Antwort enthält den erkannten Text und die Positionen von Wörtern im Text mit einem Konfidenzscore für jedes Wort. Anhand der Positionsdaten können Rahmen um die Wörter gezogen werden.
 
     ```json
     {
-      "images_processed": 1,
       "images": [
         {
-          "image": "string",
-          "text": "string",
+          "image": "lookButDontTouch.jpg",
+          "text": "look but\ndont\ntouch",
           "words": [
             {
-              "word": "string",
-              "text_location": {
-                "width": 0,
-                "height": 0,
-                "left": 0,
-                "top": 0
+              "word": "look",
+              "location": {
+                "height": 651,
+                "width": 1235,
+                "left": 914,
+                "top": 1591
               },
-              "score": 0,
+              "score": 0.9718,
               "line_number": 0
+            },
+            {
+              "word": "but",
+              "location": {
+                "height": 651,
+                "width": 939,
+                "left": 2148,
+                "top": 1591
+              },
+              "score": 0.9246,
+              "line_number": 0
+            },
+            {
+              "word": "dont",
+              "location": {
+                "height": 586,
+                "width": 1594,
+                "left": 1220,
+                "top": 2240
+              },
+              "score": 0.5823,
+              "line_number": 1
+            },
+            {
+              "word": "touch",
+              "location": {
+                "height": 629,
+                "width": 1701,
+                "left": 1193,
+                "top": 2824
+              },
+              "score": 0.8806,
+              "line_number": 2
             }
           ]
         }
-      ]
+      ],
+      "images_processed": 1
     }
+    ```
     {: codeblock}
 
 ## Nächste Schritte
 
-Sie haben nun ein grundlegendes Verständnis davon, wie Sie die Standardklassifikationsmerkmale bei {{site.data.keyword.visualrecognitionshort}} verwenden. Weitergehende Informationen finden Sie hier:
+Sie haben nun ein grundlegendes Verständnis für die Erkennung von Text in einem Bild. Unter den folgenden Links können Sie sich weiter informieren.
 
-- Informationen zur API finden Sie in der Veröffentlichung [API Reference ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/){: new_window}.
+- Lesen Sie die [Übersicht](/docs/services/visual-recognition?topic=visual-recognition-text-recognition-in-natural-scenes-beta-#text-recognition-in-natural-scenes-beta-).
+- Erkunden Sie die Methoden für Textmodelle in der [API-Referenz![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text#recognize-text-in-an-image-get-beta){: new_window}.
 
 ### Bildnachweis
-{: #attributions}
+{: #tutorial-recognize-text-attributions}
 
-Alle Bilder auf dieser Seite stammen aus Flikr und werden unter [Creative Commons Attribution 2.0-Lizenz ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://creativecommons.org/licenses/by/2.0/deed.en){: new_window} verwendet. An diesen Bildern wurden keine Änderungen vorgenommen.
+- [lookButDontTouch ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://unsplash.com/photos/WrvDSkS2yu4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){: new_window} von [Lubo Minar ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://unsplash.com/@bubo){: new_window} in [Unsplash ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){: new_window}. An diesem Bild wurden keine Änderungen vorgenommen.

@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2019
+lastupdated: "2019-03-06"
+
+keywords: training classifiers,example data,hierarchy,updating classifiers,retraining classifiers
+
+subcollection: visual-recognition
 
 ---
 
@@ -18,11 +22,13 @@ lastupdated: "2017-12-11"
 {:swift: .ph data-hd-programlang='swift'}
 
 # 訓練分類器的準則
+{: #customizing}
 
-在您使用[建立自訂分類器指導教學](/docs/services/visual-recognition/tutorial-custom-classifier.html)中的範例資料分類影像，並建立、訓練及查詢自訂分類器之後，您可以分類自己的資料，或建立自己的自訂分類器。
+在您使用[建立自訂分類器指導教學](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier)中的範例資料分類影像，並建立、訓練及查詢自訂分類器之後，您可以分類自己的資料，或建立自己的自訂分類器。
 {: shortdesc}
 
 ## 一般分類器種類
+{: #general-model}
 
 一般分類器會從數以千計的可能標籤傳回類別，並組織成種類及子種類。下列清單顯示頂層種類：
 
@@ -36,6 +42,7 @@ lastupdated: "2017-12-11"
 - 以及更多其他內容，這其中包括家具、水果、樂器、工具、顏色、小機械、裝置、儀器、武器、建築物、結構與人造物體、服裝和花等等。
 
 ### 分類回應階層
+{: #customizing-response-hierarchy}
 
 `/v3/classify` 方法會在相關類別的階層內分類影像。例如，小獵犬的圖片可能分類為 "animal"，以及相關的 "dog" 和 "beagle"。與相關類別的正符合，在本例中為 "dog" 和 "beagle"，會提高母項回應的評分。在本例中，回應包含全部三種類別："animal"、"dog" 及 "beagle"。母類別 ("animal") 的評分會提高，因為它符合相關的類別（"dog" 及 "beagle"）。母項也是 "type\_hierarchy"，顯示它是階層的母項。
 
@@ -57,6 +64,7 @@ lastupdated: "2017-12-11"
 自訂分類器只能由它們建立所在的特定服務實例存取，且不能與其他無法存取該服務實例的 {{site.data.keyword.Bluemix_notm}} 使用者共用。
 
 ## 更新自訂分類器
+{: #customizing-update}
 
 您可以藉由新增類別或新增影像到現有類別，來更新現有分類器。若要更新現有的分類器，請使用數個壓縮 (.zip) 檔，並包括內含正面或負面影像（.jpg 或 .png）的檔案。您必須提供至少一個壓縮檔，以及其他的正面或負面範例。
 
@@ -64,9 +72,10 @@ lastupdated: "2017-12-11"
 
 包含負面範例的壓縮檔不會用來在建立的分類器內建立類別，而是會定義上傳的分類器不是哪些內容。負面範例檔案應該包含不描述任何正面範例之主題的影像。在單一呼叫中，您只能指定一個負面範例檔案。
 
-![Fruits 分類器，使用柳橙的新正面類別和起司的負面類別加以重新訓練](images/retrain.png)
+![Fruits 分類器，使用柳橙的新正面類別和起司的負面類別加以重新訓練](images/retrain.svg)
 
 ### 重新訓練的運作方式
+{: #customizing-retrain}
 
 如果您使用三組正面類別圖片 - 蘋果、香蕉、西洋梨 - 來訓練分類器，系統會在內部訓練三個模型。對於 Apples 模型，"Apples" 中的圖片群組會訓練為正面範例，而在 "Bananas" 及 "Pears" 中上傳的圖片群組會訓練為負面範例。然後系統便知道香蕉和西洋梨不是蘋果。其他類別會用來作為 Bananas 的負面範例，Pears 模型也是如此。
 
@@ -79,6 +88,7 @@ lastupdated: "2017-12-11"
 最終結果是 YellowPears 及 GreenPears 類別將具有 Apples 和 Bananas 作為負面範例，但不會有來自 Pears 類別的任何確切重複影像作為負面範例。
 
 ## 大小限制
+{: #customizing-size}
 
 訓練呼叫及資料有大小限制：
 
@@ -93,23 +103,24 @@ lastupdated: "2017-12-11"
     - 最大影像大小是 10 MB。
     - 最大 .zip 檔大小是 100 MB，且最多 20 個影像。
 - 偵測臉孔的方法限制：
-    - 最大影像大小是 2 MB。
-    - 最大 .zip 檔大小是 5 MB，且最多 15 個影像。
+    - 最大影像大小是 10 MB。
+    - .zip 檔大小上限為 100 MB，內含最多 15 個影像。
 
 <!-- - The `POST /v3/recognize_text` method accept a maximum of 10 images per batch. -->
 
 ## 良好訓練的準則
+{: #customizing-guidelines-training}
 
 API 未強制執行下列準則。不過，服務傾向於在訓練資料遵循它們時效能會更好：
 
 - 確定您的影像至少 224 x 224 像素。
+    - 如果您遇到大小限制，您可以將影像大小調整為 224 x 224 像素，這不會影響訓練品質。
 - 對於 .png 影像，請確定像素深度設為至少每個像素 24 位元：
     - 若要在 MacOS 上檢查深度，請執行 `file` 指令。24 位元深度顯示為 `8-bit/color`。
     - 若要在 Windows 上檢查，請在檔案按一下滑鼠右鍵，然後選擇**內容** > **詳細資料**。尋找**位元深度**。
 - 在評量訓練結果之前，每個類別請包含至少 50 個正面影像。
     - 假設您的訓練資料有類似品質及內容，則較多的訓練影像一般會比提供較少影像更正確的結果。
     - 每個 .zip 檔 150 - 200 個影像能在處理時間與正確性之間提供最好的平衡。超過 200 個影像會增加時間和正確性，但對於它花費的時間量而言，報酬會遞減。
-    - 訓練分類器處理更多影像的好處會在 5000 個影像左右到達穩定狀態。雖然您可以訓練處理超過 5000 個影像，那樣的數量可能不會大幅提高正確性，且會增加處理時間。
 - 包含負面類別以協助改善您的結果。
     - 包含大多與正面影像相同數目的負面影像。影像數目不等可能會降低受訓分類器的品質。
 - 確定您的訓練影像的背景與您預期分類的內容類似。分類器的正確性可能會受到您提供用來訓練它的影像類型影響。
@@ -119,10 +130,12 @@ API 未強制執行下列準則。不過，服務傾向於在訓練資料遵循�
 如需訓練的相關資訊，請參閱 [Best practices for custom classifiers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/bluemix/2016/10/watson-visual-recognition-training-best-practices/){: new_window}。
 
 ## 大量分類的準則
+{: #customizing-guidelines-classifying}
 
 當您提交許多影像時，下列方法可讓服務的效率及效能最大化：
 
-- 將影像裁剪或調整大小為 224 x 224 像素。目前服務針對此大小進行最佳化，但可能會改變。
+- 裁剪影像或調整影像大小。
+    - 若要取得最佳效能同時不損害分類品質，請考量將影像大小調整為 224 x 224 像素。此服務目前已針對此大小最佳化，但可能變更。
     - 如果影像長寬比大於 2:1 或小於 1:2，請裁剪它。
     - 考慮將影像裁剪成多個方形影像，或只包含影像的中央，視什麼內容對您的使用最重要而定。
 - 在單一 .zip 檔中提交最多 20 個影像。您不需要使用任何壓縮，因為 JPEG 和 PNG 影像是壓縮檔。
@@ -130,21 +143,25 @@ API 未強制執行下列準則。不過，服務傾向於在訓練資料遵循�
 - 雖然服務可讀取 EXIF 標籤並旋轉影像，為了最佳產量起見，請傳送不需要由服務旋轉的影像（EXIF **Orientation** 標籤設為 `1`）。
 
 ## 自訂分類器評分
+{: #customizing-scores}
 
 `/classify` 方法會針對每個類別的每個影像產生 0.0 到 1.0 之間的評分。本節探究那些評分對於自訂分類器的意義（與一般分類器完全不同）。
 
 ### 背景閱讀
+{: #customizing-reading}
 
 - 服務會執行[統計分類。![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://en.wikipedia.org/wiki/Statistical_classification){: new_window}
 - 您可以用數種方式[測量統計分類器 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://en.wikipedia.org/wiki/Category:Information_retrieval_evaluation){: new_window}。
 
 ### 如何使用評分
+{: #customizing-scores-how-to}
 
 - 思索為了回應分類可能採取的動作。明確地說，分析您將如何使用「真的」或「假的」正面或負面狀況。這些狀況說明於「背景閱讀」中。
 - 這種成本效益的平衡在決定每個類別評分的處理方式時極為重要，且只有瞭解最終應用程式的人可以決定。應用程式採取某個動作所需的評分值稱為「決策臨界值」。服務不會為您計算。
 - 自訂分類器使用二元的 one-versus-the-rest 模型，以針對其他類別訓練每個類別。系統會假設分類器內的兩個類別無法同時發生，所以您應該建立不同的分類器來測試可以並存的類別，例如 `blue` 和 `sky`。或者，您可以針對兩個類別同時存在的情況建立相異的分類器，並為類別進行測試，例如 `blueSky`。
 
 ### 範例
+{: #customizing-example}
 
 想像您正在使用網路攝影機監視一個已指派的停車位。您訓練自訂分類器來辨識您的車是否在車位中、是否有外車停入、車位空著，還是攝影機遭到阻擋。您會收集這些情況每一者的訓練範例，並使用四個類別來訓練自訂分類器。您的應用程式會分類網路攝影機的影像以回報車位狀態，然後系統會在發生非預期的狀態時以訊息通知您。服務每次分類攝影機的影像時，都會產生四個評分：`myCar`、`unknownCar`、`emptySpot` 及 `blockedCamera`。
 
@@ -157,6 +174,7 @@ API 未強制執行下列準則。不過，服務傾向於在訓練資料遵循�
 同樣地，您個人也可能面臨相同的權衡。如果系統通知您攝影機遭到阻擋，所附的影像將可能全黑或是灰。您要親自去檢查車輛還是忽略？同樣地，這取決於您的其他優先順序以及感覺的風險。
 
 ### 問題
+{: #customizing-faq}
 
 - **評分有什麼意義？**
 

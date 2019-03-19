@@ -1,81 +1,124 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-27"
+  years: 2015, 2019
+lastupdated: "2019-03-06"
+
+keywords: Text recognition,Visual Recognition beta Text model,Text model,recognize text
+
+subcollection: visual-recognition
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{:apikey: data-credential-placeholder='apikey'}
+{:url: data-credential-placeholder='url'}
 
 # 识别图像中的文本
+{: #tutorial-recognize-text}
 
+本教程将指导您如何首次使用 {{site.data.keyword.visualrecognitionshort}} Beta Text 模型来检测和识别图像中的英语文本。
 {: shortdesc}
 
-## 开始之前
-{: #copy-credentials}
+Text 模型是专用 Beta 功能，您必须具有来自 {{site.data.keyword.IBM_notm}} 的许可权才能调用此模型。[请求访问权 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://datasciencex.typeform.com/to/nU6efl){: new_window}。有关 Beta 功能的更多信息，请参阅[发行说明](/docs/services/visual-recognition?topic=visual-recognition-release-notes#beta)。
+{: important}
 
-使用您在本教程的“入门教程”中复制的凭证。如果没有创建服务实例，请执行[开始之前](/docs/services/visual-recognition/getting-started.html#prerequisites)部分中的那些步骤。
+## 开始之前
+{: #tutorial-recognize-text-prerequisites}
+
+1.  转至 {{site.data.keyword.Bluemix_notm}}“目录”中的 [{{site.data.keyword.visualrecognitionshort}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/catalog/services/visual-recognition){: new_window} 页面。
+    1.  注册免费的 {{site.data.keyword.Bluemix_notm}} 帐户或登录。
+    1.  单击**创建**。
+- 复制凭证以向服务实例进行认证：
+    1.  单击**显示**以查看凭证。
+    1.  复制 **API 密钥**值。
 
 ## 步骤 1：识别图像中的文本
-{: #recognize-text}
+{: #tutorial-recognize-text-recognize-text}
 
-1.  下载样本 <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/" download="">... <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标" class="style-scope doc-content"></a> 示例图像
-1.  发出以下命令调用 `POST /v3/recognize_text` 方法来上传和分析该图像。如果使用自己的图像，那么最大大小为 2 MB：
-    - 将 `{api-key}` 替换为早先复制的服务凭证。
-    - 修改 images\_file 的位置，使其指向映像的保存位置。
+1.  发出以下调用以识别[图像 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/lookButDontTouch.jpg){: new_window} 中的文本。将 `{your_api_key}` 替换为先前复制的 API 密钥值。
 
     ```bash
-    curl -X POST --form "images_file=@prez.jpg" \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/recognize_text?api_key={api-key}&version=2016-05-20"
+    curl -u "apikey:{your_api_key}"{: apikey} \
+    "https://gateway.watsonplatform.net/visual-recognition/api/v3/recognize_text?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/lookButDontTouch.jpg&version=2018-03-19"
     ```
+    {: pre}
 
-    响应包括位置、估计年龄、性别、身份和类型层次结构（如果服务识别到该人脸）以及每项的分数。
-
-    分数范围为 0-1，分数越高，表示相关性越大。所有人脸都会检测到，但对于有 10 张以上人脸的图像，返回的年龄和性别置信度分数可能会为 0。
-
+    响应包含已识别的文本、文本中单词的位置以及每个单词的置信度分数。位置信息可用于在单词周围绘制边界框。
 
     ```json
     {
-      "images_processed": 1,
       "images": [
         {
-          "image": "string",
-          "text": "string",
+          "image": "lookButDontTouch.jpg",
+          "text": "look but\ndont\ntouch",
           "words": [
             {
-              "word": "string",
-              "text_location": {
-                "width": 0,
-                "height": 0,
-                "left": 0,
-                "top": 0
+              "word": "look",
+              "location": {
+                "height": 651,
+                "width": 1235,
+                "left": 914,
+                "top": 1591
               },
-              "score": 0,
+              "score": 0.9718,
               "line_number": 0
+            },
+            {
+              "word": "but",
+              "location": {
+                "height": 651,
+                "width": 939,
+                "left": 2148,
+                "top": 1591
+              },
+              "score": 0.9246,
+              "line_number": 0
+            },
+            {
+              "word": "dont",
+              "location": {
+                "height": 586,
+                "width": 1594,
+                "left": 1220,
+                "top": 2240
+              },
+              "score": 0.5823,
+              "line_number": 1
+            },
+            {
+              "word": "touch",
+              "location": {
+                "height": 629,
+                "width": 1701,
+                "left": 1193,
+                "top": 2824
+              },
+              "score": 0.8806,
+              "line_number": 2
             }
           ]
         }
-      ]
+      ],
+      "images_processed": 1
     }
+    ```
     {: codeblock}
 
 ## 后续步骤
 
-您已经对如何使用 {{site.data.keyword.visualrecognitionshort}} 的缺省分类器有了基本的了解。现在，可以更深入地探索以下内容：
+您已经对如何识别图像中的文本有了基本了解。进一步探索。
 
-- 阅读 [API 参考 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/){: new_window} 中有关 API 的信息。
+- 阅读[概述](/docs/services/visual-recognition?topic=visual-recognition-text-recognition-in-natural-scenes-beta-#text-recognition-in-natural-scenes-beta-)。
+- 探索 [API 参考 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text#recognize-text-in-an-image-get-beta){: new_window} 中的 Text 模型方法。
 
 ### 出处
-{: #attributions}
+{: #tutorial-recognize-text-attributions}
 
-此页面上使用的所有图像均来自 Flikr，并依据 [Creative Commons Attribution 2.0 许可证 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://creativecommons.org/licenses/by/2.0/deed.en){: new_window} 使用。这些图像未进行任何更改。
+- [lookButDontTouch ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://unsplash.com/photos/WrvDSkS2yu4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){: new_window}，由 [Lubo Minar ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://unsplash.com/@bubo){: new_window} 在 [Unsplash ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){: new_window} 上发布。此图像未进行任何更改。

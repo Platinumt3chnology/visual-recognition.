@@ -1,14 +1,21 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-07"
+  years: 2015, 2019
+lastupdated: "2019-03-06"
+
+keywords: Visual Recognition service,Face model,Food model,Explicit,Text recognition,Visual Recognition use cases
+
+subcollection: visual-recognition
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -16,25 +23,39 @@ lastupdated: "2017-12-07"
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
-{:note: .deprecated}
 
 # About
+{: #index}
 
-**Procura de similaridade beta e coleções encerradas**: *desde 8 de setembro de 2017, o período beta para Procura de similaridade está encerrado. Para obter mais informações, veja [API do Visual Recognition – Atualização de procura de similaridade ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2017/08/visual-recognition-api-similarity-search-update/){: new_window}.*
+Em 2 de abril de 2018, as informações de identidade na resposta a chamadas para o modelo Face foram removidas. As informações de identidade se referem ao nome da pessoa, à pontuação e ao gráfico de conhecimento type_hierarchy. Para obter detalhes sobre o modelo Face aprimorado, consulte as [Notas sobre a liberação](/docs/services/visual-recognition?topic=visual-recognition-release-notes#2april2018).
 {: deprecated}
 
 O serviço {{site.data.keyword.visualrecognitionfull}} usa algoritmos de aprendizado profundo para analisar imagens para cenas, objetos, faces e outros conteúdos. A resposta inclui palavras-chave que fornecem informações sobre o conteúdo.
 {: shortdesc}
 
-Um conjunto de modelos integrados fornece resultados altamente precisos sem treinamento. Também é possível treinar os modelos customizados para criar classes especializadas.
+## Modelos disponíveis
+{: #models}
+
+Um conjunto de modelos integrados fornece resultados altamente precisos sem treinamento:
+
+- [Modelo **General**](/docs/services/visual-recognition?topic=visual-recognition-customizing#general-model): classificação padrão de milhares de classes.
+- [Modelo **Face**](/docs/services/visual-recognition?topic=visual-recognition-getting-started-tutorial#detect-faces): análise facial com idade e sexo.
+- Modelo **Explicit**: se uma imagem é inapropriada para uso geral.
+- Modelo **Food**: especificamente para imagens de itens alimentícios.
+- Modelo **Text** (Beta privado): extração de texto de imagens de cenário natural. [Solicitar acesso ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://datasciencex.typeform.com/to/nU6efl){: new_window}.
+
+Também é possível treinar [modelos customizados](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier) para criar classes especializadas.
 
 ## Como usar o serviço
+{: #language-support-how-to}
 
 A imagem a seguir mostra o processo de criação e uso do {{site.data.keyword.visualrecognitionshort}}:
 
-![Descreva o fluxo do serviço {{site.data.keyword.visualrecognitionshort}}, da preparação, do treinamento e da classificação de imagens à visualização de resultados.](images/visual-recognition-process-110717.png)
+![Descreva o fluxo do serviço {{site.data.keyword.visualrecognitionshort}}, da preparação, do treinamento e da classificação de imagens à visualização de resultados.](images/visual-recognition-process-110717.svg)
+
 
 ## Casos de uso
+{: #language-support-use-cases}
 
 O serviço {{site.data.keyword.visualrecognitionshort}} pode ser usado para diferentes aplicativos e segmentos de mercado, como:
 

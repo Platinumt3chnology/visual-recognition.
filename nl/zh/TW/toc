@@ -1,14 +1,14 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="visual-recognition" audience="service" href="/docs/services/visual-recognition/getting-started.html" path="services/visual-recognition"}
+{: .toc subcollection="visual-recognition" service-name="Visual Recognition" arm="1102714" audience="service" href="/docs/services/visual-recognition?topic=visual-recognition-getting-started-tutorial#getting-started-tutorial" path="services/visual-recognition"}
 Visual Recognition
 
     {: .navgroup id="learn"}
     getting-started.md
     index.md
-    [Demo](https://visual-recognition-demo.ng.bluemix.net/)
-    [視訊：Building classifiers with the tool](https://youtu.be/VXezXAzOnUE)
+    [展示](https://www.ibm.com/watson/services/visual-recognition/demo/)
+    [影片：Visual Recognition in Watson Studio](https://youtu.be/tvNRgI8jOIs)
 
     {: .topicgroup}
     其他資源
@@ -20,35 +20,32 @@ Visual Recognition
     {: .navgroup id="howto"}
     tutorial-custom-classifier.md
     customizing.md
-    [Best practices for custom classifiers](https://www.ibm.com/blogs/bluemix/2016/10/watson-visual-recognition-training-best-practices/)
-    [Building Cognitive Applications: Visual Recognition (IBM Redbooks)](http://www.redbooks.ibm.com/redbooks/pdfs/sg248393.pdf)
-    migrating.md
+    [自訂分類器的最佳作法](https://www.ibm.com/blogs/bluemix/2016/10/watson-visual-recognition-training-best-practices/)
+    [建置認知應用程式：視覺化識別（IBM 紅皮書）](http://www.redbooks.ibm.com/redbooks/pdfs/sg248393.pdf)
+
+    {: .topicgroup}
+    測試版功能
+        object-detection.md
+        recognize-text.md
+        tutorial-recognize-text.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API 參考資料](https://www.ibm.com/watson/developercloud/visual-recognition/api)
+    [API 參考資料](https://cloud.ibm.com/apidocs/visual-recognition)
     language-support.md
-
-    {: .topicgroup}
-    Watson SDK
-        [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
-        [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
-        [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
-        [PHP SDK](https://github.com/ThomasIBM/php-sdk)
-        [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
-        [.NET SDK](https://github.com/watson-developer-cloud/dotnet-standard-sdk)
-        [Swift SDK](https://github.com/watson-developer-cloud/ios-sdk)
-        [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
-
-    [Watson GitHub 儲存庫](https://github.com/watson-developer-cloud/)
+    information-security.md
+    migrate.md
+    /watson/watson-using-sdks
+    [Watson GitHub 存放庫](https://github.com/watson-developer-cloud/)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     release-notes.md
+    feedback.md
 
     {: .topicgroup}
     開發人員社群
         [StackOverflow](http://stackoverflow.com/questions/tagged/visual-recognition)
-        [developerWorks Answers](https://developer.ibm.com/answers/topics/visual-recognition.html)
+        [IBM Developer Answers](https://developer.ibm.com/answers/topics/visual-recognition.html)
         [WDC Slack 頻道](http://wdc-slack-inviter.mybluemix.net/)
     {: .navgroup-end}

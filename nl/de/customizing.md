@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2019
+lastupdated: "2019-03-06"
+
+keywords: training classifiers,example data,hierarchy,updating classifiers,retraining classifiers
+
+subcollection: visual-recognition
 
 ---
 
@@ -18,11 +22,13 @@ lastupdated: "2017-12-11"
 {:swift: .ph data-hd-programlang='swift'}
 
 # Richtlinien für das Trainieren von Klassifikationsmerkmalen
+{: #customizing}
 
-Wenn Sie ein Bild klassifiziert und ein benutzerdefiniertes Klassifikationsmerkmal mit den Beispieldaten im [Lernprogramm "Benutzerdefiniertes Klassifikationsmerkmal erstellen"](/docs/services/visual-recognition/tutorial-custom-classifier.html) erstellt, trainiert und abgefragt haben, können Sie Ihre eigenen Daten klassifizieren oder Ihr eigenes benutzerdefiniertes Klassifikationsmerkmal erstellen.
+Wenn Sie ein Bild klassifiziert und ein benutzerdefiniertes Klassifikationsmerkmal mit den Beispieldaten im [Lernprogramm "Benutzerdefiniertes Klassifikationsmerkmal erstellen"](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier) erstellt, trainiert und abgefragt haben, können Sie Ihre eigenen Daten klassifizieren oder Ihr eigenes benutzerdefiniertes Klassifikationsmerkmal erstellen.
 {: shortdesc}
 
 ## Allgemeine Kategorien von Klassifikationsmerkmalen
+{: #general-model}
 
 Das Klassifikationsmerkmal "Allgemein" (General) gibt Klassen aus Tausenden von möglichen Tags zurück, die in Kategorien und Unterkategorien organisiert sind. Die folgende Liste zeigt die Kategorien der höchsten Ebene:
 
@@ -36,6 +42,7 @@ Das Klassifikationsmerkmal "Allgemein" (General) gibt Klassen aus Tausenden von 
 - Außerdem viele andere mehr, wie z. B. Möbel, Früchte, Musikinstrumente, Werkzeuge, Farben, Gadgets, Geräte, Instrumente, Waffen, Gebäude, Konstruktionen und hergestellte Gegenstände, Bekleidung, Blumen usw.
 
 ### Classify-Antworthierarchie
+{: #customizing-response-hierarchy}
 
 Die Methode `/v3/classify` klassifiziert Bilder in einer Hierarchie zusammengehöriger Klassen. Beispiel: Das Bild eines Beagles kann als "Tier" und auch als "Hund" und "Beagle" klassifiziert werden. Eine positive Übereinstimmung mit den zugehörigen Klassen - in diesem Fall "Hund" und "Beagle" - erhöht den Score der übergeordneten Antwort. In diesem Fall enthält die Antwort alle drei Klassen: "Tier", "Hund" und "Beagle". Der Score der übergeordneten Klasse ("Tier") wird erhöht, weil sie den zugehörigen Klassen ("Hund" und "Beagle") entspricht. Die übergeordnete Klasse ist außerdem "type\_hierarchy", um zu zeigen, dass sie eine übergeordnete Klasse in der Hierarchie ist.
 
@@ -57,6 +64,7 @@ Wenn der Service nach Abschluss des Trainings in einem Bild Früchte erkennt, gi
 Benutzerdefinierte Klassifikationsmerkmale können nur von der Serviceinstanz verwendet werden, bei der sie erstellt wurden. Sie können nicht von anderen {{site.data.keyword.Bluemix_notm}}-Benutzern verwendet werden, die keinen Zugriff auf Ihre Instanz des Service haben.
 
 ## Benutzerdefinierte Klassifikationsmerkmale aktualisieren
+{: #customizing-update}
 
 Sie können ein vorhandenes Klassifikationsmerkmal aktualisieren, indem Sie neue Klassen hinzufügen oder indem Sie neue Bilder zu vorhandenen Klassen hinzufügen. Um das bestehende Klassifikationsmerkmal zu aktualisieren, können Sie verschiedene komprimierte Dateien (.zip) verwenden, einschließlich Dateien, die positive oder negative Bilder enthalten (.jpg, oder .png). Sie müssen mindestens eine komprimierte Datei mit zusätzlichen positiven oder negativen Beispielen bereitstellen.
 
@@ -64,9 +72,10 @@ Komprimierte Dateien mit positiven Beispielen werden verwendet, um "Klassen" zu 
 
 Die komprimierte Datei mit den negativen Beispielen wird nicht verwendet, um eine Klasse in dem erstellten Klassifikationsmerkmal zu erstellen, sondern sie definiert, was das aktualisierte Klassifikationsmerkmal nicht darstellt. Dateien mit negativen Beispielen müssen Bilder enthalten, die nicht die Gegenstände der positiven Beispiele darstellen. Sie können pro Aufruf nur eine Datei mit negativen Beispielen angeben.
 
-![Klassifikationsmerkmal für Früchte neu trainiert mit neuer positiver Klasse für Orangen und negativer Klasse für Käse](images/retrain.png)
+![Klassifikationsmerkmal für Früchte neu trainiert mit neuer positiver Klasse für Orangen und negativer Klasse für Käse](images/retrain.svg)
 
 ### Funktionsweise des Neutrainierens
+{: #customizing-retrain}
 
 Wenn Sie ein Klassifikationsmerkmal mit drei Gruppen von Bildern einer positiven Klasse trainieren (Äpfel, Bananen und Birnen), trainiert das System intern drei Modelle. Für das Modell "Äpfel" wird die Gruppe von Bildern in "Äpfel" als positives Beispiel trainiert und die Gruppe der Bilder, die in "Bananen" und "Birnen" hochgeladen werden, werden als negative Beispiele trainiert. Das System weiß dann, dass Bananen und Birnen keine Äpfel sind. Die anderen Klassen werden auch als negative Beispiele für die Modelle "Bananen" und "Birnen" verwendet.
 
@@ -79,6 +88,7 @@ Nun trainieren Sie das System einfach mit GelbeBirnen.zip und GrüneBirnen.zip a
 Als Endergebnis haben die Klassen GelbeBirnen und GrüneBirnen "Äpfel" und "Bananen" als negative Beispiele, aber sie haben keine exakten Duplikate der Bilder aus der Klasse "Birnen" als negative Beispiele.
 
 ## Größenbegrenzungen
+{: #customizing-size}
 
 Es bestehen die folgenden Größenbegrenzungen für Trainingsaufrufe und -daten:
 
@@ -93,23 +103,24 @@ Außerdem bestehen die folgenden Größenbegrenzungen beim Klassifizieren von Bi
     - Die maximale Bildgröße ist 10 MB.
     - Die maximale Größe der .zip-Datei beträgt 100 MB mit bis zu 20 Bildern.
 - Begrenzungen für die Methoden für die Gesichtserkennung:
-    - Die maximale Bildgröße ist 2 MB.
-    - Die maximale Größe der .zip-Datei beträgt 5 MB mit bis zu 15 Bildern.
+    - Die maximale Bildgröße ist 10 MB.
+    - Die maximale Größe der .zip-Datei beträgt 100 MB mit bis zu 15 Bildern.
 
 <!-- - The `POST /v3/recognize_text` method accept a maximum of 10 images per batch. -->
 
 ## Richtlinien zur Erzielung besserer Trainingsergebnisse
+{: #customizing-guidelines-training}
 
 Die folgenden Richtlinien werden nicht durch die API erzwungen. Der Service liefert aber in der Regel bessere Ergebnisse, wenn sich die Trainingsdaten an ihnen orientieren:
 
 - Stellen Sie sicher, dass Ihre Bilder mindestens 224 x 224 Pixel groß sind.
+    - Wenn Sie auf Größenbeschränkungen stoßen, können Sie die Größe Ihrer Bilder auf 224 x 224 Pixel ändern, ohne dass die Qualität des Trainings beeinträchtigt wird.
 - Stellen Sie bei .png-Bildern sicher, dass die Pixeltiefe auf mindestens 24 Bits pro Pixel festgelegt ist:
     - Um die Tiefe unter MacOS zu prüfen, führen Sie den Befehl `file` aus. Eine Tiefe von 24 Bits wird als `8-Bit/Farbe` angezeigt.
     - Um die Tiefe unter Windows zu prüfen, klicken Sie mit der rechten Maustaste auf die Datei und wählen Sie **Eigenschaften** > **Details** aus. Suchen Sie nach **Bittiefe**.
 - Nehmen Sie mindestens 50 positive Bilder pro Klasse auf, bevor Sie Ihre Trainingsergebnisse bewerten.
     - Bei etwa gleicher Qualität und ähnlichem Inhalt Ihrer Trainingsdaten liefert eine größere Zahl von Trainingsbildern in der Regel bessere Ergebnisse als eine kleinere Zahl von Trainingsbildern.
     - 150 - 200 Bilder pro .zip-Datei stellen den besten Kompromiss zwischen Verarbeitungszeit und Genauigkeit dar. Mehr als 200 Bilder erhöhen die Zeit und verbessern die Genauigkeit, aber die Ergebnisse nehmen in Relation zur verbrauchten Zeit ab.
-    - Beim Trainieren eines Klassifikationsmerkmals für mehr Bilder werden die besten Ergebnisse bei etwa 5000 Bildern erzielt. Sie können zwar auch mehr als 5000 Bilder beim Trainieren verwenden. Dies erhöht die Verarbeitungszeit, verbessert die Genauigkeit aber nicht mehr signifikant.
 - Nehmen Sie eine Klasse mit negativen Bildern auf, um zur Verbesserung der Ergebnisse beizutragen.
     - Nehmen Sie etwa so viele negative Bilder wie positive auf. Eine ungleiche Anzahl von Bildern könnte die Qualität des trainierten Klassifikationsmerkmals mindern.
 - Stellen Sie sicher, dass die Hintergründe in Ihren Trainingsbildern mit denen der zu klassifizierenden Bilder vergleichbar sind. Die Genauigkeit Ihres Klassifikationsmerkmals kann durch die Art der Bilder beeinflusst werden, die Sie verwenden, um das Klassifikationsmerkmal zu trainieren.
@@ -119,10 +130,12 @@ Die folgenden Richtlinien werden nicht durch die API erzwungen. Der Service lief
 Weitere Informationen zum Trainieren finden unter [Bewährte Verfahren für benutzerdefinierte Klassifikationsmerkmale ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2016/10/watson-visual-recognition-training-best-practices/){: new_window}.
 
 ## Richtlinien für die Klassifizierung einer großen Zahl von Bildern
+{: #customizing-guidelines-classifying}
 
 Maximieren Sie die Effizienz und Leistung des Service auf folgende Art und Weise, wenn Sie eine große Zahl von Bildern verarbeiten:
 
-- Ändern Sie die Größe Ihrer Bilder in 224 x 224 Pixel (z. B. durch Zurechtschneiden). Der Service wird derzeit für diese Größe optimiert. Dies kann sich aber ändern.
+- Ändern Sie die Größe Ihrer Bilder (z. B. durch Zurechtschneiden).
+    - Für eine optimale Leistung ohne Beeinträchtigung der Klassifizierungsqualität kann es hilfreich sein, die Größe Ihrer Bilder in 224 x 224 Pixel zu ändern. Derzeit wird der Service für diese Größe optimiert, dies kann sich aber ändern.
     - Schneiden Sie das Bild zurecht, wenn es ein Seitenverhältnis größer als 2:1 oder kleiner als 1:2 hat.
     - Sie können das Bild auf mehrere quadratische Bilder zurechtschneiden oder nur die Bildmitte verwenden, abhängig davon, was in Ihrem Anwendungsfall am wichtigsten ist.
 - Stellen Sie bis zu 20 Bilder in eine einzelne Datei mit der Erweiterung .zip. Sie müssen keine Komprimierung vornehmen, weil JPEG- und PNG-Bilder bereits komprimierte Dateien sind.
@@ -130,21 +143,25 @@ Maximieren Sie die Effizienz und Leistung des Service auf folgende Art und Weise
 - Auch wenn der Service EXIF-Tags liest und die Bilder dreht, sollten Sie für einen möglichst hohen Durchsatz Bilder senden, die nicht vom Service gedreht werden müssen (der EXIF-Tag **Orientation** ist auf `1` eingestellt).
 
 ## Scores benutzerdefinierter Klassifikationsmerkmale
+{: #customizing-scores}
 
 Die Methode `/classify` liefert einen Score zwischen 0,0 und 1,0 für jedes Bild für jede Klasse. In diesem Abschnitt wird die Bedeutung dieser Scores für benutzerdefinierte Klassifikationsmerkmale beschrieben (im Unterschied zum Klassifikationsmerkmal "Allgemein").
 
 ### Hintergrundinformationen
+{: #customizing-reading}
 
 - Der Service führt eine [statistische Klassifizierung ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://en.wikipedia.org/wiki/Statistical_classification){: new_window} aus.
 - Sie können [statistische Klassifikationsmerkmale auf verschiedene Art und Weise messen![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://en.wikipedia.org/wiki/Category:Information_retrieval_evaluation){: new_window}.
 
 ### Hinweise zur Verwendung der Scores
+{: #customizing-scores-how-to}
 
-- Es gibt verschiedene Aktionen, mit denen Sie auf eine Klassifizierung reagieren können. Analysieren Sie im Besonderen, wie Sie wahre ("true") oder falsche ("false") positive oder negative Bedingungen verwenden wollen. Diese Bedingungen werden im Abschnitt "Hintergrundinformationen" beschrieben.
+- Es gibt verschiedene Aktionen, mit denen Sie auf eine Klassifizierung reagieren können. Analysieren Sie im Besonderen, wie Sie wahre ("true") oder falsche ("false") positive oder negative Bedingungen verwenden wollen.  Diese Bedingungen werden im Abschnitt "Hintergrundinformationen" beschrieben.
 - Dieses Abwägen von Aufwand und Nutzen ist wichtig für die Entscheidung, wie mit den einzelnen Klassenscores verfahren werden soll, und nur, wer die endgültige Anwendung kennt, kann dies bestimmen. Der Scorewert, den die Anwendung benötigt, um eine Aktion auszuführen, wird als "Entscheidungsschwellenwert" bezeichnet. Der Service berechnet diesen Wert nicht für Sie.
 - Benutzerdefinierte Klassifikationsmerkmale verwenden binäre "Einer-gegen-den-Rest"-Modelle, um jede Klasse anhand der anderen Klassen zu trainieren. Das System geht davon aus, dass zwei Klassen in einem Klassifikationsmerkmal nicht gleichzeitig auftreten können. Das heißt, Sie sollten separate Klassifikationsmerkmale erstellen, um auf Klassen zu testen, die gemeinsam bestehen können (z. B. `Blau` und `Himmel`). Alternativ könnten Sie ein anderes Klassifikationsmerkmal für Fälle erstellen, bei denen beide Klassen gleichzeitig bestehen, und auf eine Klasse wie `blauerHimmel` testen.
 
 ### Beispiel
+{: #customizing-example}
 
 Angenommen, Sie beobachten einen reservierten Parkplatz mit einer Webcam. Sie trainieren ein benutzerdefiniertes Klassifikationsmerkmal, um zu erkennen, ob Ihr Wagen auf dem Platz steht, ob ein anderes Fahrzeug auf dem Platz steht, ob der Platz frei oder die Kamera blockiert ist. Sie sammeln Trainingsbeispiele für jeden dieser Fälle und trainieren ein benutzerdefiniertes Klassifikationsmerkmal mit vier Klassen. Ihre Anwendung klassifiziert Bilder von der Webcam, um den Status des Parkplatzes zu dokumentieren, und das System sendet Ihnen eine Nachricht, wenn ein unerwarteter Status eintritt. Jedes Mal, wenn der Service das Bild von der Kamera klassifiziert, erstellt er vier Scores: `meinWagen`, `unbekannterWagen`, `leererParkplatz` und `blockierteKamera`.
 
@@ -157,6 +174,7 @@ D. h., Benachrichtigungslogik und -schwellenwert variieren wahrscheinlich, abhä
 Möglicherweise stehen Sie selbst vor einer ähnlichen Entscheidung. Wenn das System Sie benachrichtigt, dass die Kamera blockiert ist, wird das zugehörige Bild wahrscheinlich nur ganz schwarz oder grau sein. Gehen Sie persönlich zu Ihrem Wagen, um nachzusehen, oder ignorieren Sie die Nachricht? Auch das hängt von Ihren anderen Prioritäten und den vermeintlichen Risiken ab.
 
 ### Fragen
+{: #customizing-faq}
 
 - **Was bedeuten die Scores?**
 
@@ -174,7 +192,7 @@ Möglicherweise stehen Sie selbst vor einer ähnlichen Entscheidung. Wenn das Sy
     Sie haben dazu verschiedene Möglichkeiten. Eine ist im Folgenden beschrieben:
 
     1.  Stellen Sie eine Gruppe "L" benannter Bilder zusammen, die beim Trainieren des Klassifikationsmerkmals nicht verwendet wurden.
-    1.  Teilen Sie "L" in zwei Gruppen "V" und "T" auf - für Validierung und Test. 
+    1.  Teilen Sie "L" in zwei Gruppen "V" und "T" auf - für Validierung und Test.
     1.  Verarbeiten Sie die Gruppe "V" anhand Ihres Klassifikationsmerkmals und wählen Sie einen Scoreschwellenwert "R", der die von Ihnen gewünschte Metrik für die Richtigkeit (z. B. Top-5-Genauigkeit) für die gesamte Gruppe "V" optimiert.
     1.  Wählen Sie in Gruppe "T" eine beliebige Untergruppe "Q" aus und klassifizieren Sie sie mit Ihrem Klassifikationsmerkmal und mit dem Schwellenwert "R". Berechnen Sie die Wahrscheinlichkeit einer richtigen Klassifizierung für "Q". Dies ist ein Experiment.
     1.  Wiederholen Sie Schritt 4 mit einer anderen Untergruppe "Q" aus Gruppe "T" und berechnen Sie anschließend den durchschnittlichen Prozentsatz korrekter Werte über alle Experimente hinweg.

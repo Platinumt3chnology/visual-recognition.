@@ -1,54 +1,68 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2019
+lastupdated: "2019-03-06"
+
+keywords: custom model,custom classifier,samples,training a custom model
+
+subcollection: visual-recognition
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
+{:curl: .ph data-hd-programlang='curl'}
+{:go: .ph data-hd-programlang='go'}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
+{:ruby: .ph data-hd-programlang='ruby'}
 {:swift: .ph data-hd-programlang='swift'}
+{:apikey: data-credential-placeholder='apikey'}
+{:url: data-credential-placeholder='url'}
 
-# Benutzerdefiniertes Klassifikationsmerkmal erstellen
+# Angepasstes Modell erstellen
+{: #tutorial-custom-classifier}
 
-Wenn Sie ein Bild im "Lernprogramm zur Einführung" klassifiziert haben, können Sie ein benutzerdefiniertes Klassifikationsmerkmal (oder Modell) trainieren und erstellen. Mit einem benutzerdefinierten Klassifikationsmerkmal können Sie den {{site.data.keyword.visualrecognitionshort}}-Service trainieren, um Bilder entsprechend Ihren Geschäftsanforderungen zu klassifizieren.
+Wenn Sie im "Lernprogramm zur Einführung" ein Bild analysiert haben, können Sie ein angepasstes Modell trainieren und erstellen. Mit einem angepassten Modell können Sie den {{site.data.keyword.visualrecognitionshort}}-Service trainieren, um Bilder entsprechend Ihren Geschäftsanforderungen klassifizieren zu können.
 {: shortdesc}
 
 ## Schritt 1: Berechtigungsnachweise kopieren
 {: #copy-credentials}
 
-Verwenden Sie die Berechtigungsnachweise, die Sie im "Lernprogramm zur Einführung" kopiert haben. Wenn Sie keine Serviceinstanz erstellt haben, führen Sie diese Schritte im Abschnitt [Vorbereitende Schritte](/docs/services/visual-recognition/getting-started.html#prerequisites) aus.
+Verwenden Sie die Berechtigungsnachweise, die Sie im "Lernprogramm zur Einführung" kopiert haben. Wenn Sie keine Serviceinstanz erstellt haben, führen Sie diese Schritte im Abschnitt [Vorbereitende Schritte](/docs/services/visual-recognition?topic=visual-recognition-getting-started-tutorial#prerequisites) aus.
 
-## Schritt 2: Benutzerdefiniertes Klassifikationsmerkmal erstellen
+## Schritt 2: Angepasstes Modell erstellen
 {: #create}
 
-{{site.data.keyword.visualrecognitionshort}} kann anhand von Beispielbildern lernen, die Sie hochladen, um ein neues Klassifikationsmerkmal mit mehreren Facetten zu erstellen. Jede Beispieldatei wird anhand der anderen Dateien in diesem Aufruf trainiert und positive Beispiele werden als Klassen gespeichert. Diese Klassen werden gruppiert, um ein einzelnes Klassifikationsmerkmal zu definieren, und sie geben ihre eigenen Scores zurück. Dateien mit negativen Beispielen werden nicht als Klassen gespeichert.
+{{site.data.keyword.visualrecognitionshort}} kann anhand von Beispielbildern, die Sie hochladen, lernen, ein neues Modell mit mehreren Facetten zu erstellen. Jede Beispieldatei wird anhand der anderen Dateien in diesem Aufruf trainiert und positive Beispiele werden als Klassen gespeichert. Diese Klassen werden gruppiert, um ein einzelnes Modell zu definieren, und geben ihre eigenen Scores zurück. Dateien mit negativen Beispielen werden nicht als Klassen gespeichert.
 
-1.  Laden Sie die Beispieltrainingsdateien <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/beagle.zip" download="beagle.zip">beagle.zip <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link" class="style-scope doc-content"></a>, <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/husky.zip" download="husky.zip">husky.zip <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link" class="style-scope doc-content"></a>, <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/golden-retriever.zip" download="golden-retriever.zip">golden-retriever.zip <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link" class="style-scope doc-content"></a> und <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/cats.zip" download="cats.zip">cats.zip <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link" class="style-scope doc-content"></a> herunter.
-1.  Rufen Sie die Methode `POST /v3/classifiers` mit dem folgenden Befehl auf, der die Trainingsdaten hochlädt und ein Klassifikationsmerkmal `dogs` erstellt:
-    - Ersetzen Sie `{api-schlüssel}` durch die Serviceberechtigungsnachweise, die Sie im ersten Schritt kopiert haben.
+1.  Laden Sie die Beispieltrainingsdateien <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/beagle.zip" download="beagle.zip">beagle.zip <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a>, <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/husky.zip" download="husky.zip">husky.zip <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a>, <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/golden-retriever.zip" download="golden-retriever.zip">golden-retriever.zip <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a> und <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/cats.zip" download="cats.zip">cats.zip <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a> herunter.
+1.  Rufen Sie die Methode `POST /v3/classifiers` mit dem folgenden Befehl auf, der die Trainingsdaten hochlädt und das angepasste Modell `dogs` erstellt:
+    - Ersetzen Sie `{your_api_key}` (Ihren API-Schlüssel) durch die Serviceberechtigungsnachweise, die Sie im ersten Schritt kopiert haben.
     - Ändern Sie die Position von `{klasse}_positive_examples`, um dorthin zu verweisen, wo Sie die .zip-Dateien gespeichert haben.
 
     ```bash
-    curl -X POST \
+    curl -X POST -u "apikey:{your_api_key}" \
     --form "beagle_positive_examples=@beagle.zip" \
     --form "husky_positive_examples=@husky.zip" \
     --form "goldenretriever_positive_examples=@golden-retriever.zip" \
     --form "negative_examples=@cats.zip" \
     --form "name=dogs" \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers?api_key={api-schlüssel}&version=2016-05-20"
+    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers?version=2018-03-19"
     ```
     {: pre}
 
-    Die Namen von Dateien mit positiven Beispielen erfordern das Suffix `_positive_examples`. In diesem Beispiel lauten die Dateinamen `beagle_positive_examples`, `goldenretriever_positive_examples` und `husky_positive_examples`. Das Präfix (beagle, goldenretriever und husky) wird als Klassenname zurückgegeben.{:tip }
+    Die Namen von Dateien mit positiven Beispielen erfordern das Suffix `_positive_examples`. In diesem Beispiel lauten die Dateinamen `beagle_positive_examples`, `goldenretriever_positive_examples` und `husky_positive_examples`. Das Präfix (beagle, goldenretriever und husky) wird als Klassenname zurückgegeben.
+    {:tip }
 
     Die Antwort enthält eine neue ID und einen Status für das Klassifikationsmerkmal. Beispiel:
 
@@ -56,9 +70,10 @@ Verwenden Sie die Berechtigungsnachweise, die Sie im "Lernprogramm zur Einführu
     {
       "classifier_id": "dogs_1941945966",
       "name": "dogs",
-      "owner": "xxxx-xxxxx-xxx-xxxx",
       "status": "training",
-      "created": "2016-05-18T21:32:27.752Z",
+      "owner": "xxxx-xxxxx-xxx-xxxx",
+      "created": "2018-03-17T19:01:30.536Z",
+      "updated": "2018-03-17T19:01:30.536Z",
       "classes": [
         {
           "class": "husky"
@@ -69,53 +84,50 @@ Verwenden Sie die Berechtigungsnachweise, die Sie im "Lernprogramm zur Einführu
         {
           "class": "beagle"
         }
-      ]
+      ],
+      "core_ml_enabled": true
     }
     ```
     {: codeblock}
 
-1.  Prüfen Sie den Trainingsstatus in regelmäßigen Abständen, bis der Status `ready` (Bereit) angezeigt wird. Das Training beginnt unmittelbar und muss abgeschlossen sein, bevor Sie das Klassifikationsmerkmal abfragen können. Ersetzen Sie `{api-schlüssel}` und `{klassifikationsmerkmal-id}` durch Ihre Informationen:
+1.  Prüfen Sie den Trainingsstatus in regelmäßigen Abständen, bis der Status `ready` (Bereit) angezeigt wird. Das Training beginnt sofort und muss abgeschlossen sein, bevor Sie das Modell abfragen können. Ersetzen Sie `{your_api_key}` (Ihren API-Schlüssel) und `{classifier_id}` (die Klassifikationsmerkmal-ID) durch Ihre Angaben:
 
     ```bash
-    curl -X GET \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/{klassifikationsmerkmal-id}?api_key={api-schlüssel}&version=2016-05-20"
+    curl -X GET -u "apikey:{your_api_key}" \
+    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?version=2018-03-19"
     ```
     {: pre}
 
-## Schritt 3: Vorhandenes Klassifikationsmerkmal aktualisieren
+## Schritt 3: Vorhandenes angepasstes Modell aktualisieren
+{: #tutorial-custom-classifier-update}
 
-Sie können ein benutzerdefiniertes Klassifikationsmerkmal nicht mit einem kostenlosen API-Schlüssel aktualisieren. Wenn Sie einen kostenlosen Schlüssel haben, können Sie ein Upgrade auf einen Standardplan ausführen. Weitere Informationen hierzu finden Sie unter [Plan ändern](https://console.bluemix.net/docs/pricing/changing_plan.html).
-{: tip}
+Sie können ein angepasstes Modell aktualisieren, indem Sie entweder Klassen zum Modell hinzufügen oder Bilder zu einer vorhandenen Klasse hinzufügen. Hier verbessern Sie das Modell, das Sie in Schritt 2 erstellt haben, durch Hinzufügen einer Klasse *dalmatian* (Dalmatiner) zu den klassifizierbaren Hunderassen. Zusätzlich fügen Sie Bilder von Katzen zu der Gruppe von negativen Beispielen für das angepasste Modell "dogs" hinzu.
 
-Sie können ein benutzerdefiniertes Klassifikationsmerkmal aktualisieren, indem Sie Klassen zu dem Klassifikationsmerkmal hinzufügen oder indem Sie Bilder zu einer vorhandenen Klasse hinzufügen. Hier verbessern Sie das Klassifikationsmerkmal, das Sie in Schritt 2 erstellt haben, indem Sie eine Klasse *dalmatian* (Dalmatiner) zu den Hundearten hinzufügen, die klassifiziert werden können. Außerdem fügen Sie Bilder von Katzen zu den negativen Beispielen für das Klassifikationsmerkmal "dogs" hinzu.
-
-1.  Laden Sie die Beispieltrainingsdateien <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/dalmatian.zip" download="dalmatian.zip">dalmatian.zip <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link" class="style-scope doc-content"></a> und <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/more-cats.zip" download="more-cats.zip">more-cats.zip <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link" class="style-scope doc-content"></a> herunter.
-1.  Rufen Sie die Methode `POST /v3/classifiers/{klassifikationsmerkmal-id}` mit dem folgenden cURL-Befehl auf, der die Trainingsdaten hochlädt und das Klassifikationsmerkmal "dogs\_1941945966" aktualisiert:
-    - Ersetzen Sie `{api-schlüssel}` durch die Serviceberechtigungsnachweise, die Sie im ersten Schritt kopiert haben.
-    - Ersetzen Sie `{klassifikationsmerkmal-id}` durch die ID des Klassifikationsmerkmals, das Sie aktualisieren wollen.
+1.  Laden Sie die Beispieltrainingsdateien <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/dalmatian.zip" download="dalmatian.zip">dalmatian.zip <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a> und <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/more-cats.zip" download="more-cats.zip">more-cats.zip <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a> herunter.
+1.  Rufen Sie die Methode `POST /v3/classifiers/{classifier_id}` mit dem folgenden cURL-Befehl auf, der die Trainingsdaten hochlädt und das angepasste Modell "dogs\_1941945966" aktualisiert:
+    - Ersetzen Sie `{your_api_key}` (Ihren API-Schlüssel) durch die Serviceberechtigungsnachweise, die Sie im ersten Schritt kopiert haben.
+    - Ersetzen Sie `{classifier_id}` (die Klassifizierungs-ID) durch die ID des angepassten Modells, das Sie aktualisieren wollen.
     - Ändern Sie die Position von `{klasse}_positive_examples`, um dorthin zu verweisen, wo Sie die .zip-Dateien gespeichert haben.
 
     ```bash
-    curl -X POST \
-    --form "dalmatian_positive_examples=@dalmatiner.zip" \
+    curl -X POST -u "apikey:{your_api_key}" \
+    --form "dalmatian_positive_examples=@dalmatian.zip" \
     --form "negative_examples=@more-cats.zip" \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/{klassifikationsmerkmal-id}?api_key={api-schlüssel}&version=2016-05-20"
+    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?version=2018-03-19"
     ```
     {: pre}
 
-    Das vorhandene Klassifikationsmerkmal "dogs" wird durch das neu trainierte Klassifikationsmerkmal mit derselben "klassifikationsmerkmal-id" ersetzt. Die Antwort listet die neue Gruppe von Klassen und den aktuellen Status auf. Beispiel:
+    Das vorhandene angepasste Modell "dogs" wird durch das neu trainierte Modell mit derselben Klassifizierungs-ID ersetzt. Die Antwort listet die neue Gruppe von Klassen und den aktuellen Status auf. Beispiel:
 
     ```json
     {
       "classifier_id": "dogs_1941945966",
       "name": "dogs",
-      "owner": "xxxx-xxxxx-xxx-xxxx",
       "status": "retraining",
-      "created": "2016-05-18T21:32:27.752Z",
+      "owner": "xxxx-xxxxx-xxx-xxxx",
+      "created": "2018-03-17T19:01:30.536Z",
+      "updated": "2018-03-17T19:01:30.536Z",
       "classes": [
-        {
-          "class": "dalmatian"
-        },
         {
           "class": "husky"
         },
@@ -124,54 +136,49 @@ Sie können ein benutzerdefiniertes Klassifikationsmerkmal aktualisieren, indem 
         },
         {
           "class": "beagle"
+        },
+        {
+          "class": "dalmatian"
         }
-      ]
+      ],
+      "core_ml_enabled": true
     }
     ```
     {: codeblock}
 
     Das Training beginnt sofort. Wenn das neue verfügbar ist, ändert sich der Status in `ready` (Bereit).
 
-Geben Sie erst nach dem aktuellen Status `ready` eine Anforderung zum Neutrainieren aus. Wenn Sie das Neutrainieren eines Klassifikationsmerkmals mehrfach anfordern, führt dies dazu, dass einmalig neu trainiert wird. Eine Zeitmarke mit der Bezeichnung `retrained` (Neu trainiert) wird für den Zeitpunkt angezeigt, zu dem das Klassifikationsmerkmal zum letzten Mal neu trainiert wurde. Wenn Sie die Methode `/classify` aufrufen, während das Klassifikationsmerkmal neu trainiert wird, wird die alte Definition des Klassifikationsmerkmals verwendet.
+    Geben Sie erst nach dem aktuellen Status `ready` eine Anforderung zum Neutrainieren aus. Wenn Sie das Neutrainieren eines Modells mehrfach anfordern, führt dies dazu, dass einmalig neu trainiert wird. Eine Zeitmarke mit dem Namen `updated` zeigt die Zeit an, zu der das Modell zuletzt aktualisiert wurde. Wenn Sie die Methode `/classify` aufrufen, während das Modell neu trainiert wird, wird die alte Definition des Modells verwendet.
     {: tip}
-1.  Prüfen Sie den Trainingsstatus in regelmäßigen Abständen, bis der Status `ready` angezeigt wird. Ersetzen Sie `{api-schlüssel}` und `{klassifikationsmerkmal-id}` durch Ihre Informationen:
+1.  Prüfen Sie den Trainingsstatus in regelmäßigen Abständen, bis der Status `ready` (Bereit) angezeigt wird. Ersetzen Sie `{your_api_key}` (Ihren API-Schlüssel) und `{classifier_id}` (die Klassifikationsmerkmal-ID) durch Ihre Angaben:
 
     ```bash
-    curl -X GET \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/{klassifikationsmerkmal-id}?api_key={api-schlüssel}&version=2016-05-20"
+    curl -X GET -u "apikey:{your_api_key}" \
+    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?version=2018-03-19"
     ```
     {: pre}
 
-## Schritt 4: Bild mit einem benutzerdefinierten Klassifikationsmerkmal klassifizieren
-{: #classify}
+## Schritt 4: Bild mit einem angepassten Modell klassifizieren
+{: #tutorial-custom-classifier-classify}
 
-Wenn das neue Klassifikationsmerkmal bereit ist, rufen Sie es auf, um zu ermitteln, wie es sich verhält.
+Wenn das neue Modell bereit ist, rufen Sie es auf, um zu ermitteln, wie es sich verhält.
 
-1.  Erstellen Sie eine JSON-Datei mit dem Namen `myparams.json`, die die Parameter für Ihren Aufruf enthält, z. B. die Klassifikationsmerkmal-ID`` für Ihr neues Klassifikationsmerkmal und für das Klassifikationsmerkmals des Modells "Allgemein" (das die Klassifikationsmerkmal-ID `default`) verwendet. Eine einfache JSON-Datei könnte wie folgt aussehen:
-
-    ```json
-    {
-      "classifier_ids": ["dogs_1941945966", "default"]
-    }
-    ```
-    {: codeblock}
-
-1.  Laden Sie die Datei <a target="_blank" href="https://github.com/watson-developer-cloud/doc-tutorial-downloads/raw/master/visual-recognition/dogs.jpg" download>dogs.jpg <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link" class="style-scope doc-content"></a> herunter.
-1.  Verwenden Sie die Methode `POST /v3/classify`, um Ihr benutzerdefiniertes Klassifikationsmerkmal zu testen. Das folgende Beispiel klassifiziert das Bild `dogs.jpg` anhand des Klassifikationsmerkmals "dogs\_1941945966":
-    - Ersetzen Sie `{api-schlüssel}` durch die Serviceberechtigungsnachweise, die Sie im ersten Schritt kopiert haben.
+1.  Laden Sie die Datei <a target="_blank" href="https://github.com/watson-developer-cloud/doc-tutorial-downloads/raw/master/visual-recognition/dogs.jpg" download>dogs.jpg <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a> herunter.
+1.  Verwenden Sie die Methode `POST /v3/classify` zum Testen Ihres angepassten Modells. Im folgenden Beispiel wird das Bild `dogs.jpg` anhand des angepassten Modells "dogs\_1941945966" und des integrierten allgemeinen Modells `default` klassifiziert:
+    - Ersetzen Sie `{your_api_key}` (Ihren API-Schlüssel) durch die Serviceberechtigungsnachweise, die Sie im ersten Schritt kopiert haben.
 
     ```bash
-    curl -X POST \
+    curl -X POST -u "apikey:{your_api_key}" \
     --form "images_file=@dogs.jpg" \
-    --form "parameters=@myparams.json" \
-    "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key={api-schlüssel}&version=2016-05-20"
+    --form "classifier_ids=dogs__1941945966,default" \
+    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19"
     ```
     {: pre}
 
-    Wenn Sie die Klassifizierung nur anhand des integrierten Modells "Allgemein" vornehmen wollen, lassen Sie den Parameter `parameters` aus.
+    Für eine Klassifizierung nur anhand des integrierten allgemeinen Modells lassen Sie den Parameter `classifier_ids` aus.
     {: tip}
 
-    Die Antwort enthält Klassifikationsmerkmale, ihre Klassen und einen Score für jede Klasse. Die Scores liegen im Bereich von 0 bis 1, wobei ein höherer Score eine größere Korrelation bedeutet. Die `/v3/classify`-Aufrufe lassen Klassen mit geringem Score standardmäßig aus, wenn Klassen mit hohem Score identifiziert werden. Sie können einen Mindestscore für die Anzeige festlegen, indem Sie einen Gleitkommawert für den Parameter `threshold` in Ihrem Aufruf angeben.
+    Die Antwort enthält Klassifikationsmerkmale, ihre Klassen sowie einen Score für jede Klasse. Die Scores liegen im Bereich von 0 bis 1, wobei ein höherer Score eine größere Korrelation bedeutet. Die `/v3/classify`-Aufrufe lassen Klassen mit geringem Score standardmäßig aus, wenn Klassen mit hohem Score identifiziert werden. Sie können einen Mindestscore für die Anzeige festlegen, indem Sie einen Gleitkommawert für den Parameter `threshold` in Ihrem Aufruf angeben.
 
     ```json
     {
@@ -179,69 +186,92 @@ Wenn das neue Klassifikationsmerkmal bereit ist, rufen Sie es auf, um zu ermitte
         {
           "classifiers": [
             {
-              "classes": [
-                {
-                  "class": "animal",
-                  "score": 1.0,
-                  "type_hierarchy": "/animals"
-                },
-                {
-                  "class": "mammal",
-                  "score": 1.0,
-                  "type_hierarchy": "/animals/mammal"
-                },
-                {
-                  "class": "dog",
-                  "score": 0.880797,
-                  "type_hierarchy": "/animals/pets/dog"
-                }
-              ],
-              "classifier_id": "default",
-              "name": "default"
-            },
-            {
+              "classifier_id": "dogs_1941945966",
+              "name": "dogs",
               "classes": [
                 {
                   "class": "goldenretriever",
-                  "score": 0.610501
+                  "score": 0.513638
                 }
-              ],
-              "classifier_id": "dogs_1941945966",
-              "name": "dogs"
+              ]
+            },
+            {
+              "classifier_id": "default",
+              "name": "default",
+              "classes": [
+                {
+                  "class": "guide dog",
+                  "score": 0.86,
+                  "type_hierarchy": "/animal/domestic animal/dog/guide dog"
+                },
+                {
+                  "class": "dog",
+                  "score": 0.927
+                },
+                {
+                  "class": "domestic animal",
+                  "score": 0.927
+                },
+                {
+                  "class": "animal",
+                  "score": 0.927
+                },
+                {
+                  "class": "beagling (dog)",
+                  "score": 0.508,
+                  "type_hierarchy": "/animal/domestic animal/dog/beagling (dog)"
+                },
+                {
+                  "class": "golden retriever dog",
+                  "score": 0.5,
+                  "type_hierarchy": "/animal/domestic animal/dog/retriever dog/golden retriever dog"
+                },
+                {
+                  "class": "retriever dog",
+                  "score": 0.572
+                },
+                {
+                  "class": "light brown color",
+                  "score": 0.982
+                }
+              ]
             }
           ],
           "image": "dogs.jpg"
         }
       ],
-      "images_processed": 1
+      "images_processed": 1,
+      "custom_classes": 1
     }
     ```
     {: codeblock}
 
 1.  Prüfen Sie Ihre Ergebnisse.
 
-Sie sind fertig! Sie haben ein benutzerdefiniertes Klassifikationsmerkmal mit {{site.data.keyword.visualrecognitionshort}} erstellt, trainiert und abgefragt.
+Sie sind fertig! Sie haben ein angepasstes Modell mit {{site.data.keyword.visualrecognitionshort}} erstellt, trainiert und abgefragt.
 
-### Benutzerdefiniertes Klassifikationsmerkmal löschen
+### Angepasstes Modell löschen
+{: #tutorial-custom-classifier-delete}
 
-Sie können Ihr benutzerdefiniertes Klassifikationsmerkmal löschen, wenn Sie die Entwicklung Ihrer Anwendung mit einer bereinigten Instanz beginnen wollen. 
+Möglicherweise möchten Sie Ihr angepasstes Modell löschen, um die Entwicklung Ihrer Anwendung in einer sauberen Instanz zu beginnen.
 
-Um das Klassifikationsmerkmal zu löschen, rufen Sie die Methode `DELETE /v3/classifiers/{klassifikationsmerkmal-id}` auf. Ersetzen Sie `{api-schlüssel)` und `klassifikationsmerkmal-id` durch Ihre Informationen:
+Zum Löschen des Modells rufen Sie die Methode `DELETE /v3/classifiers/{classifier_id}` auf. Ersetzen Sie `{your_api_key)` (Ihren API-Schlüssel) und `classifier_id` (die Klassifikationsmerkmal-ID) durch Ihre Angaben:
 
 ```bash
-curl -X DELETE \
-"https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/{klassifikationsmerkmal-id}?api_key={api-schlüssel}&version=2016-05-20"
+curl -X DELETE -u "apikey:{your_api_key}" \
+"https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?version=2018-03-19"
 ```
 {: pre}
 
 ## Nächste Schritte
+{: #tutorial-custom-classifier-next-steps}
 
-Sie haben nun ein grundlegendes Verständnis davon, wie Sie die benutzerdefinierten Klassifikationsmerkmale verwenden. Hier finden Sie weitergehende Informationen:
+Mit diesem grundlegenden Verständnis von der Verwendung angepasster Modelle können Sie nun komplexere Aufgaben vornehmen:
 
 - [Bewährte Verfahren für benutzerdefinierte Klassifikationsmerkmale ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2016/10/watson-visual-recognition-training-best-practices/){: new_window}.
-- Informationen zur API finden Sie in der Veröffentlichung [API Reference ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/){: new_window}.
+- Informationen zur API finden Sie in der Veröffentlichung [API Reference ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/visual-recognition){: new_window}.
 
 ### Bildnachweis
-{: #attributions}
+{: #tutorial-custom-classifier-attributions}
 
 Alle Bilder auf dieser Seite stammen aus Flikr und werden unter [Creative Commons Attribution 2.0-Lizenz ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://creativecommons.org/licenses/by/2.0/deed.en){: new_window} verwendet. An diesen Bildern wurden keine Änderungen vorgenommen.

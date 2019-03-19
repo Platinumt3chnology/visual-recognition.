@@ -1,14 +1,21 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2019
+lastupdated: "2019-03-06"
+
+keywords: Visual Recognition languages,language support,supported languages
+
+subcollection: visual-recognition
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -19,6 +26,18 @@ lastupdated: "2017-12-11"
 
 # Unterstützte Sprachen
 
-Die Methode **Bilder klassifizieren** von {{site.data.keyword.visualrecognitionfull}} unterstützt die Sprachen Englisch (`en`), Arabisch (`ar`), Deutsch (`de`), Spanisch (`es`), Italienisch (`it`), Japanisch (`ja`) und Koreanisch (`ko`) für die Ausgabe von Standardklassen.
+## Bilder klassifizieren
+{: #language-support}
 
-Details zum API-Aufruf finden Sie unter dem Stichwort **Classify an image** (Bild klassifizieren) in der Veröffentlichung [API Reference ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/#classify_an_image){: new_window}.
+Die Methode **Classify images** (Bilder klassifizieren) von {{site.data.keyword.visualrecognitionfull}} unterstützt die Sprachen Englisch (`en`), Arabisch (`ar`), Deutsch (`de`), Spanisch (`es`), Französisch (`fr`), Italienisch (`it`), Japanisch (`ja`), Koreanisch (`ko`), Portugiesisch (Brasilien) (`pt-br`), Chinesisch (Vereinfacht) (`zh-cn`) und Chinesisch (Traditionell) (`zh-tw`).
+
+Die Sprachen funktionieren mit den Ausgabeklassen aller integrierten Modelle: `default` (auch als Modell "Allgemein" bezeichnet), `food` (Lebensmittel) und `explicit` (unangemessene Inhalte).
+
+Details zum API-Aufruf finden Sie in der Methode **Classify images** (Bilder klassifizieren) in der [API-Referenz ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/visual-recognition/#classify-images){: new_window}.
+
+## Gesichter erkennen
+{: #detect_faces}
+
+Die Methoden für **Detect faces** (Gesichter erkennen) geben Übersetzungen der englischen Wörter für die Geschlechter ("Male" und "Female") in der Antwort zurück. Legen Sie die Sprache mit dem Anforderungsheader **Accept-Language** fest.
+
+Weitere Informationen finden Sie im Abschnitt zu **Detect faces** in der [API-Referenz![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/visual-recognition/#detect-faces-in-images){: new_window}.
