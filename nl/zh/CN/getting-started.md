@@ -32,6 +32,7 @@ subcollection: visual-recognition
 {:hide-dashboard: .hide-dashboard}
 
 # 入门教程
+{: #getting-started-tutorial}
 
 本教程将指导您如何使用 {{site.data.keyword.visualrecognitionfull}} 中的一些内置模型对图像分类，然后检测图像中的人脸。
 {: shortdesc}
@@ -625,6 +626,7 @@ subcollection: visual-recognition
     {: codeblock}
 
 ## 后续步骤
+{: #gs-next-steps}
 
 您已经对如何使用 {{site.data.keyword.visualrecognitionshort}} 的内置分类器有了基本的了解。现在，可以更深入地探索以下内容：
 

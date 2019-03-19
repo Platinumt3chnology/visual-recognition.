@@ -32,6 +32,7 @@ subcollection: visual-recognition
 {:hide-dashboard: .hide-dashboard}
 
 # Esercitazione introduttiva
+{: #getting-started-tutorial}
 
 Questa esercitazione ti guida attraverso l'utilizzo di alcuni modelli integrati in {{site.data.keyword.visualrecognitionfull}} per classificare un'immagine e poi rilevare i volti in essa.
 {: shortdesc}
@@ -625,6 +626,7 @@ Se preferisci lavorare in un'interfaccia grafica, utilizza {{site.data.keyword.D
     {: codeblock}
 
 ## Passi successivi
+{: #gs-next-steps}
 
 Hai una conoscenza di base di come utilizzare i classificatori integrati con {{site.data.keyword.visualrecognitionshort}}. Ora approfondisci:
 

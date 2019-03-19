@@ -32,6 +32,7 @@ subcollection: visual-recognition
 {:hide-dashboard: .hide-dashboard}
 
 # Tutorial de introdução
+{: #getting-started-tutorial}
 
 Este tutorial orienta sobre como usar alguns modelos integrados no {{site.data.keyword.visualrecognitionfull}} para classificar uma imagem e, em seguida, detectar faces em uma imagem.
 {: shortdesc}
@@ -559,6 +560,7 @@ O {{site.data.keyword.visualrecognitionshort}} pode detectar faces em imagens.
     {: codeblock}
 
 ## Próximas Etapas
+{: #gs-next-steps}
 
 Você tem um entendimento básico de como usar classificadores integrados com o {{site.data.keyword.visualrecognitionshort}}. Agora vá além:
 

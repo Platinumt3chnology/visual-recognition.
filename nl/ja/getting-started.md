@@ -32,6 +32,7 @@ subcollection: visual-recognition
 {:hide-dashboard: .hide-dashboard}
 
 # 入門チュートリアル
+{: #getting-started-tutorial}
 
 このチュートリアルでは、{{site.data.keyword.visualrecognitionfull}} でいくつかの組み込みモデルを使用してイメージを分類し、次にイメージ内の顔を検出する方法についてご案内します。
 {: shortdesc}
@@ -625,6 +626,7 @@ subcollection: visual-recognition
     {: codeblock}
 
 ## 次のステップ
+{: #gs-next-steps}
 
 {{site.data.keyword.visualrecognitionshort}} での組み込み分類器の使用法について基本的に理解できました。 次に、さらに詳細に検討します。
 

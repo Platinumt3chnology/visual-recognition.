@@ -32,6 +32,7 @@ subcollection: visual-recognition
 {:hide-dashboard: .hide-dashboard}
 
 # 시작하기 튜토리얼
+{: #getting-started-tutorial}
 
 이 튜토리얼은 {{site.data.keyword.visualrecognitionfull}}의 일부 기본 제공 모델을 사용하여 이미지를 분류한 후에 이미지에서 얼굴을 감지하는 방법을 안내합니다.
 {: shortdesc}
@@ -625,6 +626,7 @@ subcollection: visual-recognition
     {: codeblock}
 
 ## 다음 단계
+{: #gs-next-steps}
 
 {{site.data.keyword.visualrecognitionshort}}에서 기본 제공 분류자를 사용하는 기본적인 방법을 살펴보았습니다. 이제 심층 학습을 수행합니다.
 

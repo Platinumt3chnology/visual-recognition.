@@ -25,6 +25,7 @@ subcollection: visual-recognition
 {:swift: .ph data-hd-programlang='swift'}
 
 # Unterstützte Sprachen
+{: #language-support-top}
 
 ## Bilder klassifizieren
 {: #language-support}

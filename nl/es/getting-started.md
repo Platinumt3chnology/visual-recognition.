@@ -32,6 +32,7 @@ subcollection: visual-recognition
 {:hide-dashboard: .hide-dashboard}
 
 # Guía de aprendizaje de iniciación
+{: #getting-started-tutorial}
 
 Esta guía de aprendizaje le explica cómo utilizar algunos de los modelos incorporados en {{site.data.keyword.visualrecognitionfull}} para clasificar una imagen y luego detectar caras en una imagen.
 {: shortdesc}
@@ -626,6 +627,7 @@ y una puntuación de fiabilidad para cada clase. La puntuación representa un po
     {: codeblock}
 
 ## Pasos siguientes
+{: #gs-next-steps}
 
 Ya tiene un conocimiento básico de cómo utilizar los clasificadores integrados con {{site.data.keyword.visualrecognitionshort}}. Ahora, profundice:
 

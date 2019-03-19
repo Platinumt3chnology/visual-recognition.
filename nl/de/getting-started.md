@@ -32,6 +32,7 @@ subcollection: visual-recognition
 {:hide-dashboard: .hide-dashboard}
 
 # Lernprogramm zur Einführung
+{: #getting-started-tutorial}
 
 Dieses Lernprogramm führt Sie durch die Verwendung einiger integrierter Modelle in {{site.data.keyword.visualrecognitionfull}} zur Klassifizierung eines Bildes und anschließenden Gesichtserkennung darin.
 {: shortdesc}
@@ -625,6 +626,7 @@ Wenn Sie lieber mit einer grafischen Schnittstelle arbeiten, verwenden Sie {{sit
     {: codeblock}
 
 ## Nächste Schritte
+{: #gs-next-steps}
 
 Sie haben nun ein grundlegendes Verständnis davon, wie integrierte Klassifikationsmerkmale mit {{site.data.keyword.visualrecognitionshort}} verwendet werden. Weitergehende Informationen finden Sie hier:
 

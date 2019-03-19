@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-03-19"
 
 keywords: Visual Recognition languages,language support,supported languages
 
@@ -25,6 +25,7 @@ subcollection: visual-recognition
 {:swift: .ph data-hd-programlang='swift'}
 
 # Supported languages
+{: #language-support-top}
 
 ## Classify images
 {: #language-support}

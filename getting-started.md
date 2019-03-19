@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-03-19"
 
 keywords: classify,classifying,Visual Recognition,getting started,detecting faces,detect faces,food model,general model,sample code
 
@@ -32,6 +32,7 @@ subcollection: visual-recognition
 {:hide-dashboard: .hide-dashboard}
 
 # Getting started tutorial
+{: #getting-started-tutorial}
 
 This tutorial guides you through how to use some built-in models in {{site.data.keyword.visualrecognitionfull}} to classify an image and then detect faces in an image.
 {: shortdesc}
@@ -625,6 +626,7 @@ If you prefer to work in a graphical interface, use {{site.data.keyword.DSX}}. [
     {: codeblock}
 
 ## Next steps
+{: #gs-next-steps}
 
 You have a basic understanding of how to use built-in classifiers with {{site.data.keyword.visualrecognitionshort}}. Now dive deeper:
 

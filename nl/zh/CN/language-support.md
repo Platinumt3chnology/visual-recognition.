@@ -25,6 +25,7 @@ subcollection: visual-recognition
 {:swift: .ph data-hd-programlang='swift'}
 
 # 支持的语言
+{: #language-support-top}
 
 ## 图像分类
 {: #language-support}

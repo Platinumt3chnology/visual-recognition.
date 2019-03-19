@@ -32,6 +32,7 @@ subcollection: visual-recognition
 {:hide-dashboard: .hide-dashboard}
 
 # 入門指導教學
+{: #getting-started-tutorial}
 
 本指導教學指導您如何在{{site.data.keyword.visualrecognitionfull}}中使用一些內建模型來分類影像，然後在影像中偵測臉孔。
 {: shortdesc}
@@ -624,6 +625,7 @@ subcollection: visual-recognition
     {: codeblock}
 
 ## 後續步驟
+{: #gs-next-steps}
 
 您對如何在 {{site.data.keyword.visualrecognitionshort}} 使用內建分類器已經具有基本瞭解。現在，更深入點：
 

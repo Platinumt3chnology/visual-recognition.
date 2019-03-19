@@ -32,6 +32,7 @@ subcollection: visual-recognition
 {:hide-dashboard: .hide-dashboard}
 
 # Tutoriel d'initiation
+{: #getting-started-tutorial}
 
 Ce tutoriel vous guide tout au long de l'utilisation de différents modèles intégrés dans {{site.data.keyword.visualrecognitionfull}} pour classifier une image et y détecter des visages.
 {: shortdesc}
@@ -625,6 +626,7 @@ Si vous préférez travailler dans une interface graphique, utilisez {{site.data
     {: codeblock}
 
 ## Etapes suivantes
+{: #gs-next-steps}
 
 Vous possédez une compréhension de base de l'utilisation de discriminants intégrés avec {{site.data.keyword.visualrecognitionshort}}. A présent, approfondissez vos connaissances :
 
