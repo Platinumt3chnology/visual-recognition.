@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-03-21"
 
 keywords: custom object detection,object detection,bounding boxes,visual inspection
 subcollection: visual-recognition
@@ -138,7 +138,7 @@ You can retrain a model after you update the training data by reissuing the call
 For more information, see [Train a collection ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition-v4#train-a-collection){: new_window} in the v4 API reference.
 
 ## Analyze images
-{: #object-detection-train}
+{: #object-detection-analyze}
 
 After you set up a custom object detection model and the training is complete, you can detect objects in other images. As with classification, you provide an image or `.zip` file of images and an optional **threshold** to set the minimum score of detected objects. For more information, see the **Analyze images** method in the [v4 API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition-v4#analyze-images).
 

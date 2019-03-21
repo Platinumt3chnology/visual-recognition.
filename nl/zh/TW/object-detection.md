@@ -139,7 +139,7 @@ subcollection: visual-recognition
 如需相關資訊，請參閱 v4 API 參考資料中的[訓練集合 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/apidocs/visual-recognition-v4#train-a-collection){: new_window}。
 
 ## 分析影像
-{: #object-detection-train}
+{: #object-detection-analyze}
 
 您設定好自訂物件偵測模型並完成訓練之後，您可以偵測其他影像中的物件。和分類相同，您可以提供一個影像或者內含多個影像的 `.zip` 檔，以及選用的 **threshold** 來設定偵測的物件評分下限。如需相關資訊，請參閱 [v4 API 參考資料 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/apidocs/visual-recognition-v4#analyze-images) 中的 **Analyze images** 方法。
 

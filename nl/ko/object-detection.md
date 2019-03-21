@@ -138,7 +138,7 @@ subcollection: visual-recognition
 자세한 정보는 v4 API 참조서에서 [콜렉션 훈련 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/visual-recognition-v4#train-a-collection){: new_window}을 참조하십시오. 
 
 ## 이미지 분석
-{: #object-detection-train}
+{: #object-detection-analyze}
 
 사용자 정의 오브젝트 감지 모델을 설정하고 훈련이 완료된 후에는 다른 이미지에서 오브젝트를 감지할 수 있습니다. 분류와 마찬가지로, 이미지 또는 이미지의 `.zip` 파일 및 선택적 **임계값**을 제공하여 감지된 오브젝트의 최소 점수를 설정하십시오. 자세한 정보는 [v4 API 참조서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/visual-recognition-v4#analyze-images)에서 **이미지 분석** 메소드를 참조하십시오.
 

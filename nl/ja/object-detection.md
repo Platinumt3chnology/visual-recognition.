@@ -138,7 +138,7 @@ subcollection: visual-recognition
 詳しくは、v4 API リファレンスで、[コレクションのトレーニング ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/visual-recognition-v4#train-a-collection){: new_window} を参照してください。
 
 ## イメージの分析
-{: #object-detection-train}
+{: #object-detection-analyze}
 
 カスタム物体検出モデルをセットアップしてトレーニングが完了したら、他のイメージで物体を検出できます。分類と同様に、1 つのイメージ、または複数のイメージが入った `.zip` ファイルを追加します。さらにオプションで**しきい値**を指定して、検出される物体の最小スコアを設定することができます。詳しくは、[v4 API リファレンス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/visual-recognition-v4#analyze-images) で、**Analyze images** メソッドを参照してください。
 
