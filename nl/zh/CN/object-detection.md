@@ -138,7 +138,7 @@ subcollection: visual-recognition
 有关更多信息，请参阅 V4 API 参考中的[训练集合 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/visual-recognition-v4#train-a-collection){: new_window}。
 
 ## 分析图像
-{: #object-detection-train}
+{: #object-detection-analyze}
 
 在设置定制对象检测模型并且训练完成后，可以检测其他图像中的对象。与分类一样，您将提供一个图像或提供多个图像的 `.zip` 文件，以及用于设置所检测对象的最低分数的可选**阈值**。有关更多信息，请参阅 [V4 API 参考 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/visual-recognition-v4#analyze-images) 中的 **Analyze images** 方法。
 

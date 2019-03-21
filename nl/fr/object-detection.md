@@ -138,7 +138,7 @@ Vous pouvez entraîner à nouveau un modèle après une mise à jour des donnée
 Pour plus d'informations, voir [Train a collection ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/visual-recognition-v4#train-a-collection){: new_window} dans la référence d'API de la version 4.
 
 ## Analyser des images
-{: #object-detection-train}
+{: #object-detection-analyze}
 
 Après avoir configuré un modèle de détection d'objet personnalisé et une fois l'entraînement terminé, vous pouvez détecter des objets dans d'autres images. Comme pour la classification, vous fournissez une image ou un fichier `.zip` d'images et un **seuil** facultatif pour définir le score minimal des objets détectés. Pour plus d'informations, voir la méthode **Analyze images** dans [v4 API reference ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/visual-recognition-v4#analyze-images).
 

@@ -138,7 +138,7 @@ Depois de incluir os dados de treinamento em imagens em sua coleção, a etapa f
 Para obter mais informações, consulte [Treinar uma coleção ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/apidocs/visual-recognition-v4#train-a-collection){: new_window} na Referência de API v4.
 
 ## Analisar imagens
-{: #object-detection-train}
+{: #object-detection-analyze}
 
 Depois de configurar um modelo de detecção de objeto customizado e o treinamento estiver completo, será possível detectar objetos em outras imagens. Como com a classificação, você fornece uma imagem ou um arquivo `.zip` de imagens e um **limite** opcional para configurar a pontuação mínima de objetos detectados. Para obter mais informações, consulte o método **Analisar imagens** na [Referência de API v4 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/apidocs/visual-recognition-v4#analyze-images).
 

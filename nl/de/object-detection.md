@@ -138,7 +138,7 @@ Sie können ein Modell nach dem Aktualisieren der Trainingsdaten neu trainieren,
 Weitere Informationen finden Sie unter [Sammlung trainieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/visual-recognition-v4#train-a-collection){: new_window} in der Referenz zur API Version 4.
 
 ## Bilder analysieren
-{: #object-detection-train}
+{: #object-detection-analyze}
 
 Nachdem Sie ein Modell für benutzerdefinierte Objekterkennung eingerichtet haben und das Training abgeschlossen ist, können Sie Objekte in anderen Bildern erkennen lassen. Wie bei der Klassifizierung stellen Sie ein Bild oder eine `.zip`-Datei von Bildern sowie optional einen **Schwellenwert** bereit, um den Mindest-Score für erkannte Objekte festzulegen. Weitere Informationen finden Sie im Abschnitt zur Methode **Analyze images** (Bilder analysieren) in der [Referenz für die API Version 4![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/visual-recognition-v4#analyze-images).
 

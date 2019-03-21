@@ -138,7 +138,7 @@ Puoi rieseguire la formazione di un modello dopo che hai aggiornato i dati di fo
 Per ulteriori informazioni, vedi [Train a collection ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/apidocs/visual-recognition-v4#train-a-collection){: new_window} nella guida di riferimento API v4.
 
 ## Analizza le immagini
-{: #object-detection-train}
+{: #object-detection-analyze}
 
 Dopo che hai configurato un modello di rilevamento degli oggetti personalizzato e dopo che la formazione è stata completata, puoi rilevare gli oggetti in altre immagini. Come per la classificazione, fornisci un'immagine o un file `.zip` di immagini e una **soglia** facoltativa per impostare il punteggio massimo degli oggetti rilevati. Per ulteriori informazioni, vedi il metodo **Analyze images** nella [guida di riferimento API v4 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/apidocs/visual-recognition-v4#analyze-images).
 

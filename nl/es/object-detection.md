@@ -138,7 +138,7 @@ Puede volver a entrenar un modelo después de actualizar los datos de entrenamie
 Para obtener más información, consulte [Entrenamiento de una colección ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/apidocs/visual-recognition-v4#train-a-collection){: new_window} en la Consulta de API v4.
 
 ## Análisis de imágenes
-{: #object-detection-train}
+{: #object-detection-analyze}
 
 Después de configurar un modelo de detección de objetos personalizado y de que finalice el entrenamiento, puede detectar objetos en otras imágenes. Al igual que sucede con la clasificación, debe proporcionar una imagen o un archivo `.zip` de imágenes y un **umbral** opcional para establecer la puntuación mínima de los objetos detectados. Para obtener más información, consulte el método **Analizar imágenes** en la [Consulta de API v4 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/apidocs/visual-recognition-v4#analyze-images).
 
