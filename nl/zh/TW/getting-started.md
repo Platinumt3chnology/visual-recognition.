@@ -34,32 +34,32 @@ subcollection: visual-recognition
 # 入門指導教學
 {: #getting-started-tutorial}
 
-本指導教學指導您如何在{{site.data.keyword.visualrecognitionfull}}中使用一些內建模型來分類影像，然後在影像中偵測臉孔。
+本指導教學指導您如何在 {{site.data.keyword.visualrecognitionfull}} 中使用一些內建模型來分類影像，然後在影像中偵測臉孔。
 {: shortdesc}
 
-如果您偏好使用圖形介面，請使用{{site.data.keyword.DSX}}。[請啟動工具 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: new_window}，然後遵循[影片 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://youtu.be/898RN31szg0){: new_window} 進行。
+如果您偏好使用圖形介面，請使用 {{site.data.keyword.DSX}}。[請啟動工具 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: new_window}，然後遵循[影片 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://youtu.be/898RN31szg0){: new_window} 進行。
 {: tip}
 
 ## 開始之前
 {: #prerequisites}
 
-- {: hide-dashboard}建立服務實例：
+- {: hide-dashboard}建立服務的實例：
     1.  移至型錄中的 [{{site.data.keyword.visualrecognitionshort}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/catalog/services/visual-recognition){: new_window} 頁面。
     1.  註冊免費的 {{site.data.keyword.Bluemix_notm}} 帳戶，或者登入。
     1.  按一下**建立**。
 - {: hide-dashboard}複製認證以向服務實例進行鑑別：
-    1.  在**管理**頁面中，按一下**顯示認證**。
-    1.  複製 `API Key` 值。
+    1.  在**管理**頁面上，按一下**顯示認證**。
+    1.  複製 `API 金鑰`值。
 - {: curl}請確定您有 `curl` 指令。
-    - 測試是否已安裝 `curl`。請在指令行上執行下列指令。如果輸出列出具有 SSL 支援的 `curl` 版本，表示您已經完成設定指導教學。
+    - 測試是否已安裝 `curl`。請在指令行上執行下列指令。如果輸出裡列出了具有 SSL 支援的 `curl` 版本，則您已準備好進入指導教學。
 
         ```bash
         curl -V
         ```
         {: pre}
 
-    - 必要的話，請從 [curl.haxx.se ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://curl.haxx.se/){: new_window} 安裝已啟用 SSL 的版本。如果您要從任何指令行位置執行 `curl`，請將檔案位置新增至您的 PATH 環境變數。
-- {:go} 安裝 [Go SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/watson-developer-cloud/go-sdk){: new_window}。
+    - 必要的話，請從 [curl.haxx.se ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://curl.haxx.se/){: new_window} 安裝已啟用 SSL 的版本。如果您要從任何指令行位置執行 `curl`，則請將檔案的位置新增至 PATH 環境變數。
+- {:go}安裝 [Go SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/watson-developer-cloud/go-sdk){: new_window}。
 
     ```go
     go get -u github.com/watson-developer-cloud/go-sdk/...
@@ -85,19 +85,19 @@ subcollection: visual-recognition
         compile 'com.ibm.watson.developer_cloud:java-sdk:{version}'
         ```
         {:pre}
-- {: javascript} 安裝 [Node SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/watson-developer-cloud/node-sdk){: new_window}。
+- {: javascript}安裝 [Node SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/watson-developer-cloud/node-sdk){: new_window}。
 
     ```bash
     npm install --save watson-developer-cloud
     ```
     {:pre}
-- {: python} 安裝 [Python SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/watson-developer-cloud/python-sdk){: new_window}。
+- {: python}安裝 [Python SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/watson-developer-cloud/python-sdk){: new_window}。
 
     ```bash
     pip install --upgrade watson-developer-cloud
     ```
     {:pre}
-- {: ruby} 安裝 [Ruby SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/watson-developer-cloud/ruby-sdk){: new_window}。
+- {: ruby}安裝 [Ruby SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/watson-developer-cloud/ruby-sdk){: new_window}。
 
     ```bash
     gem install ibm_watson
