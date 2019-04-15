@@ -145,4 +145,4 @@ subcollection: visual-recognition
 ## 次のステップ
 {: #object-detection-next-steps}
 
-- API について詳しくは、[v4 API リファレンス ![外部リンク・アイコン](../../icons/launch-glyph.svg " 外部リンク・アイコン")][api-ref-v4]{: new_window} を参照してください。
+- API について詳しくは、[v4 API リファレンス ![外部リンク・アイコン](../../icons/launch-glyph.svg " 外部リンク・アイコン")](https://{DomainName}/apidocs/visual-recognition-v4){: new_window} を参照してください。

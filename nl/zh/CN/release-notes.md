@@ -204,13 +204,13 @@ API 请求需要采用日期的 version 参数，格式为 `version=YYYY-MM-DD`�
 
 - **可用的新工具：Watson Studio**
 
-    [Watson Studio ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")][watson-studio-reg]{: new_window} 是新的集成环境，其中包含 Beta {{site.data.keyword.visualrecognitionshort}} 工具的替代项。Watson Studio 不仅支持 {{site.data.keyword.visualrecognitionshort}}，而且还支持大量其他 {{site.data.keyword.cloud_notm}} 服务和资源。您可以将 Watson Studio 与所有现有 {{site.data.keyword.visualrecognitionshort}} 实例和分类器一起使用。
+    [Watson Studio ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: new_window} 是新的集成环境，其中包含 Beta {{site.data.keyword.visualrecognitionshort}} 工具的替代项。Watson Studio 不仅支持 {{site.data.keyword.visualrecognitionshort}}，而且还支持大量其他 {{site.data.keyword.cloud_notm}} 服务和资源。您可以将 Watson Studio 与所有现有 {{site.data.keyword.visualrecognitionshort}} 实例和分类器一起使用。
 
      Watson Studio 在云中提供一个协作环境。利用 Watson Studio，开发者、主题专家、数据研究员和其他人员可构建和训练 {{site.data.keyword.visualrecognitionshort}} 以及其他 AI 模型。您还可以使用 Watson Studio 来访问内置“通用”和“人脸”模型。
 
      Watson Studio 还支持 Core ML。您可以针对定制模型下载 Core ML 模型文件。
 
-    [开始使用 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")][watson-studio-reg]{: new_window} Watson Studio。
+    [开始使用 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: new_window} Watson Studio。
 
 - **更新了定制模型的深度学习体系结构**
 
@@ -278,7 +278,7 @@ API 请求需要采用日期的 version 参数，格式为 `version=YYYY-MM-DD`�
 
     提供了更新的人脸检测模型。此 Beta 模型使用更广泛的训练数据集以提高人脸检测在年龄和性别方面的准确性。有关更多信息，请参阅 [Increasing the Accuracy of IBM’s Watson {{site.data.keyword.visualrecognitionshort}} service ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/watson/2018/02/increasing-accuracy-ibms-watson-visual-recognition-service/){: new_window} 和 [Mitigating Bias in AI Models ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/research/2018/02/mitigating-bias-ai-models/){: new_window}。
 
-    - 您可以在[演示 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")][demo]{: new_window} 和 Beta [Visual Recognition Tool ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://watson-visual-recognition.ng.bluemix.net/){: new_window} 中查看更新的模型的结果。
+    - 您可以在[演示 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/watson/services/visual-recognition/demo){: new_window} 和 Beta [Visual Recognition Tool ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://watson-visual-recognition.ng.bluemix.net/){: new_window} 中查看更新的模型的结果。
     - Beta 模型位于 `/v3/detect_faces_beta`。
 
     Beta 和一般可用性 (GA) 模型之间的差异：

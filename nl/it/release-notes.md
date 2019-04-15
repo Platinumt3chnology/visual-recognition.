@@ -204,13 +204,13 @@ Sono disponibili le seguenti nuove funzioni e modifiche per il servizio.
 
 - **Disponibilità di un nuovo strumento: Watson Studio**
 
-    [Watson Studio ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")][watson-studio-reg]{: new_window} è il nuovo ambiente integrato che include una sostituzione per lo strumento {{site.data.keyword.visualrecognitionshort}} beta. Watson Studio supporta non solo {{site.data.keyword.visualrecognitionshort}} ma anche molti altri servizi e molte altre risorse {{site.data.keyword.cloud_notm}}. Puoi utilizzare Watson Studio con tutte le tue istanze e tutti i classificatori {{site.data.keyword.visualrecognitionshort}}.
+    [Watson Studio ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: new_window} è il nuovo ambiente integrato che include una sostituzione per lo strumento {{site.data.keyword.visualrecognitionshort}} beta. Watson Studio supporta non solo {{site.data.keyword.visualrecognitionshort}} ma anche molti altri servizi e molte altre risorse {{site.data.keyword.cloud_notm}}. Puoi utilizzare Watson Studio con tutte le tue istanze e tutti i classificatori {{site.data.keyword.visualrecognitionshort}}.
 
      Watson Studio fornisce un ambiente collaborativo nel cloud. Con Watson Studio, gli sviluppatori, gli esperti in materia, i data scientist e altri possono creare e formare {{site.data.keyword.visualrecognitionshort}} e altri modelli di intelligenza artificiale. Puoi anche utilizzare Watson Studio per accedere ai modelli General e Face integrati.
 
      Watson Studio supporta anche Core ML. Puoi scaricare un file modello Core ML per il tuo modello personalizzato.
 
-    [Introduzione a ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")][watson-studio-reg]{: new_window} con Watson Studio.
+    [Introduzione a ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: new_window} con Watson Studio.
 
 - **Architettura di apprendimento approfondito (deep learning) aggiornata per i modelli personalizzati**
 
@@ -278,7 +278,7 @@ Sono disponibili le seguenti nuove funzioni e modifiche per il servizio.
 
     È disponibile un modello di rilevamento volti aggiornato. Questo modello beta utilizzata delle serie di dati di formazione più ampie per una maggiore accuratezza del rilevamento volti per l'età e il sesso. Per ulteriori informazioni, vedi [Increasing the Accuracy of IBM’s Watson {{site.data.keyword.visualrecognitionshort}} service ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/watson/2018/02/increasing-accuracy-ibms-watson-visual-recognition-service/){: new_window} e [Mitigating Bias in AI Models ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/research/2018/02/mitigating-bias-ai-models/){: new_window}.
 
-    - Puoi visualizzare i risultati del modello aggiornato nella [demo ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")][demo]{: new_window} e nel [Visual Recognition Tool ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://watson-visual-recognition.ng.bluemix.net/){: new_window} beta.
+    - Puoi visualizzare i risultati del modello aggiornato nella [demo ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/watson/services/visual-recognition/demo){: new_window} e nel [Visual Recognition Tool ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://watson-visual-recognition.ng.bluemix.net/){: new_window} beta.
     - Il modello beta è disponibile in `/v3/detect_faces_beta`.
 
     Differenze tra i modelli beta e GA (General Availability):

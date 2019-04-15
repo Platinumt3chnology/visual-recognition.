@@ -145,4 +145,4 @@ Après avoir configuré un modèle de détection d'objet personnalisé et une fo
 ## Etapes suivantes
 {: #object-detection-next-steps}
 
-- Familiarisez-vous avec l'API dans [v4 API reference ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")][api-ref-v4]{: new_window}.
+- Familiarisez-vous avec l'API dans [v4 API reference ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/visual-recognition-v4){: new_window}.

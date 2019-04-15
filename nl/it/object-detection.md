@@ -145,4 +145,4 @@ Dopo che hai configurato un modello di rilevamento degli oggetti personalizzato 
 ## Passi successivi
 {: #object-detection-next-steps}
 
-- Acquisisci dimestichezza con l'API nella [guida di riferimento API v4 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")][api-ref-v4]{: new_window}.
+- Acquisisci dimestichezza con l'API nella [guida di riferimento API v4 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/apidocs/visual-recognition-v4){: new_window}.

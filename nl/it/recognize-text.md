@@ -61,4 +61,4 @@ Il testo nelle immagini viene riconosciuto in modo migliore quando si rispettano
 {: #recognize-text-next-steps}
 
 - [Effettua una chiamata](/docs/services/visual-recognition?topic=visual-recognition-tutorial-recognize-text#tutorial-recognize-text) per riconoscere il testo in un'immagine.
-- Acquisisci dimestichezza con l'API nella [guida di riferimento API ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")][api-ref-text]{: new_window}.
+- Acquisisci dimestichezza con l'API nella [guida di riferimento API ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text){: new_window}.

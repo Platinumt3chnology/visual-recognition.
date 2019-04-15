@@ -204,13 +204,13 @@ API 요청이 있을 때마다 버전 매개변수를 전송하십시오. 서비
 
 - **새로운 도구 사용 가능: Watson Studio**
 
-    [Watson Studio ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")][watson-studio-reg]{: new_window}는 베타 {{site.data.keyword.visualrecognitionshort}}의 대체 도구를 제공하는 새로운 통합 환경입니다. Watson Studio는 {{site.data.keyword.visualrecognitionshort}}뿐 아니라 다른 여러 {{site.data.keyword.cloud_notm}} 서비스와 리소스도 지원합니다. 기존의 모든 {{site.data.keyword.visualrecognitionshort}} 인스턴스 및 분류자와 함께 Watson Studio를 사용할 수 있습니다. 
+    [Watson Studio ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: new_window}는 베타 {{site.data.keyword.visualrecognitionshort}}의 대체 도구를 제공하는 새로운 통합 환경입니다. Watson Studio는 {{site.data.keyword.visualrecognitionshort}}뿐 아니라 다른 여러 {{site.data.keyword.cloud_notm}} 서비스와 리소스도 지원합니다. 기존의 모든 {{site.data.keyword.visualrecognitionshort}} 인스턴스 및 분류자와 함께 Watson Studio를 사용할 수 있습니다. 
 
      Watson Studio는 클라우드에서 협업 환경을 제공합니다. Watson Studio를 사용할 경우 개발자, 관련 주제 전문가, 데이터 과학자 등은 {{site.data.keyword.visualrecognitionshort}} 및 다른 AI 모델을 빌드하고 훈련시킬 수 있습니다. 또한 Watson Studio를 사용하여 기본 제공 일반 모델 및 얼굴 모델에 액세스할 수 있습니다. 
 
      Watson Studio는 또한 Core ML도 지원합니다. 사용자 정의 모델의 Core ML 모델 파일을 다운로드할 수 있습니다. 
 
-    Watson Studio로 [![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")][watson-studio-reg]{: new_window} 시작하기
+    Watson Studio로 [![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: new_window} 시작하기
 
 - **사용자 정의 모델에 대한 딥 러닝 아키텍처가 업데이트됨**
 
@@ -278,7 +278,7 @@ API 요청이 있을 때마다 버전 매개변수를 전송하십시오. 서비
 
     업데이트된 얼굴 감지 모델이 사용 가능합니다. 이 베타 모델은 연령 및 성별에 맞춰 얼굴 감지의 정확도를 향상시키기 위해 더 광범위한 훈련 데이터 세트를 사용합니다. 자세한 정보는 [IBM Watson {{site.data.keyword.visualrecognitionshort}} 서비스의 정확도 향상 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/blogs/watson/2018/02/increasing-accuracy-ibms-watson-visual-recognition-service/){: new_window} 및 [AI 모델에서 편향 완화 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/blogs/research/2018/02/mitigating-bias-ai-models/){: new_window}를 참조하십시오. 
 
-    - 업데이트된 모델의 결과는 [데모 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")][demo]{: new_window} 및 베타 [Visual Recognition 도구 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://watson-visual-recognition.ng.bluemix.net/){: new_window}에서 볼 수 있습니다. 
+    - 업데이트된 모델의 결과는 [데모 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/watson/services/visual-recognition/demo){: new_window} 및 베타 [Visual Recognition 도구 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://watson-visual-recognition.ng.bluemix.net/){: new_window}에서 볼 수 있습니다. 
     - 베타 모델은 `/v3/detect_faces_beta`에서 사용 가능합니다. 
 
     베타 모델과 GA(General Availability) 모델 간의 차이점: 

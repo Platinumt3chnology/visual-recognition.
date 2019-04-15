@@ -204,13 +204,13 @@ API 要求のたびに version パラメーターを送信してください。�
 
 - **新しいツールを使用可能: Watson Studio**
 
-    [Watson Studio ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")][watson-studio-reg]{: new_window} は、ベータ版 {{site.data.keyword.visualrecognitionshort}} ツールの代替となるツールが組み込まれた、新しい統合環境です。Watson Studio は、{{site.data.keyword.visualrecognitionshort}} だけでなく、{{site.data.keyword.cloud_notm}} の他の多くのサービスとリソースをサポートしています。{{site.data.keyword.visualrecognitionshort}} の既存のすべてのインスタンスおよび分類器と一緒に、Watson Studio を使用できます。
+    [Watson Studio ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: new_window} は、ベータ版 {{site.data.keyword.visualrecognitionshort}} ツールの代替となるツールが組み込まれた、新しい統合環境です。Watson Studio は、{{site.data.keyword.visualrecognitionshort}} だけでなく、{{site.data.keyword.cloud_notm}} の他の多くのサービスとリソースをサポートしています。{{site.data.keyword.visualrecognitionshort}} の既存のすべてのインスタンスおよび分類器と一緒に、Watson Studio を使用できます。
 
      Watson Studio は、クラウドでのコラボレーティブ環境を実現します。Watson Studio を利用すると、開発者、対象分野の専門家、データ・サイエンティスト、その他の要員が、{{site.data.keyword.visualrecognitionshort}} モデルや他の AI モデルを作成してトレーニングすることができます。また、Watson Studio を使用して、組み込みの一般モデルと Face モデルにアクセスすることもできます。
 
      Watson Studio は Core ML もサポートしています。カスタム・モデル用に Core ML モデル・ファイルをダウンロードすることができます。
 
-    Watson Studio の[使用を開始 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")][watson-studio-reg]{: new_window} してみてください。
+    Watson Studio の[使用を開始 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: new_window} してみてください。
 
 - **カスタム・モデル用のディープ・ラーニング・アーキテクチャーの更新**
 
@@ -278,7 +278,7 @@ API 要求のたびに version パラメーターを送信してください。�
 
     更新された顔検出モデルを使用できます。このベータ版モデルでは、より広範なトレーニング・データ・セットを使用することによって、顔検出での年齢と性別に関する正確度が向上します。詳しくは、[Increasing the Accuracy of IBM’s Watson {{site.data.keyword.visualrecognitionshort}} service ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/watson/2018/02/increasing-accuracy-ibms-watson-visual-recognition-service/){: new_window} および [Mitigating Bias in AI Models ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/research/2018/02/mitigating-bias-ai-models/){: new_window} を参照してください。
 
-    - 更新されたモデルの結果は、[デモ ![外部リンク・アイコン ](../../icons/launch-glyph.svg "外部リンク・アイコン")][demo]{: new_window} およびベータ版の [Visual Recognition ツール ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://watson-visual-recognition.ng.bluemix.net/){: new_window} で参照できます。
+    - 更新されたモデルの結果は、[デモ ![外部リンク・アイコン ](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/watson/services/visual-recognition/demo){: new_window} およびベータ版の [Visual Recognition ツール ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://watson-visual-recognition.ng.bluemix.net/){: new_window} で参照できます。
     - ベータ版モデルは `/v3/detect_faces_beta` にあります。
 
     ベータ版モデルと一般出荷版 (GA) モデルの違いは以下のとおりです。

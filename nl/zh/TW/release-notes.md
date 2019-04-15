@@ -205,14 +205,14 @@ API 要求版本參數需要採用 `version=YYYY-MM-DD` 日期格式。每當我
 
 - **可用的新工具：Watson Studio**
 
-    [Watson Studio ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")][watson-studio-reg]{: new_window} 是一個新的整合環境，其中包含測試版 {{site.data.keyword.visualrecognitionshort}} 工具的取代項目。
+    [Watson Studio ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: new_window} 是一個新的整合環境，其中包含測試版 {{site.data.keyword.visualrecognitionshort}} 工具的取代項目。
 Watson Studio 不僅支援 {{site.data.keyword.visualrecognitionshort}}，還支援許多其他{{site.data.keyword.cloud_notm}}服務和資源。您可以對您現有的 {{site.data.keyword.visualrecognitionshort}} 實例和分類器使用 Watson Studio。
 
      Watson Studio 透過雲端提供協同的環境。藉由 Watson Studio，開發人員、主題專家、資料科學家，以及其他人員可以建置及訓練 {{site.data.keyword.visualrecognitionshort}} 及其他 AI 模型。您也可以使用 Watson Studio 來存取使用 General 和 Face 模型。
 
      Watson Studio 還支援 Core ML。您可以針對您的自訂模型下載 Core ML 模型檔。
 
-    [開始使用 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")][watson-studio-reg]{: new_window} Watson Studio。
+    [開始使用 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: new_window} Watson Studio。
 
 - **自訂模型的已更新的深度學習架構**
 
@@ -280,7 +280,7 @@ Watson Studio 不僅支援 {{site.data.keyword.visualrecognitionshort}}，還支
 
     目前提供已更新的 Face detection 模型。此測試版模型使用更廣泛的訓練資料集來針對年齡和性別增加臉孔偵測的正確性。如需相關資訊，請參閱 [增加 IBM Watson 的正確性 {{site.data.keyword.visualrecognitionshort}} 服務 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/watson/2018/02/increasing-accuracy-ibms-watson-visual-recognition-service/){: new_window} 以及[減少 AI 模型中的偏差 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/research/2018/02/mitigating-bias-ai-models/){: new_window}。
 
-    - 您可以在[展示 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")][demo]{: new_window} 以及測試版[視覺化識別工具 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://watson-visual-recognition.ng.bluemix.net/){: new_window} 中檢視已更新的模型的結果。
+    - 您可以在[展示 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/watson/services/visual-recognition/demo){: new_window} 以及測試版[視覺化識別工具 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://watson-visual-recognition.ng.bluemix.net/){: new_window} 中檢視已更新的模型的結果。
     - 可從 `/v3/detect_faces_beta` 取得測試版模型。
 
     測試版模型與通用版 (GA) 模型之間的差異；

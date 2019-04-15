@@ -61,4 +61,4 @@ Text 模型是一個專用測試版功能，您必須向 {{site.data.keyword.IBM
 {: #recognize-text-next-steps}
 
 - [進行呼叫](/docs/services/visual-recognition?topic=visual-recognition-tutorial-recognize-text#tutorial-recognize-text)以辨識影像中的文字。
-- 請參閱 [API 參考資料 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")][api-ref-text]{: new_window} 以熟悉此 API。
+- 請參閱 [API 參考資料 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text){: new_window} 以熟悉此 API。
