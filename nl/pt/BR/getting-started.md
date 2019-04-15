@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-03-19"
 
 keywords: classify,classifying,Visual Recognition,getting started,detecting faces,detect faces,food model,general model,sample code
 
@@ -50,7 +50,7 @@ Se preferir trabalhar em uma interface gráfica, use o {{site.data.keyword.DSX}}
 - {: hide-dashboard} Copie as credenciais para autenticar sua instância de serviço:
     1.  Na página **Gerenciar**, clique em **Mostrar credenciais**.
     1.  Copie o valor da  ` Chave API ` .
-- {: curl}Certifique-se de ter o comando `curl`.
+- {: curl} Certifique-se de ter o comando `curl`.
     - Teste se o  ` curl `  está instalado. Execute o comando a seguir na linha de comandos. Se a saída listar a versão `curl` com suporte SSL, você estará pronto para começar o tutorial.
 
         ```bash

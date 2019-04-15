@@ -24,7 +24,7 @@ subcollection: visual-recognition
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# About
+# Sobre
 {: #index}
 
 Em 2 de abril de 2018, as informações de identidade na resposta a chamadas para o modelo Face foram removidas. As informações de identidade se referem ao nome da pessoa, à pontuação e ao gráfico de conhecimento type_hierarchy. Para obter detalhes sobre o modelo Face aprimorado, consulte as [Notas sobre a liberação](/docs/services/visual-recognition?topic=visual-recognition-release-notes#2april2018).

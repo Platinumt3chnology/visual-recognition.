@@ -38,7 +38,7 @@ subcollection: visual-recognition
 ## ステップ 1: 資格情報をコピーする
 {: #copy-credentials}
 
-『入門のチュートリアル』でコピーした資格情報を使用します。 サービス・インスタンスを作成していない場合は、『[始めに](/docs/services/visual-recognition?topic=visual-recognition-getting-started-tutorial#prerequisites)』セクションの手順を実行してください。
+『入門チュートリアル』でコピーした資格情報を使用します。 サービス・インスタンスを作成していない場合は、『[始めに](/docs/services/visual-recognition?topic=visual-recognition-getting-started-tutorial#prerequisites)』セクションの手順を実行してください。
 
 ## ステップ 2: カスタム・モデルを作成する
 {: #create}
