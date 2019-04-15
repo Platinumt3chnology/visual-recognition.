@@ -61,4 +61,4 @@ Text in Bildern wird besser erkannt, wenn er den folgenden Richtlinien entsprich
 {: #recognize-text-next-steps}
 
 - [Aufruf ausführen](/docs/services/visual-recognition?topic=visual-recognition-tutorial-recognize-text#tutorial-recognize-text), um Text in einem Bild zu erkennen.
-- Machen Sie sich in der [API-Referenz![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")][api-ref-text]{: new_window} mit der API vertraut.
+- Machen Sie sich in der [API-Referenz![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text){: new_window} mit der API vertraut.

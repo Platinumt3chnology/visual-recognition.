@@ -145,4 +145,4 @@ subcollection: visual-recognition
 ## 后续步骤
 {: #object-detection-next-steps}
 
-- 熟悉 [V4 API 参考 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")][api-ref-v4]{: new_window} 中的 API。
+- 熟悉 [V4 API 参考 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/visual-recognition-v4){: new_window} 中的 API。

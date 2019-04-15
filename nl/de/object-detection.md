@@ -145,4 +145,4 @@ Nachdem Sie ein Modell für benutzerdefinierte Objekterkennung eingerichtet habe
 ## Nächste Schritte
 {: #object-detection-next-steps}
 
-- Informationen zur API finden Sie in der [Referenz zur API Version 4 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")][api-ref-v4]{: new_window}.
+- Informationen zur API finden Sie in der [Referenz zur API Version 4 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/visual-recognition-v4){: new_window}.

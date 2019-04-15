@@ -61,4 +61,4 @@ Text 模型识别短文本字符串的效果最好。例如，Text 模型的一�
 {: #recognize-text-next-steps}
 
 - [执行调用](/docs/services/visual-recognition?topic=visual-recognition-tutorial-recognize-text#tutorial-recognize-text)以识别图像中的文本。
-- 熟悉 [API 参考 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")][api-ref-text]{: new_window} 中的 API。
+- 熟悉 [API 参考 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text){: new_window} 中的 API。

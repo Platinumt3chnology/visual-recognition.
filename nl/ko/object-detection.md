@@ -146,4 +146,4 @@ subcollection: visual-recognition
 ## 다음 단계
 {: #object-detection-next-steps}
 
-- [v4 API 참조서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")][api-ref-v4]{: new_window}에서 API에 대해 익힙니다. 
+- [v4 API 참조서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/visual-recognition-v4){: new_window}에서 API에 대해 익힙니다. 

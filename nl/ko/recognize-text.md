@@ -61,4 +61,4 @@ subcollection: visual-recognition
 {: #recognize-text-next-steps}
 
 - 이미지에서 텍스트를 인식하기 위해 [호출을 수행](/docs/services/visual-recognition?topic=visual-recognition-tutorial-recognize-text#tutorial-recognize-text)합니다. 
-- [API 참조서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")][api-ref-text]{: new_window}에서 API에 대해 익힙니다. 
+- [API 참조서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text){: new_window}에서 API에 대해 익힙니다. 

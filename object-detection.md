@@ -145,4 +145,4 @@ After you set up a custom object detection model and the training is complete, y
 ## Next steps
 {: #object-detection-next-steps}
 
-- Get familiar with the API in the [v4 API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")][api-ref-v4]{: new_window}.
+- Get familiar with the API in the [v4 API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition-v4){: new_window}.

@@ -205,13 +205,13 @@ Les nouvelles fonctions et modifications apportées au service et décrites ci-a
 
 - **Nouvel outil disponible : Watson Studio**
 
-    [Watson Studio ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")][watson-studio-reg]{: new_window} est le nouvel environnement intégré qui inclut un remplacement de l'outil {{site.data.keyword.visualrecognitionshort}} bêta. Watson Studio prend en charge non seulement {{site.data.keyword.visualrecognitionshort}}, mais aussi de nombreux autres services et ressources {{site.data.keyword.cloud_notm}}. Vous pouvez utiliser Watson Studio avec l'ensemble de vos instances et discriminants {{site.data.keyword.visualrecognitionshort}} existants. 
+    [Watson Studio ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: new_window} est le nouvel environnement intégré qui inclut un remplacement de l'outil {{site.data.keyword.visualrecognitionshort}} bêta. Watson Studio prend en charge non seulement {{site.data.keyword.visualrecognitionshort}}, mais aussi de nombreux autres services et ressources {{site.data.keyword.cloud_notm}}. Vous pouvez utiliser Watson Studio avec l'ensemble de vos instances et discriminants {{site.data.keyword.visualrecognitionshort}} existants. 
 
      Watson Studio fournit un environnement collaboratif dans le cloud. Avec Watson Studio, les développeurs, les experts de domaines, les analystes scientifiques des données, etc., peuvent générer et entraîner {{site.data.keyword.visualrecognitionshort}} et d'autres modèles d'IA. Vous pouvez également utiliser Watson Studio pour accéder aux modèles intégrés General et Face.
 
      Watson studio prend également en charge Core ML. Vous pouvez télécharger un fichier modèle Core ML pour votre modèle personnalisé.
 
-    [Initiation à ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")][watson-studio-reg]{: new_window} avec Watson Studio.
+    [Initiation à ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: new_window} avec Watson Studio.
 
 - **Architecture d'apprentissage en profondeur mise à jour pour les modèles personnalisés**
 
@@ -279,7 +279,7 @@ Les nouvelles fonctions et modifications apportées au service et décrites ci-a
 
     Un modèle mis à jour de détection des visages est disponible. Ce modèle bêta utilise des ensembles de données d'apprentissage plus grands pour une précision accrue de la détection faciale pour l'âge et le sexe. Pour plus d'informations, voir [Increasing the Accuracy of IBM’s Watson {{site.data.keyword.visualrecognitionshort}} service ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/watson/2018/02/increasing-accuracy-ibms-watson-visual-recognition-service/){: new_window} et [Mitigating Bias in AI Models ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/research/2018/02/mitigating-bias-ai-models/){: new_window}.
 
-    - Vous pouvez afficher les résultats du modèle mis à jour dans la [démonstration ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")][demo]{: new_window} et l'outil [Visual Recognition Tool ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://watson-visual-recognition.ng.bluemix.net/){: new_window}.
+    - Vous pouvez afficher les résultats du modèle mis à jour dans la [démonstration ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/watson/services/visual-recognition/demo){: new_window} et l'outil [Visual Recognition Tool ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://watson-visual-recognition.ng.bluemix.net/){: new_window}.
     - Le modèle bêta est disponible sur `/v3/detect_faces_beta`.
 
     Différences entre les modèles en version bêta et en disponibilité générale (GA) :

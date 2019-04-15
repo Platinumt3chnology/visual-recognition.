@@ -146,4 +146,4 @@ subcollection: visual-recognition
 ## 後續步驟
 {: #object-detection-next-steps}
 
-- 請到 [v4 API 參考資料 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")][api-ref-v4]{: new_window} 中熟悉該 API。
+- 請到 [v4 API 參考資料 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/apidocs/visual-recognition-v4){: new_window} 中熟悉該 API。

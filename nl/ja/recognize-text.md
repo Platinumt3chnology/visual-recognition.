@@ -61,4 +61,4 @@ Text モデルはプライベート・ベータ機能です。このモデルを
 {: #recognize-text-next-steps}
 
 - 画像内のテキストを認識させるために[呼び出しを実行](/docs/services/visual-recognition?topic=visual-recognition-tutorial-recognize-text#tutorial-recognize-text)します。
-- API について詳しくは、[API リファレンス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")][api-ref-text]{: new_window} を参照してください。
+- API について詳しくは、[API リファレンス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text){: new_window} を参照してください。
