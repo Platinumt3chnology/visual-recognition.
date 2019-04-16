@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-04-16"
 
 keywords: new features,updates to Visual Recognition,what's new with Visual Recognition
 
@@ -19,11 +19,6 @@ subcollection: visual-recognition
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-
-<!-- Link definitions -->
-
-[watson-studio-reg]: https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs
-[demo]: https://www.ibm.com/watson/services/visual-recognition/demo
 
 # Notas del release
 {: #release-notes}
