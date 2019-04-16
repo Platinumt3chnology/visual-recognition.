@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-04-16"
 
 keywords: Text recognition,Visual Recognition beta Text model,Text model,recognize text
 
@@ -19,10 +19,6 @@ subcollection: visual-recognition
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-
-<!-- Link definitions -->
-
-[api-ref-text]: https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text
 
 # Texterkennung in natürlichen Szenen (Beta)
 {: #recognize-text}

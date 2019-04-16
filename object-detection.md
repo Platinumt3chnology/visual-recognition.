@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-21"
+lastupdated: "2019-04-16"
 
 keywords: custom object detection,object detection,bounding boxes,visual inspection
 subcollection: visual-recognition
@@ -22,10 +22,6 @@ subcollection: visual-recognition
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
-
-<!-- Link definitions -->
-
-[api-ref-v4]: https://{DomainName}/apidocs/visual-recognition-v4
 
 # Custom Object Detection (Beta)
 {: #object-detection-overview}
