@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-04-17"
 
 keywords: Text recognition,Visual Recognition beta Text model,Text model,recognize text
 
@@ -116,7 +116,7 @@ Il modello Text è una funzione beta privata e devi avere l'autorizzazione da {{
 
 Hai una conoscenza di base di come riconoscere il testo in un'immagine. Esplora ulteriormente.
 
-- Leggi la [panoramica](/docs/services/visual-recognition?topic=visual-recognition-text-recognition-in-natural-scenes-beta-#text-recognition-in-natural-scenes-beta-).
+- Leggi la [panoramica](/docs/services/visual-recognition?topic=visual-recognition-recognize-text#recognize-text).
 - Esplora i metodi del modello Text nella [guida di riferimento API
 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text#recognize-text-in-an-image-get-beta){: new_window}.
 
