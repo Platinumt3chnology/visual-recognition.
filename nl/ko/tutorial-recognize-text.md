@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-04-17"
 
 keywords: Text recognition,Visual Recognition beta Text model,Text model,recognize text
 
@@ -115,7 +115,7 @@ subcollection: visual-recognition
 
 이미지에서 텍스트를 인식하는 기본적인 방법을 살펴보았습니다. 이제 심층 학습을 수행합니다. 
 
-- [개요](/docs/services/visual-recognition?topic=visual-recognition-text-recognition-in-natural-scenes-beta-#text-recognition-in-natural-scenes-beta-)를 검토하십시오. 
+- [개요](/docs/services/visual-recognition?topic=visual-recognition-recognize-text#recognize-text)를 검토하십시오. 
 - [API 참조서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text#recognize-text-in-an-image-get-beta){: new_window}에서 텍스트 모델 메소드를 살펴보십시오. 
 
 ### 저작권

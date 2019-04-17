@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-04-17"
 
 keywords: Text recognition,Visual Recognition beta Text model,Text model,recognize text
 
@@ -115,7 +115,7 @@ Text モデルはプライベート・ベータ機能です。このモデルを
 
 画像内のテキストを認識する方法について、基本的な理解が得られました。さらに調べてください。
 
-- [概説](/docs/services/visual-recognition?topic=visual-recognition-text-recognition-in-natural-scenes-beta-#text-recognition-in-natural-scenes-beta-)を参照します。
+- [概説](/docs/services/visual-recognition?topic=visual-recognition-recognize-text#recognize-text)を参照します。
 - [API リファレンス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text#recognize-text-in-an-image-get-beta){: new_window} で、Text モデルのメソッドについて調べます。
 
 ### 帰属

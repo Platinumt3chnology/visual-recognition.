@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-04-17"
 
 keywords: Text recognition,Visual Recognition beta Text model,Text model,recognize text
 
@@ -115,7 +115,7 @@ Text 模型是一個專用測試版功能，您必須向 {{site.data.keyword.IBM
 
 您對如何辨識影像中的文字已有基本瞭解。可以進一步進行探索。
 
-- 請閱讀[概觀](/docs/services/visual-recognition?topic=visual-recognition-text-recognition-in-natural-scenes-beta-#text-recognition-in-natural-scenes-beta-)。
+- 請閱讀[概觀](/docs/services/visual-recognition?topic=visual-recognition-recognize-text#recognize-text)。
 - 在 [API 參考資料 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text#recognize-text-in-an-image-get-beta){: new_window} 中探索 Text 模型的方法。
 
 ### 歸屬
