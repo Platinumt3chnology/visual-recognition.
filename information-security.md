@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-04-17"
 
 keywords: GDPR,General Data Protection Regulation,deleting customer data,privacy
 
@@ -74,6 +74,9 @@ You are responsible for creating customer ID values, and ensuring that each is u
 {: important}
 
 ### Deleting labeled data
+
+{{site.data.keyword.Bluemix_dedicated_notm}} plans: To remove processed images that might have been stored within the system to expedite subsequent training of your custom classifiers, create a support ticket for the "right to be forgotten", and request the deletion. See [GDPR Subject Access Request ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/watson?topic=watson-gdpr-sar#request-EU){: new_window}.
+{: note}
 
 To delete all data that is associated with a customer ID, use the **Delete labeled data** method. You pass the string `customer_id={id}` as a query parameter with the request. The following example deletes all data for the customer ID `my_ID`:
 
