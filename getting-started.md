@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-19"
+lastupdated: "2019-04-17"
 
 keywords: classify,classifying,Visual Recognition,getting started,detecting faces,detect faces,food model,general model,sample code
 
@@ -104,6 +104,9 @@ If you prefer to work in a graphical interface, use {{site.data.keyword.DSX}}. [
     ```
     {:pre}
 
+{{site.data.keyword.Bluemix_dedicated_notm}} plans authenticate by using `-u "{username}:{password}"` instead of `-u "apikey:{apikey}"`. Use the username and password values for your instance in the examples in this tutorial.
+{: note}
+{: curl}
 
 ## Step 1: Classify an image
 {: #classify}
@@ -474,6 +477,10 @@ If you prefer to work in a graphical interface, use {{site.data.keyword.DSX}}. [
 {: #detect-faces}
 
 {{site.data.keyword.visualrecognitionshort}} can detect faces in images.
+
+The `Detect faces` methods are not available for {{site.data.keyword.Bluemix_dedicated_notm}}.
+{: note}
+{: curl}
 
 1.  Issue the following call to the `Detect faces in an image` method to analyze an [image of Ginni Rometty ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg){: new_window}. <span class="hide-dashboard">Replace `{apikey}` with the service credentials you copied earlier.</span>
 
