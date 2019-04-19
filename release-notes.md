@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-16"
+lastupdated: "2019-04-19"
 
 keywords: new features,updates to Visual Recognition,what's new with Visual Recognition
 
@@ -92,7 +92,7 @@ The following new features and changes to the service are available.
 
 - **Additional language support**
 
-    - The **Classify** methods now support Chinese (Simplified and Traditional) and Portuguese (Brazilian) in the output of `default` (General) model classes. For the full list of languages, see [Supported languages](/docs/services/visual-recognition?topic=visual-recognition-supported-languages#supported-languages).
+    - The **Classify** methods now support Chinese (Simplified and Traditional) and Portuguese (Brazilian) in the output of `default` (General) model classes. For the full list of languages, see [Supported languages](/docs/services/visual-recognition?topic=visual-recognition-language-support-top#language-support-top).
     - All languages are now also supported in the responses from the **Food** and **Explicit** models.
 
 
@@ -103,7 +103,7 @@ The following new features and changes to the service are available.
 
     You now authenticate with Identity and Access Management (IAM) at a new endpoint:
 
-    - Use a different endpoint URL for new instances. The default endpoint is `https:/gateway.watsonplatform.net/visual-recognition/api/`. To find the URL for your service instance, check the credentials by clicking the instance from the {{site.data.keyword.cloud_notm}} [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?watson){: new_window}.
+    - Use a different endpoint URL for new instances. The default endpoint is `https:/gateway.watsonplatform.net/visual-recognition/api/`. To find the URL for your service instance, check the credentials by clicking the instance from the {{site.data.keyword.cloud_notm}} [Resource list ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/resources){: new_window}.
     - Modify how you authenticate to the API. You provide either an IAM key or access token for your service instance. See [Migrating](/docs/services/visual-recognition?topic=visual-recognition-migrating#migrating) for examples.
 
     For service instances created before May 23, 2018, the authentication process and endpoint have not changed. Authenticate by providing the `api_key` query parameter.
@@ -116,7 +116,7 @@ The following new features and changes to the service are available.
     - You can create and retrain two custom models under the new Lite plan.
     - Lite plans include up to 1,000 events a month. Each image that you send for classification, detection, or training is an event. Downloading a Core ML model doesn't count toward the event limit.
 
-    If your needs exceed the Lite plan, update to a billable account. [Explore  ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/visual-recognition){: new_window} the pricing plans.
+    If your needs exceed the Lite plan, update to a billable account. [Explore  ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/visual-recognition){: new_window} the pricing plans.
 
 - **Information security**:
 
@@ -127,7 +127,7 @@ The following new features and changes to the service are available.
 
 - **Support for retraining a custom model on the Lite plan**
 
-    Under the Lite plan, you no longer have to delete and create another custom model when you want to update or retrain the model. You can now update a custom model as long as you remain under daily and monthly [limits](https://console.bluemix.net/catalog/services/visual-recognition) of the plan.
+    Under the Lite plan, you no longer have to delete and create another custom model when you want to update or retrain the model. You can now update a custom model as long as you remain under daily and monthly [limits](https://{DomainName}/catalog/services/visual-recognition) of the plan.
 
     If you need to have multiple models or multiple versions of the same model, update from the Lite plan to a billable account.
 
@@ -274,7 +274,7 @@ The following new features and changes to the service are available.
 
 - **French language support**
 
-    The **Classify** methods now support French in the output of `default` model classes. For the full list of languages, see [Supported languages](/docs/services/visual-recognition?topic=visual-recognition-supported-languages#supported-languages).
+    The **Classify** methods now support French in the output of `default` model classes. For the full list of languages, see [Supported languages](/docs/services/visual-recognition?topic=visual-recognition-language-support-top#language-support-top).
 
 ### 23 February 2018
 {: #23february2018}
@@ -283,7 +283,7 @@ The following new features and changes to the service are available.
 
     An updated face detection model is available. This beta model uses broader training data sets for increased accuracy of facial detection for age and gender. For more information, see [Increasing the Accuracy of IBM’s Watson {{site.data.keyword.visualrecognitionshort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/watson/2018/02/increasing-accuracy-ibms-watson-visual-recognition-service/){: new_window} and [Mitigating Bias in AI Models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/research/2018/02/mitigating-bias-ai-models/){: new_window}.
 
-    - You can view results of the updated model in the [demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/services/visual-recognition/demo){: new_window} and the beta [Visual Recognition Tool ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-visual-recognition.ng.bluemix.net/){: new_window}.
+    - You can view results of the updated model in the [demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/services/visual-recognition/demo){: new_window}.
     - The beta model is available at `/v3/detect_faces_beta`.
 
     Differences between the beta and general availability (GA) models:
@@ -416,7 +416,7 @@ The following new features and changes to the service are available.
 
 - **New {{site.data.keyword.visualrecognitionshort}} tool is available: Beta**
 
-    A new beta feature, the {{site.data.keyword.visualrecognitionshort}} tool, is available at [https://watson-visual-recognition.ng.bluemix.net/ ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-visual-recognition.ng.bluemix.net/){: new_window}. This tool helps you work more easily with the {{site.data.keyword.visualrecognitionshort}} service. By entering your {{site.data.keyword.cloud_notm}} API key, you can use a GUI to access General Tagging and Face Detection features, as well as to seamlessly create, retrain, and delete custom classifiers associated with your API key, without needing to code.
+    A new beta feature, the {{site.data.keyword.visualrecognitionshort}} tool, is available. This tool helps you work more easily with the {{site.data.keyword.visualrecognitionshort}} service. By entering your {{site.data.keyword.cloud_notm}} API key, you can use a GUI to access General Tagging and Face Detection features, as well as to seamlessly create, retrain, and delete custom classifiers associated with your API key, without needing to code.
 
 ### 8 March 2017
 {: #8march2017}
@@ -461,7 +461,7 @@ The following new features and changes to the service are available.
 
 - **Similarity Search BETA**
 
-    Users can now upload their own collection of images, use an image to search that collection for similar images, and then the service returns the top 100 most similar images. Similarity search can be utilized for any purpose, and users can custom train the service on collections of up to 1 million images each. For more information on using the new similarity search functionality, see the [Tutorial](/docs/services/visual-recognition/tutorial-collections.html), and the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/#collections){: new_window} pages.
+    Users can now upload their own collection of images, use an image to search that collection for similar images, and then the service returns the top 100 most similar images. Similarity search can be utilized for any purpose, and users can custom train the service on collections of up to 1 million images each.
 
 - **Text recognition is now closed beta**
 

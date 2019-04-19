@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-03-22"
+lastupdated: "2019-04-19"
 
 keywords: HA,DR,high availability,disaster recovery
 
@@ -88,7 +88,7 @@ You can download the files and data with the {{site.data.keyword.visualrecogniti
 #### Restore your collection
 {: #ha-dr-recreate-v4}
 
-You can now re-create your collection with the files and data you saved. For more information, see [Custom Object Detection](/docs/services/visual-recognition?topic=visual-recognition-custom-object-detection-beta-#object-detection-sequence) and search for "How to use Custom Object Detection."
+You can now re-create your collection with the files and data you saved. For more information, see [Custom Object Detection](/docs/services/visual-recognition?topic=visual-recognition-object-detection-overview#object-detection-sequence) and search for "How to use Custom Object Detection."
 
 ### Client applications
 {: #ha-dr-update-apps}

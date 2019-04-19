@@ -112,6 +112,7 @@ The Text model is a private beta feature, and you must have permission from {{si
     {: codeblock}
 
 ## Next steps
+{: #tutorial-recognize-text-next-steps}
 
 You have a basic understanding of how to recognize text in an image. Explore further.
 
