@@ -55,7 +55,7 @@ To find your custom models and training images, use the API or {{site.data.keywo
 
 - Models created with {{site.data.keyword.DSX}}:
     1.  Click a {{site.data.keyword.visualrecognitionshort}} service instance in your [resource list ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/resources?groups=resource-instance){: new_window}.
-    1.  Click **Launch tool** on the Manage page. (You might see, **Create a custom model**.)
+    1.  Click **Launch tool** on the Manage page. (You might see **Create a custom model**.)
     1.  Find your models from the **Assets** page of your {{site.data.keyword.visualrecognitionshort}} projects.
     1.  Download the _data assets_ that you used to create the models from the same **Assets** page.
     1.  For your Core ML applications, you can download the Core ML model file from the **Implementation** area of the model.
