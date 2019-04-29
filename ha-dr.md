@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-04-29"
 
 keywords: HA,DR,high availability,disaster recovery
 
@@ -54,7 +54,7 @@ You want to store the images that you use to train your custom models.
 To find your custom models and training images, use the API or {{site.data.keyword.DSX}}:
 
 - Models created with {{site.data.keyword.DSX}}:
-    1.  Click a {{site.data.keyword.visualrecognitionshort}} service instance from the [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/dashboard){: new_window}.
+    1.  Click a {{site.data.keyword.visualrecognitionshort}} service instance from the [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/resources?groups=resource-instance){: new_window}.
     1.  Click **Launch tool** on the Manage page.
     1.  Find your models from the **Assets** page of your {{site.data.keyword.visualrecognitionshort}} projects.
     1.  Download the _data assets_ that you used to create the models from the same **Assets** page.
