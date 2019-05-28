@@ -35,6 +35,7 @@ Visual Recognition
     [API reference](https://cloud.ibm.com/apidocs/visual-recognition)
     language-support.md
     information-security.md
+    at.md
     migrate.md
     /watson/watson-using-sdks
     [Watson GitHub repos](https://github.com/watson-developer-cloud/)
