@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-17"
+lastupdated: "2019-06-04"
 
 keywords: GDPR,General Data Protection Regulation,deleting customer data,privacy
 
@@ -11,7 +11,7 @@ subcollection: visual-recognition
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -40,7 +40,7 @@ If you need to request GDPR support for {{site.data.keyword.cloud}} {{site.data.
 
 IBM is committed to providing our clients and partners with innovative data privacy, security and governance solutions to assist them on their journey to GDPR compliance.
 
-Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and offerings to support your compliance journey [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/gdpr){: new_window}.
+Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and offerings to support your compliance journey [here](http://www.ibm.com/gdpr){: external}.
 
 ## Labeling and deleting data in {{site.data.keyword.visualrecognitionshort}}
 {: #gdpr-visrec}
@@ -75,7 +75,7 @@ You are responsible for creating customer ID values, and ensuring that each is u
 
 ### Deleting labeled data
 
-{{site.data.keyword.Bluemix_dedicated_notm}} plans: To remove processed images that might have been stored within the system to expedite subsequent training of your custom classifiers, create a support ticket for the "right to be forgotten", and request the deletion. See [GDPR Subject Access Request ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/watson?topic=watson-gdpr-sar#request-EU){: new_window}.
+{{site.data.keyword.Bluemix_dedicated_notm}} plans: To remove processed images that might have been stored within the system to expedite subsequent training of your custom classifiers, create a support ticket for the "right to be forgotten", and request the deletion. See [GDPR Subject Access Request](/docs/services/watson?topic=watson-gdpr-sar#request-EU){: external}.
 {: note}
 
 To delete all data that is associated with a customer ID, use the **Delete labeled data** method. You pass the string `customer_id={id}` as a query parameter with the request. The following example deletes all data for the customer ID `my_ID`:
@@ -94,4 +94,4 @@ Delete requests are processed in batches and might take up to 24 hours to comple
 ### Support
 {: #gdpr-visrec-support}
 
-Direct questions to your account representative, or reach out to support directly at [https://ibm.biz/ibmcloudsupport ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/ibmcloudsupport){: new_window}.
+Direct questions to your account representative, or reach out to support directly at [https://ibm.biz/ibmcloudsupport](https://ibm.biz/ibmcloudsupport){: external}.

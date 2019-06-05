@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-17"
+lastupdated: "2019-06-04"
 
 keywords: classify,classifying,Visual Recognition,getting started,detecting faces,detect faces,food model,general model,sample code
 
@@ -11,7 +11,7 @@ subcollection: visual-recognition
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -29,7 +29,9 @@ subcollection: visual-recognition
 {:download: .download}
 {:apikey: data-credential-placeholder='apikey'}
 {:url: data-credential-placeholder='url'}
+{:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:hide-dashboard: .hide-dashboard}
+{:hide-in-docs: .hide-in-docs}
 
 # Getting started tutorial
 {: #getting-started-tutorial}
@@ -37,14 +39,15 @@ subcollection: visual-recognition
 This tutorial guides you through how to use some built-in models in {{site.data.keyword.visualrecognitionfull}} to classify an image and then detect faces in an image.
 {: shortdesc}
 
-If you prefer to work in a graphical interface, use {{site.data.keyword.DSX}}. [Launch the tool ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: new_window} and follow the [video ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/898RN31szg0){: new_window}.
+To work in a graphical interface where you can create your own custom models, use <span class="hide-dashboard">[{{site.data.keyword.DSX}}](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external}</span> <span class="hide-in-docs">[{{site.data.keyword.DSX}}](tooling-url){: external} </span> and follow the [video](https://youtu.be/898RN31szg0){: external}.
+{: tooling-url}
 {: tip}
 
 ## Before you begin
 {: #prerequisites}
 
 - {: hide-dashboard} Create an instance of the service:
-    1.  Go to the [{{site.data.keyword.visualrecognitionshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/visual-recognition){: new_window} page in the catalog.
+    1.  Go to the [{{site.data.keyword.visualrecognitionshort}}](https://{DomainName}/catalog/services/visual-recognition){: external} page in the catalog.
     1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
     1.  Click **Create**.
 - {: hide-dashboard} Copy the credentials to authenticate to your service instance:
@@ -58,8 +61,8 @@ If you prefer to work in a graphical interface, use {{site.data.keyword.DSX}}. [
         ```
         {: pre}
 
-    - If necessary, install a version with SSL enabled from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. Add the location of the file to your PATH environment variables if you want to run `curl` from any command line location.
-- {:go} Install the [Go SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/go-sdk){: new_window}.
+    - If necessary, install a version with SSL enabled from [curl.haxx.se](https://curl.haxx.se/){: external}. Add the location of the file to your PATH environment variables if you want to run `curl` from any command line location.
+- {:go} Install the [Go SDK](https://github.com/watson-developer-cloud/go-sdk){: external}.
 
     ```go
     go get -u github.com/watson-developer-cloud/go-sdk/...
@@ -67,7 +70,7 @@ If you prefer to work in a graphical interface, use {{site.data.keyword.DSX}}. [
     {: go}
     {: pre}
 
-- {: java} Install the [Java SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/java-sdk){: new_window}.
+- {: java} Install the [Java SDK](https://github.com/watson-developer-cloud/java-sdk){: external}.
     - {:java} Maven
 
         ```java
@@ -85,19 +88,19 @@ If you prefer to work in a graphical interface, use {{site.data.keyword.DSX}}. [
         compile 'com.ibm.watson.developer_cloud:java-sdk:{version}'
         ```
         {:pre}
-- {: javascript} Install the [Node SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/node-sdk){: new_window}.
+- {: javascript} Install the [Node SDK](https://github.com/watson-developer-cloud/node-sdk){: external}.
 
     ```bash
     npm install --save watson-developer-cloud
     ```
     {:pre}
-- {: python} Install the [Python SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/python-sdk){: new_window}.
+- {: python} Install the [Python SDK](https://github.com/watson-developer-cloud/python-sdk){: external}.
 
     ```bash
     pip install --upgrade watson-developer-cloud
     ```
     {:pre}
-- {: ruby} Install the [Ruby SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/ruby-sdk){: new_window}.
+- {: ruby} Install the [Ruby SDK](https://github.com/watson-developer-cloud/ruby-sdk){: external}.
 
     ```bash
     gem install ibm_watson
@@ -111,7 +114,7 @@ If you prefer to work in a graphical interface, use {{site.data.keyword.DSX}}. [
 ## Step 1: Classify an image
 {: #classify}
 
-1.  Issue the following call to classify [an image ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg){: new_window}. <span class="hide-dashboard">Replace `{apikey}` with the service credentials you copied earlier.</span>
+1.  Issue the following call to classify [an image](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg){: external}. <span class="hide-dashboard">Replace `{apikey}` with the service credentials you copied earlier.</span>
 
     ```bash
     curl -u "apikey:{apikey}"{: apikey} "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg&version=2018-03-19"
@@ -312,7 +315,7 @@ If you prefer to work in a graphical interface, use {{site.data.keyword.DSX}}. [
 
 {{site.data.keyword.visualrecognitionshort}} also includes a built-in Food model that might be more accurate for your images with food items.
 
-1.  Issue a call to classify an [image of food ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg){: new_window} against the Food model. <span class="hide-dashboard">Replace `{apikey}` with the service credentials you copied earlier.</span>
+1.  Issue a call to classify an [image of food](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg){: external} against the Food model. <span class="hide-dashboard">Replace `{apikey}` with the service credentials you copied earlier.</span>
 
     ```bash
     curl -u "apikey:{apikey}"{: apikey} -F "classifier_ids=food" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg&version=2018-03-19"
@@ -482,7 +485,7 @@ The `Detect faces` methods are not available for {{site.data.keyword.Bluemix_ded
 {: note}
 {: curl}
 
-1.  Issue the following call to the `Detect faces in an image` method to analyze an [image of Ginni Rometty ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg){: new_window}. <span class="hide-dashboard">Replace `{apikey}` with the service credentials you copied earlier.</span>
+1.  Issue the following call to the `Detect faces in an image` method to analyze an [image of Ginni Rometty](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg){: external}. <span class="hide-dashboard">Replace `{apikey}` with the service credentials you copied earlier.</span>
 
     ```bash
     curl -u "apikey:{apikey}"{: apikey} "https://gateway.watsonplatform.net/visual-recognition/api/v3/detect_faces?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg&version=2018-03-19"
@@ -639,16 +642,16 @@ You have a basic understanding of how to use built-in classifiers with {{site.da
 
 - Try these calls with your own images. Just keep the image size under 10 MB.
 - Learn more about how to [build a custom model](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier).
-- {: curl} Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition){: new_window}.
-- {: go} Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition?language=go){: new_window}.
-- {: java} Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition?language=java){: new_window}.
-- {: javascript} Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition?language=node){: new_window}.
-- {: python} Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition?language=python){: new_window}.
-- {: ruby} Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition?language=ruby){: new_window}.
+- {: curl} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition){: external}.
+- {: go} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition?language=go){: external}.
+- {: java} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition?language=java){: external}.
+- {: javascript} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition?language=node){: external}.
+- {: python} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition?language=python){: external}.
+- {: ruby} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition?language=ruby){: external}.
 
 ### Attributions
 {: #attributions}
 
-- [IBM VGA 90X8941 on PS55.jpg ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://commons.wikimedia.org/wiki/File:IBM_VGA_90X8941_on_PS55.jpg){: new_window} by [Darklanlan ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://commons.wikimedia.org/wiki/User:Darklanlan){: new_window} used under [CC BY 4.0 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://creativecommons.org/licenses/by/4.0/legalcode "Creative Commons Attribution 4.0"){: new_window}. No changes were made to this image.
-- [Fruit basket ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://flic.kr/p/JPHES){: new_window} by Flikr user [Ryan Edwards-Crewe ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.flickr.com/photos/ryanec/){: new_window} used under [Creative Commons Attribution 2.0 license ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://creativecommons.org/licenses/by/2.0/deed.en){: new_window}. No changes were made to this image.
-- [Ginni Rometty at the Fortune MPW Summit in 2011 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://commons.wikimedia.org/wiki/File:Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg){: new_window} by Asa Mathat / Fortune Live Media used under [CC BY 2.0 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://creativecommons.org/licenses/by/2.0/legalcode){: new_window}. No changes were made to this image.
+- [IBM VGA 90X8941 on PS55.jpg](https://commons.wikimedia.org/wiki/File:IBM_VGA_90X8941_on_PS55.jpg){: external} by [Darklanlan](https://commons.wikimedia.org/wiki/User:Darklanlan){: external} used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode "Creative Commons Attribution 4.0"){: external}. No changes were made to this image.
+- [Fruit basket](https://flic.kr/p/JPHES){: external} by Flikr user [Ryan Edwards-Crewe](https://www.flickr.com/photos/ryanec/){: external} used under [Creative Commons Attribution 2.0 license](http://creativecommons.org/licenses/by/2.0/deed.en){: external}. No changes were made to this image.
+- [Ginni Rometty at the Fortune MPW Summit in 2011](https://commons.wikimedia.org/wiki/File:Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg){: external} by Asa Mathat / Fortune Live Media used under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/legalcode){: external}. No changes were made to this image.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-17"
+lastupdated: "2019-06-04"
 
 keywords: custom model,custom classifier,samples,training a custom model
 
@@ -11,7 +11,7 @@ subcollection: visual-recognition
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -271,10 +271,10 @@ curl -X DELETE -u "apikey:{apikey}" \
 
 Now that you have a basic understanding of how to use custom models, you can dive deeper:
 
-- Learn more about [Best practices for custom classifiers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2016/10/watson-visual-recognition-training-best-practices/){: new_window}.
-- Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition){: new_window}.
+- Learn more about [Best practices for custom classifiers](https://www.ibm.com/cloud/blog/watson-visual-recognition-training-best-practices){: external}.
+- Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition){: external}.
 
 ### Attributions
 {: #tutorial-custom-classifier-attributions}
 
-All images used on this page are from Flikr and used under [Creative Commons Attribution 2.0 license ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://creativecommons.org/licenses/by/2.0/deed.en){: new_window}. No changes were made to these images.
+All images used on this page are from Flikr and used under [Creative Commons Attribution 2.0 license](http://creativecommons.org/licenses/by/2.0/deed.en){: external}. No changes were made to these images.

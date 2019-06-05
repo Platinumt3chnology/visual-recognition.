@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-06-04"
 
 keywords: HA,DR,high availability,disaster recovery
 
@@ -11,7 +11,7 @@ subcollection: visual-recognition
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -27,7 +27,7 @@ subcollection: visual-recognition
 {{site.data.keyword.visualrecognitionfull}} supports high availability with no single point of failure. However, recovering from potential disasters that affect an entire location requires planning and preparation.
 {: shortdesc}
 
-You are responsible for understanding your configuration, customization, and usage of the service. You are also responsible for being ready to re-create an instance of the service in a new location and to restore your data in any location. See [How do I ensure zero downtime? ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/overview?topic=overview-zero-downtime#zero-downtime){: new_window} for more information.
+You are responsible for understanding your configuration, customization, and usage of the service. You are also responsible for being ready to re-create an instance of the service in a new location and to restore your data in any location. See [How do I ensure zero downtime?](/docs/overview?topic=overview-zero-downtime#zero-downtime){: external} for more information.
 
 ## High availability
 {: #ha-dr-availability}
@@ -54,14 +54,14 @@ You want to store the images that you use to train your custom models.
 To find your custom models and training images, use the API or {{site.data.keyword.DSX}}:
 
 - Models created with {{site.data.keyword.DSX}}:
-    1.  Click a {{site.data.keyword.visualrecognitionshort}} service instance in your [resource list ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/resources?groups=resource-instance){: new_window}.
-    1.  Click **Launch tool** on the Manage page. (You might see **Create a custom model**.)
+    1.  Click a {{site.data.keyword.visualrecognitionshort}} service instance in your [resource list](https://{DomainName}/resources?groups=resource-instance){: external}.
+    1.  Click **Launch tool** on the Manage page. (You might see, **Create a custom model**.)
     1.  Find your models from the **Assets** page of your {{site.data.keyword.visualrecognitionshort}} projects.
     1.  Download the _data assets_ that you used to create the models from the same **Assets** page.
     1.  For your Core ML applications, you can download the Core ML model file from the **Implementation** area of the model.
 - Classifiers created with the API:
     - If you created the classifier with the API, there is no method to download the training images. Make sure that you store a backup of those images.
-    - For your Core ML applications, you can download the Core ML model file by using the [**Retrieve a Core ML model of a classifier** ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition#retrieve-a-core-ml-model-of-a-classifier){: new_window} API method.
+    - For your Core ML applications, you can download the Core ML model file by using the [**Retrieve a Core ML model of a classifier**](https://{DomainName}/apidocs/visual-recognition#retrieve-a-core-ml-model-of-a-classifier){: external} API method.
 
 Save these files in a safe location.
 
@@ -80,10 +80,10 @@ You want to store the images and the training data that you use to train a colle
 
 You can download the files and data with the {{site.data.keyword.visualrecognitionshort}} v4 API:
 
-- Collections. Use the [**List collections** ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition-v4#list-collections){: new_window} method to get each `collection_id`.
-- Image metadata. Use [**List images** ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition-v4#list-images){: new_window} to get the `image_id` for each image in each collection.
-- Image files in .jpeg format. Use [**Get a JPEG file of an image** ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition-v4#get-a-jpeg-file-of-an-image){: new_window} to download each image in each collection. Only the images with training data form your training set and are used to train a collection.
-- Image training data. Use [**Get image details** ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition-v4#get-image-details){: new_window} for the training data of each `image_id` in each collection.
+- Collections. Use the [**List collections**](https://{DomainName}/apidocs/visual-recognition-v4#list-collections){: external} method to get each `collection_id`.
+- Image metadata. Use [**List images**](https://{DomainName}/apidocs/visual-recognition-v4#list-images){: external} to get the `image_id` for each image in each collection.
+- Image files in .jpeg format. Use [**Get a JPEG file of an image**](https://{DomainName}/apidocs/visual-recognition-v4#get-a-jpeg-file-of-an-image){: external} to download each image in each collection. Only the images with training data form your training set and are used to train a collection.
+- Image training data. Use [**Get image details**](https://{DomainName}/apidocs/visual-recognition-v4#get-image-details){: external} for the training data of each `image_id` in each collection.
 
 #### Restore your collection
 {: #ha-dr-recreate-v4}

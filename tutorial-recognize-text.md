@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-17"
+lastupdated: "2019-06-04"
 
 keywords: Text recognition,Visual Recognition beta Text model,Text model,recognize text
 
@@ -11,7 +11,7 @@ subcollection: visual-recognition
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:pre: .pre}
@@ -26,13 +26,13 @@ subcollection: visual-recognition
 This tutorial guides you through how to make your first call with the {{site.data.keyword.visualrecognitionshort}} beta Text model to detect and recognize English text in an image.
 {: shortdesc}
 
-The Text model is a private beta feature, and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. [Request access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://datasciencex.typeform.com/to/nU6efl){: new_window}. For more information about beta features, see [Release notes](/docs/services/visual-recognition?topic=visual-recognition-release-notes#beta).
+The Text model is a private beta feature, and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. [Request access](https://datasciencex.typeform.com/to/nU6efl){: external}. For more information about beta features, see [Release notes](/docs/services/visual-recognition?topic=visual-recognition-release-notes#beta).
 {: important}
 
 ## Before you begin
 {: #tutorial-recognize-text-prerequisites}
 
-1.  Go to the [{{site.data.keyword.visualrecognitionshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/visual-recognition){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
+1.  Go to the [{{site.data.keyword.visualrecognitionshort}}](https://{DomainName}/catalog/services/visual-recognition){: external} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
     1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
     1.  Click **Create**.
 - Copy the credentials to authenticate to your service instance:
@@ -42,7 +42,7 @@ The Text model is a private beta feature, and you must have permission from {{si
 ## Step 1: Recognize text in an image
 {: #tutorial-recognize-text-recognize-text}
 
-1.  Issue the following call to recognize text in [an image ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/lookButDontTouch.jpg){: new_window}. Replace `{your_api_key}` with the API key value that you copied earlier.
+1.  Issue the following call to recognize text in [an image](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/lookButDontTouch.jpg){: external}. Replace `{your_api_key}` with the API key value that you copied earlier.
 
     ```bash
     curl -u "apikey:{your_api_key}"{: apikey} \
@@ -117,9 +117,9 @@ The Text model is a private beta feature, and you must have permission from {{si
 You have a basic understanding of how to recognize text in an image. Explore further.
 
 - Read the [overview](/docs/services/visual-recognition?topic=visual-recognition-recognize-text#recognize-text).
-- Explore the Text model methods in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text#recognize-text-in-an-image-get-beta){: new_window}.
+- Explore the Text model methods in the [API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text#recognize-text-in-an-image-get-beta){: external}.
 
 ### Attributions
 {: #tutorial-recognize-text-attributions}
 
-- [lookButDontTouch ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://unsplash.com/photos/WrvDSkS2yu4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){: new_window} by [Lubo Minar ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://unsplash.com/@bubo){: new_window} on [Unsplash ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){: new_window}.  No changes were made to this image.
+- [lookButDontTouch](https://unsplash.com/photos/WrvDSkS2yu4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){: external} by [Lubo Minar](https://unsplash.com/@bubo){: external} on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){: external}.  No changes were made to this image.

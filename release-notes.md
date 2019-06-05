@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-06-04"
 
 keywords: new features,updates to Visual Recognition,what's new with Visual Recognition
 
@@ -11,7 +11,7 @@ subcollection: visual-recognition
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -38,7 +38,7 @@ The current version is `2018-03-19`.
 ## Beta features
 {: #beta}
 
-{{site.data.keyword.IBM_notm}} releases services, features, and language support for your evaluation that are classified as beta. These features might be unstable, might change frequently, and might be discontinued with short notice. Beta features also might not provide the same level of performance or compatibility that generally available features provide and are not intended for use in a production environment. Beta features are supported only on [IBM Developer Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/visual-recognition.html){: new_window}.
+{{site.data.keyword.IBM_notm}} releases services, features, and language support for your evaluation that are classified as beta. These features might be unstable, might change frequently, and might be discontinued with short notice. Beta features also might not provide the same level of performance or compatibility that generally available features provide and are not intended for use in a production environment. Beta features are supported only on [IBM Developer Answers](https://developer.ibm.com/answers/topics/visual-recognition.html){: external}.
 
 ## Changes
 {: #changelog}
@@ -59,7 +59,7 @@ The following new features and changes to the service are available.
 {: #15january2019}
 
 - **Translation for gender in Detect Faces**
-    - The **Detect Faces** methods now return translated labels for "Male" and "Female" when you provide the language in the **Accept-Language** request header. For details see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition#detect-faces-in-images){: new_window}.
+    - The **Detect Faces** methods now return translated labels for "Male" and "Female" when you provide the language in the **Accept-Language** request header. For details see the [API reference](https://{DomainName}/apidocs/visual-recognition#detect-faces-in-images){: external}.
 
 ### 1 October 2018
 {: #01october2018}
@@ -68,7 +68,7 @@ The following new features and changes to the service are available.
 
     - As previously notified, all {{site.data.keyword.visualrecognitionshort}} instances created before May 23, 2018 are no longer active. Data from the instances is now deleted. See [Migrating](/docs/services/visual-recognition?topic=visual-recognition-migrating#migrating) for details about how to move to a new service instance.
     - Service instances created after this date are not affected.
-    - If you have any questions, contact [IBM support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/ibmcloudsupport){: new_window}.
+    - If you have any questions, contact [IBM support](https://ibm.biz/ibmcloudsupport){: external}.
 
 ### 1 August 2018
 {: #01august2018}
@@ -79,13 +79,13 @@ The following new features and changes to the service are available.
 
     No code change are required. Both models are free under the Lite plan and cost $0.002 per image under the Standard plan.
 
-    For more information, see [Updates to Watson Visual Recognition ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/visrec-price-reduction){: new_window} in the <em>Watson blog</em>.
+    For more information, see [Updates to Watson Visual Recognition](https://ibm.biz/visrec-price-reduction){: external} in the <em>Watson blog</em>.
 
 ### 1 July 2018
 {: #01july2018}
 
 - **New pricing for custom models**
-    - Starting July 1, 2018, classifying an image with a custom model costs half the earlier rate and is now $0.002 per image. For details and other important information, see [Updates to Watson Visual Recognition \- Price reduction for Custom Classification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/visrec-price-reduction){: new_window} in the <em>Watson blog</em>.
+    - Starting July 1, 2018, classifying an image with a custom model costs half the earlier rate and is now $0.002 per image. For details and other important information, see [Updates to Watson Visual Recognition \- Price reduction for Custom Classification](https://ibm.biz/visrec-price-reduction){: external} in the <em>Watson blog</em>.
 
 ### 21 June 2018
 {: #21june2018}
@@ -103,7 +103,7 @@ The following new features and changes to the service are available.
 
     You now authenticate with Identity and Access Management (IAM) at a new endpoint:
 
-    - Use a different endpoint URL for new instances. The default endpoint is `https:/gateway.watsonplatform.net/visual-recognition/api/`. To find the URL for your service instance, check the credentials by clicking the instance from the {{site.data.keyword.cloud_notm}} [Resource list ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/resources){: new_window}.
+    - Use a different endpoint URL for new instances. The default endpoint is `https:/gateway.watsonplatform.net/visual-recognition/api/`. To find the URL for your service instance, check the credentials by clicking the instance from the {{site.data.keyword.cloud_notm}} [Resource list](https://{DomainName}/resources){: external}.
     - Modify how you authenticate to the API. You provide either an IAM key or access token for your service instance. See [Migrating](/docs/services/visual-recognition?topic=visual-recognition-migrating#migrating) for examples.
 
     For service instances created before May 23, 2018, the authentication process and endpoint have not changed. Authenticate by providing the `api_key` query parameter.
@@ -116,7 +116,7 @@ The following new features and changes to the service are available.
     - You can create and retrain two custom models under the new Lite plan.
     - Lite plans include up to 1,000 events a month. Each image that you send for classification, detection, or training is an event. Downloading a Core ML model doesn't count toward the event limit.
 
-    If your needs exceed the Lite plan, update to a billable account. [Explore  ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/visual-recognition){: new_window} the pricing plans.
+    If your needs exceed the Lite plan, update to a billable account. [Explore](https://{DomainName}/catalog/services/visual-recognition){: external} the pricing plans.
 
 - **Information security**:
 
@@ -148,7 +148,7 @@ The following new features and changes to the service are available.
 
     The **Classify images** and **Detect faces in images** methods support new form-data parameters. Classify images supports separate `url`, `classifier_ids`, `threshold`, and `owners` parameters, and Detect faces supports `url`.
 
-    In the past, you encoded the values in a JSON string and passed the **parameters** form-data parameter. You can use the new method of passing these values in separate form-data parameters for all application development. For details, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition){: new_window}.
+    In the past, you encoded the values in a JSON string and passed the **parameters** form-data parameter. You can use the new method of passing these values in separate form-data parameters for all application development. For details, see the [API reference](https://{DomainName}/apidocs/visual-recognition){: external}.
 
 ### 2 April 2018
 {: #2april2018}
@@ -166,7 +166,7 @@ The following new features and changes to the service are available.
         - The enhanced model supports larger file sizes: up to 10 MB for image files and up to 100 MB for .zip files.
         - The enhanced model does not include `FaceIdentity` information in the response. The identity information refers to the `name` of the person, `score`, and `type_hierarchy` knowledge graph.
 
-    For details about the API, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition/#detect-faces-in-images){: new_window}.
+    For details about the API, see the [API reference](https://{DomainName}/apidocs/visual-recognition/#detect-faces-in-images){: external}.
 
     - Known issues
 
@@ -193,9 +193,9 @@ The following new features and changes to the service are available.
 
     **Start developing**: To get started developing with {{site.data.keyword.visualrecognitionshort}} and Core ML, check out these projects on GitHub:
 
-    - Classify images locally: [{{site.data.keyword.visualrecognitionshort}} with Core ML ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/visual-recognition-coreml){: new_window}.
-    - Integrate {{site.data.keyword.discoveryfull}} with the results: [{{site.data.keyword.visualrecognitionshort}} and Discovery with Core ML ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/visual-recognition-with-discovery-coreml){: new_window}.
-    - Explore the SDK: [Swift SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/swift-sdk){: new_window}.
+    - Classify images locally: [{{site.data.keyword.visualrecognitionshort}} with Core ML](https://github.com/watson-developer-cloud/visual-recognition-coreml){: external}.
+    - Integrate {{site.data.keyword.discoveryfull}} with the results: [{{site.data.keyword.visualrecognitionshort}} and Discovery with Core ML](https://github.com/watson-developer-cloud/visual-recognition-with-discovery-coreml){: external}.
+    - Explore the SDK: [Swift SDK](https://github.com/watson-developer-cloud/swift-sdk){: external}.
 
 - **Changes to the API**
 
@@ -205,17 +205,17 @@ The following new features and changes to the service are available.
     - A new `GET /v3/classifiers/{classifier_id}/core_ml_model` method to download a Core ML model as an .mlmodel file.  You can download Core ML model files for custom models created after March 19.
     - A new `updated` field with the latest training date of the model. The `updated` field matches either the `retrained` field or the `created` field.
 
-    For details about the API changes for Core ML, see the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition#retrieve-a-core-ml-model-of-a-classifier){: new_window}.
+    For details about the API changes for Core ML, see the [API reference](https://{DomainName}/apidocs/visual-recognition#retrieve-a-core-ml-model-of-a-classifier){: external}.
 
 - **New tool available: Watson Studio**
 
-    [Watson Studio ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: new_window} is the new integrated environment that includes a replacement for the beta {{site.data.keyword.visualrecognitionshort}} tool. Watson Studio supports not only {{site.data.keyword.visualrecognitionshort}} but also many other {{site.data.keyword.cloud_notm}} services and resources. You can use Watson Studio with all your existing {{site.data.keyword.visualrecognitionshort}} instances and classifiers.
+    [Watson Studio](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external} is the new integrated environment that includes a replacement for the beta {{site.data.keyword.visualrecognitionshort}} tool. Watson Studio supports not only {{site.data.keyword.visualrecognitionshort}} but also many other {{site.data.keyword.cloud_notm}} services and resources. You can use Watson Studio with all your existing {{site.data.keyword.visualrecognitionshort}} instances and classifiers.
 
      Watson Studio provides a collaborative environment in the cloud. With Watson Studio, developers, subject matter experts, data scientists, and others can build and train {{site.data.keyword.visualrecognitionshort}} and other AI models. You can also use Watson Studio to access the built-in General and Face models.
 
      Watson studio also supports Core ML. You can download a Core ML model file for your custom model.
 
-    [Get started ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: new_window} with Watson Studio.
+    [Get started](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external} with Watson Studio.
 
 - **Updated deep learning architecture for custom models**
 
@@ -281,9 +281,9 @@ The following new features and changes to the service are available.
 
 - **Enhanced Face model available in beta**
 
-    An updated face detection model is available. This beta model uses broader training data sets for increased accuracy of facial detection for age and gender. For more information, see [Increasing the Accuracy of IBM’s Watson {{site.data.keyword.visualrecognitionshort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/watson/2018/02/increasing-accuracy-ibms-watson-visual-recognition-service/){: new_window} and [Mitigating Bias in AI Models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/research/2018/02/mitigating-bias-ai-models/){: new_window}.
+    An updated face detection model is available. This beta model uses broader training data sets for increased accuracy of facial detection for age and gender. For more information, see [Increasing the Accuracy of IBM’s Watson {{site.data.keyword.visualrecognitionshort}} service](https://www.ibm.com/blogs/watson/2018/02/increasing-accuracy-ibms-watson-visual-recognition-service/){: external} and [Mitigating Bias in AI Models](https://www.ibm.com/blogs/research/2018/02/mitigating-bias-ai-models/){: external}.
 
-    - You can view results of the updated model in the [demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/services/visual-recognition/demo){: new_window}.
+    - You can view results of the updated model in the [demo](https://www.ibm.com/watson/services/visual-recognition/demo){: external}.
     - The beta model is available at `/v3/detect_faces_beta`.
 
     Differences between the beta and general availability (GA) models:
@@ -291,7 +291,7 @@ The following new features and changes to the service are available.
     - The beta model supports larger file sizes: up to 10 MB for image files and up to 100 MB for .zip files. This enhancement is expected to be applied to the GA model.
     - Beta face detection does not include `FaceIdentity` information in the response.
     - The beta model's POST request requires a non-empty filename. The GA Face model does not enforce this constraint.
-    - The beta model's POST request supports a separate form parameter called `url`. The GA model encloses that information in the `parameters` JSON object. For details, see the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition/#detect-faces-in-images){: new_window}.
+    - The beta model's POST request supports a separate form parameter called `url`. The GA model encloses that information in the `parameters` JSON object. For details, see the [API explorer](https://{DomainName}/apidocs/visual-recognition/#detect-faces-in-images){: external}.
 
 - **Face identity deprecated**
 
@@ -375,7 +375,7 @@ The following new features and changes to the service are available.
       <p>
         The Explicit model, which launches in beta, classifies whether an image contains pornographic content and is inappropriate for general use. You can include the Explicit model with other models for combined analysis. For example, include both the `default` and `explicit` classifier IDs in your request to return image tags and whether the image contains explicit content.
       <p>
-        For details about the API call, see the **Classify images** method in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition/#classify-images).
+        For details about the API call, see the **Classify images** method in the [API reference](https://{DomainName}/apidocs/visual-recognition/#classify-images).
       </p>
     </li>
     <li>
@@ -386,7 +386,7 @@ The following new features and changes to the service are available.
     <li>
       <strong>Array required when passing classifier IDs</strong>
       <p>
-        The API now enforces an array when you pass in `classifier_ids` as part of the **parameters** object in the **Classify images** method. Previously, you could pass a classifier ID as a string. For more information, see the parameters description and example file in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition/#classify-images).
+        The API now enforces an array when you pass in `classifier_ids` as part of the **parameters** object in the **Classify images** method. Previously, you could pass a classifier ID as a string. For more information, see the parameters description and example file in the [API reference](https://{DomainName}/apidocs/visual-recognition/#classify-images).
       </p>
     </li>
 </ul>
@@ -394,15 +394,15 @@ The following new features and changes to the service are available.
 ### 8 September 2017
 {: #8september2017}
 
-- **Beta Similarity Search and collections closed**: As of September 8, 2017, the beta period for Similarity Search is closed. For more information, see [Visual Recognition API – Similarity Search Update ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/08/visual-recognition-api-similarity-search-update/){: new_window}.
+- **Beta Similarity Search and collections closed**: As of September 8, 2017, the beta period for Similarity Search is closed. For more information, see [Visual Recognition API – Similarity Search Update](http://ibm.biz/BdzquM){: external}.
 
 ### 30 June 2017
 {: #30june2017}
 
-- **Improved tagging**: We increased the number of training images for the default classifier. That increase improve the ability to recognize accurately the overall ‘scene’ of an image. For details, see [Further Enhancements for General Tagging Feature ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/07/watson-visual-recognition-sees-enhancements-general-tagging-feature/){: new_window}
+- **Improved tagging**: We increased the number of training images for the default classifier. That increase improve the ability to recognize accurately the overall ‘scene’ of an image. For details, see [Further Enhancements for General Tagging Feature](https://ibm.biz/BdzquS){: external}
 - **Additional languages**: The **Classify images** method now supports Korean, Italian, and German in addition to English, Arabic, Spanish, and Japanese.
 
-    For details about the API call, see the **Classify an image** method in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition/#classify-images){: new_window}.
+    For details about the API call, see the **Classify an image** method in the [API reference](https://{DomainName}/apidocs/visual-recognition/#classify-images){: external}.
 
 ### 16 May 2017
 {: #16may2017}
@@ -440,7 +440,7 @@ The following new features and changes to the service are available.
 - **Known issues**
 
     - Images submitted to the demo with EXIF metadata tags do not specify orientation (landscape versus portrait) correctly to the service. iPhone uploaded images may contain EXIF metadata tags. The workaround for this is to update your image metadata to not rely on EXIF metadata tags to specify the orientation of your image. Often, you can do this just by opening the image on your computer and saving it. For example, on a Mac, opening in Preview and then saving the image sets the correct orientation tags.
-    - Sending images to the {{site.data.keyword.visualrecognitionshort}} service with [EXIF tag ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/Exif){: new_window} values of 8, 3 or 6 can add latency. The service rotates the pixels of the image to the encoded viewpoint. You can save time by pre-rotating your images, or by removing the EXIF headers if they are not important to your {{site.data.keyword.visualrecognitionshort}} task.
+    - Sending images to the {{site.data.keyword.visualrecognitionshort}} service with [EXIF tag](https://en.wikipedia.org/wiki/Exif){: external} values of 8, 3 or 6 can add latency. The service rotates the pixels of the image to the encoded viewpoint. You can save time by pre-rotating your images, or by removing the EXIF headers if they are not important to your {{site.data.keyword.visualrecognitionshort}} task.
 
 ### 1 December 2016
 {: #1december2016}
