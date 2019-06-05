@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-06-04"
 
 keywords: migrating Visual Recognition,migrating
 
@@ -11,7 +11,7 @@ subcollection: visual-recognition
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,7 +34,7 @@ To migrate your current models (classifiers), provision a new instance of the {{
 {: deprecated}
 
 1.  Create another instance of the {{site.data.keyword.visualrecognitionshort}} service:
-    1.  Go to the [{{site.data.keyword.visualrecognitionshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/visual-recognition){: new_window} page in the catalog.
+    1.  Go to the [{{site.data.keyword.visualrecognitionshort}}](https://{DomainName}/catalog/services/visual-recognition){: external} page in the catalog.
     1.  Select a plan and click **Create**.
 1.  Copy the new credentials to authenticate to your service instance:
     1.  On the **Manage** page, click **Show Credentials**.

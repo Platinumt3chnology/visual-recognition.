@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-16"
+lastupdated: "2019-06-04"
 
 keywords: Text recognition,Visual Recognition beta Text model,Text model,recognize text
 
@@ -11,7 +11,7 @@ subcollection: visual-recognition
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,7 +25,7 @@ subcollection: visual-recognition
 
 Use the {{site.data.keyword.visualrecognitionshort}} beta Text model to detect and recognize English text in images. The Text model is designed to recognize scene text in images rather than the denser text in documents.
 
-The Text model is a private beta feature, and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. [Request access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://datasciencex.typeform.com/to/nU6efl){: new_window}. For more information about beta features, see [Release notes](/docs/services/visual-recognition?topic=visual-recognition-release-notes#beta).
+The Text model is a private beta feature, and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. [Request access](https://datasciencex.typeform.com/to/nU6efl){: external}. For more information about beta features, see [Release notes](/docs/services/visual-recognition?topic=visual-recognition-release-notes#beta).
 {: important}
 
 The Text model works best on short text strings. For example, a common use of the Text model is to read signs.
@@ -57,4 +57,4 @@ Text in images is better recognized when it adheres to these guidelines:
 {: #recognize-text-next-steps}
 
 - [Make a call](/docs/services/visual-recognition?topic=visual-recognition-tutorial-recognize-text#tutorial-recognize-text) to recognize text in an image.
-- Get familiar with the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text){: new_window}.
+- Get familiar with the API in the [API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3-text){: external}.

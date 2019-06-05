@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-06-04"
 
 keywords: Visual Recognition service,Face model,Food model,Explicit,Text recognition,Visual Recognition use cases
 
@@ -11,7 +11,7 @@ subcollection: visual-recognition
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -42,7 +42,7 @@ A set of built-in models provides highly accurate results without training:
 - [**Face** model](/docs/services/visual-recognition?topic=visual-recognition-getting-started-tutorial#detect-faces): Facial analysis with age and gender.
 - **Explicit** model: Whether an image is inappropriate for general use.
 - **Food** model: Specifically for images of food items.
-- **Text** model (Private beta): Text extraction from natural scene images. [Request access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://datasciencex.typeform.com/to/nU6efl){: new_window}.
+- **Text** model (Private beta): Text extraction from natural scene images. [Request access](https://datasciencex.typeform.com/to/nU6efl){: external}.
 
 You can also train [custom models](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier) to create specialized classes.
 

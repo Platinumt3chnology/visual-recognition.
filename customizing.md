@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-06-04"
 
 keywords: training classifiers,example data,hierarchy,updating classifiers,retraining classifiers
 
@@ -11,7 +11,7 @@ subcollection: visual-recognition
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:pre: .pre}
 {:codeblock: .codeblock}
@@ -127,7 +127,7 @@ The following guidelines are not enforced by the API. However, the service tends
     - For example, if you are training the "tiger" classifier, your classifier might be less accurate if you train only on images of tigers in a zoo that are taken by a mobile phone but analyze images that taken in the wild taken by professional photographers.
 - Make sure that the subject matter of the classifier is at least 1/3 of the image's overall size.
 
-For more information about training, see [Best practices for custom classifiers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2016/10/watson-visual-recognition-training-best-practices/){: new_window}.
+For more information about training, see [Best practices for custom classifiers](https://www.ibm.com/cloud/blog/watson-visual-recognition-training-best-practices){: external}.
 
 ## Guidelines for high volume classifying
 {: #customizing-guidelines-classifying}
@@ -150,8 +150,8 @@ The `/classify` method produces a score between 0.0 and 1.0 for each image for e
 ### Background reading
 {: #customizing-reading}
 
-- The service performs [statistical classification. ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/Statistical_classification){: new_window}
-- You can [measure statistical classifiers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/Category:Information_retrieval_evaluation){: new_window} in several ways.
+- The service performs [statistical classification.](https://en.wikipedia.org/wiki/Statistical_classification){: external}
+- You can [measure statistical classifiers](https://en.wikipedia.org/wiki/Category:Information_retrieval_evaluation){: external} in several ways.
 
 ### How to use the scores
 {: #customizing-scores-how-to}
