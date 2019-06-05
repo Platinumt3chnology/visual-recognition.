@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-05"
 
 keywords: new features,updates to Visual Recognition,what's new with Visual Recognition
 
@@ -127,7 +127,7 @@ The following new features and changes to the service are available.
 
 - **Support for retraining a custom model on the Lite plan**
 
-    Under the Lite plan, you no longer have to delete and create another custom model when you want to update or retrain the model. You can now update a custom model as long as you remain under daily and monthly [limits](https://{DomainName}/catalog/services/visual-recognition) of the plan.
+    Under the Lite plan, you no longer have to delete and create another custom model when you want to update or retrain the model. You can now update a custom model as long as you remain under daily and monthly [limits](https://{DomainName}/catalog/services/visual-recognition){: external} of the plan.
 
     If you need to have multiple models or multiple versions of the same model, update from the Lite plan to a billable account.
 
@@ -375,7 +375,7 @@ The following new features and changes to the service are available.
       <p>
         The Explicit model, which launches in beta, classifies whether an image contains pornographic content and is inappropriate for general use. You can include the Explicit model with other models for combined analysis. For example, include both the `default` and `explicit` classifier IDs in your request to return image tags and whether the image contains explicit content.
       <p>
-        For details about the API call, see the **Classify images** method in the [API reference](https://{DomainName}/apidocs/visual-recognition/#classify-images).
+        For details about the API call, see the **Classify images** method in the [API reference](https://{DomainName}/apidocs/visual-recognition/#classify-images){: external}.
       </p>
     </li>
     <li>
@@ -386,7 +386,7 @@ The following new features and changes to the service are available.
     <li>
       <strong>Array required when passing classifier IDs</strong>
       <p>
-        The API now enforces an array when you pass in `classifier_ids` as part of the **parameters** object in the **Classify images** method. Previously, you could pass a classifier ID as a string. For more information, see the parameters description and example file in the [API reference](https://{DomainName}/apidocs/visual-recognition/#classify-images).
+        The API now enforces an array when you pass in `classifier_ids` as part of the **parameters** object in the **Classify images** method. Previously, you could pass a classifier ID as a string. For more information, see the parameters description and example file in the [API reference](https://{DomainName}/apidocs/visual-recognition/#classify-images){: external}.
       </p>
     </li>
 </ul>
@@ -394,7 +394,7 @@ The following new features and changes to the service are available.
 ### 8 September 2017
 {: #8september2017}
 
-- **Beta Similarity Search and collections closed**: As of September 8, 2017, the beta period for Similarity Search is closed. For more information, see [Visual Recognition API – Similarity Search Update](http://ibm.biz/BdzquM){: external}.
+- **Beta Similarity Search and collections closed**: As of September 8, 2017, the beta period for Similarity Search is closed. For more information, see [Visual Recognition API – Similarity Search Update](https://ibm.biz/BdzquM){: external}.
 
 ### 30 June 2017
 {: #30june2017}
@@ -471,7 +471,7 @@ The following new features and changes to the service are available.
 
 - **Introductory pricing ending**
 
-    Custom classifier training and retraining, custom image classification, and custom classifier storage is no longer free. For information on the pricing, see the {{site.data.keyword.visualrecognitionshort}} service [pricing page](https://www.ibm.com/watson/services/visual-recognition/pricing/index.html#pricing).
+    Custom classifier training and retraining, custom image classification, and custom classifier storage is no longer free. For information on the pricing, see the {{site.data.keyword.visualrecognitionshort}} service [pricing page](https://www.ibm.com/watson/services/visual-recognition/pricing/index.html#pricing){: external}.
 
 ### 5 July 2016
 {: #5july2016}
