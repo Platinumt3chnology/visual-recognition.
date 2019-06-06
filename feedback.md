@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-06"
 
 keywords: feedback,feedback button,comments Visual Recognition
 
@@ -27,6 +27,14 @@ subcollection: visual-recognition
 We value your opinion and want to hear it.
 {: shortdesc}
 
-- Add your ideas or suggest new features for {{site.data.keyword.visualrecognitionfull}} in the [IBM Watson Ideas Portal](https://ibm-watson.ideas.aha.io/?project=VISION){: external}.
+## Share your ideas
+{: #feedback-ideas-portal}
 
-- Provide feedback about the docs through the **FEEDBACK** button that's displayed along the edge of any page you're reading. The button is not available when you access the documentation site from mobile devices.
+Add your ideas or suggest new features for {{site.data.keyword.visualrecognitionfull}} in the {{site.data.keyword.IBM_notm}} Data & AI [ideas portal](https://ibm-data-and-ai.ideas.aha.io/?project=VISION){: external}.
+
+## Rate and comment on the docs
+{: #feedback-doc}
+
+Provide feedback about the docs through the **FEEDBACK** button that's displayed along the edge of any page you're reading. The button is not available when you access the documentation site from mobile devices.
+
+Rate and comment about the topic by clicking **Yes** or **No** at the bottom of the topic.
