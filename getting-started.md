@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-09"
 
 keywords: classify,classifying,Visual Recognition,getting started,detecting faces,detect faces,food model,general model,sample code
 
@@ -71,21 +71,21 @@ To work in a graphical interface where you can create your own custom models, us
     {: pre}
 
 - {: java} Install the [Java SDK](https://github.com/watson-developer-cloud/java-sdk){: external}.
-    - {:java} Maven
+    - {: java} Maven
 
         ```java
         <dependency>
-          <groupId>com.ibm.watson.developer_cloud</groupId>
-          <artifactId>java-sdk</artifactId>
-          <version>{version}</version>
+          <groupId>com.ibm.watson</groupId>
+          <artifactId>ibm-watson</artifactId>
+          <version>[7,8)</version>
         </dependency>
         ```
         {: codeblock}
 
-    - {:java} Gradle
+    - {: java} Gradle
 
         ```bash
-        compile 'com.ibm.watson.developer_cloud:java-sdk:{version}'
+        compile 'com.ibm.watson.developer_cloud:java-sdk:7.+'
         ```
         {:pre}
 - {: javascript} Install the [Node SDK](https://github.com/watson-developer-cloud/node-sdk){: external}.
@@ -155,17 +155,33 @@ To work in a graphical interface where you can create your own custom models, us
     {: codeblock}
 
     ```java
-    IamOptions options = new IamOptions.Builder()
-      .apiKey("{apikey}"{: apikey})
-      .build();
+    import java.io.FileNotFoundException;
 
-    VisualRecognition visualRecognition = new VisualRecognition("2018-03-19", options);
+    import com.ibm.cloud.sdk.core.service.security.IamOptions;
+    import com.ibm.watson.visual_recognition.v3.VisualRecognition;
+    import com.ibm.watson.visual_recognition.v3.model.ClassifiedImages;
+    import com.ibm.watson.visual_recognition.v3.model.ClassifyOptions;
 
-    ClassifyOptions classifyOptions = new ClassifyOptions.Builder()
-      .url("https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg")
-      .build();
-    ClassifiedImages result = visualRecognition.classify(classifyOptions).execute();
-    System.out.println(result);
+    public class ClassifyUrlDefault {
+
+      public static void main(String[] args) throws FileNotFoundException {
+
+        IamOptions options = new IamOptions.Builder()
+            .apiKey("{apikey}"{: apikey})
+            .build();
+
+        VisualRecognition service = new VisualRecognition("2018-03-19", options);
+
+        ClassifyOptions classifyOptions = new ClassifyOptions.Builder()
+            .url("https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg")
+            .build();
+        ClassifiedImages result = service.classify(classifyOptions).execute().getResult();
+        System.out.println(
+            "\n******** Classify with the General model ********\n" + result
+                + "\n******** END Classify with the General model ********\n");
+      }
+
+    }
     ```
     {: java}
     {: codeblock}
@@ -357,18 +373,35 @@ To work in a graphical interface where you can create your own custom models, us
     {: codeblock}
 
     ```java
-    IamOptions options = new IamOptions.Builder()
-      .apiKey("{apikey}"{: apikey})
-      .build();
+    import java.io.FileNotFoundException;
+    import java.util.Collections;
 
-    VisualRecognition visualRecognition = new VisualRecognition("2018-03-19", options);
+    import com.ibm.cloud.sdk.core.service.security.IamOptions;
+    import com.ibm.watson.visual_recognition.v3.VisualRecognition;
+    import com.ibm.watson.visual_recognition.v3.model.ClassifiedImages;
+    import com.ibm.watson.visual_recognition.v3.model.ClassifyOptions;
 
-    ClassifyOptions classifyOptions = new ClassifyOptions.Builder()
-      .url("https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg");
-      .classifierIds(Arrays.asList("food"))
-      .build();
-    ClassifiedImages result = visualRecognition.classify(classifyOptions).execute();
-    System.out.println(result);
+    public class ClassifyUrlFood {
+
+      public static void main(String[] args) throws FileNotFoundException {
+
+        IamOptions options = new IamOptions.Builder()
+            .apiKey("{apikey}"{: apikey})
+            .build();
+
+        VisualRecognition service = new VisualRecognition("2018-03-19", options);
+
+        ClassifyOptions classifyOptions = new ClassifyOptions.Builder()
+            .url("https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg")
+            .classifierIds(Collections.singletonList("food"))
+            .build();
+        ClassifiedImages result = service.classify(classifyOptions).execute().getResult();
+        System.out.println(
+            "\n******** Classify with the Food model ********\n" + result
+                + "\n******** END Classify with the Food model ********\n");
+      }
+
+    }
     ```
     {: java}
     {: codeblock}
@@ -526,20 +559,33 @@ The `Detect faces` methods are not available for {{site.data.keyword.Bluemix_ded
     {: codeblock}
 
     ```java
-    var VisualRecognitionV3 = require('watson-developer-cloud/visual-recognition/v3');
+    import java.io.FileNotFoundException;
+    
+    import com.ibm.cloud.sdk.core.service.security.IamOptions;
+    import com.ibm.watson.visual_recognition.v3.VisualRecognition;
+    import com.ibm.watson.visual_recognition.v3.model.DetectFacesOptions;
+    import com.ibm.watson.visual_recognition.v3.model.DetectedFaces;
+    
+    public class DetectFacesUrl {
 
-    var visualRecognition = new VisualRecognitionV3({
-      version: '2018-03-19',
-      iam_apikey: '{apikey}'{: apikey}
-    });
+      public static void main(String[] args) throws FileNotFoundException {
 
-    VisualRecognition visualRecognition = new VisualRecognition("2018-03-19", options);
+        IamOptions options = new IamOptions.Builder()
+            .apiKey("{apikey}"{: apikey})
+            .build();
+    
+        VisualRecognition service = new VisualRecognition("2018-03-19", options);
 
-    DetectFacesOptions detectFacesOptions = new DetectFacesOptions.Builder()
-      .url("https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg");
-      .build();
-    DetectedFaces result = visualRecognition.detectFaces(detectFacesOptions).execute();
-    System.out.println(result);
+        DetectFacesOptions detectFacesOptions = new DetectFacesOptions.Builder()
+            .url("https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg")
+            .build();
+        DetectedFaces result = service.detectFaces(detectFacesOptions).execute().getResult();
+        System.out.println(
+            "\n******** Detect Faces  ********\n" + result
+                + "\n******** END Detect Faces ********\n");
+      }
+
+    }
     ```
     {: java}
     {: codeblock}
