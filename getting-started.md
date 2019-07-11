@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-09"
+lastupdated: "2019-07-11"
 
 keywords: classify,classifying,Visual Recognition,getting started,detecting faces,detect faces,food model,general model,sample code
 
@@ -26,7 +26,6 @@ subcollection: visual-recognition
 {:python: .ph data-hd-programlang='python'}
 {:ruby: .ph data-hd-programlang='ruby'}
 {:swift: .ph data-hd-programlang='swift'}
-{:download: .download}
 {:apikey: data-credential-placeholder='apikey'}
 {:url: data-credential-placeholder='url'}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
@@ -39,8 +38,7 @@ subcollection: visual-recognition
 This tutorial guides you through how to use some built-in models in {{site.data.keyword.visualrecognitionfull}} to classify an image and then detect faces in an image.
 {: shortdesc}
 
-To work in a graphical interface where you can create your own custom models, use <span class="hide-dashboard">[{{site.data.keyword.DSX}}](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external}</span> <span class="hide-in-docs">[{{site.data.keyword.DSX}}](tooling-url){: external} </span> and follow the [video](https://youtu.be/898RN31szg0){: external}.
-{: tooling-url}
+To work in a graphical interface where you can create your own custom models,<span class="hide-dashboard"> use [{{site.data.keyword.DSX}}](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external}</span><span class="hide-in-docs"> click **Launch {{site.data.keyword.DSX}}** on the Manage page</span> and follow the [video](https://youtu.be/898RN31szg0){: external}.
 {: tip}
 
 ## Before you begin
