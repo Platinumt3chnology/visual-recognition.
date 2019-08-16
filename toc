@@ -27,6 +27,7 @@ Visual Recognition
     {: .topicgroup}
     Beta features
         object-detection.md
+        [v4 API reference (Beta)](https://cloud.ibm.com/apidocs/visual-recognition-v4)
         recognize-text.md
         tutorial-recognize-text.md
     {: .navgroup-end}
