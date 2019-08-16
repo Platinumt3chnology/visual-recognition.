@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-08-16"
 
 keywords: custom object detection,object detection,bounding boxes,visual inspection
 subcollection: visual-recognition
@@ -29,7 +29,7 @@ subcollection: visual-recognition
 {{site.data.keyword.visualrecognitionfull}} Custom Object Detection (Beta) identifies items and their location in an image. The service detects these items based on a set of images with labeled training data that you provide.
 {: shortdesc}
 
-Custom Object Detection is a private beta feature and you must have permission from {{site.data.keyword.IBM_notm}} to make calls to the model. [Request access](https://datasciencex.typeform.com/to/c70Ak5){: external}. For more information about beta features, see the [Release notes](/docs/services/visual-recognition?topic=visual-recognition-release-notes#beta).
+Custom Object Detection is a beta feature. For more information about beta features, see the [Release notes](/docs/services/visual-recognition?topic=visual-recognition-release-notes#beta).
 {: important}
 
 You train the object detection model to recognize objects that are important to your workflow or domain. For example, detect damage to cars, find machines that need maintenance, or perform visual inspections in the field. You can also use object detection to count objects or manage inventory.

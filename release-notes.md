@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-08-16"
 
 keywords: new features,updates to Visual Recognition,what's new with Visual Recognition
 
@@ -45,6 +45,13 @@ The current version is `2018-03-19`.
 
 The following new features and changes to the service are available.
 
+### 16 August 2019
+{: #16august2019}
+
+- **Custom Object Detection avaiable in Beta**
+    - Custom Object Detection identifies items and their location in an image. The service detects these items based on a set of images with labeled training data that you provide. For details, see [Custom Object Detection (Beta)](/docs/services/visual-recognition?topic=visual-recognition-object-detection-overview)
+    - Custom Object Detection is supported by the [Visual Recognition v4 API (Beta)](https://{DomainName}/apidocs/visual-recognition-v4){: external}
+    
 ### 21 March 2019
 {: #21march2019}
 
