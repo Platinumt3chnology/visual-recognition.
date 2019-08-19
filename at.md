@@ -36,6 +36,9 @@ When you have {{site.data.keyword.visualrecognitionshort}} provisioned as a serv
 | visual_recognition.classifiers.post | Train a new multi-faceted classifier on the uploaded image data |
 | visual_recognition.classifiers.delete | Delete a classifier |
 | visual_recognition.user_data.delete | Delete all data associated with a specified customer ID |
+| visual_recognition.collection_images.get | Retrieve an image from a collection |
+| visual_recognition.collection_images.post | Add an image to a collection |
+| visual_recognition.collection_images.delete | Delete an image from a collection |
 
 ## Where to view events
 {: #at-view}
