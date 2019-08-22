@@ -58,7 +58,7 @@ Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and 
 
 If you need to remove an individual customer's data from a {{site.data.keyword.visualrecognitionshort}} service instance with multiple customers, you first need to associate that data with a unique customer ID for each individual that might have provided data.
 
-To specify the customer ID for any data that is sent with the **Create a classifier** method, include the **X-Watson-Metadata: customer_id** property in the request header. The following example associates the customer ID `my_ID` with a request:
+To specify the customer ID for any data that is sent with the **Create a classifier**, **Create a collection**, or **Update a collection** method, include the **X-Watson-Metadata: customer_id** property in the request header. The following example associates the customer ID `my_ID` with a request:
 
 ```bash
 curl -X POST \
