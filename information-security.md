@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-09-06"
 
 keywords: GDPR,General Data Protection Regulation,deleting customer data,privacy
 
@@ -58,7 +58,7 @@ Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and 
 
 If you need to remove an individual customer's data from a {{site.data.keyword.visualrecognitionshort}} service instance with multiple customers, you first need to associate that data with a unique customer ID for each individual that might have provided data.
 
-To specify the customer ID for any data that is sent with the **Create a classifier**, **Create a collection**, or **Update a collection** method, include the **X-Watson-Metadata: customer_id** property in the request header. The following example associates the customer ID `my_ID` with a request:
+To specify the customer ID for any data that is sent with the **Create a classifier**, **Create a collection**, or **Update a collection** method, include the **X-Watson-Metadata: customer_id** property in the request header. The following example for the v3 API associates the customer ID `my_ID` with a request:
 
 ```bash
 curl -X POST \
@@ -78,7 +78,7 @@ You are responsible for creating customer ID values, and ensuring that each is u
 {{site.data.keyword.Bluemix_dedicated_notm}} plans: To remove processed images that might have been stored within the system to expedite subsequent training of your custom classifiers, create a support ticket for the "right to be forgotten", and request the deletion. See [GDPR Subject Access Request](/docs/services/watson?topic=watson-gdpr-sar#request-EU){: external}.
 {: note}
 
-To delete all data that is associated with a customer ID, use the **Delete labeled data** method. You pass the string `customer_id={id}` as a query parameter with the request. The following example deletes all data for the customer ID `my_ID`:
+To delete all data that is associated with a customer ID, use the **Delete labeled data** method. You pass the string `customer_id={id}` as a query parameter with the request. The following example for the v3 API deletes all data for the customer ID `my_ID`:
 
 ```bash
 curl -X DELETE -u "apikey:{apikey}" \
