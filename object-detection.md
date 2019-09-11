@@ -2,9 +2,10 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-08-16"
+lastupdated: "2019-07-16"
 
 keywords: custom object detection,object detection,bounding boxes,visual inspection
+
 subcollection: visual-recognition
 
 ---

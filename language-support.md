@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-09-11"
 
-keywords: Visual Recognition languages,language support,supported languages
+keywords: language support,supported languages
 
 subcollection: visual-recognition
 
@@ -35,10 +35,3 @@ The **Classify images** method of {{site.data.keyword.visualrecognitionfull}} su
 The languages work with the output classes of all the built-in models: `default` (also called the General model), `food`, and `explicit`.
 
 For details about the API call, see the **Classify images** method in the [API reference](https://{DomainName}/apidocs/visual-recognition/#classify-images){: external}.
-
-## Detect faces
-{: #detect_faces}
-
-The **Detect faces** methods return translations of the English words for gender ("Male" and "Female") in the response. Set the language with the **Accept-Language** request header.
-
-For details, see the **Detect faces** methods in the [API reference](https://{DomainName}/apidocs/visual-recognition/#detect-faces-in-images){: external}.

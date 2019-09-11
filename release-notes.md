@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-08-16"
+lastupdated: "2019-09-11"
 
-keywords: new features,updates to Visual Recognition,what's new with Visual Recognition
+keywords: new features,updates,what's new,changelog,change log,release notes
 
 subcollection: visual-recognition
 
@@ -45,13 +45,23 @@ The current version is `2018-03-19`.
 
 The following new features and changes to the service are available.
 
+### 12 September 2019
+{: 12september2019}
+
+- **Detect faces methods removed**
+
+    As of 12 September 2019, the **Detect Faces** methods are removed from {{site.data.keyword.visualrecognitionshort}}. These methods include `GET /v3/detect_faces` and `POST /v3/detect_faces`.
+- **Text recognition in natural scenes closed**
+
+    As of 11 September 2019, the Text model private beta feature is closed. There are no plans for another beta or general release.
+
 ### 16 August 2019
 {: #16august2019}
 
 - **Custom Object Detection avaiable in Beta**
     - Custom Object Detection identifies items and their location in an image. The service detects these items based on a set of images with labeled training data that you provide. For details, see [Custom Object Detection (Beta)](/docs/services/visual-recognition?topic=visual-recognition-object-detection-overview)
     - Custom Object Detection is supported by the [Visual Recognition v4 API (Beta)](https://{DomainName}/apidocs/visual-recognition-v4){: external}
-    
+
 ### 21 March 2019
 {: #21march2019}
 
@@ -106,7 +116,7 @@ The following new features and changes to the service are available.
 ### 22 May 2018
 {: #22may2018}
 
-- **New API authentication process**:
+- **New API authentication process**
 
     You now authenticate with Identity and Access Management (IAM) at a new endpoint:
 
@@ -125,7 +135,7 @@ The following new features and changes to the service are available.
 
     If your needs exceed the Lite plan, update to a billable account. [Explore](https://{DomainName}/catalog/services/visual-recognition){: external} the pricing plans.
 
-- **Information security**:
+- **Information security**
 
     We updated the documentation to include some new details about data privacy. Read the details in [Information security](/docs/services/visual-recognition?topic=visual-recognition-information-security#information-security).
 

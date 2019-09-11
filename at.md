@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-09-11"
 
 keywords: activity,tracker,events,API,public API,subscription,binding
 
@@ -32,13 +32,14 @@ When you have {{site.data.keyword.visualrecognitionshort}} provisioned as a serv
 
 | Action | Description |
 | -- | -- |
-| visual_recognition.classifiers.get_core_ml_model | Retrieve a list of classifiers |
+| visual_recognition.classifiers.get_core_ml_model | Retrieve a Core ML model file of a classifier |
 | visual_recognition.classifiers.post | Train a new multi-faceted classifier on the uploaded image data |
 | visual_recognition.classifiers.delete | Delete a classifier |
 | visual_recognition.user_data.delete | Delete all data associated with a specified customer ID |
 | visual_recognition.collection_images.get | Retrieve an image from a collection |
 | visual_recognition.collection_images.post | Add an image to a collection |
 | visual_recognition.collection_images.delete | Delete an image from a collection |
+| visual_recognition.collection.delete | Delete all data associated with a specified image collection |
 
 ## Where to view events
 {: #at-view}
