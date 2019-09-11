@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-07-11"
+lastupdated: "2019-09-11"
 
 keywords: HA,DR,high availability,disaster recovery
 
@@ -46,7 +46,7 @@ Your disaster recovery plan includes knowing, preserving, and being prepared to 
 ### Disaster recovery for image classification custom models
 {: #ha-dr-v3-overview}
 
-For image classification, your disaster recovery plan includes only artifacts for custom models. The other models (General, Food, and Explicit), and face detection and text recognition are not trained from your data, so you don't have files to store locally.
+For image classification, your disaster recovery plan includes only artifacts for custom models. The other models (General, Food, and Explicit) are not trained from your data, so you don't have files to store locally.
 
 #### Backing up images
 You want to store the images that you use to train your custom models.

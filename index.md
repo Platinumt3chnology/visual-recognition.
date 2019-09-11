@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-09-11"
 
-keywords: Visual Recognition service,Face model,Food model,Explicit,Text recognition,Visual Recognition use cases
+keywords: food model,general model,default model,built-in model,pre-trained model,explicit model,food classifier,general classifier,default classifier,built-in classifier,pre-trained classifier,explicit classifier
 
 subcollection: visual-recognition
 
@@ -27,10 +27,7 @@ subcollection: visual-recognition
 # About
 {: #index}
 
-On April 2, 2018, the identity information in the response to calls to the Face model was removed. The identity information refers to the name of the person, score, and type_hierarchy knowledge graph. For details about the enhanced Face model, see the [Release notes](/docs/services/visual-recognition?topic=visual-recognition-release-notes#2april2018).
-{: deprecated}
-
-The {{site.data.keyword.visualrecognitionfull}} service uses deep learning algorithms to analyze images for scenes, objects, faces, and other content. The response includes keywords that provide information about the content.
+The {{site.data.keyword.visualrecognitionfull}} service uses deep learning algorithms to analyze images for scenes, objects, and other content. The response includes keywords that provide information about the content.
 {: shortdesc}
 
 ## Available models
@@ -39,10 +36,8 @@ The {{site.data.keyword.visualrecognitionfull}} service uses deep learning algor
 A set of built-in models provides highly accurate results without training:
 
 - [**General** model](/docs/services/visual-recognition?topic=visual-recognition-customizing#general-model): Default classification from thousands of classes.
-- [**Face** model](/docs/services/visual-recognition?topic=visual-recognition-getting-started-tutorial#detect-faces): Facial analysis with age and gender.
 - **Explicit** model: Whether an image is inappropriate for general use.
 - **Food** model: Specifically for images of food items.
-- **Text** model (Private beta): Text extraction from natural scene images. [Request access](https://datasciencex.typeform.com/to/nU6efl){: external}.
 
 You can also train [custom models](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier) to create specialized classes.
 
@@ -59,7 +54,7 @@ The following image shows the process of creating and using {{site.data.keyword.
 
 The {{site.data.keyword.visualrecognitionshort}} service can be used for diverse applications and industries, such as:
 
-- **Manufacturing:** Use images from a manufacturing setting to make sure products are being positioned correctly on an assembly line
+- **Manufacturing:** Use images from a manufacturing setting to make sure that products are positioned correctly on an assembly line
 - **Visual auditing:** Look for visual compliance or deterioration in a fleet of trucks, planes, or windmills out in the field, train custom models to understand what defects look like
 - **Insurance:** Rapidly process claims by using images to classify claims into different categories
 - **Social listening:** Use images from your product line or your logo to track buzz about your company on social media

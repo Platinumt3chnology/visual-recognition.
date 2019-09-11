@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-07-16"
 
-keywords: feedback,feedback button,comments Visual Recognition
+keywords: feedback,feedback button,comments
 
 subcollection: visual-recognition
 

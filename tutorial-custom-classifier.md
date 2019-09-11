@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-16"
 
-keywords: custom model,custom classifier,samples,training a custom model
+keywords: custom model,custom classifier,samples,train classifier,train mode,train custom model,update model,retrain model
 
 subcollection: visual-recognition
 
@@ -32,7 +32,7 @@ subcollection: visual-recognition
 # Creating a custom model
 {: #tutorial-custom-classifier}
 
-After you analyze an image in the "Getting started tutorial," you are ready to train and create a custom model. With a custom model, you can train the {{site.data.keyword.visualrecognitionshort}} service to classify images to suit your business needs.
+After you analyze an image in the "Getting started tutorial," you are ready to train and create a custom model. With a custom model, you can train the {{site.data.keyword.visualrecognitionshort}} service to classify and recognize images to suit your business needs.
 {: shortdesc}
 
 ## Step 1:  Copy your credentials
@@ -64,7 +64,7 @@ Use the credentials that you copied in "Getting started tutorial." If you didn't
     ```
     {: pre}
 
-    Positive example filenames require the suffix `_positive_examples`. In this example, the filenames are `beagle_positive_examples`, `goldenretriever_positive_examples`, and `husky_positive_examples`. The prefix (beagle, goldenretriever, and husky) is returned as the name of class.
+    Positive example file names require the suffix `_positive_examples`. In this example, the file names are `beagle_positive_examples`, `goldenretriever_positive_examples`, and `husky_positive_examples`. The prefix (beagle, goldenretriever, and husky) is returned as the name of class.
     {:tip }
 
     The response includes a new classifier ID and status, for example:
@@ -107,7 +107,7 @@ Use the credentials that you copied in "Getting started tutorial." If you didn't
 You can update a custom model either by adding classes to the model or by adding images to an existing class. Here, you improve the model that you created in Step 2 by adding a *Dalmatian* class to the types of dogs that can be classified. You also add images of cats to the negative example set for the "dogs" custom model.
 
 1.  Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/dalmatian.zip" download="dalmatian.zip">dalmatian.zip <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> and <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/more-cats.zip" download="more-cats.zip">more-cats.zip <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> sample training files.
-1.  Call the `POST /v3/classifiers/{classifier_id}` method with the following cURL command, which uploads the training data and updates the custom model "dogs\_1941945966":
+1.  Call the `POST /v3/classifiers/{classifier_id}` method with the following curl command, which uploads the training data and updates the custom model "dogs\_1941945966":
     - Replace `{apikey}` with the service credentials you copied in the first step.
     - Replace `{classifier_id}` with the ID of the custom model you want to update.
     - Modify the location of the `{class}_positive_examples` to point to where you saved the .zip files.
@@ -120,7 +120,7 @@ You can update a custom model either by adding classes to the model or by adding
     ```
     {: pre}
 
-    The existing "dogs" custom model is replaced by the retrained one with the same classifier_id. The response lists the new set of classes and the current status. For example:
+    The existing "dogs" custom model is replaced by the retrained one with the same classifier_id. The response lists the new set of classes and the status. For example:
 
     ```json
     {
@@ -151,7 +151,7 @@ You can update a custom model either by adding classes to the model or by adding
 
     Training begins immediately. When the new one is available, the status changes to `ready`.
 
-    Don't issue another retraining request until after the current status `ready` state. Multiple requests to retrain a model result in a single retraining taking effect. A timestamp called `updated` shows the time that the model was most recently updated. If you call the `/classify` method while the model is retraining, the old definition of the model is used.
+    Don't issue another retraining request until the status is `ready`. Multiple requests to retrain a model result in a single retraining taking effect. A time stamp that is called `updated` shows the time that the model was most recently updated. If you call the **Classify** methods while the model is retraining, the old definition of the model is used.
     {: tip}
 1.  Check the training status periodically until you see a status of `ready`. Replace `{apikey}` and `{classifier_id}` with your information:
 
@@ -181,7 +181,7 @@ When the new model is ready, call it to see how it performs.
     To classify against only the built-in General model, omit the `classifier_ids` parameter.
     {: tip}
 
-    The response includes classifiers (models), their classes, and a score for each class. Scores range from 0-1, with a higher score indicating greater correlation. The `/v3/classify` calls omit low-scoring classes by default if high-scoring classes are identified. You can set a minimum score to display by specifying a floating point value for the `threshold` parameter in your call.
+    The response includes classifiers (models), their classes, and a score for each class. Scores are in the range 0 - 1, and a higher score indicates greater correlation. The **Classify** methods omit low-scoring classes by default if high-scoring classes are identified. You can set a minimum score to display by specifying a floating point value for the `threshold` parameter in your call.
 
     ```json
     {
@@ -277,4 +277,4 @@ Now that you have a basic understanding of how to use custom models, you can div
 ### Attributions
 {: #tutorial-custom-classifier-attributions}
 
-All images used on this page are from Flikr and used under [Creative Commons Attribution 2.0 license](http://creativecommons.org/licenses/by/2.0/deed.en){: external}. No changes were made to these images.
+All images that are used on this page are from Flikr and used under [Creative Commons Attribution 2.0 license](http://creativecommons.org/licenses/by/2.0/deed.en){: external}. No changes were made to these images.

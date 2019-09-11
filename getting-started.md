@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-11"
+lastupdated: "2019-09-11"
 
-keywords: classify,classifying,Visual Recognition,getting started,detecting faces,detect faces,food model,general model,sample code
+keywords: visual recognition,visual recognition project,VisualRecognition,getting started,classify images, analyze images,tag images,image classification,image recognition,sample code
 
 subcollection: visual-recognition
 
@@ -32,13 +32,14 @@ subcollection: visual-recognition
 {:hide-dashboard: .hide-dashboard}
 {:hide-in-docs: .hide-in-docs}
 
-# Getting started tutorial
+# Getting started with {{site.data.keyword.visualrecognitionshort}}
 {: #getting-started-tutorial}
 
-This tutorial guides you through how to use some built-in models in {{site.data.keyword.visualrecognitionfull}} to classify an image and then detect faces in an image.
+This tutorial guides you through simple image recognition with {{site.data.keyword.visualrecognitionfull}}. You use the built-in models to analyze the images.
 {: shortdesc}
 
-To work in a graphical interface where you can create your own custom models,<span class="hide-dashboard"> use [{{site.data.keyword.DSX}}](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external}</span><span class="hide-in-docs"> click **Launch {{site.data.keyword.DSX}}** on the Manage page</span> and follow the [video](https://youtu.be/898RN31szg0){: external}.
+To work in a graphical interface where you can create your own custom models, use <span class="hide-dashboard">[{{site.data.keyword.DSX}}](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external}</span><span class="hide-in-docs">[{{site.data.keyword.DSX}}](tooling-url){: external}</span> and follow the [video](https://youtu.be/898RN31szg0){: external}.
+{: tooling-url}
 {: tip}
 
 ## Before you begin
@@ -59,7 +60,7 @@ To work in a graphical interface where you can create your own custom models,<sp
         ```
         {: pre}
 
-    - If necessary, install a version with SSL enabled from [curl.haxx.se](https://curl.haxx.se/){: external}. Add the location of the file to your PATH environment variables if you want to run `curl` from any command line location.
+    - If necessary, install a version with SSL enabled from [curl.haxx.se](https://curl.haxx.se/){: external}. Add the location of the file to your PATH environment variables if you want to run `curl` from any command-line location.
 - {:go} Install the [Go SDK](https://github.com/watson-developer-cloud/go-sdk){: external}.
 
     ```go
@@ -244,7 +245,7 @@ To work in a graphical interface where you can create your own custom models,<sp
     {: ruby}
     {: codeblock}
 
-    The response includes the classes identified in the image from the built-in General model (`"classifier_id": "default"`) and a confidence score for each class. The score represents a percentage, and higher values represent higher confidences. By default, responses from the `Classify` calls don't include classes with a score below `0.5` (50%).
+    The response includes the classes that are identified in the image from the built-in General model (`"classifier_id": "default"`) and a confidence score for each class. The score represents a percentage, and higher values represent higher confidences. By default, responses from the **Classify** calls don't include classes with a score below `0.5` (50%).
 
     ```json
     {
@@ -507,184 +508,12 @@ To work in a graphical interface where you can create your own custom models,<sp
     }
     ```
 
-## Step 3: Detect faces in an image
-{: #detect-faces}
-
-{{site.data.keyword.visualrecognitionshort}} can detect faces in images.
-
-The `Detect faces` methods are not available for {{site.data.keyword.Bluemix_dedicated_notm}}.
-{: note}
-{: curl}
-
-1.  Issue the following call to the `Detect faces in an image` method to analyze an [image of Ginni Rometty](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg){: external}. <span class="hide-dashboard">Replace `{apikey}` with the service credentials you copied earlier.</span>
-
-    ```bash
-    curl -u "apikey:{apikey}"{: apikey} "https://gateway.watsonplatform.net/visual-recognition/api/v3/detect_faces?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg&version=2018-03-19"
-    ```
-    {: pre}
-    {: curl}
-
-    ```go
-    import (
-      "encoding/json"
-      "fmt"
-      "github.com/watson-developer-cloud/go-sdk/core"
-      "github.com/watson-developer-cloud/go-sdk/visualrecognitionv3"
-    )
-
-    visualRecognition, visualRecognitionErr := visualrecognitionv3.
-      NewVisualRecognitionV3(&visualrecognitionv3.VisualRecognitionV3Options{
-        Version:   "2018-03-19",
-        IAMApiKey: "{apikey}"{: apikey},
-      })
-    if visualRecognitionErr != nil {
-      panic(visualRecognitionErr)
-    }
-
-    response, responseErr := visualRecognition.DetectFaces(
-      &visualrecognitionv3.DetectFacesOptions{
-        URL: core.StringPtr("https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg"),
-      },
-    )
-    if responseErr != nil {
-      panic(responseErr)
-    }
-    result := visualRecognition.GetClassifyResult(response)
-    b, _ := json.MarshalIndent(result, "", "  ")
-    fmt.Println(string(b))
-    ```
-    {: go}
-    {: codeblock}
-
-    ```java
-    import java.io.FileNotFoundException;
-    
-    import com.ibm.cloud.sdk.core.service.security.IamOptions;
-    import com.ibm.watson.visual_recognition.v3.VisualRecognition;
-    import com.ibm.watson.visual_recognition.v3.model.DetectFacesOptions;
-    import com.ibm.watson.visual_recognition.v3.model.DetectedFaces;
-    
-    public class DetectFacesUrl {
-
-      public static void main(String[] args) throws FileNotFoundException {
-
-        IamOptions options = new IamOptions.Builder()
-            .apiKey("{apikey}"{: apikey})
-            .build();
-    
-        VisualRecognition service = new VisualRecognition("2018-03-19", options);
-
-        DetectFacesOptions detectFacesOptions = new DetectFacesOptions.Builder()
-            .url("https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg")
-            .build();
-        DetectedFaces result = service.detectFaces(detectFacesOptions).execute().getResult();
-        System.out.println(
-            "\n******** Detect Faces  ********\n" + result
-                + "\n******** END Detect Faces ********\n");
-      }
-
-    }
-    ```
-    {: java}
-    {: codeblock}
-
-    ```javascript
-    var VisualRecognitionV3 = require('watson-developer-cloud/visual-recognition/v3');
-
-    var visualRecognition = new VisualRecognitionV3({
-          version: '2018-03-19',
-          iam_apikey: '{apikey}'{: apikey}
-        });
-
-    var params = {
-      url: 'https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg'
-    };
-
-    visualRecognition.detectFaces(params, function(err, response) {
-      if (err)
-        console.log(err);
-      else
-        console.log(JSON.stringify(response, null, 2))
-    });
-    ```
-    {: javascript}
-    {: codeblock}
-
-    ```python
-    import json
-    from watson_developer_cloud import VisualRecognitionV3
-
-    visual_recognition = VisualRecognitionV3(
-        '2018-03-19',
-        iam_apikey='{apikey}'{: apikey})
-
-    url = 'https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg'
-
-    faces = visual_recognition.detect_faces(url).get_result()
-    print(json.dumps(faces, indent=2))
-    ```
-    {: python}
-    {: codeblock}
-
-    ```ruby
-      require "json"
-      require "ibm_watson/visual_recognition_v3"
-      include IBMWatson
-
-      visual_recognition = VisualRecognitionV3.new(
-        version: "2018-03-19",
-        iam_apikey: "{apikey}"{: apikey}
-      )
-      url= "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg"
-
-      faces = visual_recognition.detect_faces(url)
-      puts JSON.pretty_generate(faces.result)
-      end
-      ```
-    {: ruby}
-    {: codeblock}
-
-    The response provides the location of the face in the image and the estimated age range and gender for each face.
-
-    ```json
-    {
-      "images": [
-        {
-          "faces": [
-            {
-              "age": {
-                "min": 50,
-                "max": 53,
-                "score": 0.8261783
-              },
-              "face_location": {
-                "height": 744,
-                "width": 606,
-                "left": 460,
-                "top": 373
-              },
-              "gender": {
-                "gender": "FEMALE",
-                "gender_label": "female",
-                "score": 0.9999988
-              }
-            }
-          ],
-          "source_url": "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg",
-          "resolved_url": "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg"
-        }
-      ],
-      "images_processed": 1
-    }
-    ```
-    {: codeblock}
-
 ## Next steps
 {: #gs-next-steps}
 
-You have a basic understanding of how to use built-in classifiers with {{site.data.keyword.visualrecognitionshort}}. Now dive deeper:
+You have a basic understanding of how to use built-in classifiers for image recognition with {{site.data.keyword.visualrecognitionshort}}. Now dive deeper:
 
-- Try these calls with your own images. Just keep the image size under 10 MB.
+- Try these calls with your own images. Keep the image size under 10 MB.
 - Learn more about how to [build a custom model](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier).
 - {: curl} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition){: external}.
 - {: go} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition?language=go){: external}.
