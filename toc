@@ -18,20 +18,17 @@ Visual Recognition
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
+    object-detection.md
     tutorial-custom-classifier.md
     customizing.md
     [Best practices for custom classifiers](https://www.ibm.com/blogs/bluemix/2016/10/watson-visual-recognition-training-best-practices/)
     [Building Cognitive Applications: Visual Recognition (IBM Redbooks)](http://www.redbooks.ibm.com/redbooks/pdfs/sg248393.pdf)
     ha-dr.md
-
-    {: .topicgroup}
-    Beta features
-        object-detection.md
-        [v4 API reference (Beta)](https://cloud.ibm.com/apidocs/visual-recognition-v4)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API reference](https://cloud.ibm.com/apidocs/visual-recognition)
+    [v3 API reference](https://cloud.ibm.com/apidocs/visual-recognition)
+    [v4 API reference](https://cloud.ibm.com/apidocs/visual-recognition-v4)
     language-support.md
     information-security.md
     at.md
