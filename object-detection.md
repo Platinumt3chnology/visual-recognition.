@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-16"
+lastupdated: "2019-10-08"
 
 keywords: custom object detection,object detection,bounding boxes,visual inspection
 
@@ -24,14 +24,11 @@ subcollection: visual-recognition
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Custom Object Detection (Beta)
+# Custom Object Detection
 {: #object-detection-overview}
 
-{{site.data.keyword.visualrecognitionfull}} Custom Object Detection (Beta) identifies items and their location in an image. The service detects these items based on a set of images with labeled training data that you provide.
+{{site.data.keyword.visualrecognitionfull}} Custom Object Detection identifies items and their location in an image. The service detects these items based on a set of images with labeled training data that you provide.
 {: shortdesc}
-
-Custom Object Detection is a beta feature. For more information about beta features, see the [Release notes](/docs/services/visual-recognition?topic=visual-recognition-release-notes#beta).
-{: important}
 
 You train the object detection model to recognize objects that are important to your workflow or domain. For example, detect damage to cars, find machines that need maintenance, or perform visual inspections in the field. You can also use object detection to count objects or manage inventory.
 
@@ -100,7 +97,7 @@ The following example shows the training data for an object labeled `BurntCookie
 ```
 {: codeblock}
 
-In this initial beta release, you create the location information by hand or by using an image annotation tool.
+In this initial release, you create the location information by hand or by using an image annotation tool.
 
 In general, the more images and bounding boxes that you provide in your training data, the better. Here are some training data guidelines to get you started:
 
