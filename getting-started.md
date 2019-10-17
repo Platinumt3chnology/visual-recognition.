@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-09-11"
+lastupdated: "2019-10-17"
 
 keywords: visual recognition,visual recognition project,VisualRecognition,getting started,classify images, analyze images,tag images,image classification,image recognition,sample code
 
@@ -26,6 +26,8 @@ subcollection: visual-recognition
 {:python: .ph data-hd-programlang='python'}
 {:ruby: .ph data-hd-programlang='ruby'}
 {:swift: .ph data-hd-programlang='swift'}
+{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
+{:unity: .ph data-hd-programlang='unity'}
 {:apikey: data-credential-placeholder='apikey'}
 {:url: data-credential-placeholder='url'}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
@@ -55,56 +57,82 @@ To work in a graphical interface where you can create your own custom models, us
 - {: curl} Make sure that you have the `curl` command.
     - Test whether `curl` is installed. Run the following command on the command line. If the output lists the `curl` version with SSL support, you are set for the tutorial.
 
-        ```bash
+        ```sh
         curl -V
         ```
         {: pre}
 
     - If necessary, install a version with SSL enabled from [curl.haxx.se](https://curl.haxx.se/){: external}. Add the location of the file to your PATH environment variables if you want to run `curl` from any command-line location.
+- {: dotnet-standard} Install the [.NET SDK](https://github.com/watson-developer-cloud/dotnet-standard-sdk){: external}.
+    - {: dotnet-standard} Package Manager
+
+        ```sh
+        Install-Package IBM.Watson.VisualRecognition.v3 -Version 4.0
+        ```
+        {: codeblock}
+
+    - {: dotnet-standard} .NET CLI
+
+        ```sh
+        dotnet add package IBM.Watson.VisualRecognition.v3 -version 4.0
+        ```
+        {: pre}
+
+    - {: dotnet-standard} PackageReference
+
+        ```xml
+        <PackageReference Include="IBM.Watson.VisualRecognition.v3" Version="4.0.0" />
+        ```
+        {: codeblock}
 - {:go} Install the [Go SDK](https://github.com/watson-developer-cloud/go-sdk){: external}.
 
-    ```go
-    go get -u github.com/watson-developer-cloud/go-sdk/...
+    ```sh
+    go get -u github.com/watson-developer-cloud/go-sdk@v1
     ```
     {: go}
     {: pre}
-
 - {: java} Install the [Java SDK](https://github.com/watson-developer-cloud/java-sdk){: external}.
     - {: java} Maven
 
-        ```java
+        ```xml
         <dependency>
           <groupId>com.ibm.watson</groupId>
           <artifactId>ibm-watson</artifactId>
-          <version>[7,8)</version>
+          <version>[8,9)</version>
         </dependency>
         ```
         {: codeblock}
 
     - {: java} Gradle
 
-        ```bash
-        compile 'com.ibm.watson.developer_cloud:java-sdk:7.+'
+        ```sh
+        compile 'com.ibm.watson.developer_cloud:java-sdk:8.+'
         ```
         {:pre}
 - {: javascript} Install the [Node SDK](https://github.com/watson-developer-cloud/node-sdk){: external}.
 
-    ```bash
-    npm install --save watson-developer-cloud
+    ```sh
+    npm install ibm-watson@^5
     ```
     {:pre}
 - {: python} Install the [Python SDK](https://github.com/watson-developer-cloud/python-sdk){: external}.
 
-    ```bash
-    pip install --upgrade watson-developer-cloud
+    ```sh
+    pip install --upgrade "ibm-watson>=4.0.1"
     ```
     {:pre}
 - {: ruby} Install the [Ruby SDK](https://github.com/watson-developer-cloud/ruby-sdk){: external}.
 
-    ```bash
+    ```sh
     gem install ibm_watson
     ```
     {:pre}
+- {: unity} Download the [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk){: external} and the [Unity SDK Core](https://github.com/IBM/unity-sdk-core){: external}.
+
+    The IBM Watson Unity SDK has the following requirements.
+
+    - The SDK requires Unity version 2018.2 or later to support TLS 1.2. Set the project settings for both the **Scripting Runtime Version** and the **Api Compatibility Level** to `.NET 4.x Equivalent`.
+    - The SDK does not support the WebGL projects. Change your build settings to any platform except `WebGL`.
 
 {{site.data.keyword.Bluemix_dedicated_notm}} plans authenticate by using `-u "{username}:{password}"` instead of `-u "apikey:{apikey}"`. Use the username and password values for your instance in the examples in this tutorial.
 {: note}
@@ -115,47 +143,70 @@ To work in a graphical interface where you can create your own custom models, us
 
 1.  Issue the following call to classify [an image](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg){: external}. <span class="hide-dashboard">Replace `{apikey}` with the service credentials you copied earlier.</span>
 
-    ```bash
-    curl -u "apikey:{apikey}"{: apikey} "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg&version=2018-03-19"
+    ```sh
+    curl -u "apikey:{apikey}"{: apikey} "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?url=https://ibm.biz/BdzLPG&version=2018-03-19"
     ```
     {: pre}
     {: curl}
 
+    ```cs
+    IamAuthenticator authenticator = new IamAuthenticator(
+        apikey: "{apikey}"{: apikey}
+        );
+
+    VisualRecognitionService visualRecognition = new VisualRecognitionService("2018-03-19", authenticator);
+
+    var result = visualRecognition.Classify(
+        url: "https://ibm.biz/BdzLPG"
+        );
+
+    Console.WriteLine(result.Response);
+    ```
+    {: dotnet-standard}
+    {: codeblock}
+
     ```go
+    package main
+
     import (
       "encoding/json"
       "fmt"
-      "github.com/watson-developer-cloud/go-sdk/core"
+      "github.com/IBM/go-sdk-core/core"
       "github.com/watson-developer-cloud/go-sdk/visualrecognitionv3"
     )
 
-    visualRecognition, visualRecognitionErr := visualrecognitionv3.
-        NewVisualRecognitionV3(&visualrecognitionv3.VisualRecognitionV3Options{
-          Version:   "2018-03-19",
-          IAMApiKey: "{apikey}"{: apikey},
-        })
+    func main() {
+      authenticator := &core.IamAuthenticator{
+        ApiKey: "{apikey}"{: apikey},
+      }
+
+      options := &visualrecognitionv3.VisualRecognitionV3Options{
+        Version: "2018-03-19",
+        Authenticator: authenticator,
+      }
+
+      visualRecognition, visualRecognitionErr := visualrecognitionv3.NewVisualRecognitionV3(options)
+
       if visualRecognitionErr != nil {
         panic(visualRecognitionErr)
       }
 
-      response, responseErr := visualRecognition.Classify(
+      result, response, responseErr := visualRecognition.Classify(
         &visualrecognitionv3.ClassifyOptions{
-          URL: core.StringPtr("https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg"),
+          URL: core.StringPtr("https://ibm.biz/BdzLPG"),
         },
       )
       if responseErr != nil {
         panic(responseErr)
       }
-      result := visualRecognition.GetClassifyResult(response)
       b, _ := json.MarshalIndent(result, "", "  ")
       fmt.Println(string(b))
+    }
     ```
     {: go}
     {: codeblock}
 
     ```java
-    import java.io.FileNotFoundException;
-
     import com.ibm.cloud.sdk.core.service.security.IamOptions;
     import com.ibm.watson.visual_recognition.v3.VisualRecognition;
     import com.ibm.watson.visual_recognition.v3.model.ClassifiedImages;
@@ -163,18 +214,15 @@ To work in a graphical interface where you can create your own custom models, us
 
     public class ClassifyUrlDefault {
 
-      public static void main(String[] args) throws FileNotFoundException {
+      public static void main(String[] args) {
 
-        IamOptions options = new IamOptions.Builder()
-            .apiKey("{apikey}"{: apikey})
-            .build();
-
-        VisualRecognition service = new VisualRecognition("2018-03-19", options);
+        IamAuthenticator authenticator = new IamAuthenticator("{apikey}"{: apikey});
+        VisualRecognition visualRecognition = new VisualRecognition("2018-03-19", authenticator);
 
         ClassifyOptions classifyOptions = new ClassifyOptions.Builder()
-            .url("https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg")
+            .url("https://ibm.biz/BdzLPG")
             .build();
-        ClassifiedImages result = service.classify(classifyOptions).execute().getResult();
+        ClassifiedImages result = visualRecognition.classify(classifyOptions).execute().getResult();
         System.out.println(
             "\n******** Classify with the General model ********\n" + result
                 + "\n******** END Classify with the General model ********\n");
@@ -186,40 +234,44 @@ To work in a graphical interface where you can create your own custom models, us
     {: codeblock}
 
     ```javascript
-    var VisualRecognitionV3 = require('watson-developer-cloud/visual-recognition/v3');
-    var fs = require('fs');
+    const fs = require('fs');
+    const VisualRecognitionV3 = require('ibm-watson/visual-recognition/v3');
+    const { IamAuthenticator } = require('ibm-watson/auth');
 
-    var visualRecognition = new VisualRecognitionV3({
+    const visualRecognition = new VisualRecognitionV3({
       version: '2018-03-19',
-      iam_apikey: '{apikey}'{: apikey}
+      authenticator: new IamAuthenticator({
+        apikey: '{apikey}'{: apikey},
+      }),
     });
 
-    var url= 'https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg';
-
-    var params = {
-      url: url,
+    const classifyParams = {
+      url: 'https://ibm.biz/BdzLPG',
     };
 
-    visualRecognition.classify(params, function(err, response) {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log(JSON.stringify(response, null, 2))
-      }
-    });
+    visualRecognition.classify(classifyParams)
+      .then(classifiedImages => {
+        console.log(JSON.stringify(classifiedImages, null, 2));
+      })
+      .catch(err => {
+        console.log('error:', err);
+      });
     ```
     {: javascript}
     {: codeblock}
 
     ```python
     import json
-    from watson_developer_cloud import VisualRecognitionV3
+    from ibm_watson import VisualRecognitionV3
+    from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
+    authenticator = IAMAuthenticator('{apikey}'{: apikey})
     visual_recognition = VisualRecognitionV3(
-        '2018-03-19',
-        iam_apikey='{apikey}'{: apikey})
+        version='2018-03-19',
+        authenticator=authenticator
+    )
 
-    url = 'https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg'
+    url = 'https://ibm.biz/BdzLPG'
 
     classes_result = visual_recognition.classify(url=url).get_result()
     print(json.dumps(classes_result, indent=2))
@@ -229,20 +281,51 @@ To work in a graphical interface where you can create your own custom models, us
 
     ```ruby
     require "json"
+    require "ibm_watson/authenticators"
     require "ibm_watson/visual_recognition_v3"
     include IBMWatson
 
+    authenticator = Authenticators::IamAuthenticator.new(
+      apikey: "{apikey}"{: apikey}
+    )
     visual_recognition = VisualRecognitionV3.new(
       version: "2018-03-19",
-      iam_apikey: "{apikey}"{: apikey}
+      authenticator: authenticator
     )
-    url= "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg"
+
+    url= "https://ibm.biz/BdzLPG"
 
     classes = visual_recognition.classify(url)
     puts JSON.pretty_generate(classes.result)
-    end
     ```
     {: ruby}
+    {: codeblock}
+
+    ```cs
+    var authenticator = new IamAuthenticator(
+        apikey: "{apikey}"{: apikey}
+    );
+
+    while (!authenticator.CanAuthenticate())
+        yield return null;
+
+    var visualRecognition = new VisualRecognitionService("2018-03-19", authenticator);
+
+    ClassifiedImages classifyResponse = null;
+    VisualRecognitionService.Classify(
+        callback: (DetailedResponse<ClassifiedImages> response, IBMError error) =>
+        {
+            Log.Debug("VisualRecognitionServiceV3", "Classify result: {0}", reponse.Response);
+            analyzeResponse = response.Result;
+        },
+        url: "https://ibm.biz/BdzLPG"
+        )
+    );
+
+    while (classifyResponse == null)
+        yield return null;
+    ```
+    {: unity}
     {: codeblock}
 
     The response includes the classes that are identified in the image from the built-in General model (`"classifier_id": "default"`) and a confidence score for each class. The score represents a percentage, and higher values represent higher confidences. By default, responses from the **Classify** calls don't include classes with a score below `0.5` (50%).
@@ -332,47 +415,75 @@ To work in a graphical interface where you can create your own custom models, us
 
 1.  Issue a call to classify an [image of food](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg){: external} against the Food model. <span class="hide-dashboard">Replace `{apikey}` with the service credentials you copied earlier.</span>
 
-    ```bash
-    curl -u "apikey:{apikey}"{: apikey} -F "classifier_ids=food" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?url=https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg&version=2018-03-19"
+    ```sh
+    curl -u "apikey:{apikey}"{: apikey} -F "classifier_ids=food" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?url=https://ibm.biz/Bd2NPs&version=2018-03-19"
     ```
     {: pre}
     {: curl}
 
+    ```cs
+    IamAuthenticator authenticator = new IamAuthenticator(
+        apikey: "{apikey}"{: apikey}
+        );
+
+    VisualRecognitionService visualRecognition = new VisualRecognitionService("2018-03-19", authenticator);
+
+    var result = visualRecognition.Classify(
+        url: "https://ibm.biz/Bd2NPs",
+        classifierIds: new List<string>()
+            {
+                "food"
+            }
+        );
+
+    Console.WriteLine(result.Response);
+    ```
+    {: dotnet-standard}
+    {: codeblock}
+
     ```go
+    package main
+
     import (
       "encoding/json"
       "fmt"
-      "github.com/watson-developer-cloud/go-sdk/core"
+      "github.com/IBM/go-sdk-core/core"
       "github.com/watson-developer-cloud/go-sdk/visualrecognitionv3"
     )
 
-    visualRecognition, visualRecognitionErr := visualrecognitionv3.
-        NewVisualRecognitionV3(&visualrecognitionv3.VisualRecognitionV3Options{
-          Version:   "2018-03-19",
-          IAMApiKey: "{apikey}"{: apikey},
-        })
+    func main() {
+      authenticator := &core.IamAuthenticator{
+        ApiKey: "{apikey}"{: apikey},
+      }
+
+      options := &visualrecognitionv3.VisualRecognitionV3Options{
+        Version: "2018-03-19",
+        Authenticator: authenticator,
+      }
+
+      visualRecognition, visualRecognitionErr := visualrecognitionv3.NewVisualRecognitionV3(options)
+
       if visualRecognitionErr != nil {
         panic(visualRecognitionErr)
       }
 
-      response, responseErr := visualRecognition.Classify(
+      result, response, responseErr := visualRecognition.Classify(
         &visualrecognitionv3.ClassifyOptions{
-          URL: core.StringPtr("https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg"),
+          URL: core.StringPtr("https://ibm.biz/Bd2NPs"),
           ClassifierIds: []string{"food"},
         },
       )
       if responseErr != nil {
         panic(responseErr)
       }
-      result := visualRecognition.GetClassifyResult(response)
       b, _ := json.MarshalIndent(result, "", "  ")
       fmt.Println(string(b))
+    }
     ```
     {: go}
     {: codeblock}
 
     ```java
-    import java.io.FileNotFoundException;
     import java.util.Collections;
 
     import com.ibm.cloud.sdk.core.service.security.IamOptions;
@@ -382,19 +493,16 @@ To work in a graphical interface where you can create your own custom models, us
 
     public class ClassifyUrlFood {
 
-      public static void main(String[] args) throws FileNotFoundException {
+      public static void main(String[] args) {
 
-        IamOptions options = new IamOptions.Builder()
-            .apiKey("{apikey}"{: apikey})
-            .build();
-
-        VisualRecognition service = new VisualRecognition("2018-03-19", options);
+        IamAuthenticator authenticator = new IamAuthenticator("{apikey}"{: apikey});
+        VisualRecognition visualRecognition = new VisualRecognition("2018-03-19", authenticator);
 
         ClassifyOptions classifyOptions = new ClassifyOptions.Builder()
-            .url("https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg")
+            .url("https://ibm.biz/Bd2NPs")
             .classifierIds(Collections.singletonList("food"))
             .build();
-        ClassifiedImages result = service.classify(classifyOptions).execute().getResult();
+        ClassifiedImages result = visualRecognition.classify(classifyOptions).execute().getResult();
         System.out.println(
             "\n******** Classify with the Food model ********\n" + result
                 + "\n******** END Classify with the Food model ********\n");
@@ -406,40 +514,45 @@ To work in a graphical interface where you can create your own custom models, us
     {: codeblock}
 
     ```javascript
-    var VisualRecognitionV3 = require('watson-developer-cloud/visual-recognition/v3');
+    var fs = require('fs');
+    const VisualRecognitionV3 = require('ibm-watson/visual-recognition/v3');
+    const { IamAuthenticator } = require('ibm-watson/auth');
 
-    var visualRecognition = new VisualRecognitionV3({
+    const visualRecognition = new VisualRecognitionV3({
       version: '2018-03-19',
-      iam_apikey: '{apikey}'{: apikey}
+      authenticator: new IamAuthenticator({
+        apikey: '{apikey}'{: apikey},
+      }),
     });
 
-    var url = 'https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg';
-    var classifier_ids = ["food"];
-
-    var params = {
-      url: url,
-      classifier_ids: classifier_ids
+    const classifyParams = {
+      url: 'https://ibm.biz/Bd2NPs',
+      classifierIds: ['food'],
     };
 
-    visualRecognition.classify(params, function(err, response) {
-      if (err)
-        console.log(err);
-      else
-        console.log(JSON.stringify(response, null, 2))
-    });
+    visualRecognition.classify(classifyParams)
+      .then(classifiedImages => {
+      console.log(JSON.stringify(classifiedImages, null, 2));
+      })
+      .catch(err => {
+        console.log('error:', err);
+      });
     ```
     {: javascript}
     {: codeblock}
 
     ```python
     import json
-    from watson_developer_cloud import VisualRecognitionV3
+    from ibm_watson import VisualRecognitionV3
+    from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
+    authenticator = IAMAuthenticator('{apikey}'{: apikey})
     visual_recognition = VisualRecognitionV3(
-        '2018-03-19',
-        iam_apikey='{apikey}'{: apikey})
+        version='2018-03-19',
+        authenticator=authenticator
+    )
 
-    url = 'https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg'
+    url = 'https://ibm.biz/Bd2NPs'
     classifier_ids = ["food"]
 
     classes_result = visual_recognition.classify(url=url, classifier_ids=classifier_ids).get_result()
@@ -450,21 +563,56 @@ To work in a graphical interface where you can create your own custom models, us
 
     ```ruby
     require "json"
+    require "ibm_watson/authenticators"
     require "ibm_watson/visual_recognition_v3"
     include IBMWatson
 
+    authenticator = Authenticators::IamAuthenticator.new(
+      apikey: "{apikey}"{: apikey}
+    )
     visual_recognition = VisualRecognitionV3.new(
       version: "2018-03-19",
-      iam_apikey: "{apikey}"{: apikey}
+      authenticator: authenticator
     )
-    url= "https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg"
-    classifier_ids= ["food"]
 
-    classes = visual_recognition.classify(url, classifier_ids)
+    classes = visual_recognition.classify(
+      url= "https://ibm.biz/Bd2NPs"
+      classifier_ids= ["food"]
+    )
     puts JSON.pretty_generate(classes.result)
-    end
     ```
     {: ruby}
+    {: codeblock}
+
+    ```cs
+    var authenticator = new IamAuthenticator(
+        apikey: "{apikey}"{: apikey}
+    );
+
+    while (!authenticator.CanAuthenticate())
+        yield return null;
+
+    var visualRecognition = new VisualRecognitionService("2018-03-19", authenticator);
+
+    ClassifiedImages classifyResponse = null;
+    VisualRecognitionService.Classify(
+        callback: (DetailedResponse<ClassifiedImages> response, IBMError error) =>
+        {
+            Log.Debug("VisualRecognitionServiceV3", "Classify result with Food model: {0}", response.Response);
+            classifyResponse = response.Result;
+        },
+        url: "https://ibm.biz/Bd2NPs",
+        classifierIds: new List<string>()
+            {
+                "food"
+            }
+        )
+    );
+
+    while (classifyResponse == null)
+        yield return null;
+    ```
+    {: unity}
     {: codeblock}
 
     The service returns the following results. You can see that the `classifier_id` is identified as `food`. The classes that the service identified are also different from the first response.
@@ -515,16 +663,18 @@ You have a basic understanding of how to use built-in classifiers for image reco
 
 - Try these calls with your own images. Keep the image size under 10 MB.
 - Learn more about how to [build a custom model](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier).
-- {: curl} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition){: external}.
-- {: go} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition?language=go){: external}.
-- {: java} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition?language=java){: external}.
-- {: javascript} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition?language=node){: external}.
-- {: python} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition?language=python){: external}.
-- {: ruby} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition?language=ruby){: external}.
+- {: curl} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3?code=dotnet-standard){: external}.
+- {: dotnet-standard} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3?code=dotnet-standard){: external}.
+- {: go} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3?code=go){: external}.
+- {: java} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3?code=java){: external}.
+- {: javascript} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3?code=node){: external}.
+- {: python} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3?code=python){: external}.
+- {: ruby} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3?code=ruby){: external}.
+- {: unity} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3?code=unity){: external}.
 
 ### Attributions
 {: #attributions}
 
 - [IBM VGA 90X8941 on PS55.jpg](https://commons.wikimedia.org/wiki/File:IBM_VGA_90X8941_on_PS55.jpg){: external} by [Darklanlan](https://commons.wikimedia.org/wiki/User:Darklanlan){: external} used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode "Creative Commons Attribution 4.0"){: external}. No changes were made to this image.
-- [Fruit basket](https://flic.kr/p/JPHES){: external} by Flikr user [Ryan Edwards-Crewe](https://www.flickr.com/photos/ryanec/){: external} used under [Creative Commons Attribution 2.0 license](http://creativecommons.org/licenses/by/2.0/deed.en){: external}. No changes were made to this image.
+- [Fruit basket](https://flic.kr/p/JPHES){: external} by Flikr user [Ryan Edwards-Crewe](https://www.flickr.com/photos/ryanec/){: external} used under [Creative Commons Attribution 2.0 license](https://creativecommons.org/licenses/by/2.0/deed.en){: external}. No changes were made to this image.
 - [Ginni Rometty at the Fortune MPW Summit in 2011](https://commons.wikimedia.org/wiki/File:Ginni_Rometty_at_the_Fortune_MPW_Summit_in_2011.jpg){: external} by Asa Mathat / Fortune Live Media used under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/legalcode){: external}. No changes were made to this image.
