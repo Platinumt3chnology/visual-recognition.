@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-10-17"
+lastupdated: "2019-10-21"
 
 keywords: visual recognition,visual recognition project,VisualRecognition,getting started,classify images, analyze images,tag images,image classification,image recognition,sample code
 
@@ -106,7 +106,7 @@ To work in a graphical interface where you can create your own custom models, us
     - {: java} Gradle
 
         ```sh
-        compile 'com.ibm.watson.developer_cloud:java-sdk:8.+'
+        compile 'com.ibm.watson:ibm-watson:8.+'
         ```
         {:pre}
 - {: javascript} Install the [Node SDK](https://github.com/watson-developer-cloud/node-sdk){: external}.
