@@ -250,7 +250,8 @@ To work in a graphical interface where you can create your own custom models, us
     };
 
     visualRecognition.classify(classifyParams)
-      .then(classifiedImages => {
+      .then(response => {
+        const classifiedImages = response.result;
         console.log(JSON.stringify(classifiedImages, null, 2));
       })
       .catch(err => {
@@ -514,7 +515,7 @@ To work in a graphical interface where you can create your own custom models, us
     {: codeblock}
 
     ```javascript
-    var fs = require('fs');
+    const fs = require('fs');
     const VisualRecognitionV3 = require('ibm-watson/visual-recognition/v3');
     const { IamAuthenticator } = require('ibm-watson/auth');
 
@@ -531,8 +532,9 @@ To work in a graphical interface where you can create your own custom models, us
     };
 
     visualRecognition.classify(classifyParams)
-      .then(classifiedImages => {
-      console.log(JSON.stringify(classifiedImages, null, 2));
+      .then(response => {
+        const classifiedImages = response.result;
+        console.log(JSON.stringify(classifiedImages, null, 2));
       })
       .catch(err => {
         console.log('error:', err);
