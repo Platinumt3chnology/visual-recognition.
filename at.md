@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-09-11"
+lastupdated: "2019-10-28"
 
-keywords: activity,tracker,events,API,public API,subscription,binding
+keywords: visual recognition,activity,tracker,events,API,public API,subscription,binding
 
 subcollection: visual-recognition
 
@@ -21,10 +21,10 @@ subcollection: visual-recognition
 {:screen: .screen}
 {:table: .aria-labeledby="caption"}
 
-# {{site.data.keyword.visualrecognitionshort}} Activity Tracker events
-{: #at-events}
+# Activity Tracker events
+{: #at_events}
 
-When you have {{site.data.keyword.visualrecognitionshort}} provisioned as a service in your {{site.data.keyword.cloud_notm}} account, you can see the following events in the [{{site.data.keyword.cloud_notm}} Activity Tracker](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov).
+When you have {{site.data.keyword.visualrecognitionshort}} provisioned as a service in your {{site.data.keyword.cloud_notm}} account, you can see the following events in the [{{site.data.keyword.cloud_notm}} Activity Tracker with LogDNA](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started).
 {: shortdesc}
 
 ## List of events
@@ -32,14 +32,14 @@ When you have {{site.data.keyword.visualrecognitionshort}} provisioned as a serv
 
 | Action | Description |
 | -- | -- |
-| visual_recognition.classifiers.get_core_ml_model | Retrieve a Core ML model file of a classifier |
-| visual_recognition.classifiers.post | Train a new multi-faceted classifier on the uploaded image data |
-| visual_recognition.classifiers.delete | Delete a classifier |
-| visual_recognition.user_data.delete | Delete all data associated with a specified customer ID |
-| visual_recognition.collection_images.get | Retrieve an image from a collection |
-| visual_recognition.collection_images.post | Add an image to a collection |
-| visual_recognition.collection_images.delete | Delete an image from a collection |
-| visual_recognition.collection.delete | Delete all data associated with a specified image collection |
+| watson-vision-combined.classifiers-core-ml-model.get | Retrieve a Core ML model file of a classifier |
+| watson-vision-combined.classifiers.post | Train a new multi-faceted classifier on the uploaded image data |
+| watson-vision-combined.classifiers.delete | Delete a classifier |
+| watson-vision-combined.user-data.delete | Delete all data associated with a specified customer ID |
+| watson-vision-combined.collection-images.get | Retrieve an image from a collection |
+| watson-vision-combined.collection-images.post | Add an image to a collection |
+| watson-vision-combined.collection-images.delete | Delete an image from a collection |
+| watson-vision-combined.collection.delete | Delete all data associated with a specified image collection |
 
 ## Where to view events
 {: #at-view}
