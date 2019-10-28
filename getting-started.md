@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-10-21"
+lastupdated: "2019-10-28"
 
 keywords: visual recognition,visual recognition project,VisualRecognition,getting started,classify images, analyze images,tag images,image classification,image recognition,sample code
 
@@ -53,7 +53,7 @@ To work in a graphical interface where you can create your own custom models, us
     1.  Click **Create**.
 - {: hide-dashboard} Copy the credentials to authenticate to your service instance:
     1.  On the **Manage** page, click **Show Credentials**.
-    1.  Copy the `API Key` value.
+    1.  Copy the `API Key` and `URL` values.
 - {: curl} Make sure that you have the `curl` command.
     - Test whether `curl` is installed. Run the following command on the command line. If the output lists the `curl` version with SSL support, you are set for the tutorial.
 
@@ -141,10 +141,10 @@ To work in a graphical interface where you can create your own custom models, us
 ## Step 1: Classify an image
 {: #classify}
 
-1.  Issue the following call to classify [an image](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg){: external}. <span class="hide-dashboard">Replace `{apikey}` with the service credentials you copied earlier.</span>
+1.  Issue the following call to classify [an image](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg){: external}. <span class="hide-dashboard">Replace `{apikey}` and `{url}` with the service credentials you copied earlier.</span>
 
     ```sh
-    curl -u "apikey:{apikey}"{: apikey} "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?url=https://ibm.biz/BdzLPG&version=2018-03-19"
+    curl -u "apikey:{apikey}"{: apikey} "{url}/v3/classify?url=https://ibm.biz/BdzLPG&version=2018-03-19"{: url}
     ```
     {: pre}
     {: curl}
@@ -155,6 +155,7 @@ To work in a graphical interface where you can create your own custom models, us
         );
 
     VisualRecognitionService visualRecognition = new VisualRecognitionService("2018-03-19", authenticator);
+    visualRecognition.SetServiceUrl("{url}"{: url});
 
     var result = visualRecognition.Classify(
         url: "https://ibm.biz/BdzLPG"
@@ -191,6 +192,8 @@ To work in a graphical interface where you can create your own custom models, us
         panic(visualRecognitionErr)
       }
 
+      visualRecognition.SetServiceURL("{url}"{: url})
+
       result, response, responseErr := visualRecognition.Classify(
         &visualrecognitionv3.ClassifyOptions{
           URL: core.StringPtr("https://ibm.biz/BdzLPG"),
@@ -218,6 +221,7 @@ To work in a graphical interface where you can create your own custom models, us
 
         IamAuthenticator authenticator = new IamAuthenticator("{apikey}"{: apikey});
         VisualRecognition visualRecognition = new VisualRecognition("2018-03-19", authenticator);
+        visualRecognition.setServiceUrl("{url}"{: url});
 
         ClassifyOptions classifyOptions = new ClassifyOptions.Builder()
             .url("https://ibm.biz/BdzLPG")
@@ -243,6 +247,7 @@ To work in a graphical interface where you can create your own custom models, us
       authenticator: new IamAuthenticator({
         apikey: '{apikey}'{: apikey},
       }),
+      url: '{url}'{: url},
     });
 
     const classifyParams = {
@@ -272,6 +277,8 @@ To work in a graphical interface where you can create your own custom models, us
         authenticator=authenticator
     )
 
+    visual_recognition.set_service_url('{url}'{: url})
+
     url = 'https://ibm.biz/BdzLPG'
 
     classes_result = visual_recognition.classify(url=url).get_result()
@@ -293,6 +300,7 @@ To work in a graphical interface where you can create your own custom models, us
       version: "2018-03-19",
       authenticator: authenticator
     )
+    visual_recognition.service_url = "{url}"{: url}
 
     url= "https://ibm.biz/BdzLPG"
 
@@ -311,6 +319,7 @@ To work in a graphical interface where you can create your own custom models, us
         yield return null;
 
     var visualRecognition = new VisualRecognitionService("2018-03-19", authenticator);
+    visualRecognition.SetServiceUrl("{url}"{: url});
 
     ClassifiedImages classifyResponse = null;
     VisualRecognitionService.Classify(
@@ -414,10 +423,10 @@ To work in a graphical interface where you can create your own custom models, us
 
 {{site.data.keyword.visualrecognitionshort}} also includes a built-in Food model that might be more accurate for your images with food items.
 
-1.  Issue a call to classify an [image of food](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg){: external} against the Food model. <span class="hide-dashboard">Replace `{apikey}` with the service credentials you copied earlier.</span>
+1.  Issue a call to classify an [image of food](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/fruitbowl.jpg){: external} against the Food model. <span class="hide-dashboard">Replace `{apikey}` and `{url}` with the service credentials you copied earlier.</span>
 
     ```sh
-    curl -u "apikey:{apikey}"{: apikey} -F "classifier_ids=food" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?url=https://ibm.biz/Bd2NPs&version=2018-03-19"
+    curl -u "apikey:{apikey}"{: apikey} -F "classifier_ids=food" "{url}/v3/classify?url=https://ibm.biz/Bd2NPs&version=2018-03-19"{: url}
     ```
     {: pre}
     {: curl}
@@ -428,6 +437,7 @@ To work in a graphical interface where you can create your own custom models, us
         );
 
     VisualRecognitionService visualRecognition = new VisualRecognitionService("2018-03-19", authenticator);
+    visualRecognition.SetServiceUrl("{url}"{: url});
 
     var result = visualRecognition.Classify(
         url: "https://ibm.biz/Bd2NPs",
@@ -468,6 +478,8 @@ To work in a graphical interface where you can create your own custom models, us
         panic(visualRecognitionErr)
       }
 
+      visualRecognition.SetServiceURL("{url}"{: url})
+
       result, response, responseErr := visualRecognition.Classify(
         &visualrecognitionv3.ClassifyOptions{
           URL: core.StringPtr("https://ibm.biz/Bd2NPs"),
@@ -498,6 +510,7 @@ To work in a graphical interface where you can create your own custom models, us
 
         IamAuthenticator authenticator = new IamAuthenticator("{apikey}"{: apikey});
         VisualRecognition visualRecognition = new VisualRecognition("2018-03-19", authenticator);
+        visualRecognition.setServiceUrl("{url}"{: url});
 
         ClassifyOptions classifyOptions = new ClassifyOptions.Builder()
             .url("https://ibm.biz/Bd2NPs")
@@ -524,6 +537,7 @@ To work in a graphical interface where you can create your own custom models, us
       authenticator: new IamAuthenticator({
         apikey: '{apikey}'{: apikey},
       }),
+      url: '{url}'{: url},
     });
 
     const classifyParams = {
@@ -554,6 +568,8 @@ To work in a graphical interface where you can create your own custom models, us
         authenticator=authenticator
     )
 
+    visual_recognition.set_service_url('{url}'{: url})
+
     url = 'https://ibm.biz/Bd2NPs'
     classifier_ids = ["food"]
 
@@ -576,6 +592,7 @@ To work in a graphical interface where you can create your own custom models, us
       version: "2018-03-19",
       authenticator: authenticator
     )
+    visual_recognition.service_url = "{url}"{: url}
 
     classes = visual_recognition.classify(
       url= "https://ibm.biz/Bd2NPs"
@@ -595,6 +612,7 @@ To work in a graphical interface where you can create your own custom models, us
         yield return null;
 
     var visualRecognition = new VisualRecognitionService("2018-03-19", authenticator);
+    visualRecognition.SetServiceUrl("{url}"{: url});
 
     ClassifiedImages classifyResponse = null;
     VisualRecognitionService.Classify(
