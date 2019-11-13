@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-09-11"
+lastupdated: "2019-11-13"
 
 keywords: new features,updates,what's new,changelog,change log,release notes
 
@@ -45,8 +45,34 @@ The current version is `2018-03-19`.
 
 The following new features and changes to the service are available.
 
+### 13 November 2019
+{: #13november2019}
+
+- Updates to v4 of the API
+    - **New endpoint: Get training usage**
+
+        To see how many v4 (Custom Object Detection) training events have occurred in your account, you can run the **Get training usage** (`GET /v4/training_usage`) endpoint. For details, see the [API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4#get-training-usage).
+
+    - **New image size: Download a thumbnail version**
+
+        With the **Get a JPEG file of an image** endpoint in v4 of the API (`GET /v4/collections/{collection_id}/images/{image_id}/jpeg`), you can now download a thumbnail version of your images by specifying `size=thumbnail`. The full size version remains the default. For more information, see the [API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4#get-a-jpeg-file-of-an-image).
+
+- **New South Korea location**
+    - You can now create {{site.data.keyword.visualrecognitionshort}} instances in the Seoul location.
+
+        {{site.data.keyword.DSX}} does not support the Seoul location, so service instances that you create outside of {{site.data.keyword.DSX}} are not available in that tool.
+
+### 7 October 2019
+{: #7october2019}
+
+- **General availability of Custom Object Detection**
+
+    The Custom Object Detection features moved from Beta to General availability (GA). Custom Object Detection identifies items and their location in an image.
+
+    For more information, see [Custom Object Detection Generally Available](https://medium.com/ibm-watson/ibm-watson-visual-recognition-custom-object-detection-generally-available-906b2ae77969){: external} in the <em>IBM Watson blog</em>.
+
 ### 12 September 2019
-{: 12september2019}
+{: #12september2019}
 
 - **Detect faces methods removed**
 
