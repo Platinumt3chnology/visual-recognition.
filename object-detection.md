@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-16"
+lastupdated: "2019-10-08"
 
 keywords: custom object detection,object detection,bounding boxes,visual inspection
 
@@ -24,14 +24,11 @@ subcollection: visual-recognition
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Custom Object Detection (Beta)
+# Custom Object Detection
 {: #object-detection-overview}
 
-{{site.data.keyword.visualrecognitionfull}} Custom Object Detection (Beta) identifies items and their location in an image. The service detects these items based on a set of images with labeled training data that you provide.
+{{site.data.keyword.visualrecognitionfull}} Custom Object Detection identifies items and their location in an image. The service detects these items based on a set of images with labeled training data that you provide.
 {: shortdesc}
-
-Custom Object Detection is a beta feature. For more information about beta features, see the [Release notes](/docs/services/visual-recognition?topic=visual-recognition-release-notes#beta).
-{: important}
 
 You train the object detection model to recognize objects that are important to your workflow or domain. For example, detect damage to cars, find machines that need maintenance, or perform visual inspections in the field. You can also use object detection to count objects or manage inventory.
 
@@ -67,10 +64,10 @@ In the following image, the **Analyze images** method of Custom Object Detection
 
 To use {{site.data.keyword.visualrecognitionshort}} Custom Object Detection, you follow this sequence of steps to set up a custom object detection model:
 
-1.  Create a collection: A collection is a container for your images and training data. See [Create a collection](https://{DomainName}/apidocs/visual-recognition-v4#create-a-collection){: external} in the v4 API reference.
-1.  Add your images to the collection. You can add single images by URL or by file, or you can upload a `.zip` file of images. See [Add images](https://{DomainName}/apidocs/visual-recognition-v4#add-images){: external} in the v4 API reference.
+1.  Create a collection: A collection is a container for your images and training data. See [Create a collection](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4#create-a-collection){: external} in the v4 API reference.
+1.  Add your images to the collection. You can add single images by URL or by file, or you can upload a `.zip` file of images. See [Add images](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4#add-images){: external} in the v4 API reference.
 1.  Add training data to your images. See [Preparing your training data](#object-detection-preparation).
-1.  Train your collection. After you have enough training data, start training on the images in the collection. See [Train a collection](https://{DomainName}/apidocs/visual-recognition-v4#train-a-collection){: external} in the v4 API reference.
+1.  Train your collection. After you have enough training data, start training on the images in the collection. See [Train a collection](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4#train-a-collection){: external} in the v4 API reference.
 
 After you complete these steps and train your collection, you can analyze images against it.
 
@@ -100,7 +97,7 @@ The following example shows the training data for an object labeled `BurntCookie
 ```
 {: codeblock}
 
-In this initial beta release, you create the location information by hand or by using an image annotation tool.
+In this initial release, you create the location information by hand or by using an image annotation tool.
 
 In general, the more images and bounding boxes that you provide in your training data, the better. Here are some training data guidelines to get you started:
 
@@ -110,7 +107,7 @@ In general, the more images and bounding boxes that you provide in your training
 - The size of each bounding box is greater than 15% of the image dimensions.
 - The API reads the EXIF orientation tags in your images. Make sure that the `location` coordinates match that orientation. To adjust the orientation, you can use a tool like ImageMagick to _auto-orient_ your images before you add bounding boxes.
 
-For more information about the **Add training data to an image** method, see the [v4 API reference](https://{DomainName}/apidocs/visual-recognition-v4#add-training-data-to-an-image){: external}.
+For more information about the **Add training data to an image** method, see the [v4 API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4#add-training-data-to-an-image){: external}.
 
 ### Train the collection
 {: #object-detection-train}
@@ -132,14 +129,14 @@ After you add the training data to images in your collection, the final setup st
 
 You can retrain a model after you update the training data by reissuing the call.
 
-For more information, see [Train a collection](https://{DomainName}/apidocs/visual-recognition-v4#train-a-collection){: external} in the v4 API reference.
+For more information, see [Train a collection](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4#train-a-collection){: external} in the v4 API reference.
 
 ## Analyze images
 {: #object-detection-analyze}
 
-After you set up a custom object detection model and the training is complete, you can detect objects in other images. As with classification, you provide an image or `.zip` file of images and an optional **threshold** to set the minimum score of detected objects. For more information, see the **Analyze images** method in the [v4 API reference](https://{DomainName}/apidocs/visual-recognition-v4#analyze-images).
+After you set up a custom object detection model and the training is complete, you can detect objects in other images. As with classification, you provide an image or `.zip` file of images and an optional **threshold** to set the minimum score of detected objects. For more information, see the **Analyze images** method in the [v4 API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4#analyze-images).
 
 ## Next steps
 {: #object-detection-next-steps}
 
-- Get familiar with the API in the [v4 API reference](https://{DomainName}/apidocs/visual-recognition-v4){: external}.
+- Get familiar with the API in the [v4 API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4){: external}.

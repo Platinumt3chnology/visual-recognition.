@@ -166,7 +166,7 @@ You can update a custom model either by adding classes to the model or by adding
 
 When the new model is ready, call it to see how it performs.
 
-1.  Download the <a target="_blank" href="https://github.com/watson-developer-cloud/doc-tutorial-downloads/raw/master/visual-recognition/dogs.jpg" download>dogs.jpg <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.
+1.  Download the <a target="_blank" href="https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/visual-recognition/dogs.jpg" download>dogs.jpg <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.
 1.  Use the `POST /v3/classify` method to test your custom model. The following example classifies the `dogs.jpg` image against both the "dogs\_1941945966" custom model and the built-in `default` General model:
     - Replace `{apikey}` with the service credentials you copied in the first step.
 
@@ -277,4 +277,4 @@ Now that you have a basic understanding of how to use custom models, you can div
 ### Attributions
 {: #tutorial-custom-classifier-attributions}
 
-All images that are used on this page are from Flikr and used under [Creative Commons Attribution 2.0 license](http://creativecommons.org/licenses/by/2.0/deed.en){: external}. No changes were made to these images.
+All images that are used on this page are from Flikr and used under [Creative Commons Attribution 2.0 license](https://creativecommons.org/licenses/by/2.0/deed.en){: external}. No changes were made to these images.
