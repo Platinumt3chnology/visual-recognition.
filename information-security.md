@@ -40,7 +40,7 @@ If you need to request GDPR support for {{site.data.keyword.cloud}} {{site.data.
 
 IBM is committed to providing our clients and partners with innovative data privacy, security and governance solutions to assist them on their journey to GDPR compliance.
 
-Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and offerings to support your compliance journey [here](http://www.ibm.com/gdpr){: external}.
+Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and offerings to support your compliance journey [here](https://www.ibm.com/gdpr){: external}.
 
 ## Labeling and deleting data in {{site.data.keyword.visualrecognitionshort}}
 {: #gdpr-visrec}
@@ -94,4 +94,4 @@ Delete requests are processed in batches and might take up to 24 hours to comple
 ### Support
 {: #gdpr-visrec-support}
 
-Direct questions to your account representative, or reach out to support directly at [https://ibm.biz/ibmcloudsupport](https://ibm.biz/ibmcloudsupport){: external}.
+Direct questions to your account representative, or reach out to support directly at [https://ibm.biz/ibmcloudsupport](https://cloud.ibm.com/login?redirect=/unifiedsupport/supportcenter){: external}.

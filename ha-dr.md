@@ -80,10 +80,10 @@ You want to store the images and the training data that you use to train a colle
 
 You can download the files and data with the {{site.data.keyword.visualrecognitionshort}} v4 API:
 
-- Collections. Use the [**List collections**](https://{DomainName}/apidocs/visual-recognition-v4#list-collections){: external} method to get each `collection_id`.
-- Image metadata. Use [**List images**](https://{DomainName}/apidocs/visual-recognition-v4#list-images){: external} to get the `image_id` for each image in each collection.
-- Image files in .jpeg format. Use [**Get a JPEG file of an image**](https://{DomainName}/apidocs/visual-recognition-v4#get-a-jpeg-file-of-an-image){: external} to download each image in each collection. Only the images with training data form your training set and are used to train a collection.
-- Image training data. Use [**Get image details**](https://{DomainName}/apidocs/visual-recognition-v4#get-image-details){: external} for the training data of each `image_id` in each collection.
+- Collections. Use the [**List collections**](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4#list-collections){: external} method to get each `collection_id`.
+- Image metadata. Use [**List images**](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4#list-images){: external} to get the `image_id` for each image in each collection.
+- Image files in .jpeg format. Use [**Get a JPEG file of an image**](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4#get-a-jpeg-file-of-an-image){: external} to download each image in each collection. Only the images with training data form your training set and are used to train a collection.
+- Image training data. Use [**Get image details**](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4#get-image-details){: external} for the training data of each `image_id` in each collection.
 
 #### Restore your collection
 {: #ha-dr-recreate-v4}

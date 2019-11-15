@@ -86,7 +86,7 @@ The following new features and changes to the service are available.
 
 - **Custom Object Detection avaiable in Beta**
     - Custom Object Detection identifies items and their location in an image. The service detects these items based on a set of images with labeled training data that you provide. For details, see [Custom Object Detection (Beta)](/docs/services/visual-recognition?topic=visual-recognition-object-detection-overview)
-    - Custom Object Detection is supported by the [Visual Recognition v4 API (Beta)](https://{DomainName}/apidocs/visual-recognition-v4){: external}
+    - Custom Object Detection is supported by the [Visual Recognition v4 API (Beta)](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4){: external}
 
 ### 21 March 2019
 {: #21march2019}
@@ -111,7 +111,7 @@ The following new features and changes to the service are available.
 
     - As previously notified, all {{site.data.keyword.visualrecognitionshort}} instances created before May 23, 2018 are no longer active. Data from the instances is now deleted. See [Migrating](/docs/services/visual-recognition?topic=visual-recognition-migrating#migrating) for details about how to move to a new service instance.
     - Service instances created after this date are not affected.
-    - If you have any questions, contact [IBM support](https://ibm.biz/ibmcloudsupport){: external}.
+    - If you have any questions, contact [IBM support](https://cloud.ibm.com/login?redirect=/unifiedsupport/supportcenter){: external}.
 
 ### 1 August 2018
 {: #01august2018}
@@ -122,13 +122,13 @@ The following new features and changes to the service are available.
 
     No code change are required. Both models are free under the Lite plan and cost $0.002 per image under the Standard plan.
 
-    For more information, see [Updates to Watson Visual Recognition](https://ibm.biz/visrec-price-reduction){: external} in the <em>Watson blog</em>.
+    For more information, see [Updates to Watson Visual Recognition](https://www.ibm.com/blogs/watson/2018/06/updates-to-ibm-watson-visual-recognition-%E2%80%A8price-reduction-for-custom-classification-%E2%80%A8food-and-explicit-model-are-now-ga/){: external} in the <em>Watson blog</em>.
 
 ### 1 July 2018
 {: #01july2018}
 
 - **New pricing for custom models**
-    - Starting July 1, 2018, classifying an image with a custom model costs half the earlier rate and is now $0.002 per image. For details and other important information, see [Updates to Watson Visual Recognition \- Price reduction for Custom Classification](https://ibm.biz/visrec-price-reduction){: external} in the <em>Watson blog</em>.
+    - Starting July 1, 2018, classifying an image with a custom model costs half the earlier rate and is now $0.002 per image. For details and other important information, see [Updates to Watson Visual Recognition \- Price reduction for Custom Classification](https://www.ibm.com/blogs/watson/2018/06/updates-to-ibm-watson-visual-recognition-%E2%80%A8price-reduction-for-custom-classification-%E2%80%A8food-and-explicit-model-are-now-ga/){: external} in the <em>Watson blog</em>.
 
 ### 21 June 2018
 {: #21june2018}
@@ -146,7 +146,7 @@ The following new features and changes to the service are available.
 
     You now authenticate with Identity and Access Management (IAM) at a new endpoint:
 
-    - Use a different endpoint URL for new instances. The default endpoint is `https:/gateway.watsonplatform.net/visual-recognition/api/`. To find the URL for your service instance, check the credentials by clicking the instance from the {{site.data.keyword.cloud_notm}} [Resource list](https://{DomainName}/resources){: external}.
+    - Use a different endpoint URL for new instances. The default endpoint is `https:/gateway.watsonplatform.net/visual-recognition/api/`. To find the URL for your service instance, check the credentials by clicking the instance from the {{site.data.keyword.cloud_notm}} [Resource list](https://{DomainName}/login?redirect=%2Fresources){: external}.
     - Modify how you authenticate to the API. You provide either an IAM key or access token for your service instance. See [Migrating](/docs/services/visual-recognition?topic=visual-recognition-migrating#migrating) for examples.
 
     For service instances created before May 23, 2018, the authentication process and endpoint have not changed. Authenticate by providing the `api_key` query parameter.
@@ -326,7 +326,6 @@ The following new features and changes to the service are available.
 
     An updated face detection model is available. This beta model uses broader training data sets for increased accuracy of facial detection for age and gender. For more information, see [Increasing the Accuracy of IBM’s Watson {{site.data.keyword.visualrecognitionshort}} service](https://www.ibm.com/blogs/watson/2018/02/increasing-accuracy-ibms-watson-visual-recognition-service/){: external} and [Mitigating Bias in AI Models](https://www.ibm.com/blogs/research/2018/02/mitigating-bias-ai-models/){: external}.
 
-    - You can view results of the updated model in the [demo](https://www.ibm.com/watson/services/visual-recognition/demo){: external}.
     - The beta model is available at `/v3/detect_faces_beta`.
 
     Differences between the beta and general availability (GA) models:
@@ -437,12 +436,12 @@ The following new features and changes to the service are available.
 ### 8 September 2017
 {: #8september2017}
 
-- **Beta Similarity Search and collections closed**: As of September 8, 2017, the beta period for Similarity Search is closed. For more information, see [Visual Recognition API – Similarity Search Update](https://ibm.biz/BdzquM){: external}.
+- **Beta Similarity Search and collections closed**: As of September 8, 2017, the beta period for Similarity Search is closed. For more information, see [Visual Recognition API – Similarity Search Update](https://www.ibm.com/blogs/cloud-archive/2017/08/visual-recognition-api-similarity-search-update/){: external}.
 
 ### 30 June 2017
 {: #30june2017}
 
-- **Improved tagging**: We increased the number of training images for the default classifier. That increase improve the ability to recognize accurately the overall ‘scene’ of an image. For details, see [Further Enhancements for General Tagging Feature](https://ibm.biz/BdzquS){: external}
+- **Improved tagging**: We increased the number of training images for the default classifier. That increase improve the ability to recognize accurately the overall ‘scene’ of an image. For details, see [Further Enhancements for General Tagging Feature](https://www.ibm.com/blogs/cloud-archive/2017/07/watson-visual-recognition-sees-enhancements-general-tagging-feature/){: external}
 - **Additional languages**: The **Classify images** method now supports Korean, Italian, and German in addition to English, Arabic, Spanish, and Japanese.
 
     For details about the API call, see the **Classify an image** method in the [API reference](https://{DomainName}/apidocs/visual-recognition/#classify-images){: external}.
@@ -490,7 +489,7 @@ The following new features and changes to the service are available.
 
 - **New pricing**
 
-    {{site.data.keyword.IBM_notm}} has lowered the pricing of custom classifiers on the {{site.data.keyword.visualrecognitionshort}} service and increased what's available on the free plan. For more information, see the [{{site.data.keyword.visualrecognitionshort}} pricing page](https://www.ibm.com/watson/services/visual-recognition/pricing/index.html#pricing).
+    {{site.data.keyword.IBM_notm}} has lowered the pricing of custom classifiers on the {{site.data.keyword.visualrecognitionshort}} service and increased what's available on the free plan. For more information, see the [{{site.data.keyword.visualrecognitionshort}} pricing page](https://www.ibm.com/cloud/watson-visual-recognition/pricing).
 
 ### 7 October 2016
 {: #7october2016}
@@ -514,7 +513,7 @@ The following new features and changes to the service are available.
 
 - **Introductory pricing ending**
 
-    Custom classifier training and retraining, custom image classification, and custom classifier storage is no longer free. For information on the pricing, see the {{site.data.keyword.visualrecognitionshort}} service [pricing page](https://www.ibm.com/watson/services/visual-recognition/pricing/index.html#pricing){: external}.
+    Custom classifier training and retraining, custom image classification, and custom classifier storage is no longer free. For information on the pricing, see the {{site.data.keyword.visualrecognitionshort}} service [pricing page](https://www.ibm.com/cloud/watson-visual-recognition/pricing){: external}.
 
 ### 5 July 2016
 {: #5july2016}

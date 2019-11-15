@@ -7,7 +7,7 @@ Visual Recognition
     {: .navgroup id="learn"}
     getting-started.md
     index.md
-    [Demo](https://www.ibm.com/watson/services/visual-recognition/demo/)
+    [Demo](https://watson-visual-recognition-duo-dev.ng.bluemix.net/)
     [Video: Visual Recognition in Watson Studio](https://youtu.be/tvNRgI8jOIs)
 
     {: .topicgroup}
