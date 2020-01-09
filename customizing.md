@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-09-11"
+  years: 2015, 2020
+lastupdated: "2020-01-09"
 
 keywords: train classifier,retrain classifier,update classifier,positive example,negative example,hierarchy classes,training data,confidence score
 
@@ -10,6 +10,8 @@ subcollection: visual-recognition
 
 ---
 
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
@@ -60,7 +62,8 @@ You can also provide a .zip file of negative examples in the same training call 
 
 After training completes, when the service identifies fruit in an image, it returns the classifier "fruit" as an array that contains the classes "pears", "apples", and "bananas" with their respective confidence scores.
 
-**Important:** The **Create a classifier** call requires that you provide at least two example .zip files: two positive examples files or one positive and one negative file.
+The **Create a classifier** call requires that you provide at least two example .zip files: two positive examples files or one positive and one negative file.
+{: tip}
 
 Custom classifiers are accessible only to the specific service instance where they were created and cannot be shared with other {{site.data.keyword.Bluemix_notm}} users who do not have access to your instance of the service.
 
@@ -107,6 +110,8 @@ There are also size limitations when you classify images.
 
 ## Guidelines for good training
 {: #customizing-guidelines-training}
+{: help}
+{: support}
 
 The following guidelines are not enforced by the API. However, the service tends to perform better when the training data adheres to them:
 
