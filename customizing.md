@@ -62,7 +62,7 @@ You can also provide a .zip file of negative examples in the same training call 
 
 After training completes, when the service identifies fruit in an image, it returns the classifier "fruit" as an array that contains the classes "pears", "apples", and "bananas" with their respective confidence scores.
 
-The **Create a classifier** call requires that you provide at least two example .zip files: two positive examples files or one positive and one negative file.
+The **Create a classifier** call requires that you provide at least two example .zip files: two files with positive examples or one positive and one negative file.
 {: tip}
 
 Custom classifiers are accessible only to the specific service instance where they were created and cannot be shared with other {{site.data.keyword.Bluemix_notm}} users who do not have access to your instance of the service.
