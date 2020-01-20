@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-07-16"
+  years: 2015, 2020
+lastupdated: "2020-01-20"
 
 keywords: custom model,custom classifier,samples,train classifier,train mode,train custom model,update model,retrain model
 
@@ -50,7 +50,7 @@ Use the credentials that you copied in "Getting started tutorial." If you didn't
 
 1.  Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/beagle.zip" download="beagle.zip">beagle.zip <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>, <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/husky.zip" download="husky.zip">husky.zip <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>, <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/golden-retriever.zip" download="golden-retriever.zip">golden-retriever.zip <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>, and <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/cats.zip" download="cats.zip">cats.zip <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> example training files.
 1.  Call the `POST /v3/classifiers` method with the following command, which uploads the training data and creates a `dogs` custom model:
-    - Replace `{apikey}` with the service credentials you copied in the first step.
+    - Replace `{apikey}` and `{url}` with the service credentials you copied in the first step.
     - Modify the location of the `{class}_positive_examples` to point to where you saved the .zip files.
 
     ```bash
@@ -60,12 +60,14 @@ Use the credentials that you copied in "Getting started tutorial." If you didn't
     --form "goldenretriever_positive_examples=@golden-retriever.zip" \
     --form "negative_examples=@cats.zip" \
     --form "name=dogs" \
-    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers?version=2018-03-19"
+    "{url}/v3/classifiers?version=2018-03-19"
     ```
     {: pre}
 
+    Windows users: Replace the backslash (`\`) at the end of each line with a caret (`^`). Make sure that there are no trailing spaces.
+    {: tip}
+
     Positive example file names require the suffix `_positive_examples`. In this example, the file names are `beagle_positive_examples`, `goldenretriever_positive_examples`, and `husky_positive_examples`. The prefix (beagle, goldenretriever, and husky) is returned as the name of class.
-    {:tip }
 
     The response includes a new classifier ID and status, for example:
 
@@ -93,11 +95,11 @@ Use the credentials that you copied in "Getting started tutorial." If you didn't
     ```
     {: codeblock}
 
-1.  Check the training status periodically until you see a status of `ready`. Training begins immediately and must finish before you can query the model. Replace `{apikey}` and `{classifier_id}` with your information:
+1.  Check the training status periodically until you see a status of `ready`. Training begins immediately and must finish before you can query the model. Replace `{apikey}`, `{url}`, and `{classifier_id}` with your information:
 
     ```bash
     curl -X GET -u "apikey:{apikey}" \
-    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?version=2018-03-19"
+    "{url}/v3/classifiers/{classifier_id}?version=2018-03-19"
     ```
     {: pre}
 
@@ -108,7 +110,7 @@ You can update a custom model either by adding classes to the model or by adding
 
 1.  Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/dalmatian.zip" download="dalmatian.zip">dalmatian.zip <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> and <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/more-cats.zip" download="more-cats.zip">more-cats.zip <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> sample training files.
 1.  Call the `POST /v3/classifiers/{classifier_id}` method with the following curl command, which uploads the training data and updates the custom model "dogs\_1941945966":
-    - Replace `{apikey}` with the service credentials you copied in the first step.
+    - Replace `{apikey}` and `{url}` with the service credentials you copied in the first step.
     - Replace `{classifier_id}` with the ID of the custom model you want to update.
     - Modify the location of the `{class}_positive_examples` to point to where you saved the .zip files.
 
@@ -116,7 +118,7 @@ You can update a custom model either by adding classes to the model or by adding
     curl -X POST -u "apikey:{apikey}" \
     --form "dalmatian_positive_examples=@dalmatian.zip" \
     --form "negative_examples=@more-cats.zip" \
-    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?version=2018-03-19"
+    "{url}/v3/classifiers/{classifier_id}?version=2018-03-19"
     ```
     {: pre}
 
@@ -153,11 +155,11 @@ You can update a custom model either by adding classes to the model or by adding
 
     Don't issue another retraining request until the status is `ready`. Multiple requests to retrain a model result in a single retraining taking effect. A time stamp that is called `updated` shows the time that the model was most recently updated. If you call the **Classify** methods while the model is retraining, the old definition of the model is used.
     {: tip}
-1.  Check the training status periodically until you see a status of `ready`. Replace `{apikey}` and `{classifier_id}` with your information:
+1.  Check the training status periodically until you see a status of `ready`. Replace `{apikey}`, `{url}`, and `{classifier_id}` with your information:
 
     ```bash
     curl -X GET -u "apikey:{apikey}" \
-    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?version=2018-03-19"
+    "{url}/v3/classifiers/{classifier_id}?version=2018-03-19"
     ```
     {: pre}
 
@@ -168,13 +170,13 @@ When the new model is ready, call it to see how it performs.
 
 1.  Download the <a target="_blank" href="https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/visual-recognition/dogs.jpg" download>dogs.jpg <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.
 1.  Use the `POST /v3/classify` method to test your custom model. The following example classifies the `dogs.jpg` image against both the "dogs\_1941945966" custom model and the built-in `default` General model:
-    - Replace `{apikey}` with the service credentials you copied in the first step.
+    - Replace `{apikey}` and `{url}` with the service credentials you copied in the first step.
 
     ```bash
     curl -X POST -u "apikey:{apikey}" \
     --form "images_file=@dogs.jpg" \
     --form "classifier_ids=dogs__1941945966,default" \
-    "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19"
+    "{url}/v3/classify?version=2018-03-19"
     ```
     {: pre}
 
@@ -258,11 +260,11 @@ You're done! You created, trained, and queried a custom model with {{site.data.k
 
 You might want to delete your custom model to begin developing your application with a clean instance.
 
-To delete the model, call the `DELETE /v3/classifiers/{classifier_id}` method. Replace `{apikey)` and `classifier_id` with your information:
+To delete the model, call the `DELETE /v3/classifiers/{classifier_id}` method. Replace `{apikey)`, `{url}`, and `classifier_id` with your information:
 
 ```bash
 curl -X DELETE -u "apikey:{apikey}" \
-"https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers/{classifier_id}?version=2018-03-19"
+"{url}/v3/classifiers/{classifier_id}?version=2018-03-19"
 ```
 {: pre}
 
