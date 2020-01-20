@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-09-06"
+  years: 2015, 2020
+lastupdated: "2020-01-20"
 
 keywords: GDPR,General Data Protection Regulation,deleting customer data,privacy
 
@@ -64,7 +64,7 @@ To specify the customer ID for any data that is sent with the **Create a classif
 curl -X POST \
 --header "X-Watson-Metadata: customer_id=my_ID" \
 --form "apple_positive_examples=@apples.zip" \
-"https://gateway.watsonplatform.net/visual-recognition/api/v3/classifiers?version=2018-03-19"
+"https://api.us-south.visual-recognition.watson.cloud.ibm.com/instances/87ff6c52-1c87-46d7-ad18-4ba7ce033760/v3/classifiers?version=2018-03-19"
 ```
 {: pre}
 
@@ -82,7 +82,7 @@ To delete all data that is associated with a customer ID, use the **Delete label
 
 ```bash
 curl -X DELETE -u "apikey:{apikey}" \
-"https://gateway.watsonplatform.net/visual-recognition/api/v3/user_data?customer_id=my_ID&version=2018-03-19"
+"https://api.us-south.visual-recognition.watson.cloud.ibm.com/instances/87ff6c52-1c87-46d7-ad18-4ba7ce033760/v3/user_data?customer_id=my_ID&version=2018-03-19"
 ```
 {: pre}
 
