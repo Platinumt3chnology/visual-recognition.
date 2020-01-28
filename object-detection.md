@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-10-08"
+  years: 2015, 2020
+lastupdated: "2020-01-27"
 
 keywords: custom object detection,object detection,bounding boxes,visual inspection
 
@@ -10,6 +10,8 @@ subcollection: visual-recognition
 
 ---
 
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
@@ -30,7 +32,7 @@ subcollection: visual-recognition
 {{site.data.keyword.visualrecognitionfull}} Custom Object Detection identifies items and their location in an image. The service detects these items based on a set of images with labeled training data that you provide.
 {: shortdesc}
 
-You train the object detection model to recognize objects that are important to your workflow or domain. For example, detect damage to cars, find machines that need maintenance, or perform visual inspections in the field. You can also use object detection to count objects or manage inventory.
+You train the object detection model to recognize objects that are important to your workflow or domain. For example, detect damage to cars, find machines that need maintenance, or inspect items in the field. You can also use object detection to count objects or manage inventory.
 
 ## Object detection and classification compared
 {: #obj-detect-comparison}
@@ -62,7 +64,10 @@ In the following image, the **Analyze images** method of Custom Object Detection
 ## How to use Custom Object Detection
 {: #object-detection-sequence}
 
-To use {{site.data.keyword.visualrecognitionshort}} Custom Object Detection, you follow this sequence of steps to set up a custom object detection model:
+To work in a graphical interface with Custom Object Detection, use [{{site.data.keyword.DSX}}](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external} and follow the [docs](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/visual-rec-obj-detect-create-model.html){: external}.
+{: tip}
+
+To use {{site.data.keyword.visualrecognitionshort}} Custom Object Detection APIs, follow this sequence of steps to set up a custom object detection model:
 
 1.  Create a collection: A collection is a container for your images and training data. See [Create a collection](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4#create-a-collection){: external} in the v4 API reference.
 1.  Add your images to the collection. You can add single images by URL or by file, or you can upload a `.zip` file of images. See [Add images](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4#add-images){: external} in the v4 API reference.
@@ -97,13 +102,12 @@ The following example shows the training data for an object labeled `BurntCookie
 ```
 {: codeblock}
 
-In this initial release, you create the location information by hand or by using an image annotation tool.
+When you use the APIs, you create the location information by hand or by using an image annotation tool. However, you can also use the graphical interface of {{site.data.keyword.DSX}} with Custom Object Detection. For more information, see the [docs](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/visual-rec-obj-detect-create-model.html){: external}.
 
 In general, the more images and bounding boxes that you provide in your training data, the better. Here are some training data guidelines to get you started:
 
 - Each image is at least 500 pixels for both height and width.
 - Each labeled object in the collection has at least 100 locations (bounding boxes).
-- Each image in the collection has no more than 10 bounding boxes.
 - The size of each bounding box is greater than 15% of the image dimensions.
 - The API reads the EXIF orientation tags in your images. Make sure that the `location` coordinates match that orientation. To adjust the orientation, you can use a tool like ImageMagick to _auto-orient_ your images before you add bounding boxes.
 
@@ -140,3 +144,4 @@ After you set up a custom object detection model and the training is complete, y
 {: #object-detection-next-steps}
 
 - Get familiar with the API in the [v4 API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4){: external}.
+- Try [{{site.data.keyword.DSX}}](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external}.
