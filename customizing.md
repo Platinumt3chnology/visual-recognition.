@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-09"
+lastupdated: "2020-01-30"
 
 keywords: train classifier,retrain classifier,update classifier,positive example,negative example,hierarchy classes,training data,confidence score
 
@@ -27,7 +27,7 @@ subcollection: visual-recognition
 # Guidelines for training classifiers
 {: #customizing}
 
-After you classify an image and create, train, and query a custom classifier with the example data in the [Creating a custom classifier tutorial](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier), you can classify your own data or create your own custom classifier.
+After you classify an image and create, train, and query a custom classifier with the example data in the [Creating a custom classifier tutorial](/docs/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier), you can classify your own data or create your own custom classifier.
 {: shortdesc}
 
 ## General classifier categories

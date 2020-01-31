@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-12-12"
+  years: 2019, 2020
+lastupdated: "2020-01-30"
 
 keywords: new features,updates,what's new,changelog,change log,release notes
 
@@ -57,10 +57,15 @@ The following new features and changes to the service are available.
 
         The previous public endpoint domain was `watsonplatform.net`.
 
-        For more information about the URLs, see the [v3](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3#service-endpoint){: external} and [v4](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4#service-endpoint){: external} API reference.
+        For more information about the URLs, see the [API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3#service-endpoint){: external}.
 
         These URLs do not introduce a breaking change. The new URLs work both for your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year (until December 2020).
-    - For more information about IAM, see [Authenticating to Watson services](/docs/services/watson?topic=watson-iam).
+    - For more information about IAM, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
+- **New network and data security features** (not supported for VisRec)
+    - **Support for data encryption with customer-managed keys**
+        - Users of Premium plans can integrate {{site.data.keyword.keymanagementservicefull}} with {{site.data.keyword.visualrecognitionshort}} to encrypt their data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice-top).
+    - **Support for private network endpoints** (not supported for VisRec)
+        - Users of Premium plans can create private network endpoints to connect to {{site.data.keyword.visualrecognitionshort}} over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/visual-recognition?topic=watson-public-private-endpoints).
 
 ### 13 November 2019
 {: #13november2019}
@@ -102,7 +107,7 @@ The following new features and changes to the service are available.
 {: #16august2019}
 
 - **Custom Object Detection avaiable in Beta**
-    - Custom Object Detection identifies items and their location in an image. The service detects these items based on a set of images with labeled training data that you provide. For details, see [Custom Object Detection (Beta)](/docs/services/visual-recognition?topic=visual-recognition-object-detection-overview)
+    - Custom Object Detection identifies items and their location in an image. The service detects these items based on a set of images with labeled training data that you provide. For details, see [Custom Object Detection (Beta)](/docs/visual-recognition?topic=visual-recognition-object-detection-overview)
     - Custom Object Detection is supported by the [Visual Recognition v4 API (Beta)](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4){: external}
 
 ### 21 March 2019
@@ -113,7 +118,7 @@ The following new features and changes to the service are available.
 
         This change does not affect API access for users or applications with existing service key credentials. Only the viewing of credentials within {{site.data.keyword.cloud_notm}} is affected.
 
-        For more information about service keys and user roles, see [IAM service API keys](/docs/services/watson?topic=watson-api-key-bp#api-key-bp).
+        For more information about service keys and user roles, see [IAM service API keys](/docs/watson?topic=watson-api-key-bp#api-key-bp).
 
 ### 15 January 2019
 {: #15january2019}
@@ -126,7 +131,7 @@ The following new features and changes to the service are available.
 
 - **Service instances created before May 23, 2018 are deleted.**
 
-    - As previously notified, all {{site.data.keyword.visualrecognitionshort}} instances created before May 23, 2018 are no longer active. Data from the instances is now deleted. See [Migrating](/docs/services/visual-recognition?topic=visual-recognition-migrating#migrating) for details about how to move to a new service instance.
+    - As previously notified, all {{site.data.keyword.visualrecognitionshort}} instances created before May 23, 2018 are no longer active. Data from the instances is now deleted. See [Migrating](/docs/visual-recognition?topic=visual-recognition-migrating#migrating) for details about how to move to a new service instance.
     - Service instances created after this date are not affected.
     - If you have any questions, contact [IBM support](https://cloud.ibm.com/login?redirect=/unifiedsupport/supportcenter){: external}.
 
@@ -152,7 +157,7 @@ The following new features and changes to the service are available.
 
 - **Additional language support**
 
-    - The **Classify** methods now support Chinese (Simplified and Traditional) and Portuguese (Brazilian) in the output of `default` (General) model classes. For the full list of languages, see [Supported languages](/docs/services/visual-recognition?topic=visual-recognition-language-support-top#language-support-top).
+    - The **Classify** methods now support Chinese (Simplified and Traditional) and Portuguese (Brazilian) in the output of `default` (General) model classes. For the full list of languages, see [Supported languages](/docs/visual-recognition?topic=visual-recognition-language-support-top#language-support-top).
     - All languages are now also supported in the responses from the **Food** and **Explicit** models.
 
 
@@ -164,7 +169,7 @@ The following new features and changes to the service are available.
     You now authenticate with Identity and Access Management (IAM) at a new endpoint:
 
     - Use a different endpoint URL for new instances. The default endpoint is `https:/gateway.watsonplatform.net/visual-recognition/api/`. To find the URL for your service instance, check the credentials by clicking the instance from the {{site.data.keyword.cloud_notm}} [Resource list](https://{DomainName}/login?redirect=%2Fresources){: external}.
-    - Modify how you authenticate to the API. You provide either an IAM key or access token for your service instance. See [Migrating](/docs/services/visual-recognition?topic=visual-recognition-migrating#migrating) for examples.
+    - Modify how you authenticate to the API. You provide either an IAM key or access token for your service instance. See [Migrating](/docs/visual-recognition?topic=visual-recognition-migrating#migrating) for examples.
 
     For service instances created before May 23, 2018, the authentication process and endpoint have not changed. Authenticate by providing the `api_key` query parameter.
 
@@ -176,18 +181,18 @@ The following new features and changes to the service are available.
     - You can create and retrain two custom models under the new Lite plan.
     - Lite plans include up to 1,000 events a month. Each image that you send for classification, detection, or training is an event. Downloading a Core ML model doesn't count toward the event limit.
 
-    If your needs exceed the Lite plan, update to a billable account. [Explore](https://{DomainName}/catalog/services/visual-recognition){: external} the pricing plans.
+    If your needs exceed the Lite plan, update to a billable account. [Explore](https://{DomainName}/catalog/visual-recognition){: external} the pricing plans.
 
 - **Information security**
 
-    We updated the documentation to include some new details about data privacy. Read the details in [Information security](/docs/services/visual-recognition?topic=visual-recognition-information-security#information-security).
+    We updated the documentation to include some new details about data privacy. Read the details in [Information security](/docs/visual-recognition?topic=visual-recognition-information-security#information-security).
 
 ### 12 April 2018
 {: #12april2018}
 
 - **Support for retraining a custom model on the Lite plan**
 
-    Under the Lite plan, you no longer have to delete and create another custom model when you want to update or retrain the model. You can now update a custom model as long as you remain under daily and monthly [limits](https://{DomainName}/catalog/services/visual-recognition){: external} of the plan.
+    Under the Lite plan, you no longer have to delete and create another custom model when you want to update or retrain the model. You can now update a custom model as long as you remain under daily and monthly [limits](https://{DomainName}/catalog/visual-recognition){: external} of the plan.
 
     If you need to have multiple models or multiple versions of the same model, update from the Lite plan to a billable account.
 
@@ -334,7 +339,7 @@ The following new features and changes to the service are available.
 
 - **French language support**
 
-    The **Classify** methods now support French in the output of `default` model classes. For the full list of languages, see [Supported languages](/docs/services/visual-recognition?topic=visual-recognition-language-support-top#language-support-top).
+    The **Classify** methods now support French in the output of `default` model classes. For the full list of languages, see [Supported languages](/docs/visual-recognition?topic=visual-recognition-language-support-top#language-support-top).
 
 ### 23 February 2018
 {: #23february2018}
@@ -556,7 +561,7 @@ The following changes and updates were made to the {{site.data.keyword.visualrec
 - **Classes and classifiers:** Single classifiers are now called "classes". In GA, a group of classes is called a "classifier".
 - **Classification:** Use the `POST` or `GET /v3/classify` methods to quickly and accurately identify a variety of subjects and scenes with default classes.
 - **Face detection:** Use the `POST` or `GET /v3/detect_faces` methods to detect faces in images and get information about them, such as where the face is located in the image and the estimated age range and gender for each face. The service can also identify many celebrities by name and can provide a knowledge graph so that you can perform interesting aggregations into higher-level concepts.
-- **Multi-faceted custom classifiers:** You can now create and train highly specialized classifiers that are defined by several classes. For example, you can create a "new\_red\_car" classifier that is defined by the classes "new\_cars" and "red\_cars". To learn more  about creating multi-faceted classifiers, see [Structure of the training data](/docs/services/visual-recognition?topic=visual-recognition-customizing#structure).
+- **Multi-faceted custom classifiers:** You can now create and train highly specialized classifiers that are defined by several classes. For example, you can create a "new\_red\_car" classifier that is defined by the classes "new\_cars" and "red\_cars". To learn more  about creating multi-faceted classifiers, see [Structure of the training data](/docs/visual-recognition?topic=visual-recognition-customizing#structure).
 - **Asynchronous training:** Training of custom classifiers is now asynchronous, so training calls complete quickly while your custom classifier continues to learn in the background. To check on the training status of your custom classifier and find out when it is available for use, call the `GET /v3/classifiers/{classifier_id}` method and check the `status` response parameter.
 
 ### 2 December 2015
@@ -570,6 +575,6 @@ To immediately start using version 2 of the API, understand and update your code
 - The `POST /v1/recognize` method for analyzing an image is now the `POST /v2/classify` method. The `labels_to_check` parameter is renamed to `classifier_ids`.
 - The `GET /v1/tag/labels` method for retrieving a list of labels in V1 is now the `GET /v2/classifiers` method for retrieving a list of classifiers.
 - In addition to retrieving a list of classifiers, you can also retrieve details for a specific classifier with the new `GET /v2/classifiers/{classifier_id}` method.
-- Version 2 of the Beta {{site.data.keyword.visualrecognitionshort}} API enables you to create custom classifiers with the new `POST /v2/classifiers` method. To learn more about creating custom classifiers, see [Creating custom classifiers](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier).
+- Version 2 of the Beta {{site.data.keyword.visualrecognitionshort}} API enables you to create custom classifiers with the new `POST /v2/classifiers` method. To learn more about creating custom classifiers, see [Creating custom classifiers](/docs/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier).
 - Version 2 of the Beta {{site.data.keyword.visualrecognitionshort}} API also enables you to delete custom classifiers with the new `DELETE /v2/classifiers` method.
 - Version 2 of the Beta {{site.data.keyword.visualrecognitionshort}} API requires the `version` parameter. Specify the release date of the version of the API you want to use in `MM-DD-YYYY` format.
