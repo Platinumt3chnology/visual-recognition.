@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-20"
+lastupdated: "2020-01-30"
 
 keywords: GDPR,General Data Protection Regulation,deleting customer data,privacy
 
@@ -32,8 +32,8 @@ Clients are responsible for ensuring their own compliance with various laws and 
 The products, services, and other capabilities described herein are not suitable for all client situations and may have restricted availability. IBM does not provide legal, accounting or auditing advice or represent or warrant that its services or products will ensure that clients are in compliance with any law or regulation.
 If you need to request GDPR support for {{site.data.keyword.cloud}} {{site.data.keyword.watson}} resources that are created
 
-- In the European Union, see [Requesting support for IBM Cloud Watson resources created in the European Union](/docs/services/watson?topic=watson-gdpr-sar#request-EU).
-- Outside the European Union, see [Requesting support for resources outside the European Union](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU).
+- In the European Union, see [Requesting support for IBM Cloud Watson resources created in the European Union](/docs/watson?topic=watson-gdpr-sar#request-EU).
+- Outside the European Union, see [Requesting support for resources outside the European Union](/docs/watson?topic=watson-gdpr-sar#request-non-EU).
 
 ## European Union General Data Protection Regulation (GDPR)
 {: #gdpr}
@@ -49,7 +49,7 @@ Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and 
 {: #gdpr-visrec-update}
 
 - All {{site.data.keyword.visualrecognitionfull}} service instances created before **May 22, 2018** are not suitable for clients that require compliance with the EU General Data Protection Regulation EU 2016/679 (GDPR).
-- Clients that are subject to GDPR need to [migrate to a new {{site.data.keyword.visualrecognitionshort}} service instance](/docs/services/visual-recognition?topic=visual-recognition-migrating#migrating) available on **May 22nd, 2018** and to adopt the new agreement for the {{site.data.keyword.visualrecognitionshort}} service.
+- Clients that are subject to GDPR need to [migrate to a new {{site.data.keyword.visualrecognitionshort}} service instance](/docs/visual-recognition?topic=visual-recognition-migrating#migrating) available on **May 22nd, 2018** and to adopt the new agreement for the {{site.data.keyword.visualrecognitionshort}} service.
 - Clients are required to provision a new {{site.data.keyword.visualrecognitionshort}} service and generate *new authentication keys* to utilize the new {{site.data.keyword.visualrecognitionshort}} service.
 - If a client does not provision the new {{site.data.keyword.visualrecognitionshort}} service, you confirm that IBM is not processing any Personal Data on the client's behalf that is subject to the GDPR.
 - Clients who do not move to the new {{site.data.keyword.visualrecognitionshort}} service between May 22, 2018 and October 1, 2018 will have their data deleted.
@@ -75,7 +75,7 @@ You are responsible for creating customer ID values, and ensuring that each is u
 
 ### Deleting labeled data
 
-{{site.data.keyword.Bluemix_dedicated_notm}} plans: To remove processed images that might have been stored within the system to expedite subsequent training of your custom classifiers, create a support ticket for the "right to be forgotten", and request the deletion. See [GDPR Subject Access Request](/docs/services/watson?topic=watson-gdpr-sar#request-EU){: external}.
+{{site.data.keyword.Bluemix_dedicated_notm}} plans: To remove processed images that might have been stored within the system to expedite subsequent training of your custom classifiers, create a support ticket for the "right to be forgotten", and request the deletion. See [GDPR Subject Access Request](/docs/watson?topic=watson-gdpr-sar#request-EU){: external}.
 {: note}
 
 To delete all data that is associated with a customer ID, use the **Delete labeled data** method. You pass the string `customer_id={id}` as a query parameter with the request. The following example for the v3 API deletes all data for the customer ID `my_ID`:

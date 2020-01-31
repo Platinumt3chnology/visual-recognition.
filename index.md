@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-09-11"
+  years: 2019, 2020
+lastupdated: "2020-01-30"
 
 keywords: food model,general model,default model,built-in model,pre-trained model,explicit model,food classifier,general classifier,default classifier,built-in classifier,pre-trained classifier,explicit classifier
 
@@ -35,11 +35,11 @@ The {{site.data.keyword.visualrecognitionfull}} service uses deep learning algor
 
 A set of built-in models provides highly accurate results without training:
 
-- [**General** model](/docs/services/visual-recognition?topic=visual-recognition-customizing#general-model): Default classification from thousands of classes.
+- [**General** model](/docs/visual-recognition?topic=visual-recognition-customizing#general-model): Default classification from thousands of classes.
 - **Explicit** model: Whether an image is inappropriate for general use.
 - **Food** model: Specifically for images of food items.
 
-You can also train [custom models](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier) to create specialized classes.
+You can also train [custom models](/docs/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier) to create specialized classes.
 
 ## How to use the service
 {: #language-support-how-to}

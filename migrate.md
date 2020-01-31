@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-07-16"
+  years: 2019, 2020
+lastupdated: "2020-01-30"
 
 keywords: migrating
 
@@ -34,15 +34,15 @@ To migrate your current models (classifiers), provision a new instance of the {{
 {: deprecated}
 
 1.  Create another instance of the {{site.data.keyword.visualrecognitionshort}} service:
-    1.  Go to the [{{site.data.keyword.visualrecognitionshort}}](https://{DomainName}/catalog/services/visual-recognition){: external} page in the catalog.
+    1.  Go to the [{{site.data.keyword.visualrecognitionshort}}](https://{DomainName}/catalog/visual-recognition){: external} page in the catalog.
     1.  Select a plan and click **Create**.
 1.  Copy the new credentials to authenticate to your service instance:
     1.  On the **Manage** page, click **Show Credentials**.
     1.  Copy the `API Key` value.
-1.  [Re-create and train your custom models](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier) in your new instance of the {{site.data.keyword.visualrecognitionshort}} service.
+1.  [Re-create and train your custom models](/docs/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier) in your new instance of the {{site.data.keyword.visualrecognitionshort}} service.
 1.  Modify how you call your service.
 
     You provide either an Identity and Access Management (IAM) key or access token for your service instance. Tokens provide greater security because they must be periodically renewed and they support requests without your embedding service credentials in every call. API keys use basic authentication and do not expire.
 
-    - For more information about tokens, see [Authenticating with IAM tokens](/docs/services/watson?topic=watson-iam#iam).
+    - For more information about tokens, see [Authenticating with IAM tokens](/docs/watson?topic=watson-iam#iam).
     - For more information about using an IAM API key, see the [API reference](https://{DomainName}/apidocs/visual-recognition/#authentication).

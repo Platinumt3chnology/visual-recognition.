@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-10-28"
+  years: 2019, 2020
+lastupdated: "2020-01-30"
 
 keywords: visual recognition,visual recognition project,VisualRecognition,getting started,classify images, analyze images,tag images,image classification,image recognition,sample code
 
@@ -48,7 +48,7 @@ To work in a graphical interface where you can create your own custom models, us
 {: #prerequisites}
 
 - {: hide-dashboard} Create an instance of the service:
-    1.  Go to the [{{site.data.keyword.visualrecognitionshort}}](https://{DomainName}/catalog/services/visual-recognition){: external} page in the catalog.
+    1.  Go to the [{{site.data.keyword.visualrecognitionshort}}](https://{DomainName}/catalog/visual-recognition){: external} page in the catalog.
     1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
     1.  Click **Create**.
 - {: hide-dashboard} Copy the credentials to authenticate to your service instance:
@@ -682,7 +682,7 @@ To work in a graphical interface where you can create your own custom models, us
 You have a basic understanding of how to use built-in classifiers for image recognition with {{site.data.keyword.visualrecognitionshort}}. Now dive deeper:
 
 - Try these calls with your own images. Keep the image size under 10 MB.
-- Learn more about how to [build a custom model](/docs/services/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier).
+- Learn more about how to [build a custom model](/docs/visual-recognition?topic=visual-recognition-tutorial-custom-classifier#tutorial-custom-classifier).
 - {: curl} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3?code=dotnet-standard){: external}.
 - {: dotnet-standard} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3?code=dotnet-standard){: external}.
 - {: go} Read about the API in the [API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v3?code=go){: external}.
