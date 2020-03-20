@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-30"
+lastupdated: "2020-03-20"
 
-keywords: HA,DR,high availability,disaster recovery
+keywords: HA for visual recognition,DR for visual recognition,high availability for visual recognition,disaster recovery for visual recognition, failover for visual recognition
 
 subcollection: visual-recognition
 
@@ -21,18 +21,20 @@ subcollection: visual-recognition
 {:screen: .screen}
 {:table: .aria-labeledby="caption"}
 
-# High availability and disaster recovery
+# Understanding high availability and disaster recovery for {{site.data.keyword.visualrecognitionshort}}
 {: #ha-dr-top}
 
 {{site.data.keyword.visualrecognitionfull}} supports high availability with no single point of failure. However, recovering from potential disasters that affect an entire location requires planning and preparation.
 {: shortdesc}
 
-You are responsible for understanding your configuration, customization, and usage of the service. You are also responsible for being ready to re-create an instance of the service in a new location and to restore your data in any location. See [How do I ensure zero downtime?](/docs/overview?topic=overview-zero-downtime#zero-downtime){: external} for more information.
+You are responsible for understanding your configuration, customization, and usage of the service. You are also responsible for being ready to re-create an instance of the service in a new location and to restore your data in any location.
 
 ## High availability
 {: #ha-dr-availability}
 
-{{site.data.keyword.visualrecognitionshort}} is hosted in the [Dallas location](/docs/resources?topic=resources-services_region#services_region), and traffic is load-balanced across several [data centers](/docs/overview?topic=overview-zero-downtime#zero-downtime).
+All {{site.data.keyword.cloud_notm}} general availability (GA) offerings have a Service Level Agreement of 99.99% availability. {{site.data.keyword.visualrecognitionshort}} is offered in several locations (for example, Dallas, Frankfurt, and Seoul). For more information about supported locations, see [Service availability](/docs/resources?topic=resources-services_region).
+
+Each location has multiple data centers for redundancy. For more information about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}, see [How do I ensure zero downtime?](/docs/overview?topic=overview-zero-downtime#zero-downtime) You can also find information about [Service Level Agreements](/docs/overview?topic=overview-zero-downtime#SLAs).
 
 ## Disaster recovery
 {: #ha-dr-recovery}
@@ -53,15 +55,15 @@ You want to store the images that you use to train your custom models.
 
 To find your custom models and training images, use the API or {{site.data.keyword.DSX}}:
 
-- Models created with {{site.data.keyword.DSX}}:
+- Models created with {{site.data.keyword.DSX}}.
     1.  Click a {{site.data.keyword.visualrecognitionshort}} service instance in your [resource list](https://{DomainName}/resources?groups=resource-instance){: external}.
     1.  Click **Launch {{site.data.keyword.DSX}}** on the Manage page. (You might see, **Create a custom model**.)
     1.  Click the name of the **Associated project** for this instance.
     1.  Find your models from the **Assets** page of your {{site.data.keyword.visualrecognitionshort}} projects.
     1.  Download the _data assets_ that you used to create the models from the same **Assets** page.
     1.  For your Core ML applications, you can download the Core ML model file from the **Implementation** area of the model.
-- Classifiers created with the API:
-    - If you created the classifier with the API, there is no method to download the training images. Make sure that you store a backup of those images.
+- Classifiers created with the API.
+    - If you created the classifier with the API, no method exists to download the training images. Make sure that you store a backup of those images.
     - For your Core ML applications, you can download the Core ML model file by using the [**Retrieve a Core ML model of a classifier**](https://{DomainName}/apidocs/visual-recognition#retrieve-a-core-ml-model-of-a-classifier){: external} API method.
 
 Save these files in a safe location.
