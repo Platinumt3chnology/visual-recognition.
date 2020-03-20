@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-30"
+lastupdated: "2020-03-20"
 
 keywords: new features,updates,what's new,changelog,change log,release notes
 
@@ -44,6 +44,12 @@ The current version is `2018-03-19`.
 {: #changelog}
 
 The following new features and changes to the service are available.
+
+### 20 March 2020
+{: #20march2020}
+
+- **New Germany location**
+    - You can now create {{site.data.keyword.visualrecognitionshort}} instances in the Frankfurt location.
 
 ### 12 December 2019
 {: #12december2019}
