@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-20"
+lastupdated: "2020-03-30"
 
-keywords: new features,updates,what's new,changelog,change log,release notes
+keywords: new features,updates,what's new,changelog,change log,release notes,visual recognition release notes
 
 subcollection: visual-recognition
 
@@ -38,7 +38,7 @@ The current version is `2018-03-19`.
 ## Beta features
 {: #beta}
 
-{{site.data.keyword.IBM_notm}} releases services, features, and language support for your evaluation that are classified as beta. These features might be unstable, might change frequently, and might be discontinued with short notice. Beta features also might not provide the same level of performance or compatibility that generally available features provide and are not intended for use in a production environment. Beta features are supported only on [IBM Developer Answers](https://developer.ibm.com/answers/topics/visual-recognition.html){: external}.
+{{site.data.keyword.IBM_notm}} releases services, features, and language support for your evaluation that are classified as beta. These features might be unstable, might change frequently, and might be discontinued with short notice. Beta features also might not provide the same level of performance or compatibility that generally available features provide and are not intended for use in a production environment.
 
 ## Changes
 {: #changelog}
