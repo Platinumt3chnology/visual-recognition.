@@ -44,6 +44,5 @@ Visual Recognition
     {: .topicgroup}
     Developer community
         [StackOverflow](http://stackoverflow.com/questions/tagged/visual-recognition)
-        [IBM Developer Answers](https://developer.ibm.com/answers/topics/visual-recognition.html)
         [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
     {: .navgroup-end}
