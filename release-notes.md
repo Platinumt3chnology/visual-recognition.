@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-30"
+lastupdated: "2020-04-27"
 
 keywords: new features,updates,what's new,changelog,change log,release notes,visual recognition release notes
 
@@ -44,6 +44,16 @@ The current version is `2018-03-19`.
 {: #changelog}
 
 The following new features and changes to the service are available.
+
+### 28 April 2020
+{: #28april2020}
+
+- **Android support for object detection**
+
+    You can now download custom object detection models to use in your Android apps.
+
+    - For more information about the method, see **Get a model** in the [API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4#get-a-model){: external}.
+    - For an example app and sample model, see [{{site.data.keyword.visualrecognitionshort}} on Android](https://github.com/matt-ny/rscnn){: external}.
 
 ### 20 March 2020
 {: #20march2020}
