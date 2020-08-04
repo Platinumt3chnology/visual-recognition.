@@ -2,11 +2,15 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-30"
+lastupdated: "2020-07-30"
 
 keywords: visual recognition,visual recognition project,VisualRecognition,getting started,classify images, analyze images,tag images,image classification,image recognition,sample code
 
 subcollection: visual-recognition
+
+content-type: tutorial
+account-plan: lite
+completion-time: 10m
 
 ---
 
@@ -33,9 +37,13 @@ subcollection: visual-recognition
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:hide-dashboard: .hide-dashboard}
 {:hide-in-docs: .hide-in-docs}
+{:step: data-tutorial-type='step'}
+
 
 # Getting started with {{site.data.keyword.visualrecognitionshort}}
 {: #getting-started-tutorial}
+{: toc-content-type="tutorial"}
+{: toc-completion-time="10m"}
 
 This tutorial guides you through simple image recognition with {{site.data.keyword.visualrecognitionfull}}. You use the built-in models to analyze the images.
 {: shortdesc}
@@ -138,8 +146,9 @@ To work in a graphical interface where you can create your own custom models, us
 {: note}
 {: curl}
 
-## Step 1: Classify an image
+## Classify an image
 {: #classify}
+{: step}
 
 1.  Issue the following call to classify [an image](https://watson-developer-cloud.github.io/doc-tutorial-downloads/visual-recognition/640px-IBM_VGA_90X8941_on_PS55.jpg){: external}. <span class="hide-dashboard">Replace `{apikey}` and `{url}` with the service credentials you copied earlier.</span>
 
@@ -418,8 +427,9 @@ To work in a graphical interface where you can create your own custom models, us
     ```
     {: codeblock}
 
-## Step 2: Classify with the Food model
+## Classify with the Food model
 {: #classify-food}
+{: step}
 
 {{site.data.keyword.visualrecognitionshort}} also includes a built-in Food model that might be more accurate for your images with food items.
 

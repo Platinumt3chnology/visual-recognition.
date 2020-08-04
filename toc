@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="visual-recognition" category="ai" service-name="Visual Recognition" audience="service" console-page="/developer/watson" product-page="https://www.ibm.com/cloud/watson-visual-recognition" href="/docs/visual-recognition?topic=visual-recognition-getting-started-tutorial#getting-started-tutorial" path="visual-recognition"}
+{: .toc subcollection="visual-recognition" category="ai" service-name="Visual Recognition" audience="service" product-page="https://www.ibm.com/cloud/watson-visual-recognition" href="/docs/visual-recognition?topic=visual-recognition-getting-started-tutorial#getting-started-tutorial" path="visual-recognition"}
 Visual Recognition
 
     {: .navgroup id="learn"}
