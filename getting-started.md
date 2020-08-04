@@ -39,7 +39,6 @@ completion-time: 10m
 {:hide-in-docs: .hide-in-docs}
 {:step: data-tutorial-type='step'}
 
-
 # Getting started with {{site.data.keyword.visualrecognitionshort}}
 {: #getting-started-tutorial}
 {: toc-content-type="tutorial"}
