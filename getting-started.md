@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-30"
+lastupdated: "2020-07-30"
 
 keywords: visual recognition,visual recognition project,VisualRecognition,getting started,classify images, analyze images,tag images,image classification,image recognition,sample code
 
