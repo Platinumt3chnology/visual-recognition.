@@ -144,4 +144,4 @@ After you set up a custom object detection model and the training is complete, y
 {: #object-detection-next-steps}
 
 - Get familiar with the API in the [v4 API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4){: external}.
-- Try [{{site.data.keyword.DSX}}](https://dataplatform.cloud.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external}.
+- Try [{{site.data.keyword.DSX}}](https://dataplatform.cloud.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external}, part of Cloud Pak for Data as a Service.
