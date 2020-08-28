@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-20"
+lastupdated: "2020-08-28"
 
 keywords: HA for visual recognition,DR for visual recognition,high availability for visual recognition,disaster recovery for visual recognition, failover for visual recognition
 
@@ -32,9 +32,9 @@ You are responsible for understanding your configuration, customization, and usa
 ## High availability
 {: #ha-dr-availability}
 
-All {{site.data.keyword.cloud_notm}} general availability (GA) offerings have a Service Level Agreement of 99.99% availability. {{site.data.keyword.visualrecognitionshort}} is offered in several locations (for example, Dallas, Frankfurt, and Seoul). For more information about supported locations, see [Service availability](/docs/resources?topic=resources-services_region).
+All {{site.data.keyword.cloud_notm}} general availability (GA) offerings have a Service Level Agreement of 99.99% availability. {{site.data.keyword.visualrecognitionshort}} is offered in several locations (for example, Dallas, Frankfurt, and Seoul). For more information about supported locations, see [Service availability](/overview?topic=overview-services_region).
 
-Each location has multiple data centers for redundancy. For more information about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}, see [How do I ensure zero downtime?](/docs/overview?topic=overview-zero-downtime#zero-downtime) You can also find information about [Service Level Agreements](/docs/overview?topic=overview-zero-downtime#SLAs).
+Each location has multiple data centers for redundancy. For more information about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}, see [How do I ensure zero downtime?](/docs/overview?topic=overview-zero-downtime#zero-downtime) You can also find information about [Service Level Agreements](//docs/overview?topic=overview-slas).
 
 ## Disaster recovery
 {: #ha-dr-recovery}

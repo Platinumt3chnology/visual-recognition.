@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-30"
+lastupdated: "2020-08-28"
 
 keywords: custom object detection,object detection,bounding boxes,visual inspection
 
@@ -64,7 +64,7 @@ In the following image, the **Analyze images** method of Custom Object Detection
 ## How to use Custom Object Detection
 {: #object-detection-sequence}
 
-To work in a graphical interface with Custom Object Detection, use [{{site.data.keyword.DSX}}](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external} and follow the [docs](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/visual-rec-obj-detect-create-model.html){: external}.
+To work in a graphical interface with Custom Object Detection, use [{{site.data.keyword.DSX}}](https://dataplatform.cloud.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external} and follow the [docs](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/visual-rec-obj-detect-create-model.html){: external}.
 {: tip}
 
 To use {{site.data.keyword.visualrecognitionshort}} Custom Object Detection APIs, follow this sequence of steps to set up a custom object detection model:
@@ -144,4 +144,4 @@ After you set up a custom object detection model and the training is complete, y
 {: #object-detection-next-steps}
 
 - Get familiar with the API in the [v4 API reference](https://{DomainName}/apidocs/visual-recognition/visual-recognition-v4){: external}.
-- Try [{{site.data.keyword.DSX}}](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external}.
+- Try [{{site.data.keyword.DSX}}](https://dataplatform.cloud.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external}, part of Cloud Pak for Data as a Service.
