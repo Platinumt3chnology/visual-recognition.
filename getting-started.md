@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-07-30"
+lastupdated: "2020-08-28"
 
 keywords: visual recognition,visual recognition project,VisualRecognition,getting started,classify images, analyze images,tag images,image classification,image recognition,sample code
 
@@ -39,6 +39,7 @@ completion-time: 10m
 {:hide-in-docs: .hide-in-docs}
 {:step: data-tutorial-type='step'}
 
+
 # Getting started with {{site.data.keyword.visualrecognitionshort}}
 {: #getting-started-tutorial}
 {: toc-content-type="tutorial"}
@@ -47,7 +48,7 @@ completion-time: 10m
 This tutorial guides you through simple image recognition with {{site.data.keyword.visualrecognitionfull}}. You use the built-in models to analyze the images.
 {: shortdesc}
 
-To work in a graphical interface where you can create your own custom models, use <span class="hide-dashboard">[{{site.data.keyword.DSX}}](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external}</span><span class="hide-in-docs">[{{site.data.keyword.DSX}}](tooling-url){: external}</span> and follow the [video](https://youtu.be/898RN31szg0){: external}.
+To work in a graphical interface where you can create your own custom models, use <span class="hide-dashboard">[{{site.data.keyword.DSX}}](https://dataplatform.cloud.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external}</span><span class="hide-in-docs">[{{site.data.keyword.DSX}}](tooling-url){: external}</span> and follow the [video](https://youtu.be/898RN31szg0){: external}.
 {: tooling-url}
 {: tip}
 

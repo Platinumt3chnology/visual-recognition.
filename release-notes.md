@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-27"
+lastupdated: "2020-08-28"
 
 keywords: new features,updates,what's new,changelog,change log,release notes,visual recognition release notes
 
@@ -79,9 +79,9 @@ The following new features and changes to the service are available.
     - For more information about IAM, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
 - **New network and data security features** (not supported for VisRec)
     - **Support for data encryption with customer-managed keys**
-        - Users of Premium plans can integrate {{site.data.keyword.keymanagementservicefull}} with {{site.data.keyword.visualrecognitionshort}} to encrypt their data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice-top).
+        - Users of Premium plans can integrate {{site.data.keyword.keymanagementservicefull}} with {{site.data.keyword.visualrecognitionshort}} to encrypt their data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice).
     - **Support for private network endpoints** (not supported for VisRec)
-        - Users of Premium plans can create private network endpoints to connect to {{site.data.keyword.visualrecognitionshort}} over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/visual-recognition?topic=watson-public-private-endpoints).
+        - Users of Premium plans can create private network endpoints to connect to {{site.data.keyword.visualrecognitionshort}} over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/watson?topic=watson-public-private-endpoints).
 
 ### 13 November 2019
 {: #13november2019}
@@ -134,7 +134,7 @@ The following new features and changes to the service are available.
 
         This change does not affect API access for users or applications with existing service key credentials. Only the viewing of credentials within {{site.data.keyword.cloud_notm}} is affected.
 
-        For more information about service keys and user roles, see [IAM service API keys](/docs/watson?topic=watson-api-key-bp#api-key-bp).
+        For more information about service keys and user roles, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
 
 ### 15 January 2019
 {: #15january2019}
@@ -290,13 +290,13 @@ The following new features and changes to the service are available.
 
 - **New tool available: Watson Studio**
 
-    [Watson Studio](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external} is the new integrated environment that includes a replacement for the beta {{site.data.keyword.visualrecognitionshort}} tool. Watson Studio supports not only {{site.data.keyword.visualrecognitionshort}} but also many other {{site.data.keyword.cloud_notm}} services and resources. You can use Watson Studio with all your existing {{site.data.keyword.visualrecognitionshort}} instances and classifiers.
+    [Watson Studio](https://dataplatform.cloud.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external} is the new integrated environment that includes a replacement for the beta {{site.data.keyword.visualrecognitionshort}} tool. Watson Studio supports not only {{site.data.keyword.visualrecognitionshort}} but also many other {{site.data.keyword.cloud_notm}} services and resources. You can use Watson Studio with all your existing {{site.data.keyword.visualrecognitionshort}} instances and classifiers.
 
      Watson Studio provides a collaborative environment in the cloud. With Watson Studio, developers, subject matter experts, data scientists, and others can build and train {{site.data.keyword.visualrecognitionshort}} and other AI models. You can also use Watson Studio to access the built-in General and Face models.
 
      Watson studio also supports Core ML. You can download a Core ML model file for your custom model.
 
-    [Get started](https://dataplatform.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external} with Watson Studio.
+    [Get started](https://dataplatform.cloud.ibm.com/registration/stepone?target=watson_vision_combined&context=wdp&apps=watson_studio&cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_VisualRecognition-_-docs){: external} with Watson Studio.
 
 - **Updated deep learning architecture for custom models**
 
